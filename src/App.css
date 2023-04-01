@@ -2,6 +2,50 @@
 
 /* ============ VARIABLES CSS ============ */
 
+
+#light  {
+
+  --title-color: hsl(var(--hue), var(--sat), 90%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 80%);
+  --text-color: hsl(var(--hue), var(--sat), 70%);
+  --body-color: #373737;
+  --container-color: #2e2e2e;
+  background-color: #373737;
+  --box-shadow-img: 0 0 0 9px rgba(254, 254, 254, 1);
+  --rim-color: rgba(254, 254, 254, 0.9);
+  --nav-color: wheat;
+  --accent-color: #c2b08f;
+  --box-shadow:  1px 0px 19px -1px rgba(245,222,179,0.75);
+  --webkit-shadow:   1px 0px 19px -1px rgba(245,222,179,0.75);
+  --moz-box-shadow:  1px 0px 19px -1px rgba(245,222,179,0.75);
+  --insider-color: #373737;
+  --accent-color-darker: #d2c1a1;
+  --border-color: #c2b08f;
+  --blog-text-color: hsl(var(--hue), var(--sat), 70%);
+}
+
+#dark {
+  --title-color: hsl(var(--hue), var(--sat), 39%);
+  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+  --text-color: hsl(var(--hue), var(--sat), 60%);
+  --body-color: #efe0cb;
+  --container-color: #fff2e0;
+  background-color: #efe0cb;
+  --nav-color: #698269;
+  --box-shadow-img: 0 0 0 9px rgba(66, 99, 66, 0.9);
+  --rim-color: #212121;
+  --accent-color: #426342;
+  --box-shadow: -4px 6px 31px 0px rgba(93, 110, 96, 0.6);
+  --webkit-shadow:  -4px 6px 31px 0px rgba(93, 110, 96, 0.6);
+  --moz-box-shadow: -4px 6px 31px 0px rgba(93, 110, 96, 0.6);
+  --insider-color: #fff2e0;
+  --accent-color-darker: #244224;
+  --border-color: #698269;
+  --blog-text-color: hsl(var(--hue), var(--sat), 50%);
+  
+}
+
+
 :root {
   --header-height: 3rem;
   /* =========== COLORS =========== */
@@ -11,8 +55,12 @@
   --title-color: hsl(var(--hue), var(--sat), 30%);
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
   --text-color: hsl(var(--hue), var(--sat), 46%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #ffffff;
+  --body-color: #fff7f3;
+  --container-color: #fef4ee;
+  --accent-color-darker: #244224;
+  --border-color: #698269;
+  --accent-color: #426342;
+  
 
   /* =========== Font And Typography =========== */
 
@@ -27,6 +75,8 @@
    --small-font-size: 0.875rem;
    --smaller-font-size: 0.813rem;
    --tiny-font-size: 0.625rem;
+   --border-radius: 1rem;
+   --speed: 500ms;
 
    /* ========== Font Weight ========== */
 
@@ -73,10 +123,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--background-color);
 }
 
 body,
@@ -90,6 +142,7 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  overflow: overlay;
 }
 
 h1,h2,h3 {
@@ -133,6 +186,7 @@ img {
   display: block;
   font-size: var(--small-font-size);
   margin-bottom: 4rem;
+  color: var(--accent-color);
 }
 
 .section__title, .section__subtitle {
@@ -175,6 +229,11 @@ img {
   align-items: center;
 }
 
+.button--flex:hover {
+  background-color: var(--title-color-dark);
+  border-radius: 0rem;
+}
+
 
 #trailer {
   height: 20px;
@@ -190,8 +249,18 @@ img {
   transition: opacity 500ms ease;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
 
+::-webkit-scrollbar-thumb {
+  background: rgba(90, 90, 90);
+}
 
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
 
 
 /* ========== BREAKPOINTS ========== */

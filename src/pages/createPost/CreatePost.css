@@ -1,0 +1,147 @@
+.create__page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.create__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--container-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    width: 60rem;
+    
+}
+
+.create__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.create__input-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    color: var(--text-color);
+}
+.create__input-title input {
+    width: 50rem;
+    height: 3rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--insider-color);
+    color: var(--accent-color);
+
+}
+
+.create__input-post {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    color: var(--text-color);
+
+}
+
+.create__input-post textarea {
+    width: 50rem;
+    height: 10rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--insider-color);
+    color: var(--accent-color);
+}
+
+.create__input-post textarea:focus {
+    outline: none;
+}
+
+.create__input-title input:focus {
+    outline: none;
+}
+
+.create__button {
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--nav-color);
+    color: var(--container-color);
+    font-weight: var(--font-medium);
+    width: 10rem;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create__input-image {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    color: var(--text-color);
+}
+
+.create__input-image img {
+    width: 60rem;
+    height: 20rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--insider-color);
+    color: var(--accent-color);
+}
+
+.create__input-image input {
+    width: 50rem;
+    height: 3rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--insider-color);
+    color: var(--accent-color);
+}
+
+.create__input-image input:focus {
+    outline: none;
+}
+
+
+.create__input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    color: var(--text-color);
+}
+
+.create__input-category {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    color: var(--text-color);
+
+}
+
+.create__input-category input {
+    width: 10rem;
+    height: 3rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: var(--insider-color);
+    color: var(--accent-color);
+}
+
+.create__input-category textarea:focus {
+    outline: none;
+}
+
+.create__input-category input:focus {
+    outline: none;
+}

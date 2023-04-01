@@ -33,9 +33,9 @@
 
 .contact__card:hover {
     border-radius: 1rem;
-    -webkit-box-shadow: -4px 6px 31px 0px rgba(143, 143, 143, 0.6);
-    -moz-box-shadow: -4px 6px 31px 0px rgba(143, 143, 143, 0.6);
-    box-shadow: -4px 6px 31px 0px rgba(143, 143, 143, 0.6);
+    -webkit-box-shadow: var(--webkit-shadow);
+    -moz-box-shadow: var(--moz-shadow);
+    box-shadow: var(--box-shadow)
 }
 
 .contact__card-icon {
@@ -59,20 +59,22 @@
 }
 
 .contact__button {
-    color: var(--text-color);
+    color: var(--accent-color);
     font-size: var(--small-font-size);
     display: inline-block;
     align-items: center;
     justify-content: center;
     column-gap: 0.25rem;
     transition: 0.6s;
+    text-align: center;
+    display: flex;
 }
 
 
 .contact__button-icon {
     font-size: 1rem;
     transition: 0.3s;
-    
+    color: var(--accent-color);
 }
 
 .contact__button:hover .contact__button-icon {
@@ -83,6 +85,7 @@
     position: relative;
     margin-bottom: var(--mb-2);
     height: 4rem;
+    
 }
 
 .contact__form-input {
@@ -109,6 +112,7 @@
     padding: 0.2rem;
     background-color: var(--body-color);
     z-index: 10;
+    color: var(--accent-color);
 }
 
 .contact__form-area {
@@ -117,11 +121,7 @@
 
 .contact__form-area textarea {
     resize: none;
-}
-
-
-.button--flex:hover {
-    background-color: var(--title-color-dark);
+    
 }
 
 .button--flex {

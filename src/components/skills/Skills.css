@@ -1,7 +1,13 @@
+.skills {
+    height: max-content;
+}
+
 .skills__container {
-    grid-template-columns: repeat(2, 350px);
+    grid-template-columns: repeat(3, 350px);
     column-gap: 3rem;
     justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .skills__content {
@@ -15,9 +21,9 @@
 
 .skills__content:hover {
     transform: scale(1.07);
-    -webkit-box-shadow: -4px 6px 31px 0px rgba(143, 143, 143, 0.6);
-    -moz-box-shadow: -4px 6px 31px 0px rgba(143, 143, 143, 0.6);
-    box-shadow: -4px 6px 31px 0px rgba(143, 143, 143, 0.6);
+    -webkit-box-shadow: var(--webkit-shadow);
+    -moz-box-shadow: var(--moz-box-shadow);
+    box-shadow: var(--box-shadow);
 }
 
 .skills__title {
@@ -53,4 +59,5 @@
 
 .skills__level {
     font-size: var(--tiny-font-size);
+    color: var(--accent-color)
 }

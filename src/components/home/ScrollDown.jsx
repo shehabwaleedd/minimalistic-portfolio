@@ -1,6 +1,34 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+import i18next from 'i18next'
+import cookies from 'js-cookie'
 
 const ScrollDown = () => {
+
+
+  const languages = [
+    {
+      code: 'fr',
+      name: 'Français',
+      country_code: 'fr',
+    },
+    {
+      code: 'en',
+      name: 'English',
+      country_code: 'gb',
+    },
+    {
+      code: 'ar',
+      name: 'العربية',
+      dir: 'rtl',
+      country_code: 'sa',
+    },
+  ]
+
+  const currentLanguageCode = cookies.get('i18next') || 'en'
+  const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
+
+  const { t } = useTranslation()
   return (
     <div className="home__scroll">
         <a href="#about" className="home__scroll-button ">
@@ -40,7 +68,7 @@ const ScrollDown = () => {
                 ></path>
             </svg>
             <span className="home__scroll-name">
-                Scroll Down
+               {t("button__scroll_down")}
                 
             </span>
             <i class="uil uil-arrow-down home__scroll-arrow"></i>

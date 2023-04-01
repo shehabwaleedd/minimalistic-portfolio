@@ -1,3 +1,7 @@
+.about {
+    height: 100vh;
+}
+
 .about__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -35,11 +39,11 @@
     transition: 0.6s ease;
 }
 
-.about__box:hover {
+.about__box:hover  {
     border-radius: 1rem;
-    -webkit-box-shadow: -4px 6px 31px 0px rgba(143, 143, 143, 0.6);
-    -moz-box-shadow: -4px 6px 31px 0px rgba(143, 143, 143, 0.6);
-    box-shadow: -4px 6px 31px 0px rgba(143, 143, 143, 0.6);
+    -webkit-box-shadow: var(--webkit-shadow);
+    -moz-box-shadow: var(--moz-shadow);
+    box-shadow: var(--box-shadow)
 }
 
 .about__icon {
@@ -55,9 +59,11 @@
 
 .about__subtitle {
     font-size: var(--tiny-font-size);
+    color: var(--accent-color);
 }
 
 .about__description {
     padding: 0 4rem 0 0;
     margin-bottom: var(--mb-2-5);
+    color: var(--title-color);
 }

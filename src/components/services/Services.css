@@ -1,3 +1,10 @@
+.services {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .services__container {
     grid-template-columns: repeat(3, 270px);
     justify-content: center;
@@ -14,9 +21,9 @@
 
 .services__content:hover {
     border-radius: 1rem;
-    -webkit-box-shadow: -4px 6px 31px 0px rgba(143, 143, 143, 0.6);
-    -moz-box-shadow: -4px 6px 31px 0px rgba(143, 143, 143, 0.6);
-    box-shadow: -4px 6px 31px 0px rgba(143, 143, 143, 0.6);
+    --webkit-box-shadow: var(--webkit-shadow);
+    -moz-box-shadow: var(--moz-shadow);
+    box-shadow: var(--box-shadow)
 }
 
 .services__icon {
@@ -33,7 +40,7 @@
 }
 
 .services__button {
-    color: var(--title-color);
+    color: var(--accent-color);
     font-size: var(--small-font-size);
     display: inline-block;
     align-items: center;
@@ -81,6 +88,7 @@
     background-color: var(--container-color);
     padding: 4.5rem 2.5rem 2.5rem;
     border-radius: 1.5rem;
+    text-align: left;
 
 }
 
@@ -92,7 +100,7 @@
     top: 1.5rem;
     right: 1.5rem;
     font-size: 1.5rem;
-    color: var(--title-color);
+    color: var(--accent-color);
     cursor: pointer;
 }
 
@@ -100,7 +108,7 @@
 
  .services__modal-title,
  .services__modal-description {
-    text-align: center;
+    text-align: left;
  }
 
  .services__modal-title {
@@ -111,8 +119,9 @@
 
 .services__modal-description {
     font-size: var(--small-font-size);
-    padding: 0 3.5rem;
     margin-bottom: var(--mb-1);
+    color: var(--text-color);
+    text-align: left;
 }
 
 .services__modal-services {
@@ -127,12 +136,13 @@
 }
 
 .services__modal-icon {
-    color: var(--title-color);
+    color: var(--accent-color);
     font-size: 1.1rem;
 }
 
 .services__modal-info {
     font-size: var(--small-font-size);
+    color: var(--text-color);
 }
 
 /* Active Modal */ 

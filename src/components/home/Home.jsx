@@ -14,7 +14,6 @@ const Home = () => {
                 <Socials />
                 <div className="home__img"></div>
                 <Data />
-
             </div>
             <ScrollDown />
         </div>

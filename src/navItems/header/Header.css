@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@400;500;600;700&family=Oooh+Baby&display=swap');
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--background-color);
+}
+
+.nav {
+    height: calc(var(--header-height) + 3rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1.2rem;
+    padding: 0 1.5rem;
+    line-height: 2rem;
+
+
+}
+
+.nav__logo {
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+
+}
+
+.nav__logo, 
+.nav__toggle{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__list {
+    display: flex;
+    column-gap: 2rem;
+    line-height: 20px;
+}
+
+.nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    transition: 0.3s;
+}
+
+.nav__icon,
+.nav__close,
+.nav__toggle
+ {
+    display: none;
+}
+
+
+.active-link,
+.nav__link:hover  {
+    color: var(--accent-color-darker);
+}
+
+  
+   .dropdown-menu::before{
+    content: '';
+    position: absolute;
+    top: 0.35rem;
+    right: 8.25rem;
+    height: 1.25rem;
+    width: 1.25rem;
+    background: var(--container-color);
+    transform: rotate(45deg);
+  }
+  
+  .dropdown-menu.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: var(--speed) ease;
+  }
+  
+  .dropdown-menu.inactive{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: var(--speed) ease;
+  }
+
+  .dropdown__icon {
+    font-size: 20rem;
+    color: var(--accent-color);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 2rem;
+  }
+
+  .dropdown-menu{
+    position: absolute;
+    top: 2rem;
+    right: 5.625rem;
+    background-color: var(--container-color);
+    border-radius: var(--border-radius);
+    padding: 0.625rem 1.25rem;
+    width: 9.375rem;
+    
+  }
+
+  .dropdown-menu ul li{
+    padding: 0.125rem  0;
+    border-top: 0.8px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .dropdown-menu button:hover {
+    color:  var(--accent-color-darker);
+    cursor: pointer;
+  }
+  
+  .dropdown-menu ul li:hover img{
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  
+  .dropdownItem{
+    display: flex;
+    margin: 0.15rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .dropdown-menu button {
+    background-color: transparent;
+    border: none;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    font-weight: var(--font-medium);
+    cursor: pointer;
+  }
+  
+
+  .dropdown__flag {
+    line-height: 1.6rem;
+  }
+
+  .dropdown__flag img{
+    max-width: 1.25rem;
+    margin-right: 0.625rem;
+    opacity: 1;
+    transition: var(--speed);
+  }
+
+  .nav__list button {
+    background-color: transparent;
+    border: none;
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+  }
+  
+
+/* ========== BREAKPOINTS ========== */
+
+/* For Medium Devices */
+@media screen and (max-width: 768px) {
+    .header {
+        top: initial;
+        bottom: 0;
+    }
+    .nav {
+        height: var(--header-height);
+    }
+    .nav__menu {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--body-color);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 1.5rem 1.5rem 0 0;
+    }
+    .nav__icon,
+    .nav__close,
+    .nav__toggle {
+        display: block;
+    }
+    .show-menu {
+        bottom: 0;
+        
+    }
+
+    .nav__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    .nav__icon {
+        font-size: 1.2rem;
+    }
+
+    .nav__close:hover{
+        color: var(--title-color-dark);
+    }
+    .nav__toggle {
+        font-size: 1.1rem;
+    }
+    .nav__close {
+        position: absolute;
+        right: 1.3rem;
+        bottom: 0.5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--title-color);
+        transition: 0.3s ease;
+
+    }
+  }
+
+
+  .bx-world {
+    font-size: 1.2rem;
+  }
+
+  
+
+
+  /* For SMALL Devices */
+@media screen and (max-width: 768px) {
+    .nav__menu {
+        padding: 2rem 0.25rem 4rem;
+    }
+    .nav__list {
+        column-gap: 0;
+    }
+}
+
+
+.button__sign-out {
+    background-color: var(--background-color);
+}
+
+

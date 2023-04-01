@@ -1,0 +1,11 @@
+.category__button:hover {
+    background-color: var(--title-color);
+    color: var(--container-color);
+    padding: 0.1rem 1rem;
+    border-radius: 1rem;
+}
+
+.category__button {
+    transition: 0.3s ease;
+}
+
