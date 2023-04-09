@@ -5,7 +5,15 @@
     border-radius: 1rem;
 }
 
-.category__button {
-    transition: 0.3s ease;
-}
 
+.category__button {
+    padding: 0.1rem 1rem;
+    border-radius: 1rem;
+    font-weight: var(--font-medium);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    background-color: transparent;
+}

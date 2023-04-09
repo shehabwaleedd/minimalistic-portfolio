@@ -47,22 +47,18 @@ const Header = (Props) => {
                 <i className="uil uil-estate nav__icon"></i>{t("navbar__blog")}
               </li>
             </Link>
-            <Link className="nav__link " to="/testimonials">
-              <li className="nav__item">
-                <i className="uil uil-estate nav__icon"></i>Testimonials
-              </li>
-            </Link>
-
-            <Link className="nav__link " to="/createpost">Create Post</Link>
+            <Link className="nav__link " to="/contact">Conatct</Link>
+            {/* <Link className="nav__link " to="/createpost">Create Post</Link> */}
             {user ? <>
               {/* <Link className='nav__link' to="/createpost"> Create Post </Link> */}
-              <button className='button__sign-out nav__link' onClick={handleLogout} > {t("navbar__logout")}</button>
+              {/* <button className='button__sign-out nav__link' onClick={handleLogout} > {t("navbar__logout")}</button> */}
             </>
               :
               <>
-                <Link className='nav__link' to="/login">{t("navbar__login")}</Link>
+                {/* <Link className='nav__link' to="/login">{t("navbar__login")}</Link> */}
               </>
             }
+            <Link className="nav__link " to="/qualifications">Conatct</Link>
             <DropDownMenu />
           </ul>
           <i class="uil uil-times nav__close"></i>

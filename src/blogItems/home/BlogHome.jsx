@@ -7,18 +7,17 @@ import Skills from "../../components/skills/Skills"
 import Testimonials from "../../components/testimonials/Testimonials"
 import Contact from "../../components/contact/Contact"
 import Footer from "../../components/footer/Footer"
+import { motion } from "framer-motion"
 
 export const BlogHome = () => {
   return (
-    <>  
+    <motion.div initial={{ x: "-100vw", opacity: 1}} animate={{ x: "0%" }} transition={{ duration: 0.4, ease: "easeOut" }} exit={{ opacity: 0 , scaleX: "-100vh"}}>  
       <Home />
       <Nav />
-      <About />
       <Skills />
-      <Qualifications />
       <Testimonials />
       <Contact />
       <Footer />
-    </>
+    </motion.div>
   )
 }

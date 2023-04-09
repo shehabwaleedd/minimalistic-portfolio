@@ -3,7 +3,7 @@ import "./Contact.css"
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next'
-
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const form = useRef();
@@ -16,6 +16,7 @@ const Contact = () => {
   };
   const { t } = useTranslation()
   return (
+    <motion.div initial={{ y: "100%"}} animate={{ y: "0%" }} transition={{ duration: 0.25, ease: "easeOut" }} exit={{opacity: 1}}>
     <section className='contact section' id='contact'>
       <h2 className="section__title">{t("section__contact_me")}</h2>
       <span className="section__subtitle">{t("section__subtitle_contact")}</span>
@@ -84,6 +85,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
+    </motion.div>
   )
 }
 

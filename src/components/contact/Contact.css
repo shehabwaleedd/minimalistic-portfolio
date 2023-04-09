@@ -1,3 +1,8 @@
+.contact {
+    background-color: var(--contact-background);
+}
+
+
 .contact__container {
     grid-template-columns: repeat(2, max-content);
     justify-content: center;
@@ -23,7 +28,7 @@
 }
 
 .contact__card {
-    background-color: var(--container-color);
+    background-color: var(--contact-card-background);
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1rem;
     border-radius: 0.75rem;
@@ -47,10 +52,12 @@
 .contact__card-title,
 .contact__card-data {
     font-size: var(--small-font-size);
+    
 }
 
 .contact__card-title {
     font-weight: var(--font-medium);
+    
 }
 
 .contact__card-data {
@@ -59,7 +66,7 @@
 }
 
 .contact__button {
-    color: var(--accent-color);
+    color: var(--contact-text-color);
     font-size: var(--small-font-size);
     display: inline-block;
     align-items: center;
@@ -74,7 +81,7 @@
 .contact__button-icon {
     font-size: 1rem;
     transition: 0.3s;
-    color: var(--accent-color);
+   
 }
 
 .contact__button:hover .contact__button-icon {
@@ -97,7 +104,7 @@
     height: 100%;
     border: 2px solid rgba(0, 0, 0, 0.3);
     background: transparent;
-    color: var(--text-color);
+    color: var(--contact-text-color);
     outline: none;
     border-radius: 0.75rem;
     padding: 1.5rem;
@@ -110,9 +117,9 @@
     left: 1.25rem;
     font-size: var(--smaller-font-size);
     padding: 0.2rem;
-    background-color: var(--body-color);
+    background-color: var(--contact-background);
     z-index: 10;
-    color: var(--accent-color);
+    
 }
 
 .contact__form-area {

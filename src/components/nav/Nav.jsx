@@ -12,10 +12,10 @@ const Nav = () => {
 
 
   return (
-    <section className="navigation container">
+    <section className="navigation containered">
       <div className="navigation__content">
 
-          <ul className='navigation__list grid'>
+          <ul className='navigation__list gridded'>
             <li className='nav__itemm'>
               <a href="#" className="navigation__link"><i class="uil uil-estate"></i></a>
             </li>

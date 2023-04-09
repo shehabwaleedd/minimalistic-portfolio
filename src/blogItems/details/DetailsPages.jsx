@@ -5,6 +5,8 @@ import { useEffect } from "react"
 import { getDoc, collection, deleteDoc, doc } from "firebase/firestore";
 import { UserAuth } from "../../pages/authContext/AuthContext"
 import { auth, db } from "../../firebase-config";
+import ScrollAnimation from "./ScrollAnimation";
+
 import Loading from "../loading/Loading";
 
 export const DetailsPages = () => {
@@ -14,6 +16,8 @@ export const DetailsPages = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const { currentUser } = UserAuth();
   const navigate = useNavigate();
+
+
 
   useEffect(() => {
     const getPost = async () => {
@@ -48,6 +52,7 @@ export const DetailsPages = () => {
 
   return (
     <>
+      <ScrollAnimation />
       <div className="blog__details container">
         <div className='blog__card_details'>
           <div className='blog__image_container'>

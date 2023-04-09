@@ -5,7 +5,11 @@
 }
 
 .footer__container {
-    padding: 2rem 0 6rem;
+    padding: 2rem 1rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -15,10 +19,10 @@
 
 
 .footer__title {
+    font-size: 1.5rem;
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-bottom: var(--mb-2);
     text-transform: uppercase;
     letter-spacing: 0.7rem;
     align-items: center;
@@ -74,6 +78,7 @@
 }
 
 .footer__social-link:hover {
+    transform: scaleZ(1.5);
     color: var(--title-color-dark);
 }
 

@@ -38,7 +38,7 @@ const Data = () => {
         <p className="home__description">
             {t('Introduction')}
         </p>
-        <a href="#contact" className="button button--flex">
+        <a href="#contact" className="button button--flex sayhi__button ">
             {t("button__say_hi")}
             <svg
                   class="button__icon"

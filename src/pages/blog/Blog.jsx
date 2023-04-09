@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 
+
 function Blog() {
   const [postLists, setPostList] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -47,6 +48,8 @@ function Blog() {
     }
     return true;
   });
+
+  
   const toggleTab = (index) => {
     setToggleState(index);
   };
@@ -54,7 +57,7 @@ function Blog() {
   const categories = ["Philosophy", "Nature", "Politics", "Anime"];
 
   return (
-    <>
+    <motion.div initial={{ y: "100%"}} animate={{ y: "0%" }} transition={{ duration: 0.25, ease: "easeOut" }} exit={{opacity: 1}}>
       {isLoading && <Loading height={100} />}
 
       {/* Show loading indicator if data is being fetched */}
@@ -107,7 +110,7 @@ function Blog() {
           </div>
         </section>
       )}
-    </>
+    </motion.div>
   );
 }
 

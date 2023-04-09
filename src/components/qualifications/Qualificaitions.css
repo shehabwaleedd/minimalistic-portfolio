@@ -1,7 +1,14 @@
+.qualification {
+    margin-top: 3rem;
+    height: fit-content;
+    background-color: 	#fff2cc;
+}
+
 .qualification__container {
     max-width: 768px;
-    
 }
+
+
 
 .qualification__tabs {
     display: flex;

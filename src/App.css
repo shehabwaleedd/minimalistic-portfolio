@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@276&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 /* ============ VARIABLES CSS ============ */
 
 
@@ -22,6 +23,8 @@
   --accent-color-darker: #d2c1a1;
   --border-color: #c2b08f;
   --blog-text-color: hsl(var(--hue), var(--sat), 70%);
+  --contact-background: #373737;
+  --contact-text-color: #fff;
 }
 
 #dark {
@@ -30,7 +33,7 @@
   --text-color: hsl(var(--hue), var(--sat), 60%);
   --body-color: #efe0cb;
   --container-color: #fff2e0;
-  background-color: #efe0cb;
+  background-color: #fbefde;
   --nav-color: #698269;
   --box-shadow-img: 0 0 0 9px rgba(66, 99, 66, 0.9);
   --rim-color: #212121;
@@ -42,6 +45,9 @@
   --accent-color-darker: #244224;
   --border-color: #698269;
   --blog-text-color: hsl(var(--hue), var(--sat), 50%);
+  --contact-background: #b69bc1;
+  --contact-card-background: #cdafda;
+  --contact-text-color: #fff;
   
 }
 
@@ -123,7 +129,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  font-family: "Poppins";
 }
 
 html {
@@ -137,11 +143,11 @@ input,
 textarea {
       font-family: var(--body-font);
       font-size: var(--normal-font-size);
+      
 }
 
 body {
   background-color: var(--body-color);
-  color: var(--text-color);
   overflow: overlay;
 }
 
@@ -201,7 +207,18 @@ img {
   margin-right: auto;
 }
 
+.containered {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.gridded {
   display: grid;
   gap: 1.5rem;
 }
@@ -263,6 +280,26 @@ img {
 }
 
 
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ========== BREAKPOINTS ========== */
 
 /* For Larger Devices */
+
+
+

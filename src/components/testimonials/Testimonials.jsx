@@ -11,7 +11,7 @@ const Testimonials = () => {
     <section className="testimonial section">
       <h2 className="section__title">{t("section__clients")}</h2>
       <span className="section__subtitle">{t("section__subtitle_clients")}</span>
-      <div className="testimonials__container containered">
+      <div className="testimonials__container container">
         {Data.map(({ id, image, title, comment, job, url, location }) => {
           return (
             <div className="testimonial__grid">
