@@ -144,7 +144,7 @@ const Model = ({ imageDetails }) => {
         <motion.div className='detailed__containerr containerr' initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: "spring" }}>
           <motion.div className='detailed__row' initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.8, type: "spring" }}>
             <motion.h2 className='detailed__title' initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.8, type: "spring" }}>
-              The insiration behind the <br /> artwork &  what it means.
+              The insiration behind the <br /> change &  what it means.
             </motion.h2>
             <p>
             I am a young gentleman of twenty-four years, hailing from the bustling metropolis of Cairo, situated in the cradle of civilization, Egypt. My journey in the professional realm has been diverse and multifaceted, as I have explored various vocations in search of my true calling. Alas, it was in the domain of front-end development that my ardor for the craft was kindled. In addition to my proficiency in the art of coding, I possess the ability to converse fluently in three distinct languages, and I am perpetually consumed by a fervent desire to expand my horizons and acquire new knowledge.
