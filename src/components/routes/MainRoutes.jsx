@@ -10,10 +10,10 @@ import CreatePost from "../../pages/createPost/CreatePost";
 import Login from "../../pages/login/Login";
 import SignUp from "../../pages/signUp/SignUp";
 import PasswordReset from "../../pages/passwordReset/PasswordReset";
-import { DetailsPages } from "../../../src/blogItems/details/DetailsPages";
+import { DetailsPages } from '../../blogItems/blog/blog/details/DetailsPages';
 import { BlogHome } from "../../blogItems/home/BlogHome";
-import EditPost from "../../blogItems/blog/edit/EditPost";
-import Blog from "../../pages/blog/Blog";
+import EditPost from '../../blogItems/blog/blog/details/edit/EditPost';
+import Blog from "../../blogItems/blog/blog/Blog";
 import FilteredCategories from "../../blogItems/blog/filteredCategories/FilteredCategories"
 
 import { Route, Routes } from 'react-router-dom';

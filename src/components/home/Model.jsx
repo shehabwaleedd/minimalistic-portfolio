@@ -77,10 +77,11 @@ const Model = ({ imageDetails }) => {
                 x: 0,
                 transition: { delay: 1.2, ...transition },
               }}
+              
               className='details__detail'>
               <div className='details__mua'>MUA: @mylifeascrystall</div>
             </motion.div>
-            <motion.div className='details__model'>
+            <motion.div className='details__model' exit={{ y: 50, opacity: 0 ,transition: { duration: 0.6 }}}>
               <motion.span className='details__first' variants={firstName}>
                 <motion.span variants={letter}>S</motion.span>
                 <motion.span variants={letter}>H</motion.span>
@@ -105,13 +106,14 @@ const Model = ({ imageDetails }) => {
             <motion.div className='details__image-container-single'>
               <motion.div
                 initial={{
-                  y: "50vw",
-                  width: imageDetails.width,
-                  height: imageDetails.height,
+                //   x: "100vw",
+                y: "-100vw",
+                //   width: imageDetails.width,
+                //   height: imageDetails.height,
                 }}
                 animate={{
                   y: 0,
-                  width: "100%",
+                width: "100%",
                 //   height: window.innerWidth > 1440 ? 800 : 400,
                 height: 500,
                   transition: { delay: 0.2, ...transition },
@@ -132,6 +134,7 @@ const Model = ({ imageDetails }) => {
                     //   y: window.innerWidth > 1440 ? -1200 : -600,
                     y: -400,
                     }}
+                    exit={{ opacity: 0, transition: { duration: 0.6 }, y: "-50vw" }}
                   />
                 </motion.div>
               </motion.div>

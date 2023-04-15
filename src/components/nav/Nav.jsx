@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Nav.css"
-
+import { motion } from "framer-motion"
 
 const Nav = () => {
 
@@ -10,12 +10,13 @@ const Nav = () => {
     else scrollUp.classList.remove("show-scroll")
   })
 
-
+  const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
+  
   return (
-    <section className="navigation containered">
-      <div className="navigation__content">
+    <motion.section className="navigation containered" initial={{ opacity: 0, x: 50}} animate={{opacity: 1, x:0, transition: { delay: 1, ...transition }}} exit={{ opacity: 1 }} transition={transition}>
+      <motion.div className="navigation__content" initial={{ opacity: 0, x: -50}} animate={{opacity: 1, x:0, transition: { delay: 1, ...transition }}} exit={{ opacity: 1 }} transition={transition}>
 
-          <ul className='navigation__list gridded'>
+          <motion.ul className='navigation__list gridded' initial={{ opacity: 0, x: 50}} animate={{opacity: 1, x:0, transition: { delay: 1, ...transition }}} exit={{ opacity: 1 }} transition={transition}>
             <li className='nav__itemm'>
               <a href="#" className="navigation__link"><i class="uil uil-estate"></i></a>
             </li>
@@ -34,9 +35,9 @@ const Nav = () => {
             <li className='nav__itemm'>
               <a href="#contact" className="navigation__link"><i class='bx bx-message-square-detail'></i></a>
             </li>
-          </ul>
-      </div>
-    </section>
+          </motion.ul>
+      </motion.div>
+    </motion.section>
   )
 }
 

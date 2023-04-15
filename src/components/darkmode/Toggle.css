@@ -4,7 +4,12 @@
     left: 2rem;
     bottom: 5rem;
     z-index: 999;
+    display: flex;
+    flex-direction: column;
+
 }
+
+
 
 .toggle__container {
     display: flex;
@@ -12,17 +17,58 @@
     padding: 0.6rem 0.4rem;
     border-radius: 2rem;
     gap: 0.5rem;
-    background-color: var(--color-primary);
+    display: flex;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    color: var(--accent-color);
+
 }
 
 .toggle__container button {
-    padding: 0.4rem 0.6rem;
+    padding: 0.5rem 0.8rem;
     border-radius: 2rem;
     transition: 0.4s ease;
 }
 
-.toggle__active {
-    background-color: var(--color-primary);
-    color: var(--accent-color);
+
+.active {
+    color: var(--dark-mode-icon-color);
+}
+
+.handle {
+    z-index: -1;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .switch {
+    width: 2.5rem;
+    height: 5rem;
+    font-size: 1rem;
+  }
+
+  .handle {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .uil {
+    font-size: 1.25rem;
+  }
+}
+
+/* For screens larger than 900px */
+@media (min-width: 900px) {
+  .switch {
+    width: 3.125rem;
+    height: 6.25rem;
+    font-size: 1.25rem;
+  }
+
+  .handle {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .uil {
+    font-size: 1.5rem;
+  }
 }

@@ -3,6 +3,7 @@ import './Portfolio.css'
 import Works from './Works'
 import { useTranslation } from 'react-i18next'
 import { motion, useAnimation } from 'framer-motion'
+import AnimatedLayout from '../services/animatedLayout/AnimatedLayout'
 
 const Portfolio = () => {
   const { t } = useTranslation()
@@ -18,7 +19,7 @@ const Portfolio = () => {
       <section className="work section" id="portfolio" initial={{ x: "100%" }} animate={controls}>
         <h2 className="section__title">{t('section__portfolio')}</h2>
         <span className="section__subtitle">{t('section__subtitle_portfolio')}</span>
-
+        <AnimatedLayout />
       </section>
     </div>
   )

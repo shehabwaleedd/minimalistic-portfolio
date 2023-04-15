@@ -28,20 +28,20 @@ const Contact = () => {
               <i className="bx bx-mail-send contact__card-icon"></i>
               <h3 className="contact__card-title">{t("contact__form__email")}</h3>
               <span className="contact__card-data">shehabwaleedd@gmail.com</span>
-              <a href="mailto:shehabwaleedd@gmail.com" target="_blank" className="contact__button">{t("contact__form__write_me")} <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+              <a href="mailto:shehabwaleedd@gmail.com" target="_blank" className="contact__button-arrow">{t("contact__form__write_me")} <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
             </div>
 
             <div className="contact__card">
               <i class="uil uil-whatsapp contact__card-icon"></i>
               <h3 className="contact__card-title">Whatsapp</h3>
               <span className="contact__card-data">+201023288200</span>
-              <a href="https://api.whatsapp.com/send?phone=+201023288200" target="_blank" className="contact__button">{t("contact__form__write_me")} <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+              <a href="https://api.whatsapp.com/send?phone=+201023288200" target="_blank" className="contact__button-arrow">{t("contact__form__write_me")} <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
             </div>
             <div className="contact__card">
               <i class="uil uil-facebook-messenger-alt contact__card-icon"></i>
               <h3 className="contact__card-title">{t("contact__form__message")}</h3>
               <span className="contact__card-data">/shehabwaleedd</span>
-              <a href="https://m.me/shehabwaleedd" target="_blank" className="contact__button">{t("contact__form__write_me")} <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+              <a href="https://m.me/shehabwaleedd" target="_blank" className="contact__button-arrow">{t("contact__form__write_me")} <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
 
             </div>
           </div>
@@ -61,7 +61,7 @@ const Contact = () => {
               <label htmlFor="" className="contact__form-tag">Project</label>
               <textarea name="message" cols="30" rows="10" className='contact__form-input' placeholder={t("contact__form__write_me_your_project")} ></textarea>
             </div>
-            <button href="contact" className="button button--flex">
+            <button href="contact" className="button button--flex contact__button">
               {t("contact__form__button-sending")}
               <svg
                 class="button__icon"

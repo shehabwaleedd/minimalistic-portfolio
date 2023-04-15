@@ -88,19 +88,34 @@
 
 .expierence {
     padding-top: 5rem;
-    background-color: #fff2cc;
     height: max-content;
     padding-bottom: 3rem;
 }
 
 .education {
     padding-top: 5rem;
-    background-color: #fff2cc;
+
     height: max-content;
     padding-bottom: 3rem;
 }
 
 .timelocation_text {
+    color: var(--accent-color);
+}
+
+.comment__text {
+    color: var(--text-color);
+    white-space: pre-wrap;
+    text-align-last: left;
+    text-align: justify;
+}
+
+.title__text {
     color: var(--title-color);
 }
 
+.company__text {
+    color: var(--title-color);
+    font-size: var(--normal-font-size);
+
+}

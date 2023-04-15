@@ -48,8 +48,14 @@
 
 }
 
+.footer__social p strong {
+    color: var(--accent-color);
+    font-size: 0.69rem;
+}
+
 .footer__social p {
     font-size: 0.69rem;
+    color: var(--text-color);
 }
 
 .footer__socials {

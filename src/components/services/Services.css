@@ -52,8 +52,8 @@
 .services__button-icon {
     font-size: 1.001rem;
     position: relative;
-    display: inline-block;
-    animation: scroll 2s ease infinite;
+    
+    
 }
 
 @keyframes scroll {
@@ -81,6 +81,13 @@
     visibility: hidden;
     transition: 0.3s ease;
 }
+
+
+.active-modal {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 .services__modal-content {
     width: 500px;
@@ -147,9 +154,4 @@
 
 /* Active Modal */ 
 
-
-.active-modal {
-    opacity: 1;
-    visibility: visible;
-}
 

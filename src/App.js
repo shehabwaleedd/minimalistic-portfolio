@@ -13,13 +13,13 @@ import Qualifications from './components/qualifications/Qualifications';
 import Portfolio from './components/portfolio/Portfolio';
 import Testimonials from './components/testimonials/Testimonials';
 import { BlogHome } from './blogItems/home/BlogHome';
-import Blog from './pages/blog/Blog';
+import Blog from './blogItems/blog/blog/Blog';
 import Contact from './components/contact/Contact';
 import Login from './pages/login/Login';
 import SignUp from './pages/signUp/SignUp';
 import PasswordReset from './pages/passwordReset/PasswordReset';
-import { DetailsPages } from './blogItems/details/DetailsPages';
-import EditPost from "./blogItems/blog/edit/EditPost"
+import { DetailsPages } from './blogItems/blog/blog/details/DetailsPages';
+import EditPost from './blogItems/blog/blog/details/edit/EditPost';
 import FilteredCategories from './blogItems/blog/filteredCategories/FilteredCategories';
 import { useTranslation } from 'react-i18next'
 import { createContext } from 'react';
@@ -47,13 +47,15 @@ function App() {
     height: 650,
   };
 
+  const [count, setCount] = useState(0);
+
 
   return (
     <div className="App" id={theme}>
 
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
         <AuthContextProvider initial={false}>
-          <header className='header'>
+          {/* <header className='header'>
             <nav className='nav container'>
               <Link className="nav__logo" to="/">{t("my__name-first")}</Link>
               <div className="nav__menu">
@@ -74,10 +76,13 @@ function App() {
                     </li>
                   </Link>
                   <Link className="nav__link " to="/contact">Conatct</Link>
+                  <Link className="nav__link " to="/login">Login</Link>
                 </ul>
               </div>
             </nav>
-          </header>
+          </header> */}
+
+          <Header />
           <AnimatePresence wait>
             <Routes location={location} key={location.pathname}>
               <Route path='/skills' element={<Skills />} />
@@ -91,7 +96,7 @@ function App() {
               <Route path="/signup" element={<SignUp />} />
               <Route path="/passwordreset" element={<PasswordReset />} />
               <Route path="/details/:id" element={<DetailsPages />} />
-              <Route path="/" element={<Home imageDetails={imageDetails}/>} />
+              <Route path="/" element={<BlogHome/>} />
               <Route path="/about" element={<Model imageDetails={imageDetails}/>} />
               <Route path="/edit/:id" element={<EditPost />} />
               <Route path="/blog" element={<Blog />} />

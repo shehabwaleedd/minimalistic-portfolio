@@ -21,6 +21,7 @@ export const ExperienceData = [
         title: "Barber Assistant",
         time: "2014",
         location: "Beverly Hills / Sheikh Zayed. Egypt",
+        company: "Zizou Barber Shop",
         comment: "I was helping the barber in his work, making sure that the customers are satisfied and that the barber is doing his job properly."
       },
       {

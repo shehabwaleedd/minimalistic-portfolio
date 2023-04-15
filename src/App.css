@@ -22,33 +22,32 @@
   --insider-color: #373737;
   --accent-color-darker: #d2c1a1;
   --border-color: #c2b08f;
-  --blog-text-color: hsl(var(--hue), var(--sat), 70%);
-  --contact-background: #373737;
-  --contact-text-color: #fff;
+  --dark-mode-icon-color: #c2b08f;
+  --blog-text-color: hsl(var(--hue), var(--sat), 65%);  
+  --progressive-bar-color: #d9c39d;
+
 }
 
 #dark {
   --title-color: hsl(var(--hue), var(--sat), 39%);
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
   --text-color: hsl(var(--hue), var(--sat), 60%);
-  --body-color: #efe0cb;
-  --container-color: #fff2e0;
-  background-color: #fbefde;
+  --body-color: #fbefde;;
+  --container-color: #fff5e8;
+  background-color: rgb(254, 242, 226);
   --nav-color: #698269;
   --box-shadow-img: 0 0 0 9px rgba(66, 99, 66, 0.9);
   --rim-color: #212121;
   --accent-color: #426342;
-  --box-shadow: -4px 6px 31px 0px rgba(93, 110, 96, 0.6);
+  --box-shadow: -4px 2px 20px 1px rgba(63, 63, 63, 0.3);
   --webkit-shadow:  -4px 6px 31px 0px rgba(93, 110, 96, 0.6);
   --moz-box-shadow: -4px 6px 31px 0px rgba(93, 110, 96, 0.6);
   --insider-color: #fff2e0;
   --accent-color-darker: #244224;
   --border-color: #698269;
-  --blog-text-color: hsl(var(--hue), var(--sat), 50%);
-  --contact-background: #b69bc1;
-  --contact-card-background: #cdafda;
-  --contact-text-color: #fff;
-  
+  --dark-mode-icon-color: #e4e4e4;
+  --blog-text-color: hsl(var(--hue), var(--sat), 45%);
+  --progressive-bar-color: #6f988a;
 }
 
 
@@ -66,6 +65,20 @@
   --accent-color-darker: #244224;
   --border-color: #698269;
   --accent-color: #426342;
+  --black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+  --background: var(--white);
+  --accent: var(--pink);
   
 
   /* =========== Font And Typography =========== */
@@ -146,10 +159,6 @@ textarea {
       
 }
 
-body {
-  background-color: var(--body-color);
-  overflow: overlay;
-}
 
 h1,h2,h3 {
     color: var(--title-color);
@@ -230,7 +239,7 @@ img {
   display: inline-block;
   background-color: var(--title-color);
   color: var(--container-color);
-  padding: 1.25rem 2rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
 }

@@ -1,0 +1,40 @@
+.section {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 3rem;
+    margin: 3rem 0;
+}
+
+.card {
+    height: 15rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--container-color);
+    grid-column: span 3;
+    font-size: 1.2rem;
+    padding: 5rem;
+}
+
+
+.card p {
+    display: none;
+}
+
+.card.active p {
+    display: block;
+    color: var(--text-color);
+}
+
+.card.active {
+    grid-column: 1 / span 6;
+    grid-row: 1;
+    height: auto;
+    order: 0;
+}
+.card.is-inactive {
+    grid-column: span 2;
+}

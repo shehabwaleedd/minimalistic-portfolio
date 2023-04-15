@@ -58,7 +58,6 @@ const Header = (Props) => {
                 {/* <Link className='nav__link' to="/login">{t("navbar__login")}</Link> */}
               </>
             }
-            <Link className="nav__link " to="/qualifications">Conatct</Link>
             <DropDownMenu />
           </ul>
           <i class="uil uil-times nav__close"></i>
