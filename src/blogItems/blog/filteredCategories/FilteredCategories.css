@@ -7,7 +7,7 @@
 
 
 .category__button {
-    padding: 0.1rem 1rem;
+    padding: 0.1rem 0.8rem;
     border-radius: 1rem;
     font-weight: var(--font-medium);
     display: flex;
@@ -16,4 +16,19 @@
     cursor: pointer;
     transition: 0.3s ease-out;
     background-color: transparent;
+}
+
+.category__active {
+    background-color: var(--text-color);
+    color: var(--container-color);
+    padding: 0.1rem 1rem;
+    border-radius: 1rem;
+    
+}
+
+.category__tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 0.6rem;
 }

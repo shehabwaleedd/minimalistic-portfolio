@@ -1,91 +1,36 @@
-// import React from 'react'
-// import './Home.css'
-// import Socials from './Socials'
-// import Data from './Data'
-// import ScrollDown from './ScrollDown'
-// import { AnimatePresence, motion } from 'framer-motion'
+import React, { useEffect } from "react";
+import "./Home.css";
+import "../../navItems/header/Header.css"
+import { Animation2 } from "../../animation/Animation2";
+import Main from "./main/Main";
+
+const Home = () => {
+
+  useEffect(() => {
+
+    Animation2();
+
+  }, []);
 
 
-// const Home = () => {
-//   return (
-//     <AnimatePresence>
-//       <motion.div initial={{ x: "-100vw" }} animate={{ x: "0%" }} transition={{ duration: 0.95, ease: "easeOut" }} exit={{ opacity: 1, y: "-200vh" }}>
-//         <section className='home section' id='home'>
-//           <div className="home__container container grid">
-//             <motion.div className="home__content grid" initial={{ x: "-100vw" }} animate={{ x: "0%" }} transition={{ duration: 0.95, ease: "easeOut" }} exit={{ opacity: 0 }}>
-//               <Socials />
-//               <div className="home__img"></div>
-//               <Data />
-//             </motion.div>
-//             <ScrollDown />
-//           </div>
-//         </section>
-//       </motion.div>
-//     </AnimatePresence>
-//   )
-// }
 
-// export default Home
-
-import * as React from "react";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import ProgressiveImage from "react-progressive-image";
-import ScrollForMore from "./ScrollForMore";
-import Socials from "./Socials";
-import "./Home.css"
-
-const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
-
-const Home = ({ imageDetails, image }) => (
-  <>
+  return (
     <main>
-      <div className='about about__containerr'>
-        <div className='about__row center'>
-          <div className='image__container'>
-            <motion.div className='about__socials' initial={{ opacity: 0, x: -50}} animate={{opacity: 1, x:0, transition: { delay: 1, ...transition }}} exit={{ opacity: 1 }} transition={transition}>
-              <Socials />
-            </motion.div>
-            <div
-              className='about__thumbnail'
-              ref={image}
-              style={{
-                width: imageDetails.width,
-                height: imageDetails.height,
-              }}>
-              <motion.div className='about__frame' initial={{opacity: 0}} animate={{opacity: 1, transition: { delay: 0.5, ...transition }}} exit={{ y: "-5vh", transition: { delay: 0.5, ...transition }}}>
-                <div className="frame__containerr">
-                
-                  <Link to={`/about`}>
-                    
-                    <ProgressiveImage src={require("../../assets/profile5.jpg")} placeholder={require("../../assets/profile5.jpg")}>
-                      {(src) => (
-                        <motion.img src={src} alt='Shehab Waleed' whileHover={{ scale: 1.1 }} transition={transition}
-                        />
-                      )}
-                    </ProgressiveImage>
-                  </Link>
-                </div>
-              </motion.div>
-              <motion.div
-              initial={{ opacity: 0, y: 50}} animate={{opacity: 1, y: 0, transition: { delay: 1, ...transition }}} 
-              
-              exit={{ opacity: 0 }}
-              transition={transition}
-              className='about__information'>
-              <div className='about__title'>Shehab Waleed</div>
-              <div className='about__location'>
-                <span>30°03'60.00" N </span>
-                <span>31°12'60.00" E</span>
-              </div>
-            </motion.div>
-            </div>
-            <div className=""></div>
-          </div>
-        </div>
+      <div className="home__container" >
+        <div className="block b-1"></div>
+        <div className="block b-2"></div>
+        <div className="block b-3"></div>
+        <div className="block b-4"></div>
+        <div className="block b-5"></div>
+        <div className="block b-6"></div>
+        <div className="block b-7"></div>
       </div>
+      <div className="main__container" >
+        <Main />
+      </div>
+      
     </main>
-  </>
-);
+  );
+};
 
 export default Home;

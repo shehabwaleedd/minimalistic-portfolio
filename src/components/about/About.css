@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Itim&family=Kaushan+Script&family=Oooh+Baby&display=swap');
+
 
 .containered {
 
@@ -119,3 +121,148 @@
     font-size: var(--normal-font-size);
 
 }
+
+
+.details__row {
+
+    width: 100%;
+    align-items: flex-end;
+}
+.details__top {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.details__location span:nth-child(2) {
+    margin-left: 16px;
+}
+
+.details__model {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.details__first {
+    margin-right: 72px;
+}
+
+
+.details__model span {
+    display: inline-block;
+    position: relative;
+    font-weight: 500;
+    font-size: 8rem;
+    font-family: "Poppins";
+    color: var(--title-color);
+    letter-spacing: 1rem;
+
+}
+
+.details__bottom-row {
+    height: 50vh;
+    position: relative;
+}
+.details__bottom{
+    height: 100%;
+    width: 100%;
+}
+.details__image-container-single {
+    width: 100%;
+
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+
+
+.detailed__frame-single img  {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.6s ease;
+    z-index: 1;
+
+    
+}
+
+
+
+.detailed__information {
+    padding: 6rem 3rem;
+    margin-top: 5rem;
+ 
+
+}
+
+.detailed__containerr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.detailed__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.detailed__row h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--title-color);
+    margin-bottom: 1rem;
+    font-family: "Poppins";
+}
+
+.detailed__row p {
+    font-family: "Poppins";
+    font-size: 1rem;
+    line-height: 28px;
+    font-weight: 400;
+    width: 800px;
+    color: var(--text-color);
+    white-space: pre-wrap;
+    text-align-last: left;
+    text-align: justify;
+}
+
+.load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+  }
+  
+
+.load-screen {
+    position: relative;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: #458a74;
+    width: 0%;
+    height: 100%;
+  }
+  

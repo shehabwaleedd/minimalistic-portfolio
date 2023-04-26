@@ -48,14 +48,13 @@ const Header = (Props) => {
               </li>
             </Link>
             <Link className="nav__link " to="/contact">Conatct</Link>
-            {/* <Link className="nav__link " to="/createpost">Create Post</Link> */}
             {user ? <>
-              {/* <Link className='nav__link' to="/createpost"> Create Post </Link> */}
-              {/* <button className='button__sign-out nav__link' onClick={handleLogout} > {t("navbar__logout")}</button> */}
+              <Link className='nav__link' to="/createpost"> Create Post </Link> 
+              <button className='button__sign-out nav__link' onClick={handleLogout} > {t("navbar__logout")}</button>
             </>
               :
               <>
-                {/* <Link className='nav__link' to="/login">{t("navbar__login")}</Link> */}
+                <Link className='nav__link' to="/login">{t("navbar__login")}</Link> 
               </>
             }
             <DropDownMenu />

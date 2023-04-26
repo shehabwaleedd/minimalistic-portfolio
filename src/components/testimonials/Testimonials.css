@@ -76,7 +76,7 @@
 .testimonial__description {
     font-size: 1rem;
     font-weight: 400;
-    color: var(--text-color);
+    color: var(--title-color);
     margin-top: 1rem;
 }
 

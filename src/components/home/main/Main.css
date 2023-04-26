@@ -1,0 +1,168 @@
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main__titlee,
+.main__subtitle {
+  font-size: 5rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.main__subcontent {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main__description {
+    position: relative;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.main__titlee span{
+    
+    letter-spacing: 0.6rem;
+}
+
+.main__content span {
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: "Reggae One";
+    color: var(--title-color);
+}
+
+.main__container h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--text-color);
+    font-family: "Reggae One";
+}
+
+
+.main__container p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-family: "Reggae One";
+}
+
+.main__links {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    line-height: 1rem;
+}
+
+
+.main__links p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    font-family: "Reggae One";
+}
+
+.main__button {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main__button i {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.button1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 65%;
+    height: 2px;
+    background-color: var(--title-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease-out;
+  }
+  
+  .button1:hover::after {
+    transform: scaleX(1);
+    
+  }
+
+  .button2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 65%;
+    height: 2px;
+    background-color: var(--title-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease-out;
+  }
+  
+  .button2:hover::after {
+    
+    transform: scaleX(1);
+  }
+
+  .button1:hover > p {
+    color: var(--title-color);
+  }
+  .button1:hover > p > i {
+    color: var(--title-color);
+  }
+
+  .button2:hover > p {
+    color: var(--title-color);
+  }
+  .button2:hover > p > i {
+    color: var(--title-color);
+  }
+
+  ::selection {
+    color: var(--container-color);
+    background-color: var(--accent-color);
+  }
+  

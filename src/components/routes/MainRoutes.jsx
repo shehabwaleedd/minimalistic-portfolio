@@ -15,19 +15,27 @@ import { BlogHome } from "../../blogItems/home/BlogHome";
 import EditPost from '../../blogItems/blog/blog/details/edit/EditPost';
 import Blog from "../../blogItems/blog/blog/Blog";
 import FilteredCategories from "../../blogItems/blog/filteredCategories/FilteredCategories"
-
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Contact from '../contact/Contact';
+import AboutPage from '../about/About';
+import MyStack from '../about/stack/MyStack';
 import { AnimatePresence } from 'framer-motion';
+import Main from '../home/main/Main';
 
 
 const MainRoutes = () => {
 
+  const location = useLocation();
+  const imageDetails = {
+    width: 524,
+    height: 650,
+  };
+
 
   return (
-    <AnimatePresence>
-      <Routes>
-        <Route path='/about' element={<About />} />
+      <Routes location={location} key={location.pathname}>
+        <Route path='/mystack' element={<MyStack />} />
+        <Route path='/about' element={<AboutPage imageDetails={imageDetails}/>} />
         <Route path='/skills' element={<Skills />} />
         <Route path='/services' element={<Services />} />
         <Route path='/pricing' element={<Pricing />} />
@@ -44,8 +52,8 @@ const MainRoutes = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/filtered/:category" element={<FilteredCategories />} />
+        <Route path="/main" element={<Main />} />
       </Routes>
-    </AnimatePresence>
   )
 }
 

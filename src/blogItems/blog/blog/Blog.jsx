@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../../../firebase-config";
 import "./Blog.css";
-import { UserAuth } from "../../../pages/authContext/AuthContext";
 import { Link } from "react-router-dom";
 import FilteredCategoriesTabs from "../filteredCategories/FilteredCategoriesTabs";
 import Loading from "../../loading/Loading";
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
 
 
 
@@ -15,12 +14,10 @@ function Blog() {
   const [postLists, setPostList] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const postsCollectionRef = collection(db, "posts");
-  const [toggleState, setToggleState] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
   const [isLoading, setIsLoading] = useState(true); // Set loading state to true initially
-  const [searchFilter, setSearchFilter] = useState(""); // Set search filter state to empty string initially
-  const { user } = UserAuth();
-  let navigate = useNavigate();
+  const [searchFilter, setSearchFilter] = useState(""); // Set search filter state to empty string initially.
+
 
   useEffect(() => {
     const getPosts = async () => {
@@ -30,51 +27,79 @@ function Blog() {
     };
 
     getPosts();
+    runAnimation();
   }, []);
 
   const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
-    navigate(`/filtered/${category}`); // Navigate to the filtered categories
+    setSelectedCategory(category === "All" ? "" : category);
+    
   };
 
-
   const filteredPosts = postLists.filter((post) => {
-    if (selectedCategory && post.category !== selectedCategory) { return false; }
-    if (searchQuery && !(post.title.toLowerCase().includes(searchQuery.toLowerCase()) || post.postText.toLowerCase().includes(searchQuery.toLowerCase()))) {
-      return false;
-    }
-    if (searchFilter && !(post.title.toLowerCase().includes(searchFilter.toLowerCase()) || post.postText.toLowerCase().includes(searchFilter.toLowerCase()))) {
+    if (selectedCategory && post.category !== selectedCategory) {
       return false;
     }
     return true;
   });
 
-  
-  const toggleTab = (index) => {
-    setToggleState(index);
-  };
 
-  const categories = ["Philosophy", "Nature", "Politics", "Anime"];
+
+  const categories = ["All", "Philosophy", "Nature", "Politics", "Anime"];
+
+  let screen = useRef(null);
+  let body = useRef(null);
+
+  const runAnimation = () => {
+    var tl = new TimelineMax();
+    tl.to(screen, {
+      duration: 0.5,
+      width: "100%",
+      left: "0%",
+      ease: Power3.easeInOut,
+    });
+    tl.to(screen, {
+      duration: 0.5,
+      left: "100%",
+      ease: Power3.easeInOut,
+      delay: 0.1,
+    });
+    tl.set(screen, { left: "-100%" });
+    TweenMax.to(body, .3, {
+      css: {
+        opacity: "1",
+        pointerEvents: "auto",
+        ease: Power4.easeInOut
+      }
+    }).delay(1);
+  }
+  
 
   return (
-    <motion.div initial={{ y: "100%"}} animate={{ y: "0%" }} transition={{ duration: 0.25, ease: "easeOut" }} exit={{opacity: 1}}>
-      {isLoading && <Loading height={100} />}
-
-      {/* Show loading indicator if data is being fetched */}
-      {!isLoading && (
-        <section className="blog section">
-          <h2 className="section__title">Blog</h2>
-
-          <span className="section__subtitle">
-            An Intellectual Blog Where You Find Me Talking About Everything
-          </span>
-            <FilteredCategoriesTabs categories={categories} selectedCategory={selectedCategory} onCategoryClick={handleCategoryClick}/>
-          <div className="grid3 container">
-
-            {filteredPosts.map((post) => {
-              return (
-                <motion.div layout animate={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 1 }} exit={{ opacity: 0, scale: 1 }} transition={{ duration: 0.5 }} className="post__box post__boxItems" key={post.id}>
-                  <AnimatePresence>
+    <React.Fragment>
+      <div className="blog__load-container">
+        <div className="blog__load-screen" ref={(el) => (screen = el)}></div>
+      </div>
+      <motion.div data-barba="container"  initial={{ y: "100%" }} animate={{ y: "0%" }} transition={{ duration: 0.25, ease: "easeOut" }} exit={{ opacity: 1 }}>
+        {/* {isLoading && <Loading height={100} />}
+        {!isLoading && ( */}
+          <section  className="blog section" ref={(el) => (body = el)}>
+            <h2 className="section__title">Blog</h2>
+            <span className="section__subtitle">
+              An Intellectual Blog Where You Find Me Talking About Everything
+            </span>
+            <FilteredCategoriesTabs categories={categories} selectedCategory={selectedCategory} onCategoryClick={handleCategoryClick} />
+            <AnimatePresence>
+              <div className="grid3 container" >
+                {filteredPosts.map((post) => (
+                  <motion.div
+                    layout
+                    animate={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, scale: 1 }}
+                    exit={{ opacity: 0, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="post__box post__boxItems"
+                    key={post.id}
+                  >
                     <div className="blog__card_details">
                       <Link to={`/details/${post.id}`} className="link">
                         <div className="post__img ">
@@ -103,14 +128,14 @@ function Blog() {
                         <label htmlFor="">{post.date}</label>
                       </div>
                     </div>
-                  </AnimatePresence>
-                </motion.div>
-              );
-            })}
-          </div>
-        </section>
-      )}
-    </motion.div>
+                  </motion.div>
+                ))}
+              </div>
+            </AnimatePresence>
+          </section>
+        {/* )} */}
+      </motion.div>
+    </React.Fragment>
   );
 }
 

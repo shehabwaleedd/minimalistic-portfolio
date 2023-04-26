@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
-import ScrollForMore from "./ScrollForMore";
-import Experience from "../about/Experience";
-import Education from "../about/Education";
+import "./About.css"
 
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
@@ -69,18 +67,6 @@ const Model = ({ imageDetails }) => {
       <div className='details__containerr fluid'>
         <div className='details__row'>
           <div className='details__top'>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{
-                opacity: 1,
-                x: 0,
-                transition: { delay: 1.2, ...transition },
-              }}
-              
-              className='details__detail'>
-              <div className='details__mua'>MUA: @mylifeascrystall</div>
-            </motion.div>
             <motion.div className='details__model' exit={{ y: 50, opacity: 0 ,transition: { duration: 0.6 }}}>
               <motion.span className='details__first' variants={firstName}>
                 <motion.span variants={letter}>S</motion.span>
@@ -107,15 +93,15 @@ const Model = ({ imageDetails }) => {
               <motion.div
                 initial={{
                 //   x: "100vw",
-                y: "-100vw",
-                //   width: imageDetails.width,
-                //   height: imageDetails.height,
+                y: "100vw",
+                  // width: imageDetails.width,
+                  // height: imageDetails.height,
                 }}
                 animate={{
                   y: 0,
                 width: "100%",
-                //   height: window.innerWidth > 1440 ? 800 : 400,
-                height: 500,
+                  height: window.innerWidth > 1440 ? 800 : 520,
+                // height: 500,
                   transition: { delay: 0.2, ...transition },
                 }}
                 className='thumbnail-single'>
@@ -132,9 +118,9 @@ const Model = ({ imageDetails }) => {
                     animate={{
                       transition: { delay: 0.2, ...transition },
                     //   y: window.innerWidth > 1440 ? -1200 : -600,
-                    y: -400,
+                    y: -200,
                     }}
-                    exit={{ opacity: 0, transition: { duration: 0.6 }, y: "-50vw" }}
+                    exit={{ opacity: 0, transition: { duration: 0.6 } }}
                   />
                 </motion.div>
               </motion.div>
@@ -155,10 +141,9 @@ const Model = ({ imageDetails }) => {
           </motion.div>
         </motion.div>
       </motion.div>
-        <Education />
-        <Experience />
     </motion.div>
   );
 };
 
 export default Model;
+
