@@ -21,6 +21,7 @@ import AboutPage from '../about/About';
 import MyStack from '../about/stack/MyStack';
 import { AnimatePresence } from 'framer-motion';
 import Main from '../home/main/Main';
+import AnimatedNav from '../../navItems/animatedNav/AnimatedNav';
 
 
 const MainRoutes = () => {
@@ -53,6 +54,7 @@ const MainRoutes = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/filtered/:category" element={<FilteredCategories />} />
         <Route path="/main" element={<Main />} />
+        <Route path="/animatednav" element={<AnimatedNav />} />
       </Routes>
   )
 }

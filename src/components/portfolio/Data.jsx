@@ -3,9 +3,9 @@ import Work2 from "../../assets/project2.png"
 import Work3 from "../../assets/project3.png"
 import Work4 from "../../assets/project4.png"
 import Work5 from "../../assets/project5.png"
+import React from "react"
 
-
-export const projectsData = [
+const projectsData = [
     {
       id: 1,
       image: Work1,
@@ -43,17 +43,4 @@ export const projectsData = [
     },
 ]
 
-export const ProjectsNav = [
-    {
-        name: "all",
-    },
-    {
-        name: "web",
-    },
-    {
-        name: "app",
-    },
-    {
-        name: "design",
-    },
-]
+export default projectsData;

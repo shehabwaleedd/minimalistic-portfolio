@@ -1,48 +1,62 @@
-.preloader {
-    height: 100vh;
-    width: 100%;
-    background-color: #000;
-    color: #fff;
+.btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff8f8;
+    font-family: "Reggae One";
+    font-size: 3rem;
+  }
+
+  
+  .headerr {
     position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 55;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.preloader .texts-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 28.75rem;
-    font-size: 1.25rem;
-    color: #fff;
-    font-weight: 800;
-    overflow: hidden;
-    gap: 1rem;
-   
-}
-
-
-.texts-container h1 {
-    font-size: 8.25rem;
-    color: #fff;
-    font-weight: 800;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-
-.texts-container p {
-    font-size: 4.25rem;
-    color: #fff;
-    font-weight: 800;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
+    height: 100vh;
+    background: #eee7e1;
+    color: #fff8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -2;
+    font-family: "Voyage";
+    font-size: 8em;
+  }
+  
+  .text-containerr {
+    position: fixed;
+    width: 120%;
+    height: 100vh;
+    background: #1b1b1b;
+    z-index: -1;
+  }
+  
+  .text-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: -50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: default;
+  }
+  
+  .text {
+    width: 300%;
+    font-family: "Voyage";
+    font-size: 5vw;
+    text-transform: uppercase;
+    opacity: 0.1;
+    color: #fff8f8;
+  }

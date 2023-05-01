@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Itim&family=Kaushan+Script&family=Oooh+Baby&family=Reggae+One&display=swap');
+
+
+.dropdown-menu {
+    z-index: -1;
+}
+
+  .active .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown__icon  {
+    margin: 0 auto;
+    position: relative;
+    color: var(--title-color);
+    display: block;
+    left: 0rem;
+    right: 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+  
+  .dropdown__icon:hover {
+    cursor: pointer;
+  }
+
+
+  .dropdown__icon.spin {
+    position: relative;
+    color: var(--container-color);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: 0.3s;
+    padding: 0.6rem;
+
+  }

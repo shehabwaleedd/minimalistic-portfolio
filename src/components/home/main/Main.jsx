@@ -1,8 +1,13 @@
 import React, { useEffect} from 'react'
 import "./Main.css"
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Main = () => {
+
+
+    const { t } = useTranslation()
+
 
     useEffect(() => {
 
@@ -29,18 +34,18 @@ const Main = () => {
     <section className='main section'>
         <div className="main__container container grid">
             <div className="main__content">
-                <h1 className="main__titlee">HEY, I'M <span className="main__title-color">SHEHAB</span> <span> WALEED</span></h1>
-                <h1 className="main__subtitle">BUT YOU CAN CALL ME SHEBO</h1>
+                <h1 className="main__titlee">HEY, {t("my__name_im")} <span className="main__title-color">{t("my__name-first")}</span> <span> {t("my__name-last")}</span></h1>
+                <h1 className="main__subtitle">{t("my__intro")}</h1>
             </div>
                 <div className="main__subcontent">
-                    <p className="main__description">I am a self-taught Frontend Developer with experience in React, Redux, JavaScript, HTML, CSS, SASS, Tailwind and Firebase.</p>
+                    <p className="main__description">{t("Introduction")}</p>
                 </div>
             <div className="main__links">
-                <Link to='/contact' className="main__button button1">
-                    <p><i class='bx bx-right-arrow-alt'></i> see my projects </p>
+                <Link to='/portfolio' className="main__button button1">
+                    <p><i class='bx bx-right-arrow-alt'></i> {t("button__view_my_projects")} </p>
                 </Link>
-                <Link to='/contact' className="main__button button2">
-                    <p><i class='bx bx-right-arrow-alt'></i> more about me</p>
+                <Link to='/about' className="main__button button2">
+                    <p><i class='bx bx-right-arrow-alt'></i>{t("button__more__about_me")}</p>
                 </Link>
 
 

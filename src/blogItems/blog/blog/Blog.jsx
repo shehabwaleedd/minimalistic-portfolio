@@ -80,8 +80,7 @@ function Blog() {
         <div className="blog__load-screen" ref={(el) => (screen = el)}></div>
       </div>
       <motion.div data-barba="container"  initial={{ y: "100%" }} animate={{ y: "0%" }} transition={{ duration: 0.25, ease: "easeOut" }} exit={{ opacity: 1 }}>
-        {/* {isLoading && <Loading height={100} />}
-        {!isLoading && ( */}
+        
           <section  className="blog section" ref={(el) => (body = el)}>
             <h2 className="section__title">Blog</h2>
             <span className="section__subtitle">

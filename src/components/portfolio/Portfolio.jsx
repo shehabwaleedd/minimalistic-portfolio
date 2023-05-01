@@ -1,79 +1,90 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Portfolio.css';
-import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-import { TweenMax, TimelineMax, Power3, Power4 } from 'gsap';
+import projectsData from './Data';
+import { PortfolioAnimations, PortfolioAnimations2 } from '../../animation/PortfolioAnimations';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from "framer-motion";
+import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
 
 const Portfolio = () => {
-  const { t } = useTranslation();
-  const [showComponent, setShowComponent] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleTextHover = (imageId) => {
+    const selected = projectsData.find((image) => image.id === imageId);
+    setSelectedImage(selected.image);
+  }
+
+  const handleTextLeave = () => {
+    setSelectedImage(null);
+  }
+
+  useEffect(() => {
+    PortfolioAnimations();
+    runAnimation();
+  }, []);
 
   let screen = useRef(null);
   let body = useRef(null);
 
-  useEffect(() => {
-    var tl = new TimelineMax();
 
+  const runAnimation = () => {
+    var tl = new TimelineMax();
     tl.to(screen, {
       duration: 0.5,
-      width: '100%',
-      left: '0%',
+      width: "100%",
+      left: "0%",
       ease: Power3.easeInOut,
     });
     tl.to(screen, {
       duration: 0.5,
-      left: '100%',
+      left: "100%",
       ease: Power3.easeInOut,
-      delay: 0.0,
-      onComplete: () => setShowComponent(true),
+      delay: 0.1,
     });
-    tl.set(screen, { left: '-100%' });
-    TweenMax.to(body, 0.3, {
+    tl.set(screen, { left: "-100%" });
+    TweenMax.to(body, .3, {
       css: {
-        opacity: '1',
-        pointerEvents: 'auto',
-        ease: Power4.easeInOut,
-      },
+        opacity: "1",
+        pointerEvents: "auto",
+        ease: Power4.easeInOut
+      }
     }).delay(1);
-    return () => {
-      TweenMax.to(body, 1, {
-        css: {
-          opacity: '0',
-          pointerEvents: 'none',
-        },
-      });
-    };
-  }, []);
+  }
+  
 
   return (
     <React.Fragment>
-      <div className="portfolio__load-container">
-        <div
-          className="portfolio__load-screen"
-          ref={(el) => (screen = el)}
-        ></div>
+      <div className="projects__load-container">
+        <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
       </div>
-      {showComponent && (
-        <motion.div className="portfolio-container" data-barba="container"             initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}>
-          <section
-            ref={(el) => (body = el)}
-            className="work section"
-            id="portfolio"
-          >
-            <motion.h2
-              className="section__title"
-            >
-              {t('section__portfolio')}
-            </motion.h2>
-            <span className="section__subtitle">
-              {t('section__subtitle_portfolio')}
-            </span>
-          </section>
-        </motion.div>
-      )}
+      <section className="portfolio">
+        <div className="portfolio__container" >
+          <div className="menu">
+            <div className="menu__item-image_wrapper">
+              <div className="menu__item-image_inner">
+                {projectsData.map((image) => (
+                  <img
+                    key={image.id}
+                    src={image.image}
+                    alt={image.title}
+                    className={selectedImage === image.image ? 'menu__item-image' : 'hidden'}
+                  />
+                ))}
+              </div>
+            </div>
+            <motion.div className="text-container" >
+              <h1 className='work__work-text'>WORK</h1>
+              {projectsData.map((item, index) => (
+                <div className="work__title" key={item.id} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>
+                  <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
+                </div>
+              ))}
+            </motion.div></div>
+
+        </div>
+      </section>
     </React.Fragment>
   );
-};
+}
 
 export default Portfolio;
