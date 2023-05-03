@@ -6,7 +6,7 @@
     z-index: 999;
     display: flex;
     flex-direction: column;
-
+    cursor: pointer;
 }
 
 
@@ -20,6 +20,7 @@
     display: flex;
     box-shadow: var(--box-shadow);
     color: var(--accent-color);
+    cursor: pointer;
 
 }
 
@@ -27,15 +28,18 @@
     padding: 0.5rem 0.8rem;
     border-radius: 2rem;
     transition: 0.4s ease;
+    cursor: pointer;
 }
 
 
 .active {
     color: var(--dark-mode-icon-color);
+    cursor: pointer;
 }
 
 .handle {
     z-index: -1;
+    cursor: pointer;
 }
 
 @media (min-width: 600px) and (max-width: 900px) {

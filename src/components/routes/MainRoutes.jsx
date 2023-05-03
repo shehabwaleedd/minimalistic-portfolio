@@ -1,8 +1,6 @@
 import React from 'react';
-import About from "../about/About";
 import Skills from '../skills/Skills';
 import Services from '../services/Services';
-import Pricing from '../pricing/Pricing';
 import Qualifications from '../qualifications/Qualifications';
 import Portfolio from '../portfolio/Portfolio';
 import Testimonials from '../testimonials/Testimonials';
@@ -19,7 +17,6 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import Contact from '../contact/Contact';
 import AboutPage from '../about/About';
 import MyStack from '../about/stack/MyStack';
-import { AnimatePresence } from 'framer-motion';
 import Main from '../home/main/Main';
 import AnimatedNav from '../../navItems/animatedNav/AnimatedNav';
 
@@ -39,7 +36,6 @@ const MainRoutes = () => {
         <Route path='/about' element={<AboutPage imageDetails={imageDetails}/>} />
         <Route path='/skills' element={<Skills />} />
         <Route path='/services' element={<Services />} />
-        <Route path='/pricing' element={<Pricing />} />
         <Route path='/qualifications' element={<Qualifications />} />
         <Route path='/portfolio' element={<Portfolio />} />
         <Route path='/testimonials' element={<Testimonials />} />

@@ -1,6 +1,6 @@
 import "./AnimatedLayout.css";
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import ProductDesigner from "./ProductDesigner";
 import UXDesigner from "./UxDesigner";

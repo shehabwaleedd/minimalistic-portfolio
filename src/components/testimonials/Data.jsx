@@ -1,8 +1,6 @@
 import Image1 from "../../assets/rym.jpeg"
 import Image2 from "../../assets/Emilie.webp"
-import Image3 from "../../assets/moaz.jpg"
 import Image4 from "../../assets/Poet.jpeg"
-import Image5 from "../../assets/haidy.jpeg"
 import Image6 from "../../assets/Anas.jpeg"
 import Image7 from "../../assets/Ibrahim.jpeg"
 import Image8 from "../../assets/Zizo.jpeg"
@@ -17,15 +15,15 @@ export const Data = [
       location: "Monastir, Tunisia",
       url: "https://www.facebook.com/rymm.chebbi"
     },
-    // {
-    //   id: 2,
-    //   image: Image2,
-    //   title: "Emilie",
-    //   comment: "Shehab is a young, social, spontaneous, intelligent, attentive, generous, charming, patient, resourceful and thoughtful host. He put up with my multiple and probably annoying requests (including doing laundry, getting an adapter for my devices, getting a mirror...) and complicated schedule; he was incredibly flexible about my checking in and my checking out. He invited me to a wedding on the very same day I arrived, and when I changed my mind about it at the last minute, he was totally fine with it. He fed me and offered me delicious coffee and tea.",
-    //   job: "Music Journalist",
-    //   location: "NYC, USA",
-    //   url: "https://www.instagram.com/emilistorytelling/"
-    // },
+    {
+      id: 2,
+      image: Image2,
+      title: "Emilie",
+      comment: "Shehab is a young, social, spontaneous, intelligent, attentive, generous, charming, patient, resourceful and thoughtful host. He put up with my multiple and probably annoying requests (including doing laundry, getting an adapter for my devices, getting a mirror...) and complicated schedule; he was incredibly flexible about my checking in and my checking out. He invited me to a wedding on the very same day I arrived, and when I changed my mind about it at the last minute, he was totally fine with it. He fed me and offered me delicious coffee and tea.",
+      job: "Music Journalist",
+      location: "NYC, USA",
+      url: "https://www.instagram.com/emilistorytelling/"
+    },
     // {
     //   id: 3,
     //   image: Image3,

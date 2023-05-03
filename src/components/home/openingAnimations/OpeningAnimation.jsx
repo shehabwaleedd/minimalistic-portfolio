@@ -1,11 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
 import "./OpeningAnimation.css";
-import preLoaderAnim from "../../../animation/Animation";
-import { TweenMax, TimelineMax, Power3, Power4, Expo } from "gsap";
+import { Expo } from "gsap";
 import gsap from "gsap";
 import anime from "animejs";
-import Home from "../Home";
+
 
 
 

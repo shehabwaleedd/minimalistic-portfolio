@@ -57,7 +57,7 @@
     width: 100%;
     height: 50vh;
     bottom: -10rem;
-    background: var(--body-color);
+    background: var(--overlay-color);
   }
   
   .title {

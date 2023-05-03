@@ -17,7 +17,7 @@ const Testimonials = () => {
             <div className="testimonial__grid">
               <div className="testimonial__card" key={id}>
                 <div className="testimonial__card_combined_img_title-combined">
-                  <a href={url} target="_blank"><img src={image} className="testimonial__img" /></a>
+                  <a href={url} target="_blank" rel="noreferrer"><img src={image} className="testimonial__img" alt=""/></a>
                   <div className="testimonial__card_combined_title_job-combined">
                     <h3 className="testimonial__name">{title}, <span className="testimonial__job">{job}</span></h3>
                     <span className="testimonial__location">{location}</span>

@@ -17,7 +17,6 @@ const Faq = () => {
   const handleClick = (index) => {
     const container = containersRef.current[index];
     const textContainer = container.querySelector(".faq__text-container");
-    const text = textContainer.querySelector(".faq__text");
   
     if (index === activeIndex) {
       gsap.to(textContainer, { height: 0, opacity: 0 });

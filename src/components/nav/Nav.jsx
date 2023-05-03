@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import "./Nav.css"
 import { motion } from "framer-motion"
@@ -18,7 +19,7 @@ const Nav = () => {
 
           <motion.ul className='navigation__list gridded' initial={{ opacity: 0, x: 50}} animate={{opacity: 1, x:0, transition: { delay: 1, ...transition }}} exit={{ opacity: 1 }} transition={transition}>
             <li className='nav__itemm'>
-              <a href="#" className="navigation__link"><i class="uil uil-estate"></i></a>
+              <a href="#" className="navigation__link" ><i class="uil uil-estate"></i></a>
             </li>
             <li className='nav__itemm'>
               <a href="#about" className="navigation__link"><i class='bx bx-user-circle'></i></a>

@@ -3,7 +3,7 @@ import "./About.css"
 import AboutImg from "../../assets/profile.jpg"
 import CV from '../../assets/Shehab-Waleed_CV.pdf'
 import { useTranslation } from 'react-i18next'
-import { motion, useInView, useMotionValue, useSpring } from 'framer-motion'
+import { useInView, useMotionValue, useSpring } from 'framer-motion'
 import { useRef } from 'react'
 
 
@@ -32,6 +32,7 @@ const AnimatedNumbers = ({ value }) => {
 
 
   return (
+    // eslint-disable-next-line jsx-a11y/heading-has-content
     <h2 ref={ref}></h2>
   )
 }

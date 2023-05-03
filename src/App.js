@@ -1,12 +1,10 @@
 import './App.css';
-
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, useEffect, lazy } from 'react';
 import Toggle from './components/darkmode/Toggle';
 import { createContext } from 'react';
 import { AuthContextProvider } from './pages/authContext/AuthContext';
 import { AnimatePresence } from 'framer-motion';
 import OpeningAnimation from './components/home/openingAnimations/OpeningAnimation';
-import Loading from './blogItems/loading/Loading';
 import AnimatedNav from './navItems/animatedNav/AnimatedNav';
 import { HomeAnimations } from './animation/HomeAnimations';
 const MainRoutes = lazy(() => import('./components/routes/MainRoutes'));

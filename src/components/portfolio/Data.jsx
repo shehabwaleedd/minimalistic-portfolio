@@ -3,7 +3,6 @@ import Work2 from "../../assets/project2.png"
 import Work3 from "../../assets/project3.png"
 import Work4 from "../../assets/project4.png"
 import Work5 from "../../assets/project5.png"
-import React from "react"
 
 const projectsData = [
     {

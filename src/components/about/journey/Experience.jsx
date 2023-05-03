@@ -3,7 +3,6 @@ import { motion, useScroll } from 'framer-motion'
 import { useRef } from 'react'
 import LiIcon from './LiIcon'
 import { ExperienceData } from './Data'
-import { EducationData } from './Data'
 
 
 const Details = ({title, company, time, location, comment}) => {

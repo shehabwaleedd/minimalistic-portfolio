@@ -4,9 +4,8 @@ import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../../firebase-config";
 import { useNavigate } from "react-router-dom";
 import "./CreatePost.css";
-import { UserAuth } from "../authContext/AuthContext";
 import { storage } from "../../firebase-config";
-import { ref, uploadBytes, getDownloadURL, listAll } from "firebase/storage";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
 import { motion } from "framer-motion";
 
@@ -17,18 +16,7 @@ const CreatePost = (props) => {
   const [error, setError] = useState("");
   const [imageUrls, setImageUrls] = useState([]);
   const postsCollectionRef = collection(db, "posts");
-  const [postTitle, setPostTitle] = useState("");
 
-  const handlePostTextChange = (text) => {
-    setPostText(text);
-  };
-
-  const handlePostTitleChange = (event) => {
-    setPostTitle(event.target.value);
-  };
-
-  const imagesListRef = ref(storage, "images/");
-  const { currentUser } = UserAuth();
   const navigate = useNavigate();
 
 
@@ -91,7 +79,7 @@ const CreatePost = (props) => {
           <form className="create__form" onSubmit={handleCreatePost}>
             <div className="create__input-image">
               {imageUrls.map((url, index) => (
-                <img key={index} src={url} />
+                <img key={index} src={url} alt="" />
               ))}
               <input
                 type="file"

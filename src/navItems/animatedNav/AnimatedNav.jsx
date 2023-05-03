@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import DropDownMenu from './dropDownMenu/DropDownMenu'
 import './AnimatedNav.css'
@@ -110,19 +110,13 @@ const AnimatedNav = () => {
             <div className="nav-social-media">
               <ul>
                 <li>
-                  <a href="#">LI</a>
+                  <a href="https://www.linkedin.com/in/shehabwaleedd/" target="_blank" rel="noreferrer">LI</a>
                 </li>
                 <li>
-                  <a href="#">IG</a>
+                  <a href="https://github.com/shehabwaleedd" target="_blank" rel="noreferrer">GH</a>
                 </li>
                 <li>
-                  <a href="#">TW</a>
-                </li>
-                <li>
-                  <a href="#">FB</a>
-                </li>
-                <li>
-                  <a href="#">GH</a>
+                  <a href="https://www.instagram.com/shehabwaleedd/" target="_blank" rel="noreferrer">IG</a>
                 </li>
               </ul>
             </div>

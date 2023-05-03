@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import "./AnimatedLayout.css"
 import { useTranslation } from 'react-i18next'
@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 
 
 const VisualDesginer = () => {
-    const [showDetails, setShowDetails] = useState(false);
+
     const { t } = useTranslation()
 
     // Define the animation variants for the modal

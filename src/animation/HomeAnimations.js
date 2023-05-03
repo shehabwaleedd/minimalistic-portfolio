@@ -128,10 +128,11 @@ gsap.to(dropDownMenu, {
     );
 
     gsap.to(overlay, {
-      y: "100%",
+      y: "130%",
       ease: "expo.inOut",
       duration: 0.5,
       delay: 5.2,
+
     });
 
     gsap.to(container, {

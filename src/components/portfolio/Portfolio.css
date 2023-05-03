@@ -8,11 +8,11 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding-top: 15rem;
     overflow-y: hidden;
     overflow-x: hidden;
     position: fixed;
     background-color: var(--body-color);
+    padding-bottom: 5rem;
  }
 
 
@@ -53,6 +53,7 @@
     align-items: last baseline;
     text-align: left;
     width: 50%;
+    cursor: pointer;
 
   }
   

@@ -23,7 +23,6 @@ const Toggle = (props) => {
     <div className='toggle__main '>
       <motion.div 
         className='switch' 
-        data-isOn={isOn} 
         onClick={toggleSwitch} 
         layout 
         transition={spring}

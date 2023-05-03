@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import i18next from 'i18next';
-import classNames from 'classnames';
 import './DropDownMenu.css';
 
 const DropDownMenu = (Props) => {

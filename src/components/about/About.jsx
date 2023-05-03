@@ -1,8 +1,6 @@
 
 import React, { useEffect, useRef } from 'react'
 import "./About.css"
-
-import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Experience from './journey/Experience'
 import Education from './journey/Education'
@@ -12,8 +10,6 @@ import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
 
 const AboutPage = () => {
 
-
-  const { t } = useTranslation()
   let screen = useRef(null);
   let body = useRef(null);
   useEffect(() => {

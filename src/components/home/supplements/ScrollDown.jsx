@@ -1,11 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import i18next from 'i18next'
-import cookies from 'js-cookie'
 
 const ScrollDown = () => {
-
-  const currentLanguageCode = cookies.get('i18next') || 'en'
 
   const { t } = useTranslation()
   return (

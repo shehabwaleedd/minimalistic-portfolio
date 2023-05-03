@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import './Transition.css'
-import { motion } from 'framer-motion'
-import { Power4, Expo, TimelineMax } from 'gsap'
+import { Expo, TimelineMax } from 'gsap'
 
 function Transition({ timeline }) {
     const trans = useRef(null);

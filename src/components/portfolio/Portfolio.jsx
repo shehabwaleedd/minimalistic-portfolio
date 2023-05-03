@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './Portfolio.css';
 import projectsData from './Data';
-import { PortfolioAnimations, PortfolioAnimations2 } from '../../animation/PortfolioAnimations';
+import { PortfolioAnimations } from '../../animation/PortfolioAnimations';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
 
 const Portfolio = () => {
@@ -50,7 +50,7 @@ const Portfolio = () => {
       }
     }).delay(1);
   }
-  
+
 
   return (
     <React.Fragment>
@@ -63,12 +63,13 @@ const Portfolio = () => {
             <div className="menu__item-image_wrapper">
               <div className="menu__item-image_inner">
                 {projectsData.map((image) => (
-                  <img
-                    key={image.id}
-                    src={image.image}
-                    alt={image.title}
-                    className={selectedImage === image.image ? 'menu__item-image' : 'hidden'}
-                  />
+                  <div className="image-wrapper" key={image.id}>
+                    <img
+                      src={image.image}
+                      alt={image.title}
+                      className={selectedImage === image.image ? 'menu__item-image' : 'hidden'}
+                    />
+                  </div>
                 ))}
               </div>
             </div>

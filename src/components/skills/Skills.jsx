@@ -4,7 +4,6 @@ import Frontend from './Frontend'
 import Backend from './Backend'
 import Others from './Others'
 import { useTranslation } from 'react-i18next'
-import { useEffect } from 'react'
 
 const Skills = () => {
 

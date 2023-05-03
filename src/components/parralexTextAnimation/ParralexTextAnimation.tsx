@@ -1,5 +1,5 @@
 import "./ParralexTextAnimation.css";
-import React, { useState } from 'react';
+import React from 'react';
 import { useRef } from "react";
 import {
   motion,
