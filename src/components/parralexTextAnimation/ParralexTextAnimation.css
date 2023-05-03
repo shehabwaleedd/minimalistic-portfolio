@@ -24,8 +24,3 @@
     color: var(--title-color);
   }
   
-
-  /* useAnimationFrame((t, delta) => {
-    const elapsedSeconds = delta / 1000;
-    baseX.set((baseX.get() - baseVelocity * elapsedSeconds) % 100);
-  }); */

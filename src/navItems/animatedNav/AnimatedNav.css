@@ -54,6 +54,7 @@
   padding: 4em;
   transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
   background-color: var(--accent-color);
+  overflow: hidden;
 }
 
 .nav-overlay::before {
@@ -232,20 +233,4 @@ ul.nav-links li a:hover::before {
     opacity: 0.5;
     transition: all 2s cubic-bezier(0.16, 1, 0.3, 1 );
     text-transform: lowercase;
-}
-
-@media(max-width: 900px) {
-    ul.nav-links li a{
-        font-size: 5em;
-    }
-    .location {
-        display: none;
-    }
-    .nav-footer {
-        justify-content: space-around;
-
-    }
-    .nav-social-media ul li a {
-        padding:  0 1em;
-    }
 }

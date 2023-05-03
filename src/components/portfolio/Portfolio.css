@@ -103,20 +103,7 @@
   }
 
   
-  @media screen and (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    .image-container {
-      height: 50vh;
-    }
-  
-    .text-container {
-      height: 50vh;
-    }
-  }
+
 
   
 .menu__item-image_wrapper img {

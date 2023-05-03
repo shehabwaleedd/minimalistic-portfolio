@@ -5,7 +5,7 @@ import { db } from "../../../firebase-config";
 import FilteredCategoriesTabs from "./FilteredCategoriesTabs";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import Loading from "../../loading/Loading";
+import Loading from "../../loading/Loading.tsx";
 
 const FilteredCategories = () => {
     const { category } = useParams();
@@ -13,7 +13,6 @@ const FilteredCategories = () => {
     const [posts, setPosts] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("");
     const [postLists, setPostList] = useState([]);
-    const [toggleState, setToggleState] = useState(1);
     const [isLoading, setIsLoading] = useState(false);
 
     const handleCategoryClick = (category) => {
@@ -29,9 +28,7 @@ const FilteredCategories = () => {
   ? postLists.filter((post) => post.category === selectedCategory)
   : postLists;
 
-    const toggleTab = (index) => {
-        setToggleState(index);
-    }
+
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -94,7 +91,7 @@ const FilteredCategories = () => {
                                     <p className="post__subtitle">{post.postText.slice(0, 90)}...</p>
                                     <div className="post__date">
                                         <div className="post__date-imgname">
-                                            <img src={post.photoURL} />
+                                            <img src={post.photoURL} alt=""/>
                                             <span className="blog__post-author">@{post.author.name}</span>
                                         </div>
                                         <label htmlFor="">{post.date}</label>

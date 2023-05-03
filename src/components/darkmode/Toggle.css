@@ -42,37 +42,4 @@
     cursor: pointer;
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
-  .switch {
-    width: 2.5rem;
-    height: 5rem;
-    font-size: 1rem;
-  }
 
-  .handle {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .uil {
-    font-size: 1.25rem;
-  }
-}
-
-/* For screens larger than 900px */
-@media (min-width: 900px) {
-  .switch {
-    width: 3.125rem;
-    height: 6.25rem;
-    font-size: 1.25rem;
-  }
-
-  .handle {
-    width: 2.2rem;
-    height: 2.2rem;
-  }
-
-  .uil {
-    font-size: 1.5rem;
-  }
-}

@@ -133,7 +133,6 @@
     font-size: var(--small-font-size);
     font-weight: var(--font-medium);
     margin-top: 0.2rem;
-    animation: scroll 2s ease infinite;
 }
 
 .signup__button-sign {
@@ -149,14 +148,6 @@
     transition: 0.6s ease;
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    30% {
-        transform: translateX(0.4rem);
-    }
-}
 
 .signup__button-sign:hover {
     background-color: var(--title-color);

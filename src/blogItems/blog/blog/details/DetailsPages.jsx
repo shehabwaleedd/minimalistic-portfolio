@@ -2,13 +2,13 @@ import React, { useState } from "react"
 import "./Details.css"
 import { useNavigate, useParams } from "react-router-dom"
 import { useEffect } from "react"
-import { getDoc, collection, deleteDoc, doc } from "firebase/firestore";
+import { getDoc, deleteDoc, doc } from "firebase/firestore";
 // import { UserAuth } from "../../pages/authContext/AuthContext"
 import { UserAuth } from "../../../../pages/authContext/AuthContext";
 // import { auth, db } from "../../firebase-config";
 import { auth, db } from "../../../../firebase-config";
 import ScrollAnimation from "./ScrollAnimation";
-import Loading from "../../../loading/Loading";
+import Loading from "../../../loading/Loading.tsx";
 
 
 export const DetailsPages = () => {
@@ -88,7 +88,7 @@ export const DetailsPages = () => {
           <div className='post__date'>
             <div className="details__post__date-imgname">
               <div className="details__post__date_imgname-combined">
-                <img src={post.photoURL} />
+                <img src={post.photoURL} alt=""/>
                 <span className="blog__post-author">@{post.author.name}</span>
               </div>
             </div>

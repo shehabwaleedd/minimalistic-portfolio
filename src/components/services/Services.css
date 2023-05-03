@@ -56,14 +56,6 @@
     
 }
 
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    30% {
-        transform: translateX(0.8rem);
-    }
-}
 
 .services__modal {
     position: fixed;

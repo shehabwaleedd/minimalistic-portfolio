@@ -1,6 +1,5 @@
 import React from 'react';
-import { useState, CSSProperties } from "react";
-import ClipLoader from "react-spinners/ClipLoader";
+import { CSSProperties } from "react";
 import PulseLoader from "react-spinners/PulseLoader";
 import "./Loading.css"
 

@@ -4,7 +4,6 @@ import { db } from "../../../firebase-config";
 import "./Blog.css";
 import { Link } from "react-router-dom";
 import FilteredCategoriesTabs from "../filteredCategories/FilteredCategoriesTabs";
-import Loading from "../../loading/Loading";
 import { motion, AnimatePresence } from "framer-motion";
 import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
 
@@ -14,16 +13,13 @@ function Blog() {
   const [postLists, setPostList] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const postsCollectionRef = collection(db, "posts");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [isLoading, setIsLoading] = useState(true); // Set loading state to true initially
-  const [searchFilter, setSearchFilter] = useState(""); // Set search filter state to empty string initially.
+
 
 
   useEffect(() => {
     const getPosts = async () => {
       const data = await getDocs(postsCollectionRef);
       setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-      setIsLoading(false); // Set loading state to false when the data has finished loading
     };
 
     getPosts();
@@ -121,7 +117,7 @@ function Blog() {
                       <p className="post__subtitle">{post.postText.slice(0, 90)}...</p>
                       <div className="post__date">
                         <div className="post__date-imgname ">
-                          <img src={post.photoURL} />
+                          <img src={post.photoURL} alt=""/>
                           <span className="blog__post-author">@{post.author.name}</span>
                         </div>
                         <label htmlFor="">{post.date}</label>

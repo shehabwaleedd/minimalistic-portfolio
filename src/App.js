@@ -17,16 +17,18 @@ function App() {
   const [theme, setTheme] = useState('dark');
   const [isAnimationFinished, setIsAnimationFinished] = useState(false);
 
+
   useEffect(() => {
-    
+
     const timeout = setTimeout(() => {
       setIsAnimationFinished(true);
       HomeAnimations();
     }, 7500); // 8000ms is the duration of the animation
     return () => clearTimeout(timeout);
-    
+
   }, []);
 
+  
   const toggleTheme = () => {
     theme === 'dark' ? setTheme('light') : setTheme('dark');
   };
@@ -45,8 +47,9 @@ function App() {
               <Toggle theme={theme} toggleTheme={toggleTheme} />
             </ThemeContext.Provider>
           </AuthContextProvider>
-        </>
-      )}
+          </>
+      )
+      }
     </div>
   );
 }
