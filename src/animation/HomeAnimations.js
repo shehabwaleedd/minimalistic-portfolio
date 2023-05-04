@@ -64,7 +64,7 @@ export const HomeAnimations = () => {
         gsap.to(mainContainer, {
           opacity: 1,
           y: window.innerWidth > 1440 ? "-30%" : "-35%",
-          x: window.innerWidth > 1440 ? "-50%" : "0%",
+          x: window.innerWidth > 1440 ? "0%" : "0%",
           ease: "expo.inOut",
           duration: 3,
           delay: 0.5,
