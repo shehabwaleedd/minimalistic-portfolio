@@ -61,7 +61,7 @@ export const OpeningAnimations = () => {
   });
 
   gsap.to(".text-wrapper > div", 4, {
-    x: window.innerWidth > 1440 ? -3500 : -5000,
+    x: window.innerWidth > 1440 ? -5500 : -5000,
     ease: Expo.easeInOut,
     delay: 3.5,
     stagger: 0.05,

@@ -24,7 +24,7 @@ function OpeningAnimation({ onAnimationComplete }) {
         it was in the domain of front-end development that my ardor for the craft was kindled, in addition to
         </div>
         <div className="text">
-        Abdelrahman Al Adawy Motafar3 Mn Shar3 Masged Al Hedaya Mn Qawymia Al Arabia Imbaba Giza Egypt 
+        CAIRO, EGYPT. NAPOLI, ITALY. BUENOS AIRES, ARGENTINA. LONDON, UK. PARIS, FRANCE. MADRID, SPAIN.  
         </div>
         <div className="text">
         build myself from the scratch needed no one. will always fight and be the best version of myself. 
