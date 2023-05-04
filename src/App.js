@@ -7,6 +7,7 @@ import { AnimatePresence } from 'framer-motion';
 import OpeningAnimation from './components/home/openingAnimations/OpeningAnimation';
 import AnimatedNav from './navItems/animatedNav/AnimatedNav';
 import { HomeAnimations } from './animation/HomeAnimations';
+
 const MainRoutes = lazy(() => import('./components/routes/MainRoutes'));
 
 
@@ -28,7 +29,7 @@ function App() {
 
   }, []);
 
-  
+
   const toggleTheme = () => {
     theme === 'dark' ? setTheme('light') : setTheme('dark');
   };

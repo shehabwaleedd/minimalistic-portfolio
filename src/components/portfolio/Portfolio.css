@@ -57,14 +57,17 @@
 
   }
   
-  .text-container div {
+  .text-container {
     margin: 0.2rem 0;
-    padding-left: 2rem;
-    font-size: 2rem;
-    font-family: "Reggae One";
-    font-weight: bold;
     text-align: left;
-    cursor: pointer;
+    
+    display: flex;
+    align-items: flex-start;
+    transition: 0.3s ease;
+    line-height: 1.8;
+    width: 100%;
+    height: 35.25rem; /* Set the height to whatever you want */
+    overflow: hidden;
   }
 
   
@@ -77,29 +80,47 @@
     transition: 0.3s ease;
     width: 100%;
     text-align: left;
-    align-items: center;
     position: relative;
 }
 
+.work__title h1 {
+  width: 100%;
+  color: transparent;
+  -webkit-text-stroke: 0.2px var(--project-text-animation-color);
+  font-size: 2.6rem;
+  font-family: "Reggae One", sans-serif;
+  top: 0;
+  font-weight: bolder;
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1 );
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer;
+}
 
-.work__title--active {
-    transform: translateX(20px);
-    transition: transform 0.3s ease;
-  }
+.work__title h1::before {
+  position: absolute;
+  content: attr(data-text);
+  -webkit-text-fill-color: var(--project-text-animation-color);
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1 );
+  width: 0%;
+  overflow: hidden;
+}
+
+.work__title:hover h1::before {
+  width: 100%;
+}
+
+
 
 .work__work-text {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: flex-start;
     transition: 0.3s ease;
-    width: 65%;
-    flex-direction: column;
     text-align: left;
-    position: relative;
     font-family: "Reggae One", sans-serif;
     font-size: 2.5rem;
     color: var(--accent-color);
-    padding-left: 2rem;
   }
 
   
@@ -163,3 +184,27 @@
   
 
  
+
+  .scrollbarr {
+    overflow-y: scroll;
+    scrollbar-width: none; /* hide default scrollbar in Firefox */
+    overflow-x: hidden;
+  }
+  
+  .scrollbarr::-webkit-scrollbar {
+    width: 0; /* hide default scrollbar in Chrome and Safari */
+  }
+  
+  /* Add custom scrollbar styles */
+  .scrollbarr::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+  }
+  
+  .scrollbarr::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+  }
+  
+  .scrollbarr::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }

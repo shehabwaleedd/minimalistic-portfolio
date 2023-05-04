@@ -45,10 +45,8 @@ const Main = () => {
                     <p><i class='bx bx-right-arrow-alt'></i> {t("button__view_my_projects")} </p>
                 </Link>
                 <Link to='/about' className="main__button button2">
-                    <p><i class='bx bx-right-arrow-alt'></i>{t("button__more__about_me")}</p>
+                    <p><i class='bx bx-right-arrow-alt'></i> {t("button__more__about_me")}</p>
                 </Link>
-
-
             </div>
         </div>
     </section>

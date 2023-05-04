@@ -9,9 +9,10 @@ export const HomeAnimations = () => {
   const logo = document.querySelector(".logo");
   const menuToggle = document.querySelector(".menu-toggle");
   const darkModeToggle = document.querySelector(".toggle__main");
-  const mainContainer = document.querySelector(".main__container");
+  const mainContainer = document.querySelector(".main__containerr");
   const dropDownMenu = document.querySelector('.dropdown-menu');
   const overlay = document.querySelector('.overlay');
+
   gsap.set(logo, {
     y: 0,
     opacity: 0,
@@ -33,11 +34,13 @@ export const HomeAnimations = () => {
     opacity: 0,
     y: 10,
   })
+
   gsap.set(mainContainer, {
     opacity: 0,
-    y: "-20%",
-    x: "-18%",
+    ease: "expo.out",
+    y: -100,
   })
+  
   gsap.fromTo(
     container.children,
     { y: "110%",  },
@@ -54,22 +57,22 @@ export const HomeAnimations = () => {
           ease: "expo.inOut",
           duration: 0.5,
         });
-
-        gsap.to(container, {
-          scale: "2",
-          y: window.innerWidth > 1440 ? "200%" : "160%",
-          ease: "expo.inOut",
-          duration: 2,
-        });
         gsap.to(mainContainer, {
+          y:  window.innerWidth > 1440 ? -250 : -250,
           opacity: 1,
-          y: window.innerWidth > 1440 ? "-30%" : "-35%",
-          x: window.innerWidth > 1440 ? "0%" : "0%",
           ease: "expo.inOut",
           duration: 3,
           delay: 0.5,
           stagger: 0.4,
-        })
+        });
+
+
+        gsap.to(container, {
+          scale: "2",
+          y: window.innerWidth > 1440 ? "190%" : "160%",
+          ease: "expo.inOut",
+          duration: 2,
+        });
         gsap.to(menuToggle, {
           opacity: 1,
           y: 0,

@@ -3,7 +3,7 @@
     position: fixed;
     left: 2rem;
     bottom: 5rem;
-    z-index: 999;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -19,7 +19,6 @@
     gap: 0.5rem;
     display: flex;
     box-shadow: var(--box-shadow);
-    color: var(--accent-color);
     cursor: pointer;
 
 }
@@ -33,7 +32,6 @@
 
 
 .active {
-    color: var(--dark-mode-icon-color);
     cursor: pointer;
 }
 

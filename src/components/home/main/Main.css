@@ -57,7 +57,7 @@
     font-size: 3rem;
     font-weight: 400;
     font-family: "Reggae One";
-    color: var(--title-color);
+    color: var(--accent-color-darker);
 }
 
 .main__container h1 {
@@ -91,7 +91,7 @@
 .main__links p {
     font-size: 1rem;
     font-weight: 400;
-    color: var(--text-color);
+    color: var(--title-color);
     font-family: "Reggae One";
 }
 
@@ -105,7 +105,7 @@
 
 .main__button i {
     font-size: 0.9rem;
-    color: var(--text-color);
+    color: var(--title-color);
     transition: 0.3s ease-in-out;
     text-align: center;
     margin-top: 1.4rem;

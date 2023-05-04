@@ -65,28 +65,6 @@ const Model = ({ imageDetails }) => {
       animate='animate'
       exit='exit'>
       <div className='details__containerr fluid'>
-        <div className='details__row'>
-          <div className='details__top'>
-            <motion.div className='details__model' exit={{ y: 50, opacity: 0 ,transition: { duration: 0.6 }}}>
-              <motion.span className='details__first' variants={firstName}>
-                <motion.span variants={letter}>S</motion.span>
-                <motion.span variants={letter}>H</motion.span>
-                <motion.span variants={letter}>E</motion.span>
-                <motion.span variants={letter}>H</motion.span>
-                <motion.span variants={letter}>A</motion.span>
-                <motion.span variants={letter}>B</motion.span>
-              </motion.span>
-              <motion.span className='details__last' variants={lastName}>
-                <motion.span variants={letter}>W</motion.span>
-                <motion.span variants={letter}>A</motion.span>
-                <motion.span variants={letter}>L</motion.span>
-                <motion.span variants={letter}>E</motion.span>
-                <motion.span variants={letter}>E</motion.span>
-                <motion.span variants={letter}>D</motion.span>
-              </motion.span>
-            </motion.div>
-          </div>
-        </div>
         <div className='details__bottom-row'>
           <div className='details__bottom'>
             <motion.div className='details__image-container-single'>
@@ -100,7 +78,7 @@ const Model = ({ imageDetails }) => {
                 animate={{
                   y: 0,
                 width: "100%",
-                  height: window.innerWidth > 1440 ? 800 : 520,
+                  height: window.innerWidth > 1440 ? 500 : 520,
                 // height: 500,
                   transition: { delay: 0.2, ...transition },
                 }}
@@ -110,8 +88,8 @@ const Model = ({ imageDetails }) => {
                   whileHover='hover'
                   transition={transition}>
                   <motion.img
-                   className='detailed__frame-single'
-                    src={require("../../assets/profile5.jpg")}
+                   className='detailed__frame-single container'
+                    src={require("../../assets/profile3.jpg")}
                     alt='an image'
                     style={{ scale: scale }}
                     initial={{ scale: 1 }}
@@ -129,12 +107,14 @@ const Model = ({ imageDetails }) => {
 
         </div>
       </div>
-      <motion.div className='detailed__information' >
-        <motion.div className='detailed__containerr containerr' initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: "spring" }}>
-          <motion.div className='detailed__row' initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.8, type: "spring" }}>
-            <motion.h2 className='detailed__title' initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.8, type: "spring" }}>
-              The insiration behind the <br /> change &  what it means.
-            </motion.h2>
+      <motion.div className='detailed__information '  >
+        <motion.div className='detailed__containerr' initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ duration: 0.5, type: "spring" }}>
+          <motion.div className='detailed__row' 
+          initial={{ opacity: 0 }}
+           whileInView={{ opacity: 1}}
+            transition={{ duration: 0.8, type: "spring" }}
+            style={{ paddingTop: window.innerWidth > 1440 ? "1rem" : "5rem" }}
+            >
             <p>
             I am a young gentleman of twenty-four years, hailing from the bustling metropolis of Cairo, situated in the cradle of civilization, Egypt. My journey in the professional realm has been diverse and multifaceted, as I have explored various vocations in search of my true calling. Alas, it was in the domain of front-end development that my ardor for the craft was kindled. In addition to my proficiency in the art of coding, I possess the ability to converse fluently in three distinct languages, and I am perpetually consumed by a fervent desire to expand my horizons and acquire new knowledge.
             </p>

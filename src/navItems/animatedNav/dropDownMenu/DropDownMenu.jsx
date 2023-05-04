@@ -38,7 +38,7 @@ const DropDownMenu = (Props) => {
           onClick={() => handleLanguageChange()}
           className={Props.navOpen ? "dropdown__icon spin" : "dropdown__icon"}
         >
-          <span>{language === 'en' ? 'EN' : 'DE'}</span>
+          <span>{language === 'en' ? 'de' : 'en'}</span>
         </button>
       </div>
     </div>

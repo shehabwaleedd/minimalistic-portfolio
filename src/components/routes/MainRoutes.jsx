@@ -19,6 +19,7 @@ import AboutPage from '../about/About';
 import MyStack from '../about/stack/MyStack';
 import Main from '../home/main/Main';
 import AnimatedNav from '../../navItems/animatedNav/AnimatedNav';
+import ProjectDetails from '../portfolio/projectDetails/ProjectDetails';
 
 
 const MainRoutes = () => {
@@ -51,6 +52,7 @@ const MainRoutes = () => {
         <Route path="/filtered/:category" element={<FilteredCategories />} />
         <Route path="/main" element={<Main />} />
         <Route path="/animatednav" element={<AnimatedNav />} />
+        <Route path="/projectDetails/:id" element={<ProjectDetails />} />
       </Routes>
   )
 }

@@ -58,6 +58,7 @@
     height: 50vh;
     bottom: -10rem;
     background: var(--overlay-color);
+
   }
   
   .title {
@@ -83,4 +84,5 @@
     overflow: hidden;
     right: 0;
     bottom: 0;
+    margin-bottom: 10rem;
   }

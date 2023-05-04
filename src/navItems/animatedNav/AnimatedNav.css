@@ -5,6 +5,7 @@
 .nav {
     position: relative;
     z-index: 2;
+    
 }
 
 .navbar {
@@ -15,12 +16,14 @@
     display: flex;
     justify-content: space-between;
     padding: 6em;
+    overflow: hidden;
 }
 
 .side__navbar {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    overflow: hidden;
 }
 
 .logo {
@@ -28,8 +31,9 @@
     color: var(--text-color);
     font-size: 1.5em;
     font-family: "Reggae One", sans-serif;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.3rem;
     font-weight: bolder;
+    cursor: pointer;
     
 }
 
@@ -53,7 +57,7 @@
   height: 100vh;
   padding: 4em;
   transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
-  background-color: var(--accent-color);
+  background-color: var(--nav-overlay-color);
   overflow: hidden;
 }
 
@@ -67,6 +71,7 @@
   opacity: 0.04;
   z-index: -1;
   pointer-events: none;
+  overflow: hidden;
 
 }
 
@@ -80,13 +85,6 @@
 
 }
 
-.hamBox:hover {
-    background-color: var(--accent-colro-darker);
-}
-
-.hamBoxOpen {
-    background: var(--accent-color);
-}
 
 .lineTop, .lineBottom {
     margin: 0 auto;

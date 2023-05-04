@@ -31,7 +31,9 @@ const AnimatedNav = () => {
   return (
     <nav className='nav'>
       <div className="nav-container">
-        <div className="navbar">
+        <div className="navbar" style={{ 
+          position: navOpen ? "fixed" : "relative",
+        }}>
           <div className={navOpen ? "logo spin" : "logo"}>
             <Link to="/">{t("my__name-first")}</Link>
           </div>
@@ -62,7 +64,7 @@ const AnimatedNav = () => {
         </div>
         <div className="nav-overlay" style={{
           right: navOpen ? "0" : "-100%",
-          transitionDelay: navOpen ? "0s" : "0s"
+          transitionDelay: navOpen ? "0s" : "0s",
         }}>
           <ul className="nav-links">
             <li className="nav-item">

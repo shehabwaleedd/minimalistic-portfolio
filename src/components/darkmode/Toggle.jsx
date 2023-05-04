@@ -47,7 +47,7 @@ const Toggle = (props) => {
           transition={spring} 
           style={{ 
             fontSize: '1.25rem', 
-            color: isOn ? 'var(--dark-mode-icon-color)' : 'var(--dark-mode-icon-color)',
+            color: isOn ? 'var(--accent-color)' : 'var(--body-color)',
             marginTop: isOn ? '1.25rem' : '0',
           }} 
         />
