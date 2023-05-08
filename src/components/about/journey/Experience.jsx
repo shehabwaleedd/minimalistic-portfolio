@@ -12,7 +12,7 @@ const Details = ({title, company, time, location, comment}) => {
       <LiIcon reference={ref}/>
       <motion.div initial={{y: 50}} whileInView={{y: 0}} transition={{duration: 0.5, type: "spring"}}>
         <h3 className='capitalize font-bold text-2xl title__text'>{title}&nbsp; <span className='company__text'>@{company}</span></h3>
-        <span className='captialize font-medium timelocation_text timelocation__text'>{time} | {location} </span> 
+        <span className='captialize font-medium timelocation_text timelocation_text-experience'>{time} | {location} </span> 
         <p className='font-xs text-sm w-full mt-1 comment__text'>{comment}</p>
       </motion.div>
     </li>

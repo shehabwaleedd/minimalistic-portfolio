@@ -1,90 +1,177 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Contact.css"
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion';
+import Socials from '../home/supplements/socials/Socials';
+import ParralexContactAnimation from '../parralexTextAnimation/ParralexContactAnimation.tsx';
+
+
+
 
 const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_5y7rll1', 'template_jdpz7a3', form.current, '4nyzjigYhVGMwCX0W')
-      e.target.reset()
+  
+    emailjs.sendForm('service_5y7rll1', 'template_jdpz7a3', e.target, '4nyzjigYhVGMwCX0W')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  
+    e.target.reset();
   };
   const { t } = useTranslation()
+
+  const [name, setName] = useState("");
+  const [budget, setBudget] = useState("budget");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [agreed, setAgreed] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
+
+  const handleOptionChange = (e) => {
+    setBudget(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+
+    // Validate form fields
+    const errors = {};
+    if (name.trim() === "") {
+      errors.name = "Name is required";
+    }
+    if (budget === "budget") {
+      errors.budget = "Please select a budget";
+    }
+    if (email.trim() === "") {
+      errors.email = "Email is required";
+    }
+    if (message.trim() === "") {
+      errors.message = "Message is required";
+    }
+    if (!agreed) {
+      errors.agreed = "You must agree to the storage and processing of your personal data";
+    }
+
+    // Check if there are any errors
+    if (
+      !formErrors.name &&
+      !formErrors.budget &&
+      !formErrors.email &&
+      !formErrors.message &&
+      !formErrors.agreed
+    ) {
+      // All fields are valid, submit the form or perform your desired action
+      sendEmail(e); // Call your sendEmail function here or any other submission logic else {
+      // Set the formErrors state to display error messages
+      setFormErrors(errors);
+    }
+  };
+
+
   return (
-    <motion.div initial={{ y: "100%"}} animate={{ y: "0%" }} transition={{ duration: 0.25, ease: "easeOut" }} exit={{opacity: 1}}>
-    <section className='contact section' id='contact'>
-      <h2 className="section__title">{t("section__contact_me")}</h2>
-      <span className="section__subtitle">{t("section__subtitle_contact")}</span>
-      <div className="contact__container container grid">
-        <div className="contact__content">
-          <h3 className="contact__title">{t("contact__title")}</h3>
-          <div className="contact__info">
-            <div className="contact__card">
-              <i className="bx bx-mail-send contact__card-icon"></i>
-              <h3 className="contact__card-title">{t("contact__form__email")}</h3>
-              <span className="contact__card-data">shehabwaleedd@gmail.com</span>
-              <a href="mailto:shehabwaleedd@gmail.com" target="_blank" className="contact__button-arrow" rel="noreferrer">{t("contact__form__write_me")} <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+    <motion.div className='contact_entire' initial={{ y: "100%" }} animate={{ y: "0%" }} transition={{ duration: 0.25, ease: "easeOut" }} exit={{ opacity: 1 }}>
+      <ParralexContactAnimation />
+      <section className='contact section' id='contact'>
+        <div className="contact__container container grid">
+          <div className="contact__content">
+            <div className="contact__details">
+              <h1>{t("contact__title1")}<br />{t("contact__title2")}<br />{t("contact__title3")}</h1>
             </div>
-
-            <div className="contact__card">
-              <i class="uil uil-whatsapp contact__card-icon"></i>
-              <h3 className="contact__card-title">Whatsapp</h3>
-              <span className="contact__card-data">+201023288200</span>
-              <a href="https://api.whatsapp.com/send?phone=+201023288200" target="_blank" className="contact__button-arrow" rel="noreferrer">{t("contact__form__write_me")} <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
-            </div>
-            <div className="contact__card">
-              <i class="uil uil-facebook-messenger-alt contact__card-icon"></i>
-              <h3 className="contact__card-title">{t("contact__form__message")}</h3>
-              <span className="contact__card-data">/shehabwaleedd</span>
-              <a href="https://m.me/shehabwaleedd" target="_blank" className="contact__button-arrow" rel="noreferrer">{t("contact__form__write_me")} <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
-
+            <Socials />
+            <div className="contact__info">
+              <div className="contact__email">
+                <h3>{t("contact__getInTouch")}</h3>
+                <p><a href="mailto:shehabwaleedd@gmail.com">shehabwaleedd@gmail.com</a></p>
+              </div>
+              <div className="contact__location">
+                <h3>{t("contact__location")}</h3>
+                <p>{t("contact__location-cairo")} {t("contact__location-egypt")}</p>
+              </div>
             </div>
           </div>
+          <div className="contact__content">
+            <form className="contact__form" onSubmit={handleSubmit} ref={form}>
+              <div className="contact__merged">
+                <input
+                  type="text"
+                  name="name"
+                  className={`contact__form-input ${formErrors.name ? "error" : ""}`}
+                  placeholder={t("contact__form__insert_name")} 
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+                {formErrors.name && <p className="error-message">{formErrors.name}</p>}
+                <div className="custom-dropdown">
+                  <select
+                    className={`dropdown-select ${formErrors.budget ? "error" : ""}`}
+                    name="budget"
+                    value={budget}
+                    onChange={handleOptionChange}
+                    required
+                  >
+                    <option value="budget" disabled>
+                      Budget
+                    </option>
+                    <option value="$100">$100</option>
+                    <option value="$100-$500">$100 - $500</option>
+                    <option value="$500-$1000">$500 - $1000</option>
+                    <option value="$1000+">$1000+</option>
+                  </select>
+                  {formErrors.budget && <p className="error-message">{formErrors.budget}</p>}
+                  <div className="dropdown-icon">▼</div>
+                </div>
+              </div>
+              <div className="contact__form-div">
+                <input
+                  type="email"
+                  name="email"
+                  className={`contact__form-input ${formErrors.email ? "error" : ""}`}
+                  placeholder={t("contact__form__insert_email")} 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                {formErrors.email && <p className="error-message">{formErrors.email}</p>}
+              </div>
+              <div className="contact__form-div contact__form-area">
+                <textarea
+                  name="message"
+                  cols="30"
+                  rows="5"
+                  className={`contact__form-input ${formErrors.message ? "error" : ""}`}
+                  placeholder={t("contact__form__write_me_your_project")}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                ></textarea>
+                {formErrors.message && <p className="error-message">{formErrors.message}</p>}
+                <div className="contact__form-line"></div>
+              </div>
+              <div className="contact__lower">
+                <label className="contact__checkbox">
+                  <input
+                    type="checkbox"
+                    checked={agreed}
+                    onChange={(e) => setAgreed(e.target.checked)}
+                    required
+                  />
+                  <p>I agree with the storage and processing of my personal data</p>
+                </label>
+                {formErrors.agreed && <p className="error-message">{formErrors.agreed}</p>}
+                <button type="submit" className="contact__button">
+                  {t("contact__button_submit")}
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div className="contact__content">
-          <h3 className="contact__title">{t("contact__title")}</h3>
-          <form className="contact__form" ref={form} onSubmit={sendEmail}>
-            <div className="contact__form-div">
-              <label htmlFor="" className="contact__form-tag">Name</label>
-              <input type="text" name='name' className='contact__form-input' placeholder={t("contact__form__insert_name")} />
-            </div>
-            <div className="contact__form-div" >
-              <label htmlFor="" className="contact__form-tag">Email</label>
-              <input type="email" name='email' className='contact__form-input' placeholder={t("contact__form__insert_email")}  />
-            </div>
-            <div className="contact__form-div contact__form-area">
-              <label htmlFor="" className="contact__form-tag">Project</label>
-              <textarea name="message" cols="30" rows="10" className='contact__form-input' placeholder={t("contact__form__write_me_your_project")} ></textarea>
-            </div>
-            <button href="contact" className="button button--flex contact__button">
-              {t("contact__form__button-sending")}
-              <svg
-                class="button__icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M14.2199 21.9352C13.0399 21.9352 11.3699 21.1052 10.0499 17.1352L9.32988 14.9752L7.16988 14.2552C3.20988 12.9352 2.37988 11.2652 2.37988 10.0852C2.37988 8.91525 3.20988 7.23525 7.16988 5.90525L15.6599 3.07525C17.7799 2.36525 19.5499 2.57525 20.6399 3.65525C21.7299 4.73525 21.9399 6.51525 21.2299 8.63525L18.3999 17.1252C17.0699 21.1052 15.3999 21.9352 14.2199 21.9352ZM7.63988 7.33525C4.85988 8.26525 3.86988 9.36525 3.86988 10.0852C3.86988 10.8052 4.85988 11.9052 7.63988 12.8252L10.1599 13.6652C10.3799 13.7352 10.5599 13.9152 10.6299 14.1352L11.4699 16.6552C12.3899 19.4352 13.4999 20.4252 14.2199 20.4252C14.9399 20.4252 16.0399 19.4352 16.9699 16.6552L19.7999 8.16525C20.3099 6.62525 20.2199 5.36525 19.5699 4.71525C18.9199 4.06525 17.6599 3.98525 16.1299 4.49525L7.63988 7.33525Z"
-                  fill="var(--container-color)"
-                ></path>
-                <path
-                  d="M10.11 14.7052C9.92005 14.7052 9.73005 14.6352 9.58005 14.4852C9.29005 14.1952 9.29005 13.7152 9.58005 13.4252L13.16 9.83518C13.45 9.54518 13.93 9.54518 14.22 9.83518C14.51 10.1252 14.51 10.6052 14.22 10.8952L10.64 14.4852C10.5 14.6352 10.3 14.7052 10.11 14.7052Z"
-                  fill="var(--container-color)"
-                ></path>
-              </svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
+      </section>
     </motion.div>
   )
 }

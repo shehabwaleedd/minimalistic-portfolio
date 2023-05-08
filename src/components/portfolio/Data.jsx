@@ -44,7 +44,7 @@ const projectsData = [
     {
       id: 5,
       image: Work5,
-      title: "First Portfolio ReactJS",
+      title: "Portfolio ReactJS",
       category: "web",
       link: "https://github.com/shehabwaleedd/first-personal-website-react",
       date: "2022-09-22",

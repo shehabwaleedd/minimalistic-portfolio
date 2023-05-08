@@ -3,7 +3,7 @@ import "./Main.css"
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-const Main = () => {
+const Main = (Props) => {
 
 
     const { t } = useTranslation()
@@ -33,7 +33,7 @@ const Main = () => {
   return (
     <section className='main section'>
         <div className="main__container container grid">
-            <div className="main__content">
+            <div className="main__content" style={{ marginTop: Props.navOpen ? "5rem" : "0" }}>
                 <h1 className="main__titlee">HEY, {t("my__name_im")} <span className="main__title-color">{t("my__name-first")}</span> <span> {t("my__name-last")}</span></h1>
                 <h1 className="main__subtitle">{t("my__intro")}</h1>
             </div>

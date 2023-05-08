@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "../Data";
 import "./ProjectDetails.css";
-import ScrollAnimation from "../../../blogItems/blog/blog/details/ScrollAnimation";
+import ScrollAnimation from "../../../animation/ScrollAnimation/ScrollAnimation";
 
 function ProjectDetails() {
     const { id } = useParams();

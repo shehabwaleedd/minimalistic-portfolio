@@ -39,6 +39,7 @@ const Toggle = (props) => {
           cursor: 'pointer',
           gap: '1rem',
           MozBoxShadow: 'var(--moz-box-shadow)',
+          transition: "all 4s cubic-bezier(0.16, 1, 0.3, 1)",
         }}
       >
         <motion.i 

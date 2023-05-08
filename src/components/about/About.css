@@ -101,8 +101,12 @@
     padding-bottom: 3rem;
 }
 
-.timelocation_text {
-    color: var(--accent-color);
+.timelocation_text-experience {
+    color: var(--experience-text-color);
+}
+
+.timelocation_text-education {
+    color: var(--education-text-color);
 }
 
 .comment__text {
@@ -110,6 +114,7 @@
     white-space: pre-wrap;
     text-align-last: left;
     text-align: justify;
+    font-family: "Satoshi", sans-serif;
 }
 
 .title__text {
@@ -124,7 +129,7 @@
 
 
 .details__row {
-
+    
     width: 100%;
     align-items: flex-end;
 }
@@ -237,16 +242,9 @@
     margin-bottom: 2rem;
 }
 
-.detailed__row h2 {
-    font-size: 2rem;
-    font-weight: 400;
-    color: var(--title-color);
-    margin-bottom: 1rem;
-    font-family: "Poppins";
-}
 
 .detailed__row p {
-    font-family: "Poppins";
+    font-family: "Satoshi", sans-serif;
     font-size: 1.2rem;
     line-height: 28px;
     font-weight: 400;

@@ -5,19 +5,31 @@
 .nav {
     position: relative;
     z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 4s cubic-bezier(0.16, 1, 0.3, 1);
     
 }
 
 .navbar {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 6em;
-    overflow: hidden;
+    padding: 5.2rem;
+    transition: all 4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+.nav-overlay {
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25vh;
+    transition: all 4s cubic-bezier(0.16, 1, 0.3, 1);
+    background-color: var(--nav-overlay-color);
+}
+  
 
 .side__navbar {
     display: flex;
@@ -28,12 +40,13 @@
 
 .logo {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--logo-color);
     font-size: 1.5em;
-    font-family: "Reggae One", sans-serif;
+    font-family: "Satoshi-Bold", sans-serif;
     letter-spacing: 0.3rem;
     font-weight: bolder;
     cursor: pointer;
+    transition: all 4s cubic-bezier(0.16, 1, 0.3, 1);
     
 }
 
@@ -48,32 +61,6 @@
     cursor: pointer;
 }
 
-.nav-overlay {
-  position: fixed;
-  z-index: -2;
-  top: 0;
-  right: -100%;
-  width: 100%;
-  height: 100vh;
-  padding: 4em;
-  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
-  background-color: var(--nav-overlay-color);
-  overflow: hidden;
-}
-
-.nav-overlay::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  opacity: 0.04;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-
-}
 
 .hamBox {
     position: relative;
@@ -93,7 +80,7 @@
     width: 24px;
     height: 2px;
     border-radius: 10px;
-    background: var(--accent-color);
+    background: var(--text-color);
     left: 0;
     right: 0;
     transform: rotate(0deg);
@@ -125,75 +112,6 @@
     background: var(--container-color);
 }
 
-
-
-.nav__link {
-    margin: 0 auto;
-    position: relative;
-    color: var(--title-color);
-    display: block;
-    left: 0rem;
-    right: 0px;
-    display: none;
-    font-family: "Reggae One";
-}
-
-
-.nav__link.spin {
-    position: relative;
-    color: var(--container-color);
-    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-    padding: 0.6rem;
-    display: block;
-}
-
-ul.nav-links {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-}
-
-ul.nav-links li {
-    list-style: none;
-    position: relative;
-}
-
-ul.nav-links li a{
-    text-decoration: none;
-    color: transparent;
-    -webkit-text-stroke: 0.2px var(--container-color);
-    font-size: 4.5em;
-    font-family: "Reggae One", sans-serif;
-    letter-spacing: 0.5rem;
-    font-weight: bolder;
-    transition: 0.3s ease;
-    top: 0;
-    transition: all 2s cubic-bezier(0.16, 1, 0.3, 1 );
-    position: relative;
-}
-
-ul.nav-links li a::before {
-    position: absolute;
-    content: attr(data-text);
-    -webkit-text-fill-color: var(--container-color);
-    transition: 1s cubic-bezier(0.16, 0.5, 0.3, 1 );;
-    width: 1%;
-    overflow: hidden;
-}
-
-ul.nav-links li a:hover::before {
-    width: 100%;
-}
-
-
-
-
 .nav-footer {
     position: absolute;
     width: 100%;
@@ -202,33 +120,54 @@ ul.nav-links li a:hover::before {
     padding: 2em;
     display: flex;
     justify-content: space-between;
-}
-
-.nav-social-media ul {
-    display: flex;
-}
-
-.nav-social-media ul li {
-    position: relative;
-    bottom: -20%;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Reggae One", sans-serif;
     color: var(--container-color);
-    padding-left: 2em;
-    opacity: 1;
-    transition: all 2s cubic-bezier(0.16, 1, 0.3, 1 );
 }
 
-.location {
-    position: relative;
-    bottom: -20%;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Reggae One", sans-serif;
-    color: var(--container-color);
-    padding-left: 2em;
-    opacity: 0.5;
-    transition: all 2s cubic-bezier(0.16, 1, 0.3, 1 );
-    text-transform: lowercase;
-}
+
+@media (max-width: 414px) {
+    .navbar {
+
+      padding: 2.5rem;
+    }
+  
+    .side__navbar {
+      margin-top: 1.5rem;
+      justify-content: space-between;
+    }
+  
+    .logo {
+    font-size: 0.7rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .nav-footer {
+        position: relative;
+        justify-content: center;
+        padding-top: 2rem;
+      }
+      
+      .nav-overlay {
+        height: 55vh;
+      }
+
+      .hamBox {
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        padding: 0;
+      }
+    
+      .lineTop,
+      .lineBottom {
+        margin: 0;
+        font-size: 0.5rem;
+      }
+    
+      .lineTop.spin {
+        font-size: 0.5rem;
+      }
+    
+      .lineBottom.spin {
+        font-size: 0.5rem;
+      }
+    }

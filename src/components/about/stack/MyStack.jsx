@@ -1,7 +1,5 @@
 import React from 'react'
 import "./Stack.css"
-import { motion } from 'framer-motion'
-import javascript from '../../../assets/javascript.jpeg'
 
 const MyStack = () => {
   return (

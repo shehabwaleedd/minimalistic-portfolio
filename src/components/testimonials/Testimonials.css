@@ -69,6 +69,7 @@
     font-weight: 600;
     margin-bottom: 7px;
     color: var(--accent-color);
+    font-family: "Satoshi-Bold", sans-serif;
 
 }
 
@@ -78,6 +79,7 @@
     font-weight: 400;
     color: var(--title-color);
     margin-top: 1rem;
+    font-family: "Satoshi-Regular", sans-serif;
 }
 
 
@@ -85,7 +87,7 @@
 .testimonial__job {
     color: var(--accent-color);
     font-weight: 500;
-
+    font-family: "Satoshi-Bold", sans-serif;
     
 }
 
@@ -94,4 +96,5 @@
     color: var(--text-color);
     font-weight: 300;
     font-size: 0.8rem;
+    font-family: "Satoshi-Regular", sans-serif;
 }

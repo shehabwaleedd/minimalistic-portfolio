@@ -1,11 +1,12 @@
 .parallax {
     overflow: hidden;
-    letter-spacing: -2px;
+    letter-spacing: 12px;
     line-height: 0.8;
     margin: 0;
     white-space: nowrap;
     display: flex;
     flex-wrap: nowrap;
+    margin-bottom: 2rem;
   }
   
   .parallax .scroller {
@@ -20,7 +21,8 @@
   
   .parallax span {
     display: block;
-    margin-right: 30px;
+
     color: var(--title-color);
+    font-family: "Satoshi-Bold", sans-serif;
   }
   

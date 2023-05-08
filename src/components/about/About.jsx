@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import Experience from './journey/Experience'
 import Education from './journey/Education'
 import Model from './Model'
+import Footer from '../footer/Footer'
 import MyStack from './stack/MyStack'
 import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
 
@@ -13,8 +14,12 @@ const AboutPage = () => {
   let screen = useRef(null);
   let body = useRef(null);
   useEffect(() => {
-    var tl = new TimelineMax();
+    runAnimation();
+  }, []);
 
+  
+  const runAnimation = () => {
+    var tl = new TimelineMax();
     tl.to(screen, {
       duration: 0.5,
       width: "100%",
@@ -28,18 +33,14 @@ const AboutPage = () => {
       delay: 0.1,
     });
     tl.set(screen, { left: "-100%" });
-    TweenMax.to(body, .3, {css: {
-      opacity: "1",
-      pointerEvents: "auto",
-      ease: Power4.easeInOut
-    }}).delay(1);
-    return () => {
-      TweenMax.to(body, 1, {css: {
-        opacity: "0",
-        pointerEvents: 'none'
-      }});
+    TweenMax.to(body, .3, {
+      css: {
+        opacity: "1",
+        pointerEvents: "auto",
+        ease: Power4.easeInOut
+      }
+    }).delay(1);
   }
-  });
 
   const imageDetails = {
     width: 524,
@@ -58,6 +59,7 @@ const AboutPage = () => {
           <MyStack />
           <Education />
         </section>
+        <Footer />
       </motion.div>
     </React.Fragment>
   )

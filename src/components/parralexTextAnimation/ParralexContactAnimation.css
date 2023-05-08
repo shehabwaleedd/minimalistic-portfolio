@@ -1,0 +1,40 @@
+.parallax {
+    overflow: hidden;
+    letter-spacing: 12px;
+    line-height: 0.8;
+    margin: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 4rem;
+  }
+  
+  .parallax .scroller {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 5rem;
+    display: flex;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .parallax span {
+    display: block;
+
+    color: var(--title-color);
+    font-family: "Satoshi-Bold", sans-serif;
+  }
+
+  @media (max-width: 600px) {
+    .parallax {
+      flex-wrap: wrap;
+      letter-spacing: 0;
+      line-height: 1;
+    }
+  
+    .parallax .scroller {
+      font-size: 3rem;
+    }
+  }
+  

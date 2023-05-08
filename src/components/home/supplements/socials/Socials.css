@@ -1,0 +1,97 @@
+
+.nav-social-media {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Satoshi-Bold", sans-serif;
+    color: var(--title-color);
+    transition: all 5s cubic-bezier(0.16, 1, 0.3, 1 );
+    cursor: pointer;
+    letter-spacing: 0.3rem;
+    margin: 2rem 0;
+}
+
+.nav-social-media ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-social-media ul li {
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Satoshi-Bold", sans-serif;
+    color: var(--text-color);
+    opacity: 1;
+    transition: all 5s cubic-bezier(0.16, 1, 0.3, 1 );
+    cursor: pointer;
+    letter-spacing: 0.3rem;
+    
+}
+
+
+.nav-social-media ul li::after {
+    content: "";
+    position: absolute;
+    left: 0rem;
+    top: 2rem;
+    width: 70%;
+    height: 2px;
+    background-color: var(--title-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 3s cubic-bezier(0.16, 1, 0.3, 1 );
+    
+}
+
+.nav-social-media ul li:hover::after {
+    transform: scaleX(1); 
+
+  }
+
+ 
+
+.location {
+    position: relative;
+    bottom: -20%;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Satoshi-Bold", sans-serif;
+    color: var(--container-color);
+    padding-left: 2em;
+    opacity: 0.5;
+    transition: all 5s cubic-bezier(0.16, 1, 0.3, 1 );
+    text-transform: lowercase;
+}
+
+.location h4 {
+    color: var(--container-color);
+}
+
+@media (max-width: 414px) {
+
+    .nav-social-media {
+        display: flex;
+    }
+    .nav-social-media ul {
+            
+    display: flex;
+    font-size: 0.5rem;
+    gap: 0.4rem;
+
+    }
+    
+    .nav-social-media ul li {
+        
+      width: 100%;
+    }
+    
+    .nav-social-media ul li::after {
+      display: none;
+    }
+    
+    .location {
+      bottom: auto;
+      opacity: 1;
+    }
+  }
