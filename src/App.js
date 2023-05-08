@@ -1,13 +1,13 @@
 import './App.css';
 import { useState, useEffect, lazy } from 'react';
-import Toggle from './components/darkmode/Toggle';
+import Toggle from './components/nav/darkmode/Toggle';
 import { createContext } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import OpeningAnimation from './components/home/openingAnimations/OpeningAnimation';
+import OpeningAnimation from './pages/home/openingAnimations/OpeningAnimation';
 import AnimatedNav from './navItems/animatedNav/AnimatedNav';
 import { HomeAnimations } from './animation/HomeAnimations';
-import ScrollUp from './components/home/supplements/ScrollUp';
-const MainRoutes = lazy(() => import('./components/routes/MainRoutes'));
+import ScrollUp from './pages/home/supplements/ScrollUp';
+import MainRoutes from './navItems/routes/MainRoutes';
 
 
 export const ThemeContext = createContext(null);
@@ -28,13 +28,15 @@ function App() {
 
   }, []);
 
-  useEffect(() => {
-    if (navOpen) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
-  }, [navOpen]);
+  // To disable scrolling when the nav is open 
+
+  // useEffect(() => {
+  //   if (navOpen) {
+  //     document.body.classList.add('no-scroll');
+  //   } else {
+  //     document.body.classList.remove('no-scroll');
+  //   }
+  // }, [navOpen]);
 
   useEffect(() => {
     // Disable scrolling for the first 15 seconds

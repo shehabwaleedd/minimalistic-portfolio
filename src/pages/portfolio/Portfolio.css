@@ -51,25 +51,18 @@
     flex: 0.7;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: last baseline;
+    justify-content: center;
     text-align: left;
-    width: 50%;
     cursor: pointer;
-
-  }
-  
-  .text-container {
     margin: 0.2rem 0;
     text-align: left;
-    
-    display: flex;
     align-items: flex-start;
-    transition: 0.3s ease;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
     line-height: 1.9;
-    width: 100%;
+    width: 50%;
     height: 35.25rem; /* Set the height to whatever you want */
     overflow: hidden;
+    margin-right: 6.5rem;
   }
 
   
@@ -78,18 +71,27 @@
 .work__title {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    transition: 0.3s ease;
+    align-items:end;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
     width: 100%;
     text-align: left;
     position: relative;
+    gap: 7rem;
+}
+
+.work__title p {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-5);
+  font-family: "Satoshi", sans-serif;
+  color: var(--title-color);
 }
 
 .work__title h1 {
   width: 100%;
   color: transparent;
   -webkit-text-stroke: 0.2px var(--project-text-animation-color);
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-family: "Krona One", sans-serif;
   top: 0;
   font-weight: bolder;
@@ -97,6 +99,7 @@
   position: relative;
   white-space: nowrap;
   cursor: pointer;
+  padding-top: 0.5rem;
 }
 
 .work__title h1::before {
@@ -147,7 +150,7 @@
     position: absolute;
     content: "";
     display: block;
-    width: 25.5rem;
+    width: 272.5%;
     background: var(--text-color);
     height: 2px;
     transition: width 0.3s;
@@ -169,27 +172,29 @@
     border-top-right-radius: 5.4rem;
   }
 
-  .menu__item-image {
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
-    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1 );
+   .menu__item-image {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1 );
   }
   
-  @keyframes fadeIn {
+  .menu__item-image.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+  } 
+
+
+  
+  @keyframes slideIn {
     0% {
       opacity: 0;
-      transform: scale(0.99);
-
+      transform: translateY(20px);
     }
     100% {
       opacity: 1;
-      transform: scale(1);
-
+      transform: translateY(0);
     }
   }
-
 
   .projects__load-container {
     position: fixed;

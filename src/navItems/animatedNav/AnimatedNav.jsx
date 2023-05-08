@@ -21,7 +21,7 @@ const AnimatedNav = (Props) => {
     <nav className='nav'>
       <div className="nav-container">
         <div className="navbar">
-          <div className={Props.navOpen ? "logo spin" : "logo"}>
+          <div className={Props.navOpen ? "logo spin" : "logo"} style={{transitionDuration: Props.navOpen ? "1s" : "1.5s", transition: Props.navOpen ? "1.5s" : "1.5s"}}>
             <Link to="/">{t("my__name")}</Link>
           </div>
 
@@ -45,7 +45,7 @@ const AnimatedNav = (Props) => {
         <div className="nav-overlay" style={{
           top: Props.navOpen ? "0" : "-100%",
           transitionDelay: Props.navOpen ? "0s" : "0s",
-          transitionDuration: Props.navOpen ? "2s" : "5s",
+          transitionDuration: Props.navOpen ? "2s" : "2.5s",
         }}>
         </div>
       </div>

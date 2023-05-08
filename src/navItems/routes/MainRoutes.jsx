@@ -1,16 +1,17 @@
 import React from 'react';
-import Skills from '../skills/Skills';
-import Services from '../services/Services';
-import Portfolio from '../portfolio/Portfolio';
-import Testimonials from '../testimonials/Testimonials';
-import { BlogHome } from "../../navItems/siteHome/BlogHome";
 import { Route, Routes, useLocation } from 'react-router-dom';
-import Contact from '../contact/Contact';
-import AboutPage from '../about/About';
-import MyStack from '../about/stack/MyStack';
-import Main from '../home/main/Main';
-import AnimatedNav from '../../navItems/animatedNav/AnimatedNav';
-import ProjectDetails from '../portfolio/projectDetails/ProjectDetails';
+import MyStack from '../../pages/about/stack/MyStack';
+import AboutPage from '../../pages/about/About';
+import Skills from '../../pages/skills/Skills';
+import Services from '../../pages/services/Services';
+import Portfolio from '../../pages/portfolio/Portfolio';
+import Testimonials from '../../pages/testimonials/Testimonials';
+import { BlogHome } from '../siteHome/BlogHome';
+import Contact from '../../pages/contact/Contact';
+import Main from '../../pages/home/main/Main';
+import AnimatedNav from '../animatedNav/AnimatedNav';
+import ProjectDetails from '../../pages/portfolio/projectDetails/ProjectDetails';
+
 
 
 const MainRoutes = (Props) => {

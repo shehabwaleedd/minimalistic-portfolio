@@ -67,7 +67,7 @@ const Portfolio = () => {
                     <img
                       src={image.image}
                       alt={image.title}
-                      className={selectedImage === image.image ? 'menu__item-image' : 'hidden'}
+                      className={selectedImage === image.image ? 'menu__item-image.fade-in' : 'menu__item-image'}
                     />
                   </div>
                 ))}
@@ -79,11 +79,12 @@ const Portfolio = () => {
                 {projectsData.map((item, index) => (
                   <div className="work__title" key={item.id} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>
                     <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
+                    <p>{item.category}</p>
                   </div>
                 ))}
               </div>
-            </motion.div></div>
-
+            </motion.div>
+            </div>
         </div>
       </section>
     </React.Fragment>

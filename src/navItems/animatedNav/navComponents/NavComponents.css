@@ -8,6 +8,7 @@
     display: none;
     font-family: "Satoshi-Bold", sans-serif;
     width: 100%;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 
@@ -15,7 +16,7 @@
 .nav__link.spin {
     position: relative;
     color: var(--overlay-color);
-    transition: all 2.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 5.5s cubic-bezier(0.16, 1, 0.3, 1);
     padding: 0.6rem;
     display: block;
 }

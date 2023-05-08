@@ -1,8 +1,8 @@
 import React from "react"
-import Home from "../../components/home/Home"
+import Home from "../../pages/home/Home"
 import { motion } from "framer-motion"
-import ParallaxTextAnimation from "../../components/parralexTextAnimation/ParralexTextAnimation.tsx"
-import Testimonials from "../../components/testimonials/Testimonials"
+import ParallaxTextAnimation from "../../components/nav/parralexTextAnimation/ParralexTextAnimation.tsx"
+import Testimonials from "../../pages/testimonials/Testimonials"
 export const BlogHome = () => {
   const imageDetails = {
     width: 524,

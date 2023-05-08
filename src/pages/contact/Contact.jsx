@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion';
 import Socials from '../home/supplements/socials/Socials';
-import ParralexContactAnimation from '../parralexTextAnimation/ParralexContactAnimation.tsx';
+import ParralexContactAnimation from '../../components/nav/parralexTextAnimation/ParralexContactAnimation.tsx';
 
 
 
