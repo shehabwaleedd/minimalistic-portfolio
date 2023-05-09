@@ -1,27 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Contact.css"
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next'
-import { motion } from 'framer-motion';
 import Socials from '../home/supplements/socials/Socials';
 import ParralexContactAnimation from '../../components/nav/parralexTextAnimation/ParralexContactAnimation.tsx';
-
-
+import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
+import Faq from '../faq/Faq';
 
 
 const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-  
+
     emailjs.sendForm('service_5y7rll1', 'template_jdpz7a3', e.target, '4nyzjigYhVGMwCX0W')
       .then((result) => {
         console.log(result.text);
       }, (error) => {
         console.log(error.text);
       });
-  
+
     e.target.reset();
   };
   const { t } = useTranslation()
@@ -72,11 +71,54 @@ const Contact = () => {
     }
   };
 
+  let screen = useRef(null);
+  let body = useRef(null);
+
+
+  const runAnimation = () => {
+    var tl = new TimelineMax();
+    tl.fromTo(
+      screen,
+      { width: "0%", left: "100%" },
+      {
+        duration: 0.5,
+        width: "100%",
+        left: "0%",
+        ease: Power3.easeInOut,
+      }
+    );
+    tl.fromTo(
+      screen,
+      { left: "0%" },
+      {
+        duration: 0.5,
+        left: "-100%",
+        ease: Power3.easeInOut,
+        delay: 0.1,
+      }
+    );
+    tl.set(screen, { left: "100%" });
+    TweenMax.to(body, 0.3, {
+      css: {
+        opacity: "1",
+        pointerEvents: "auto",
+        ease: Power4.easeInOut,
+      },
+    }).delay(1);
+  };
+
+  useEffect(() => {
+    runAnimation();
+  }, []);
+
 
   return (
-    <motion.div className='contact_entire' initial={{ y: "100%" }} animate={{ y: "0%" }} transition={{ duration: 0.25, ease: "easeOut" }} exit={{ opacity: 1 }}>
+    <React.Fragment className='contact_entire'>
+      <div className="contact__load-container">
+        <div className="contact__load-screen" ref={(el) => (screen = el)}></div>
+      </div>
       <ParralexContactAnimation />
-      <section className='contact section' id='contact'>
+      <section className='contact section' id='contact' ref={(el) => (body = el)}>
         <div className="contact__container container grid">
           <div className="contact__content">
             <div className="contact__details">
@@ -101,7 +143,7 @@ const Contact = () => {
                   type="text"
                   name="name"
                   className={`contact__form-input ${formErrors.name ? "error" : ""}`}
-                  placeholder={t("contact__form__insert_name")} 
+                  placeholder={t("contact__form__insert_name")}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
@@ -132,7 +174,7 @@ const Contact = () => {
                   type="email"
                   name="email"
                   className={`contact__form-input ${formErrors.email ? "error" : ""}`}
-                  placeholder={t("contact__form__insert_email")} 
+                  placeholder={t("contact__form__insert_email")}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -172,7 +214,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </motion.div>
+      <Faq />
+    </React.Fragment>
   )
 }
 

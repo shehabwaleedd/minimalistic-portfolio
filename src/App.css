@@ -34,6 +34,10 @@
   --experience-text-color: #76ae7b;
   --education-text-color: #b682c4;
   --footer-border-color: 1px solid rgba(255, 255, 255, 0.098);
+  --about-transition-color: #eee7e1;
+  --projects-transition-color: #eee7e1;
+  --contact-transition-color: #eee7e1;
+
 
 }
 
@@ -65,6 +69,9 @@
   --experience-text-color: #557c58;
   --education-text-color: #946c9f;
   --footer-border-color: 1px solid rgba(0, 0, 0, 0.1);
+  --about-transition-color: #1b1b1b;
+  --projects-transition-color: #1b1b1b;
+  --contact-transition-color: #1b1b1b;
 }
 
 

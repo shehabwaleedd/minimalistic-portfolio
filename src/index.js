@@ -10,6 +10,7 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 import { BrowserRouter as Router } from 'react-router-dom';
 
 
+
 i18next
   .use(HttpApi)
   .use(LanguageDetector)

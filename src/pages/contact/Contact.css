@@ -101,7 +101,7 @@
     background-color: var(--title-color);
     transform: scaleX(0);
     transform-origin: left;
-    transition: all 3s cubic-bezier(0.16, 1, 0.3, 1 );
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1 );
 }
 
 .contact__button:hover::after {
@@ -217,6 +217,24 @@ resize: vertical;
     margin-bottom: var(--mb-0-5);
     font-family: "Satoshi", sans-serif;
     color: var(--text-color);
+    position: relative;
+}
+
+.contact__email p::after {
+  content: "";
+  position: absolute;
+  left: 0rem;
+  top: 2rem;
+  width: 70%;
+  height: 1.2px;
+  background-color: var(--text-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1 );
+}
+
+.contact__email p:hover::after {
+  transform: scaleX(1); 
 }
 
 .contact__location h3 {
@@ -336,6 +354,48 @@ resize: vertical;
     transform: translate(-50%, -50%) rotate(45deg);
   }
 
+  .contact__load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+  }
+  
+  .contact__load-screen {
+    position: relative;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: var(--contact-transition-color);
+    width: 0%;
+    height: 100%;
+  }
+  
+  /* .contact__load-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+  }
+  
+  .contact__load-screen {
+    position: relative;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    background-color: var(--contact-transition-color);
+    width: 100%;
+    height: 0%;
+  } */
+
 
 
   @media (max-width: 414px) {
@@ -415,15 +475,20 @@ resize: vertical;
       border-bottom: 1px solid var(--text-color);
     }
 
+    .contact__form-input:focus {
+      width: 100%;
+      font-size: 0.6rem;
+      padding: 0;
+      margin: 0;
+      border-bottom: 1px solid var(--text-color);
+      background-color: red;
+    }
+
     .dropdown-select {
       width: 100%;
       font-size: 0.3rem;
       padding: 0 0rem;
       margin: 0 0;
-
-    }
-
-    .contact__merged select {
 
     }
 

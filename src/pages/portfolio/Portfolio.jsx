@@ -31,25 +31,25 @@ const Portfolio = () => {
     var tl = new TimelineMax();
     tl.to(screen, {
       duration: 0.5,
-      width: "100%",
-      left: "0%",
+      height: "100%",
+      top: "0%",
       ease: Power3.easeInOut,
     });
     tl.to(screen, {
       duration: 0.5,
-      left: "100%",
+      top: "-100%",
       ease: Power3.easeInOut,
       delay: 0.1,
     });
-    tl.set(screen, { left: "-100%" });
-    TweenMax.to(body, .3, {
+    tl.set(screen, { top: "100%" });
+    TweenMax.to(body, 0.3, {
       css: {
         opacity: "1",
         pointerEvents: "auto",
-        ease: Power4.easeInOut
-      }
+        ease: Power4.easeInOut,
+      },
     }).delay(1);
-  }
+  };
 
 
   return (
@@ -57,7 +57,7 @@ const Portfolio = () => {
       <div className="projects__load-container">
         <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
       </div>
-      <section className="portfolio">
+      <section className="portfolio" ref={(el) => (body = el)}>
         <div className="portfolio__container" >
           <div className="menu">
             <div className="menu__item-image_wrapper">

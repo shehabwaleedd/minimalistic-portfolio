@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container container">
-        <h1 className="footer__title">{t("my__name")}</h1>
+        <h1 className="footer__title">{t("my__name")} {t("my__name-last")}</h1>
         <div className="footer__social">
             <p><strong id="mono">{t("footer__info-address")}:</strong> 2 Abdulrahman Al Adawi - Imbaba, {t("footer__info-egypt")}</p>
             <p><strong id="mono">{t("footer__info-freelancing")}:</strong>   08:00 - 12:00. {t("footer__info-mon-to-sat")}</p>

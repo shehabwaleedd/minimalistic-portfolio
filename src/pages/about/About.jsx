@@ -9,38 +9,41 @@ import Footer from '../footer/Footer'
 import MyStack from './stack/MyStack'
 import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
 
+
 const AboutPage = () => {
 
   let screen = useRef(null);
   let body = useRef(null);
+
   useEffect(() => {
     runAnimation();
   }, []);
+
 
   
   const runAnimation = () => {
     var tl = new TimelineMax();
     tl.to(screen, {
       duration: 0.5,
-      width: "100%",
-      left: "0%",
+      height: "100%",
+      top: "0%",
       ease: Power3.easeInOut,
     });
     tl.to(screen, {
       duration: 0.5,
-      left: "100%",
+      top: "100%",
       ease: Power3.easeInOut,
       delay: 0.1,
     });
-    tl.set(screen, { left: "-100%" });
-    TweenMax.to(body, .3, {
+    tl.set(screen, { top: "-100%" });
+    TweenMax.to(body, 0.3, {
       css: {
         opacity: "1",
         pointerEvents: "auto",
-        ease: Power4.easeInOut
-      }
+        ease: Power4.easeInOut,
+      },
     }).delay(1);
-  }
+  };
 
   const imageDetails = {
     width: 524,
@@ -48,7 +51,7 @@ const AboutPage = () => {
   };
 
   return (
-    <React.Fragment>
+    <React.Fragment className="smooth-scroll-wrapper">
       <div className="load-container">
         <div className="load-screen" ref={(el) => (screen = el)}></div>
       </div>

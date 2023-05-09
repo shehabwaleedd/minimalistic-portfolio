@@ -1,6 +1,6 @@
 
 .footer {
-    background-color: var(--stack-accent-color);
+    background-color: var(--container-color);
     border-top: var(--footer-border-color);
 }
 
@@ -26,6 +26,7 @@
     text-transform: uppercase;
     letter-spacing: 0.7rem;
     align-items: center;
+    padding-left: 2.5rem;
 }
 
 .footer__link:hover {

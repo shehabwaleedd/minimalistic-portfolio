@@ -1,4 +1,4 @@
-.parallax {
+.parallaxText {
     overflow: hidden;
     letter-spacing: 12px;
     line-height: 0.8;
@@ -9,7 +9,7 @@
     margin-bottom: 2rem;
   }
   
-  .parallax .scroller {
+  .parallaxText .scroller {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 5rem;
@@ -19,7 +19,7 @@
     flex-wrap: nowrap;
   }
   
-  .parallax span {
+  .parallaxText span {
     display: block;
 
     color: var(--title-color);

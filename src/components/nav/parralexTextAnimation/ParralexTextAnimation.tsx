@@ -46,7 +46,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
   });
 
   return (
-    <div className="parallax">
+    <div className="parallaxText">
       <motion.div className="scroller" style={{ x }}>
         <span>{children} </span>
         <span>{children} </span>
@@ -60,8 +60,8 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 export default function ParallaxTextAnimation() {
   return (
     <section>
-      <ParallaxText baseVelocity={-5}>S H E H A B W A L E E D</ParallaxText>
-      <ParallaxText baseVelocity={5}>F R O N T E N D  D E V E L O P E R</ParallaxText>
+      <ParallaxText baseVelocity={-5}>S H E H A B W A L E E D /</ParallaxText>
+      <ParallaxText baseVelocity={5}>F R O N T E N D / D E V E L O P E R /</ParallaxText>
     </section>
   );
 }
