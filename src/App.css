@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Itim&family=Kaushan+Script&family=Luckiest+Guy&family=Macondo&family=Oooh+Baby&family=Overlock+SC&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,400;1,500;1,600;1,700&family=Reggae+One&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Itim&family=Kaushan+Script&family=Oooh+Baby&family=Reggae+One&display=swap');
+
 
 
 /* ============ VARIABLES CSS ============ */
@@ -25,7 +26,7 @@
   --blog-text-color: hsl(var(--hue), var(--sat), 65%);
   --progressive-bar-color: #d9c39d;
   --stack-accent-color: #fafafa;
-  --stack-icons-background-color: #10100e;
+  --stack-icons-background-color: #1e1e1e;
   --overlay-color: #10100e;
   --nav-overlay-color: #eee7e1;
   --project-text-animation-color: #f3e9e1;

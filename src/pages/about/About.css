@@ -220,7 +220,7 @@
 
 
 .about {
-    padding-bottom: 5rem;
+    padding-bottom: 15rem;
 }
 
 .detailed__containerr {
@@ -261,7 +261,7 @@
     font-weight: var(--font-medium);
     color: var(--title-color);
     margin-bottom: 2rem;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid var(--nav-overlay-color);
     padding: 1rem;
     width: 80%;
     letter-spacing: 0.3rem;

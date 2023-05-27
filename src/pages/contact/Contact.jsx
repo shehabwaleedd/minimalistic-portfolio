@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next'
 import Socials from '../home/supplements/socials/Socials';
 import ParralexContactAnimation from '../../components/nav/parralexTextAnimation/ParralexContactAnimation.tsx';
 import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
-import Faq from '../faq/Faq';
 
 
 const Contact = () => {
@@ -117,7 +116,9 @@ const Contact = () => {
       <div className="contact__load-container">
         <div className="contact__load-screen" ref={(el) => (screen = el)}></div>
       </div>
-      <ParralexContactAnimation />
+      <div className="let__contact">
+        <h1>LET'S CONNECT</h1>
+      </div>
       <section className='contact section' id='contact' ref={(el) => (body = el)}>
         <div className="contact__container container grid">
           <div className="contact__content">
@@ -214,7 +215,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      <Faq />
     </React.Fragment>
   )
 }

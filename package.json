@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emailjs/browser": "^3.10.0",
+    "@emailjs/browser": "^3.11.0",
     "@hookform/resolvers": "^3.0.0",
     "@iconify/icons-heroicons-solid": "^1.2.6",
     "@motionone/utils": "^10.15.1",

@@ -91,8 +91,7 @@
 
 .work__title h1 {
   width: 100%;
-  color: transparent;
-  -webkit-text-stroke: 0.2px var(--project-text-animation-color);
+  color: var(--title-color);
   font-size: 2rem;
   font-family: "Krona One", sans-serif;
   top: 0;
@@ -105,21 +104,6 @@
 
 }
 
-.work__title h1::before {
-  position: absolute;
-  content: attr(data-text);
-  -webkit-text-stroke: transparent;
-  -webkit-text-fill-color: var(--title-color);
-  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
-  width: 0%;
-  overflow: hidden;
-}
-
-
-
-.work__title:hover h1::before {
-  width: 100%;
-}
 
 
 

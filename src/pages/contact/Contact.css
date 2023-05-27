@@ -7,15 +7,34 @@
     align-items: center;
     font-family: "Satoshi", sans-serif;
     padding: 0 1rem;
+}
+
+.let__contact {
+  margin-top: 2rem;
+  display: flex;
+  font-size: 10rem;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid var(--nav-overlay-color);
+  align-items: center;
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  top: -6rem;
 
 }
 
+.let__contact h1 {
+    color: var(--nav-overlay-color);
+    letter-spacing: 1rem;
+
+}
 
 .contact__container {
     grid-template-columns: repeat(2, max-content);
     justify-content: center;
     column-gap: 6rem;
     padding-bottom: 3rem;
+    flex-direction: column;
 }
 
 .contact__title {
