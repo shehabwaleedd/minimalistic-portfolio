@@ -2,10 +2,7 @@
 import React, { useEffect, useRef } from 'react'
 import "./About.css"
 import { motion } from 'framer-motion'
-import Experience from './journey/Experience'
-import Education from './journey/Education'
 import Model from './Model'
-import Footer from '../footer/Footer'
 import MyStack from './stack/MyStack'
 import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
 
@@ -55,14 +52,12 @@ const AboutPage = () => {
       <div className="load-container">
         <div className="load-screen" ref={(el) => (screen = el)}></div>
       </div>
-      <motion.div data-barba="container" initial={{ x: "100vw" }} animate={{ x: "0%" }} transition={{ duration: 0.65, ease: "easeOut" }} exit={{ opacity: 0, scaleX: "100vh" }} >
+      <motion.div>
         <section ref={(el) => (body = el)} className="about section" id='about' >
           <Model  imageDetails={imageDetails}/>
-          <Experience />
           <MyStack />
-          <Education />
         </section>
-        <Footer />
+
       </motion.div>
     </React.Fragment>
   )

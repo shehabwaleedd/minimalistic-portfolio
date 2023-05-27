@@ -8,6 +8,7 @@ import AnimatedNav from './navItems/animatedNav/AnimatedNav';
 import { HomeAnimations } from './animation/HomeAnimations';
 import ScrollUp from './pages/home/supplements/ScrollUp';
 import MainRoutes from './navItems/routes/MainRoutes';
+import Footer from './pages/footer/Footer';
 
 
 export const ThemeContext = createContext(null);
@@ -19,40 +20,27 @@ function App() {
   const [navOpen, setNavOpen] = useState(false)
 
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const timeout = setTimeout(() => {
-      setIsAnimationFinished(true);
-      HomeAnimations();
+  //   const timeout = setTimeout(() => {
+  //     setIsAnimationFinished(true);
+  //     HomeAnimations();
 
-    }, 7500); // 8000ms is the duration of the animation
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, []);
+  //   }, 8000); // 8000ms is the duration of the animation
+  //   return () => {
+  //     clearTimeout(timeout);
+  //   };
+  // }, []);
 
 
-  // To disable scrolling when the nav is open 
 
   // useEffect(() => {
-  //   if (navOpen) {
+  //   if (isAnimationFinished) {
   //     document.body.classList.add('no-scroll');
   //   } else {
   //     document.body.classList.remove('no-scroll');
   //   }
-  // }, [navOpen]);
-
-
-
-  useEffect(() => {
-    // Disable scrolling for the first 15 seconds
-    document.body.classList.add('no-scroll');
-    const timeout = setTimeout(() => {
-      document.body.classList.remove('no-scroll');
-    }, 18000); // 18000ms = 18 seconds
-
-    return () => clearTimeout(timeout);
-  }, []);
+  // }, []);
 
 
 
@@ -62,21 +50,21 @@ function App() {
 
   return (
     <div className="App" id={theme}>
-        {!isAnimationFinished && <OpeningAnimation />}
+      {/* {!isAnimationFinished && <OpeningAnimation />}
         {isAnimationFinished && (
-          <>
-            <AnimatedNav navOpen={navOpen} setNavOpen={setNavOpen} />
-            <ThemeContext.Provider value={{ theme, toggleTheme }}>
-              <AnimatePresence>
-                <MainRoutes />
-              </AnimatePresence>
-              <ScrollUp />
-              <Toggle theme={theme} toggleTheme={toggleTheme} />
-            </ThemeContext.Provider>
-          </>
+          <> */}
+      <AnimatedNav navOpen={navOpen} setNavOpen={setNavOpen} />
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <AnimatePresence>
+          <MainRoutes />
+        </AnimatePresence>
+        <ScrollUp />
+        <Toggle theme={theme} toggleTheme={toggleTheme} />
+      </ThemeContext.Provider>
+      {/* </>
         )
-        }
-      </div>
+        } */}
+    </div>
   );
 }
 

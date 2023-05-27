@@ -56,7 +56,7 @@
 .main__content span {
     font-size: 3rem;
     font-weight: 400;
-    font-family: "Reggae One";
+    font-family: "Satoshi-BlackItalic";
     color: var(--accent-color-darker);
 }
 
@@ -64,16 +64,17 @@
     font-size: 3rem;
     font-weight: 400;
     color: var(--title-color);
-    font-family: "Reggae One";
+    font-family: "Satoshi-BlackItalic";
+    letter-spacing: 0.2rem;
 }
 
 
 .main__container p {
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 1rem;
     color: var(--title-color);
     margin-bottom: 1rem;
-    font-family: "Reggae One";
+    font-family: "Satoshi-Medium";
+    letter-spacing: 0.1rem;
 }
 
 .main__links {
@@ -92,7 +93,7 @@
     font-size: 1rem;
     font-weight: 400;
     color: var(--title-color);
-    font-family: "Reggae One";
+    font-family: "Satoshi-MediumItalic";
 }
 
 .main__button {
@@ -114,11 +115,11 @@
 .button1::after {
     content: "";
     position: absolute;
-    left: 0;
+    left: 1.5rem;
     bottom: 0;
     width: 65%;
     height: 2px;
-    background-color: var(--title-color);
+    background-color: var(--text-color);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.2s ease-out;
@@ -132,11 +133,11 @@
   .button2::after {
     content: "";
     position: absolute;
-    left: 0;
+    left: 1.5rem;
     bottom: 0;
     width: 65%;
     height: 2px;
-    background-color: var(--title-color);
+    background-color: var(--text-color);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.2s ease-out;

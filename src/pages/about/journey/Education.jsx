@@ -37,7 +37,7 @@ const Education = () => {
       <h2 className="font-bold text-8xl mb-32 mt-32 w-full text-center">Education</h2>
       <div ref={ref} className="w-[75%] mx-auto relative">
 
-        <motion.div style={{ scaleY: scrollYProgress }} className="absolute top-0 left-9 w-[4px] h-full bg-teal-800 origin-top" />
+        <motion.div style={{ scaleY: scrollYProgress }} className="absolute top-0 left-9 w-[4px] h-full bg-teal-700 origin-top" />
 
         <ul className='w-full flex flex-col items-start justify-between ml-4'>
           {EducationData.map(( {id, title, time, location, comment }) => {

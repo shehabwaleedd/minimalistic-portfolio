@@ -26,10 +26,10 @@ export const HomeAnimations = () => {
     x: 15,
   });
 
-  gsap.set(overlay, {
-    y: 0,
-    opacity: 1,
-  });
+  // gsap.set(overlay, {
+  //   y: 0,
+  //   opacity: 1,
+  // });
   gsap.set(menuToggle, {
     opacity: 0,
     y: 10,
@@ -43,20 +43,15 @@ export const HomeAnimations = () => {
   
   gsap.fromTo(
     container.children,
-    { y: "110%",  },
+    { y: "100%",  },
     {
       y: "0%",
       ease: "expo.out",
-      duration: 2,
-      delay: 1,
+      duration: 0.1,
+      delay: 0,
       stagger: 0.4,
       onComplete: () => {
         // animation complete
-        gsap.to(overlay, {
-          y: "130%",
-          ease: "expo.inOut",
-          duration: 0.5,
-        });
         gsap.to(mainContainer, {
           y:  window.innerWidth > 1440 ? -250 : -250,
           opacity: 1,
@@ -69,7 +64,7 @@ export const HomeAnimations = () => {
 
         gsap.to(container, {
           scale: "2",
-          y: window.innerWidth > 1440 ? "190%" : "160%",
+          y: window.innerWidth > 1440 ? "100%" : "100%",
           ease: "expo.inOut",
           duration: 2,
         });

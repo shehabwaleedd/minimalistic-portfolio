@@ -9,27 +9,11 @@ export const ExperienceData = [
     //     comment: "My first job ever, I was working as a helper in a factory that makes purses and bags. I was responsible for the quality of the products and making sure that the products are ready to be shipped."
     //   },
       {
-        id: 2,
-        title: "Fixing Cars' Lights",
-        time: "2013",
-        location: "Imbaba, Egypt",
-        company: "Local Cars' Repair Shop",
-        comment: "I was mainly responsible for fixing the lights of the cars and making sure that they are working properly, polishing the cars and making sure that they are clean."
-      },
-      {
-        id: 3,
-        title: "Barber Assistant",
-        time: "2014",
-        location: "Beverly Hills / Sheikh Zayed. Egypt",
-        company: "Zizou Barber Shop",
-        comment: "I was helping the barber in his work, making sure that the customers are satisfied and that the barber is doing his job properly."
-      },
-      {
         id: 4,
         title: "AIESEC RNS",
         time: "2019 - 2020",
         location: "University Of Cairo, Egypt",
-        company: "Purses Factory",
+        company: "AIESEC",
         comment: "This is literally one of the best experiences I've ever had and lived though it wasn't paid and was only voluntary, but having the opportuninty to help forigners and make them feel like home was a great experience. I was responsible for making sure that the foreigner is having a great time in Egypt and that he is enjoying his stay, I was also responsible for making sure that the foreigner is safe and that he is not getting into any trouble. In this experience I have learnt how to deal with people from different cultures and backgrounds and it literally widened my horizions and made me a more of a global citizen."
       },
       {

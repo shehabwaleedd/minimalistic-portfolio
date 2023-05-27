@@ -78,13 +78,20 @@ const Portfolio = () => {
               <div className="scrollbarr">
                 {projectsData.map((item, index) => (
                   <div className="work__title" key={item.id} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>
-                    <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
+                    <div className="menu-item-wrapper">
+                      <div className="menu-arrow">
+                        <i class='bx bx-right-arrow-alt' ></i>
+                      </div>
+                      <div className="menu-text">
+                        <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
+                      </div>
+                    </div>
                     <p>{item.category}</p>
                   </div>
                 ))}
               </div>
             </motion.div>
-            </div>
+          </div>
         </div>
       </section>
     </React.Fragment>
@@ -92,3 +99,4 @@ const Portfolio = () => {
 }
 
 export default Portfolio;
+

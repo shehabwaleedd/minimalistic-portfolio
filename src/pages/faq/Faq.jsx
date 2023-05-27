@@ -146,7 +146,7 @@ const Faq = () => {
                 <h3 className="faq__title">{item.id} - {item.question}</h3>
                 <i className={`uil ${activeIndexLeft === index ? "uil-angle-up" : "uil-angle-down"}`}></i>
               </div>
-              <AnimatePresence>
+              <AnimatePresence mode="wait">
                 {activeIndexLeft === index && (
                   <motion.div
                     className="faq__text-container"
