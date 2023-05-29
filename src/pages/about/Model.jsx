@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import "./About.css"
-
+import cv from "../../assets/Shehab_Waleed.docx"
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -99,8 +99,8 @@ const Model = () => {
               </p>
               <div className="cv__button">
                 <button>
-                  <i class='bx bx-down-arrow-alt'></i>
-                  <a href="https://drive.google.com/file/d/1Z3Q3Q4Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z3Z/view?usp=sharing" target="_blank" rel="noopener noreferrer">resume</a>
+                  <i className='bx bx-down-arrow-alt scroll-down'></i>
+                  <a href={cv} download>resume</a>
                 </button>
               </div>
             </div>

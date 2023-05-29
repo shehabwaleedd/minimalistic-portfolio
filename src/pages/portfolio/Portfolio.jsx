@@ -74,7 +74,9 @@ const Portfolio = () => {
               </div>
             </div>
             <motion.div className="text-container" >
-              <h1 className='work__work-text'>WORK</h1>
+              <div className="workk__work">
+                <h1 className='work__work-text'>WORK</h1>
+              </div>
               <div className="scrollbarr">
                 {projectsData.map((item, index) => (
                   <div className="work__title" key={item.id} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>

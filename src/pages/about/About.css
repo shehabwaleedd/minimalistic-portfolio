@@ -269,7 +269,7 @@
 }
 
 .detailed__row p {
-    font-family: "Satoshi", sans-serif;
+    font-family: "Satoshi-Italic", sans-serif;
     font-size: 1.1rem;
     line-height: 28px;
     font-weight: 400;
@@ -340,7 +340,7 @@
 .cv__button button::after {
     content: "";
     position: absolute;
-    left: 0.8rem;
+    left: 1.8rem;
     top: 2.2rem;
     width: 50%;
     height: 2px;
@@ -366,4 +366,22 @@
     object-fit: cover;
     object-position: center;
     border-bottom-left-radius: 2rem;
+}
+
+@keyframes scrollDown {
+    0% {
+        transform: translateY(-0.5rem);
+    }
+
+    50% {
+        transform: translateY(0.2rem);
+    }
+
+    100% {
+        transform: translateY(-0.5rem);
+    }
+}
+
+.scroll-down {
+    animation: scrollDown 1.5s infinite;
 }

@@ -10,9 +10,9 @@
   --title-color: #FFFFE3;
   --title-color-dark: hsl(var(--hue), var(--sat), 80%);
   --text-color: hsl(var(--hue), var(--sat), 65%);
-  --body-color: #10100e;
+  --body-color: #1b1918;
   --container-color: #1b1b1b;
-  background-color: #10100e;
+  background-color: #1b1918;
   --box-shadow-img: 0 0 0 9px rgba(254, 254, 254, 1);
   --rim-color: rgba(254, 254, 254, 0.9);
   --nav-color: wheat;

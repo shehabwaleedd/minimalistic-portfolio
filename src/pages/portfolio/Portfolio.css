@@ -104,6 +104,17 @@
 
 }
 
+.menu-text h1 span {
+  color: var(--text-color);
+  font-family: "Satoshi-BoldItalic", sans-serif;
+  font-size: 0.9rem;
+  transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+}
 
 
 
@@ -122,6 +133,7 @@
   padding-bottom: 1rem;
 }
 
+
 .work__work-text::after {
   position: absolute;
   content: "";
@@ -139,12 +151,14 @@
 
 .menu__item-image_wrapper img {
   width: 150%;
-  height: 110%;
+  height: 90%;
   object-fit: cover;
   position: absolute;
+  object-position: 40% 70%;
   top: 0;
   left: -20px;
   transition: 0.3s ease;
+  border: 1px solid #000;
   border-top-right-radius: 5.4rem;
 }
 
