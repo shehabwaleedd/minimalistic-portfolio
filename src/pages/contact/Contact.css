@@ -5,14 +5,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Satoshi", sans-serif;
+    font-family: "Posterama", sans-serif;
     padding: 0 1rem;
 }
 
 .let__contact {
   margin-top: 2rem;
   display: flex;
-  font-size: 10rem;
+  font-size: 8rem;
   justify-content: center;
   text-align: center;
   border-bottom: 1px solid var(--nav-overlay-color);
@@ -26,7 +26,6 @@
 .let__contact h1 {
     color: var(--nav-overlay-color);
     letter-spacing: 1rem;
-
 }
 
 .contact__container {
@@ -54,7 +53,7 @@
     display: flex; 
     justify-content: left;
     gap: 10rem;
-    font-family: "Satoshi", sans-serif;
+    font-family: "Posterama", sans-serif;
 
 }
 
@@ -62,13 +61,14 @@
     font-size: var(--h1-font-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-1-5);
+    font-family: "Posterama", sans-serif;
 }
 
 .contact__merged {
     display: flex;
     justify-content: left;
     justify-content: space-between;
-    font-family: "Satoshi", sans-serif;
+    font-family: "Posterama", sans-serif;
     margin-bottom: 2rem;
     position: relative;
 
@@ -82,7 +82,7 @@
     outline: none;
     font-size: 1rem;
     margin: 0rem 0.5rem;
-    font-family: "Satoshi-Bold", sans-serif;
+    font-family: "Posterama", sans-serif;
     gap: 1rem;
 }
 
@@ -106,7 +106,7 @@
     display: flex;
     padding-top: 2rem;
     padding-left: 1rem;
-    font-family: "Satoshi-Bold",serif;
+    font-family: "Posterama", sans-serif;
     position: relative;
 }
 
@@ -149,7 +149,7 @@
     margin: 1rem 0rem;
     padding: 0.2rem 0rem;
     z-index: 1;
-    font-family: "Satoshi-Bold", sans-serif;
+    font-family: "Posterama", sans-serif;
     font-size: var(--normal-font-size);
     letter-spacing: 0.1rem;
     margin: 0rem 0.5rem;
@@ -171,7 +171,7 @@
     color: var(--text-color);
     outline: none;
     font-size: var(--normal-font-size);
-    font-family: "Satoshi-Bold", sans-serif;
+    font-family: "Posterama", sans-serif;
     margin: 0rem 0.5rem;
     transition: 0.3s ease;
 
@@ -226,7 +226,7 @@ resize: vertical;
 .contact__email h3 {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
-    font-family: "Satoshi-Bold", sans-serif;
+    font-family: "Posterama", sans-serif;
     color: var(--title-color);
 }
 
@@ -259,7 +259,7 @@ resize: vertical;
 .contact__location h3 {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
-    font-family: "Satoshi-Bold", sans-serif;
+    font-family: "Posterama", sans-serif;
     color: var(--title-color);
 }
 
@@ -267,7 +267,7 @@ resize: vertical;
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-5);
-    font-family: "Satoshi", sans-serif;
+    font-family: "Posterama", sans-serif;
     color: var(--text-color);
 }
 

@@ -87,7 +87,7 @@ const Model = () => {
     // </motion.div>
     <section className="about section">
       <div className="about__pic">
-        <img src={require("../../assets/profile5.jpg")} alt="profile" />
+        <img src={require("../../assets/profile.jpg")} alt="profile" />
       </div>
       <div className='detailed__containerr'>
         <div className='detailed__row'>

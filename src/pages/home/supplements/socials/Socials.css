@@ -20,7 +20,7 @@
     position: relative;
     list-style: none;
     text-decoration: none;
-    font-family: "Satoshi-Bold", sans-serif;
+    font-family: "Posterama", sans-serif;
     color: var(--text-color);
     opacity: 1;
     transition: all 5s cubic-bezier(0.16, 1, 0.3, 1 );

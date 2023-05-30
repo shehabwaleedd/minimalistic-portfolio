@@ -6,8 +6,9 @@
     left: 0rem;
     right: 0px;
     display: none;
-    font-family: "Satoshi-Bold", sans-serif;
+    font-family: "Posterama", sans-serif;
     width: 100%;
+    letter-spacing: 0.3rem;
     transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 

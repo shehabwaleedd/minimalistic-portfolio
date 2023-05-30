@@ -266,15 +266,16 @@
     width: 80%;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
+    font-family: "Posterama", sans-serif;
 }
 
 .detailed__row p {
-    font-family: "Satoshi-Italic", sans-serif;
-    font-size: 1.1rem;
+    font-family: "Posterama", sans-serif;
+    font-size: 0.9rem;
     line-height: 28px;
     font-weight: 400;
     width: 80%;
-    color: var(--title-color);
+    color: var(--text-color);
     white-space: pre-wrap;
     text-align-last: left;
     text-align: justify;
@@ -326,7 +327,7 @@
     cursor: pointer;
     font-size: 1.5rem;
     color: var(--title-color);
-    font-family: "Poppins", sans-serif;
+    font-family: "Posterama", sans-serif;
     font-weight: 500;
     letter-spacing: 0.1rem;
     transition: 0.3s ease;
@@ -364,8 +365,9 @@
     width: 25vw;
     height: 70vh;
     object-fit: cover;
-    object-position: center;
+    object-position: 8% 50%;
     border-bottom-left-radius: 2rem;
+    border: 0.5px solid var(--nav-overlay-color);
 }
 
 @keyframes scrollDown {

@@ -93,7 +93,7 @@
   width: 100%;
   color: var(--title-color);
   font-size: 2rem;
-  font-family: "Krona One", sans-serif;
+  font-family: "Posterama", sans-serif;
   top: 0;
   font-weight: bolder;
   transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -101,6 +101,8 @@
   white-space: nowrap;
   cursor: pointer;
   padding-top: 0.5rem;
+  letter-spacing: 0.5rem;
+  padding-left: 0.5rem;
 
 }
 
@@ -125,7 +127,7 @@
   align-items: flex-start;
   transition: 0.3s ease;
   text-align: left;
-  font-family: "Krona One", sans-serif;
+  font-family: "Posterama", sans-serif;
   font-size: 2.5rem;
   color: var(--accent-color);
   position: relative;
