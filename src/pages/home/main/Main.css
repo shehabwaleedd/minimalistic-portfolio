@@ -57,7 +57,7 @@
 .main__content span {
     font-size: 3rem;
     font-weight: 400;
-    font-family: "Satoshi-BlackItalic";
+    font-family: "Posterama";
     color: var(--accent-color-darker);
 }
 
@@ -65,16 +65,17 @@
     font-size: 3rem;
     font-weight: 400;
     color: var(--title-color);
-    font-family: "Satoshi-BlackItalic";
+    font-family: "Posterama";
     letter-spacing: 0.2rem;
 }
 
 
 .main__container p {
     font-size: 1rem;
+    width: 100%;
     color: var(--title-color);
     margin-bottom: 1rem;
-    font-family: "Satoshi-Medium";
+    font-family: "Posterama";
     letter-spacing: 0.1rem;
 }
 

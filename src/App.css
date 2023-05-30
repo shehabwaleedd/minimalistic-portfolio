@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Itim&family=Kaushan+Script&family=Oooh+Baby&family=Reggae+One&display=swap');
-
+@import url("//db.onlinewebfonts.com/c/ea250342ec4016561ba9e791c2f39c11?family=Posterama");
 
 
 /* ============ VARIABLES CSS ============ */
@@ -455,3 +455,4 @@ img {
        font-style: italic;
 }
 
+@font-face {font-family: "Posterama"; src: url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.eot"); src: url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.woff") format("woff"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.svg#Posterama") format("svg"); }
