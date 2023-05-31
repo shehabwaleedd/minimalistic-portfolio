@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.9f737302.css",
-    "main.js": "/static/js/main.c915b5e7.js",
+    "main.css": "/static/css/main.c26dfe59.css",
+    "main.js": "/static/js/main.41c37593.js",
     "static/js/27.755029ae.chunk.js": "/static/js/27.755029ae.chunk.js",
     "static/media/leluweb.png": "/static/media/leluweb.e56bcba2eba840039dcb.png",
     "static/media/project2.png": "/static/media/project2.09cc78bcb1afa7842a6c.png",
     "static/media/project5.png": "/static/media/project5.170a57df1916fb640c3d.png",
     "static/media/project4.png": "/static/media/project4.28a37ba318c864059e7e.png",
+    "static/media/profile.jpg": "/static/media/profile.763cd32bc9e9ac0dcf82.jpg",
     "static/media/project3.png": "/static/media/project3.25f8c017cc64fe06337d.png",
     "static/media/Satoshi-VariableItalic.ttf": "/static/media/Satoshi-VariableItalic.9519fea9567e2405bc08.ttf",
-    "static/media/profile5.jpg": "/static/media/profile5.6c060fb09af412efe5d3.jpg",
     "static/media/Satoshi-MediumItalic.ttf": "/static/media/Satoshi-MediumItalic.5db9ec801a311bdf187b.ttf",
     "static/media/Satoshi-Italic.ttf": "/static/media/Satoshi-Italic.89c785539a22fa0dfa0f.ttf",
     "static/media/Satoshi-BoldItalic.ttf": "/static/media/Satoshi-BoldItalic.95e24575ceb54c131b6b.ttf",
@@ -52,7 +52,7 @@
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
-    "static/css/main.9f737302.css",
-    "static/js/main.c915b5e7.js"
+    "static/css/main.c26dfe59.css",
+    "static/js/main.41c37593.js"
   ]
 }
