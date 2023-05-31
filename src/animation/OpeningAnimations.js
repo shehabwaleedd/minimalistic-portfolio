@@ -76,7 +76,7 @@ export const OpeningAnimations = () => {
   let textWrapper = document.querySelector(".headerr");
   textWrapper.innerHTML = textWrapper.textContent.replace(
     /\S/g,
-    "<span class='letter'>$&</span>"
+    "<span className='letter'>$&</span>"
   );
 
   anime.timeline().add({

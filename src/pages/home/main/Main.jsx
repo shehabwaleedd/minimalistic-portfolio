@@ -42,10 +42,10 @@ const Main = (Props) => {
                 </div>
             <div className="main__links">
                 <Link to='/portfolio' className="main__button button1">
-                    <p><i class='bx bx-right-arrow-alt'></i> {t("button__view_my_projects")} </p>
+                    <p><i className='bx bx-right-arrow-alt'></i> {t("button__view_my_projects")} </p>
                 </Link>
                 <Link to='/about' className="main__button button2">
-                    <p><i class='bx bx-right-arrow-alt'></i> {t("button__more__about_me")}</p>
+                    <p><i className='bx bx-right-arrow-alt'></i> {t("button__more__about_me")}</p>
                 </Link>
             </div>
         </div>

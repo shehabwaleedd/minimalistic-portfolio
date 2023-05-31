@@ -10,21 +10,21 @@ const Backend = () => {
         <div className="skills__box">
                 <div className="skills__group">
                     <div className="skills__data">
-                        <i class='bx bx-badge-check' ></i>
+                        <i className='bx bx-badge-check' ></i>
                         <div>
                             <h3 className="skills__name">{t("skills__name-writing")}</h3>
                             <span className="skills__level">{t("skills__level_advanced")}</span>
                         </div>
                     </div> 
                     <div className="skills__data">
-                        <i class='bx bx-badge-check' ></i>
+                        <i className='bx bx-badge-check' ></i>
                         <div>
                             <h3 className="skills__name">{t("skills__name-nutrition")}</h3>
                             <span className="skills__level">{t("skills__level_intermediate")}</span>
                         </div>
                     </div> 
                     <div className="skills__data">
-                        <i class='bx bx-badge-check' ></i>
+                        <i className='bx bx-badge-check' ></i>
                         <div>
                             <h3 className="skills__name">{t("skills__name-percussion")}</h3>
                             <span className="skills__level">{t("skills__level_intermediate")}</span>
@@ -33,21 +33,21 @@ const Backend = () => {
                 </div>
                 <div className="skills__group">
                     <div className="skills__data">
-                        <i class='bx bx-badge-check' ></i>
+                        <i className='bx bx-badge-check' ></i>
                         <div>
                             <h3 className="skills__name">{t("skills__name-composing")}</h3>
                             <span className="skills__level">{t("skills__level_intermediate")}</span>
                         </div>
                     </div> 
                     <div className="skills__data">
-                        <i class='bx bx-badge-check' ></i>
+                        <i className='bx bx-badge-check' ></i>
                         <div>
                             <h3 className="skills__name">{t("skills__name-philosophy")}</h3>
                             <span className="skills__level">{t("skills__level_advanced")}</span>
                         </div>
                     </div> 
                     <div className="skills__data">
-                        <i class='bx bx-badge-check' ></i>
+                        <i className='bx bx-badge-check' ></i>
                         <div>
                             <h3 className="skills__name">{t("skills__name-history")}</h3>
                             <span className="skills__level">{t("skills__level_expert")}</span>

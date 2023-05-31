@@ -6,14 +6,14 @@ const MyStack = () => {
     <section className="stack section">
       <div className="stack__container container">
         <div className="stack__icons">
-          <i class='bx bxl-javascript'></i>
-          <i class='bx bxl-react' ></i>
-          <i class='bx bxl-tailwind-css' ></i>
-          <i class='bx bxl-bootstrap'></i>
-          <i class='bx bxl-sass' ></i>
-          <i class='bx bxl-firebase'></i>
-          <i class='bx bxl-git'></i>
-          <i class='bx bxl-typescript'></i>
+          <i className='bx bxl-javascript'></i>
+          <i className='bx bxl-react' ></i>
+          <i className='bx bxl-tailwind-css' ></i>
+          <i className='bx bxl-bootstrap'></i>
+          <i className='bx bxl-sass' ></i>
+          <i className='bx bxl-firebase'></i>
+          <i className='bx bxl-git'></i>
+          <i className='bx bxl-typescript'></i>
         </div>
       </div>
     </section>

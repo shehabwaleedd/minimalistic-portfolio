@@ -9,21 +9,21 @@ const Frontend = () => {
         <div className="skills__box">
         <div className="skills__group">
                     <div className="skills__data">
-                        <i class='bx bx-badge-check' ></i>
+                        <i className='bx bx-badge-check' ></i>
                         <div>
                             <h3 className="skills__name">HTML</h3>
                             <span className="skills__level">{t("skills__level_advanced")}</span>
                         </div>
                     </div> 
                     <div className="skills__data">
-                        <i class='bx bx-badge-check' ></i>
+                        <i className='bx bx-badge-check' ></i>
                         <div>
                             <h3 className="skills__name">CSS</h3>
                             <span className="skills__level">{t("skills__level_advanced")}</span>
                         </div>
                     </div> 
                     <div className="skills__data">
-                        <i class='bx bx-badge-check' ></i>
+                        <i className='bx bx-badge-check' ></i>
                         <div>
                             <h3 className="skills__name">JAVASCRIPT</h3>
                             <span className="skills__level">{t("skills__level_intermediate")}</span>
@@ -32,21 +32,21 @@ const Frontend = () => {
                 </div>
                 <div className="skills__group">
                     <div className="skills__data">
-                        <i class='bx bx-badge-check' ></i>
+                        <i className='bx bx-badge-check' ></i>
                         <div>
                             <h3 className="skills__name">REACT</h3>
                             <span className="skills__level">{t("skills__level_intermediate")}</span>
                         </div>
                     </div> 
                     <div className="skills__data">
-                        <i class='bx bx-badge-check' ></i>
+                        <i className='bx bx-badge-check' ></i>
                         <div>
                             <h3 className="skills__name">BOOTSTRAP</h3>
                             <span className="skills__level">{t("skills__level_intermediate")}</span>
                         </div>
                     </div> 
                     <div className="skills__data">
-                        <i class='bx bx-badge-check' ></i>
+                        <i className='bx bx-badge-check' ></i>
                         <div>
                             <h3 className="skills__name">typescript</h3>
                             <span className="skills__level">{t("skills__level_intermediate")}</span>

@@ -82,7 +82,7 @@ const Portfolio = () => {
                   <div className="work__title" key={item.id} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>
                     <div className="menu-item-wrapper">
                       <div className="menu-arrow">
-                        <i class='bx bx-right-arrow-alt' ></i>
+                        <i className='bx bx-right-arrow-alt' ></i>
                       </div>
                       <div className="menu-text">
                         <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
