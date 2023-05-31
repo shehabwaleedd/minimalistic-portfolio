@@ -28,10 +28,24 @@
 .toggle__container button {
     padding: 0.5rem 0.8rem;
     border-radius: 2rem;
-    transition: 0.4s ease;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: pointer;
 }
 
+.sun_icon {
+    color: var(--title-color);
+    font-size: 3.35rem;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+.switch i {
+    font-size: 1.35rem;
+    color: var(--container-color);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+
+}
 
 .active {
     cursor: pointer;

@@ -14,6 +14,7 @@
   position: fixed;
   background-color: var(--body-color);
   padding-bottom: 5rem;
+  border-top: 1px solid var(--text-color);
 
 }
 
@@ -77,17 +78,22 @@
   width: 100%;
   text-align: left;
   position: relative;
-  gap: 7rem;
+  gap: 3.5rem;
   border-bottom: 1px solid var(--title-color);
 }
 
+.categories {
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .work__title p {
-  font-size: var(--normal-font-size);
+  font-size: var(--smaller-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-0-5);
-  font-family: "Satoshi", sans-se1rif;
+  font-family: "Satoshi-Light", sans-serif;
   color: var(--title-color);
 }
+
 
 .work__title h1 {
   width: 100%;
@@ -102,7 +108,7 @@
   cursor: pointer;
   padding-top: 0.5rem;
   letter-spacing: 0.5rem;
-  padding-left: 0.5rem;
+  padding-left: 0.2rem;
 
 }
 

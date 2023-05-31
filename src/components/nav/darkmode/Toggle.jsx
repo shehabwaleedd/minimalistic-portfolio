@@ -37,29 +37,29 @@ const Toggle = (props) => {
           borderRadius: '2rem',
           boxShadow: 'var(--box-shadow)',
           cursor: 'pointer',
-          gap: '1rem',
+          gap: '2rem',
           MozBoxShadow: 'var(--moz-box-shadow)',
           transition: "all 4s cubic-bezier(0.16, 1, 0.3, 1)",
         }}
       >
         <motion.i 
-          className={`uil uil-sun ${!isOn ? '' : 'acitve'}`} 
+          className={`bx bx-sun ${!isOn ? '' : 'acitve'}`} 
           layout 
           transition={spring} 
           style={{ 
-            fontSize: '1.25rem', 
+            fontSize: '1.35rem', 
             color: isOn ? 'var(--accent-color)' : 'var(--body-color)',
-            marginTop: isOn ? '1.25rem' : '0',
+            marginTop: isOn ? '3.7rem' : '0.2rem',
           }} 
         />
         <motion.i 
-          className={`uil uil-moon ${isOn ? 'active' : ''}`} 
+          className={`bx bx-moon ${isOn ? 'active' : ''}`} 
           layout 
           transition={spring} 
           style={{ 
-            fontSize: '1.25rem', 
+            fontSize: '1.35rem', 
             color: isOn ? 'var(--body-color)' : 'var(--accent-color)',
-            marginBottom: isOn ? '1.25rem' : '0',
+            marginBottom: isOn ? '3.8rem' : '0',
             zIndex: 999,
             
           }} 

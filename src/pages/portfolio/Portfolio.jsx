@@ -88,7 +88,9 @@ const Portfolio = () => {
                         <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
                       </div>
                     </div>
-                    <p>{item.category}</p>
+                    <div className="categories">
+                      <p>{item.category}</p>
+                    </div>
                   </div>
                 ))}
               </div>
