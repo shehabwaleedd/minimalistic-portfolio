@@ -49,7 +49,7 @@ const Toggle = (props) => {
           style={{ 
             fontSize: '1.35rem', 
             color: isOn ? 'var(--accent-color)' : 'var(--body-color)',
-            marginTop: isOn ? '3.7rem' : '0.2rem',
+            marginTop: isOn ? '5rem' : '0',
           }} 
         />
         <motion.i 
@@ -59,7 +59,7 @@ const Toggle = (props) => {
           style={{ 
             fontSize: '1.35rem', 
             color: isOn ? 'var(--body-color)' : 'var(--accent-color)',
-            marginBottom: isOn ? '3.8rem' : '0',
+            marginBottom: isOn ? '5rem' : '0rem',
             zIndex: 999,
             
           }} 
