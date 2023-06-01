@@ -422,15 +422,14 @@
   /* Styles for mobile phones */
 
   .contact {
-    width: 70%;
+    width: 100%;
   }
 
 
   .let__contact {
-    padding-top: 4rem;
-    font-size: 2rem;
+    padding-top: 2rem;
+    font-size: 3rem;
     letter-spacing: normal;
-    padding-right: 7.5rem;
     margin-bottom: 3rem;
   }
 

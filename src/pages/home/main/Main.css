@@ -207,21 +207,21 @@
     .main__container h1 {
         width: 100%;
         letter-spacing: 0.1rem;
-        font-size: 0.7rem;
+        font-size: 1rem;
     }
 
     .main__content span {
         letter-spacing: 0.1rem;
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     .main {
-        width: 70%;
+        width: 100%;
     }
 
     .main__subcontent p {
         width: 98%;
-        font-size: 0.4rem;
+        font-size: 0.5rem;
         padding-left: 0.6rem;
     }
 
@@ -239,12 +239,12 @@
 
    .main__links p {
         width: 100%;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         padding: 0 1rem;
     }
 
     .main__links i {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 
 

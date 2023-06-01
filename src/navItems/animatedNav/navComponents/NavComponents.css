@@ -48,19 +48,20 @@
   @media (max-width: 414px) {
     .nav__link {  
 
-      font-size: 0.5rem;
+      font-size: 0.65rem;
     }
 
     .nav__link.spin {
       letter-spacing: normal;
-      padding: 0.2rem;
+      padding: 0.2rem;;
     }
     .nav__links-links {
-        
-        margin-right: 2rem;
-        width: 45%;
-        display: flex;
+        width: 40%;
+        position: absolute;
         transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 999;
+        gap: 0rem;
+        left: 9.9rem;
       }
 
 }

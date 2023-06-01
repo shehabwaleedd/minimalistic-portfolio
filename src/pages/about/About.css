@@ -172,33 +172,32 @@
 @media (max-width: 480px) {
 
     .about {
-        padding-bottom: 0;
-        margin-bottom: 10rem;
+
     }
 
     .detailed__containerr {
         padding: 0 1rem;
-        height: 100vh;
+        height: 90vh;
 
     }
 
     .about__pic  {
-        top: 6rem;
-        left: 1rem;
+        top: 0rem;
+
     }
 
     .about__pic img {
-        width: 60%;
-        height: 60%;
+        width: 100vw;
+        height: 45vh;
         object-fit: cover;
-        object-position: 50% 50%;
-        border-radius: 1rem;
+
+        border-radius: 0rem;
         border: none;
     }
 
     .aboutttt__container h1  {
         font-size: 1.7rem;
-        width: 60%;
+        width: 100%;
         text-align: left;
 
     }
@@ -206,11 +205,13 @@
     .detailed__row p {
         font-size: 0.5rem;
         line-height: 1rem;
-        width: 65%;
+        width: 100%;
+        
     }
 
     .cv__button button {
         font-size: 1rem;
+        padding-bottom: 4rem;
     }
 
 }

@@ -41,8 +41,8 @@
 @media (max-width: 480px){ 
     .stack {
         height: 5%;
-        width: 67%;
-        position: absolute;
+        width: 100%;
+        position: relative;
         
     }
     .stack__icons i {
