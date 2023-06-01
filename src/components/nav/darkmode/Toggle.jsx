@@ -40,6 +40,7 @@ const Toggle = (props) => {
           gap: '2rem',
           MozBoxShadow: 'var(--moz-box-shadow)',
           transition: "all 4s cubic-bezier(0.16, 1, 0.3, 1)",
+          position: 'relative',
         }}
       >
         <motion.i 
@@ -49,7 +50,10 @@ const Toggle = (props) => {
           style={{ 
             fontSize: '1.35rem', 
             color: isOn ? 'var(--accent-color)' : 'var(--body-color)',
-            marginTop: isOn ? '5rem' : '0',
+            position: 'absolute',
+            top: isOn ? '1rem' : '1rem',
+            zIndex: 999,
+
           }} 
         />
         <motion.i 
@@ -59,8 +63,9 @@ const Toggle = (props) => {
           style={{ 
             fontSize: '1.35rem', 
             color: isOn ? 'var(--body-color)' : 'var(--accent-color)',
-            marginBottom: isOn ? '5rem' : '0rem',
             zIndex: 999,
+            position: 'absolute',
+            top: isOn ? '4rem' : '4rem',
             
           }} 
         />
