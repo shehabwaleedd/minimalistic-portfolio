@@ -18,7 +18,7 @@ const projectsData = [
       id: 2,
       image: Work2,
       title: "Minimalistic Blog",
-      category: "web-application",
+      category: "application",
       link: "https://github.com/shehabwaleedd/countingDown",
       date: "2022-06-16",
       comment: "I made this small website just to keep always reminding myself of the time left for me to finish my learning process and start to actually make good projects, I used Vanilla JavaScript to make it"
@@ -27,7 +27,7 @@ const projectsData = [
       id: 3,
       image: Work3,
       title: "Moaaz Askaar",
-      category: "UI/UX Design",
+      category: "branding",
       link: "https://github.com/shehabwaleedd/twitterclone",
       date: "2022-07-01",
       comment: "I made this website using HTML and CSS, I was trying to make it as close as possible to the original twitter website, I used flexbox to make it responsive"
