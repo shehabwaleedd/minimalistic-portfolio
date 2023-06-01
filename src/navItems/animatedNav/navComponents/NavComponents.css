@@ -46,21 +46,21 @@
 
 
   @media (max-width: 414px) {
-    .nav__link {
-        display: block;
-        margin: 0 0;
-        position: relative;
-        color: var(--title-color);
-        left: -1rem;
-        right: 0rem;
-        top: 1rem;
-        display: none;
-        font-family: "Satoshi-Bold", sans-serif;
-        width: 200%;
-        font-size: 0.3rem;
+    .nav__link {  
+
+      font-size: 0.5rem;
+    }
+
+    .nav__link.spin {
+      letter-spacing: normal;
+      padding: 0.2rem;
     }
     .nav__links-links {
+        
+        margin-right: 2rem;
+        width: 45%;
         display: flex;
         transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
       }
+
 }

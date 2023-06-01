@@ -37,3 +37,16 @@
     font-size: 4rem;
     margin: 0 2rem;
 }
+
+@media (max-width: 480px){ 
+    .stack {
+        height: 5%;
+        width: 67%;
+        position: absolute;
+        
+    }
+    .stack__icons i {
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+}

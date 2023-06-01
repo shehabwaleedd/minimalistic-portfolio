@@ -172,3 +172,68 @@
     background-color: var(--accent-color);
   }
   
+  @media (max-width: 768px) {
+    .main__titlee {
+        font-size: 3.5rem;
+    }
+
+    .main__subtitle {
+        font-size: 2.5rem;
+    }
+
+    .main__description {
+        width: 80%;
+    }
+
+    .main__container h1 {
+        font-size: 2rem;
+    }
+
+    .main__container p {
+        font-size: 0.9rem;
+    }
+
+    .main__links p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    .main__subtitle {
+        font-size: 0.8rem;
+    }
+
+
+    .main__container h1 {
+        letter-spacing: 0.15rem;
+        font-size: 0.8rem;
+    }
+
+    .main__content span {
+        letter-spacing: 0.1rem;
+        font-size: 0.8rem;
+    }
+
+    .main {
+        width: 70%;
+    }
+
+    .main__titlee h1 span {
+      font-size: 0.5rem;
+  }
+
+    .main__container p {
+      width: 100%;
+        font-size: 0.5rem;
+    }
+
+
+
+    .main__button i {
+        margin-top: 0.4rem;
+        font-size: 0.6rem;
+    }
+
+}

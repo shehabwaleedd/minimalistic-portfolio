@@ -1,224 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Itim&family=Kaushan+Script&family=Oooh+Baby&display=swap');
 
-
-
-
-/* .about__data {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
-    width: 90%;
-    gap: 2rem;
-}
-
-.about__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    column-gap: 6rem;
-}
-
-.about__data-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: right;
-    text-align: right;
-    width: 90%;
-    gap: 1rem;
-}
-
-.about__data-container span {
-    display: flex;
-    justify-content: flex-start;
-    align-items: left;
-    text-align: left;
-}
-
-.about__data-container h2 {
-    font-size: 3rem;
-    font-weight: var(--font-medium);
-    color: var(--title-color);
-}
-
-
-
-.about__img {
-    width: 350px;
-    justify-self: center;
-    border-radius: 1rem;
-    overflow: hidden;
-    transition: 0.6s ease;
-    box-shadow: 6px 6px 0px 4px rgba(0, 0, 0, 1);
-
-
-}
-
-
-.about__description {
-    padding: 0 4rem 0 0;
-
-    color: var(--title-color);
-}
-
-.about__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    color: #e2eef9;
-    line-height: 0.5;
-}
-
-.about__data-numbers {
-    display: flex;
-    justify-content: flex-start;
-    text-align: center;
-    align-items: center;
-}
-
-.about__data-numbers span {
-    font-size: 2rem;
-}
-
-
-.expierence {
-    padding-top: 5rem;
-    height: max-content;
-    padding-bottom: 3rem;
-}
-
-.education {
-    padding-top: 5rem;
-
-    height: max-content;
-    padding-bottom: 3rem;
-}
-
-.timelocation_text-experience {
-    color: var(--experience-text-color);
-}
-
-.timelocation_text-education {
-    color: var(--education-text-color);
-}
-
-.comment__text {
-    color: var(--text-color);
-    white-space: pre-wrap;
-    text-align-last: left;
-    text-align: justify;
-    font-family: "Satoshi", sans-serif;
-}
-
-.title__text {
-    color: var(--title-color);
-}
-
-.company__text {
-    color: var(--title-color);
-    font-size: var(--normal-font-size);
-
-}
-
-
-.details__row {
-
-    width: 100%;
-    align-items: flex-end;
-}
-
-.details__top {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    position: relative;
-} */
-
-/* .details__location span:nth-child(2) {
-    margin-left: 16px;
-}
-
-.details__model {
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
-    padding-bottom: 2rem;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.details__first {
-    margin-right: 72px;
-}
-
-
-.details__model span {
-    display: inline-block;
-    position: relative;
-    font-weight: 500;
-    font-size: 8rem;
-    font-family: "Poppins";
-    color: var(--title-color);
-    letter-spacing: 1rem;
-
-}
-
-.details__bottom-row {
-    height: 50vh;
-    position: relative;
-}
-
-.details__bottom {
-    height: 100%;
-    width: 100%;
-} */
-
-/* .details__image-container-single {
-    width: 100%;
-
-    margin: 0 auto;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
-
-
-.detailed__frame-single img {
-    position: absolute;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: 0.6s ease;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-
-} */
-
-
-
-/* .detailed__information {
-    padding: 6rem 0.1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-} */
-
-
 .about {
     padding-bottom: 15rem;
 }
@@ -386,4 +167,50 @@
 
 .scroll-down {
     animation: scrollDown 1.5s infinite;
+}
+
+@media (max-width: 480px) {
+
+    .about {
+        padding-bottom: 0;
+        margin-bottom: 10rem;
+    }
+
+    .detailed__containerr {
+        padding: 0 1rem;
+        height: 100vh;
+
+    }
+
+    .about__pic  {
+        top: 6rem;
+        left: 1rem;
+    }
+
+    .about__pic img {
+        width: 60%;
+        height: 60%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        border-radius: 1rem;
+        border: none;
+    }
+
+    .aboutttt__container h1  {
+        font-size: 1.7rem;
+        width: 60%;
+        text-align: left;
+
+    }
+
+    .detailed__row p {
+        font-size: 0.5rem;
+        line-height: 1rem;
+        width: 65%;
+    }
+
+    .cv__button button {
+        font-size: 1rem;
+    }
+
 }
