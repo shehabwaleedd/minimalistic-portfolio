@@ -23,10 +23,10 @@
 
 .main__titlee,
 .main__subtitle {
-  font-size: 5rem;
-  display: inline-block;
-  vertical-align: middle;
-  
+    font-size: 5rem;
+    display: inline-block;
+    vertical-align: middle;
+
 }
 
 
@@ -48,12 +48,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    
+
 }
 
 
-.main__titlee span{
-    
+.main__titlee span {
+
     letter-spacing: 0.6rem;
 }
 
@@ -128,14 +128,14 @@
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.2s ease-out;
-  }
-  
-  .button1:hover::after {
-    transform: scaleX(1);
-    
-  }
+}
 
-  .button2::after {
+.button1:hover::after {
+    transform: scaleX(1);
+
+}
+
+.button2::after {
     content: "";
     position: absolute;
     left: 1.5rem;
@@ -146,33 +146,35 @@
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.2s ease-out;
-  }
-  
-  .button2:hover::after {
-    
+}
+
+.button2:hover::after {
+
     transform: scaleX(1);
-  }
+}
 
-  .button1:hover > p {
+.button1:hover>p {
     color: var(--title-color);
-  }
-  .button1:hover > p > i {
-    color: var(--title-color);
-  }
+}
 
-  .button2:hover > p {
+.button1:hover>p>i {
     color: var(--title-color);
-  }
-  .button2:hover > p > i {
-    color: var(--title-color);
-  }
+}
 
-  ::selection {
+.button2:hover>p {
+    color: var(--title-color);
+}
+
+.button2:hover>p>i {
+    color: var(--title-color);
+}
+
+::selection {
     color: var(--container-color);
     background-color: var(--accent-color);
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .main__titlee {
         font-size: 3.5rem;
     }
@@ -201,14 +203,11 @@
 @media (max-width: 480px) {
 
 
-    .main__subtitle {
-        font-size: 0.8rem;
-    }
-
 
     .main__container h1 {
-        letter-spacing: 0.15rem;
-        font-size: 0.8rem;
+        width: 100%;
+        letter-spacing: 0.1rem;
+        font-size: 0.7rem;
     }
 
     .main__content span {
@@ -220,20 +219,34 @@
         width: 70%;
     }
 
-    .main__titlee h1 span {
-      font-size: 0.5rem;
-  }
+    .main__subcontent p {
+        width: 98%;
+        font-size: 0.4rem;
+        padding-left: 0.6rem;
+    }
 
-    .main__container p {
-      width: 100%;
-        font-size: 0.5rem;
+    .main__links {
+        position: relative;
+        width: 99.1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 0.0rem;
+        line-height: 1rem;
     }
 
 
+   .main__links p {
+        width: 100%;
+        font-size: 0.6rem;
+        padding: 0 1rem;
+    }
 
-    .main__button i {
-        margin-top: 0.4rem;
+    .main__links i {
         font-size: 0.6rem;
     }
+
+
 
 }
