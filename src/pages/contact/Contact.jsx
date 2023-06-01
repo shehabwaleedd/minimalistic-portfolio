@@ -4,7 +4,6 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next'
 import Socials from '../home/supplements/socials/Socials';
-import ParralexContactAnimation from '../../components/nav/parralexTextAnimation/ParralexContactAnimation.tsx';
 import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
 
 
