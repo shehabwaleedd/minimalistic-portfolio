@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
-import "./About.css"
+import "./About.scss"
 import cv from "../../assets/Shehab_Waleed.docx"
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };

@@ -395,27 +395,6 @@
   height: 100%;
 }
 
-/* .contact__load-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    z-index: 10;
-    pointer-events: none;
-  }
-  
-  .contact__load-screen {
-    position: relative;
-    padding-top: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    background-color: var(--contact-transition-color);
-    width: 100%;
-    height: 0%;
-  } */
-
 
 
 @media (max-width: 414px) {

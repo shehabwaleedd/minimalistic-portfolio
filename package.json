@@ -48,6 +48,7 @@
     "react-smooth-scroll": "^0.1.0",
     "react-spinners": "^0.13.8",
     "react-transition-group": "^4.4.5",
+    "sass": "^1.62.1",
     "styled-components": "^5.3.9",
     "web-vitals": "^2.1.4"
   },

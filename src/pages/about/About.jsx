@@ -1,6 +1,5 @@
-
 import React, { useEffect, useRef } from 'react'
-import "./About.css"
+import "./About.scss"
 import { motion } from 'framer-motion'
 import Model from './Model'
 import MyStack from './stack/MyStack'

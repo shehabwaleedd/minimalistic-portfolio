@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import "./Main.css"
+import "./Main.scss"
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 

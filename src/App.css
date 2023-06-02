@@ -464,3 +464,9 @@ img {
   src: url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.woff") format("woff"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.svg#Posterama") format("svg");
 }
 
+
+@media screen (display-mode: standalone) {
+
+  height: 8vh !important;
+
+}

@@ -1,0 +1,204 @@
+.about {
+    padding-bottom: 15rem;
+  
+    .about__pic {
+      position: absolute;
+      top: -5rem;
+      right: 0rem;
+  
+      img {
+        width: 25vw;
+        height: 70vh;
+        object-fit: cover;
+        object-position: 8% 50%;
+        border-bottom-left-radius: 2rem;
+        border: 0.5px solid var(--nav-overlay-color);
+      }
+    }
+  }
+  
+  .detailed__containerr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem;
+  
+    .detailed__row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      width: 100%;
+      gap: 2rem;
+      flex-direction: column;
+  
+      p {
+        font-family: "Posterama", sans-serif;
+        font-size: 0.9rem;
+        line-height: 28px;
+        font-weight: 400;
+        width: 80%;
+        color: var(--text-color);
+        white-space: pre-wrap;
+        text-align-last: left;
+        text-align: justify;
+      }
+    }
+  }
+  
+  .aboutttt__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+    width: 100%;
+    height: 20vh;
+  
+    h1 {
+      font-size: 3rem;
+      font-weight: var(--font-medium);
+      color: var(--title-color);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--nav-overlay-color);
+      padding: 1rem;
+      width: 80%;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+      font-family: "Posterama", sans-serif;
+    }
+  }
+  
+  .load-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 10;
+    pointer-events: none;
+  
+    .load-screen {
+      position: relative;
+      padding-top: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+      background-color: var(--contact-transition-color);
+      width: 100%;
+      height: 0%;
+    }
+  }
+  
+  .cv__button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    color: var(--nav-overlay-color);
+    line-height: 0.5;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  
+    &:hover {
+      color: var(--nav-overlay-color);
+    }
+  
+    button {
+      border: none;
+      background: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: var(--title-color);
+      font-family: "Satoshi-MediumItalic", sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+      transition: 0.3s ease;
+      border-radius: 1rem;
+      display: flex;
+      align-items: center;
+      position: relative;
+  
+      &::after {
+        content: "";
+        position: absolute;
+        left: 1.8rem;
+        top: 2.2rem;
+        width: 50%;
+        height: 2px;
+        background-color: var(--text-color);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+  
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+  
+  @keyframes scrollDown {
+    0% {
+      transform: translateY(-0.5rem);
+    }
+    50% {
+      transform: translateY(0.2rem);
+    }
+    100% {
+      transform: translateY(-0.5rem);
+    }
+  }
+  
+  .scroll-down {
+    animation: scrollDown 1.5s infinite;
+  }
+  
+  @media (max-width: 480px) {
+    .about {
+      padding-bottom: 1rem;
+  
+      .about__pic {
+        top: 0rem;
+  
+        img {
+          width: 100vw;
+          height: 45vh;
+          object-fit: cover;
+          border-radius: 0rem;
+          border: none;
+        }
+      }
+    }
+  
+    .detailed__containerr {
+      padding: 0 1rem;
+      height: 80vh;
+  
+      .about__pic {
+        display: none;
+      }
+  
+      .aboutttt__container h1 {
+        font-size: 1.7rem;
+        width: 100%;
+        text-align: left;
+      }
+  
+      .detailed__row p {
+        font-size: 0.7rem;
+        line-height: 1rem;
+        width: 100%;
+      }
+  
+      .cv__button button {
+        font-size: 1rem;
+      }
+    }
+  }
