@@ -40,13 +40,12 @@
 
 @media (max-width: 480px){ 
     .stack {
-        height: 5%;
-        width: 100%;
         position: relative;
+        height: 10%;
         
     }
     .stack__icons i {
-        font-size: 1rem;
+        font-size: 1.9rem;
         margin: 0 0.5rem;
     }
 }

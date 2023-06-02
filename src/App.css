@@ -11,7 +11,6 @@
   --text-color: hsl(var(--hue), var(--sat), 65%);
   --body-color: #1b1918;
   --container-color: #1b1b1b;
-  background-color: #1b1918;
   --box-shadow-img: 0 0 0 9px rgba(254, 254, 254, 1);
   --rim-color: rgba(254, 254, 254, 0.9);
   --nav-color: wheat;
@@ -46,7 +45,7 @@
   --text-color: hsl(var(--hue), var(--sat), 60%);
   --body-color: #eee7e1;
   --container-color: #f3e9e1;
-  background-color: #eee7e1;
+
   --nav-color: #698269;
   --rim-color: #212121;
   --accent-color: #4E6C50;
@@ -83,13 +82,14 @@
   --title-color: hsl(var(--hue), var(--sat), 30%);
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
   --text-color: hsl(var(--hue), var(--sat), 46%);
-  --body-color: #fff7f3;
+  --body-color: #eee7e1;
   --container-color: #fef4ee;
   --accent-color-darker: #244224;
   --border-color: #698269;
   --accent-color: #426342;
   --accent: var(--pink);
   --background-color: #eee7e1;
+
 
 
 
@@ -143,6 +143,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+
 
 }
 
@@ -461,3 +463,4 @@ img {
   src: url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.eot");
   src: url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.woff") format("woff"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.svg#Posterama") format("svg");
 }
+

@@ -172,12 +172,12 @@
 @media (max-width: 480px) {
 
     .about {
-
+        padding-bottom: 1rem;
     }
 
     .detailed__containerr {
         padding: 0 1rem;
-        height: 90vh;
+        height: 80vh;
 
     }
 
@@ -203,7 +203,7 @@
     }
 
     .detailed__row p {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         line-height: 1rem;
         width: 100%;
         
@@ -211,7 +211,6 @@
 
     .cv__button button {
         font-size: 1rem;
-        padding-bottom: 4rem;
     }
 
 }

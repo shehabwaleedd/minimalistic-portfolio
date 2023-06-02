@@ -10,20 +10,20 @@ const AnimatedNav = (Props) => {
   const { t } = useTranslation()
   const location = useLocation();
 
-  
+
   useEffect(() => {
-    
+
     Props.setNavOpen(false); // Close the navbar when the location changes
-     // eslint-disable-next-line 
+    // eslint-disable-next-line 
   }, [location, Props.setNavOpen]);
-  
+
   return (
     <nav className='nav'>
-        <div className="navbar">
-          <div className={Props.navOpen ? "logo spin" : "logo"} style={{transitionDuration: Props.navOpen ? "1s" : "1.5s", transition: Props.navOpen ? "1.5s" : "1.5s"}}>
+      <div className="navbar">
+        <div className="navbar__container">
+          <div className={Props.navOpen ? "logo spin" : "logo"} style={{ transitionDuration: Props.navOpen ? "1s" : "1.5s", transition: Props.navOpen ? "1.5s" : "1.5s" }}>
             <Link to="/">{t("my__name")}</Link>
           </div>
-
           <div className="side__navbar">
             <NavComponents navOpen={Props.navOpen} />
             <DropDownMenu navOpen={Props.navOpen} />
@@ -34,12 +34,13 @@ const AnimatedNav = (Props) => {
               </div>
             </div>
           </div>
+        </div>
         <div className="nav-overlay" style={{
-          top: Props.navOpen ? "0%" : "-180%",
+          top: Props.navOpen ? "0%" : "-200%",
           transitionDuration: Props.navOpen ? "1s" : "1.5s",
         }}>
         </div>
-        </div>
+      </div>
     </nav>
   )
 }
