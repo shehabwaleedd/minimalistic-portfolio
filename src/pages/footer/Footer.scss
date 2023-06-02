@@ -8,11 +8,14 @@ $background-color_1: var(--container-color);
 	border-top: var(--footer-border-color);
 }
 .footer__container {
-	padding: 1.5rem 1rem 1rem;
+	padding: 1.5rem 2rem 1rem 2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	h1 {
+		font-family: "Posterama";
+	}
 }
 .footer__link {
 	color: $color_1;
@@ -37,6 +40,7 @@ $background-color_1: var(--container-color);
 	margin-left: 2.2rem;
 }
 .footer__social {
+	padding-left: 3rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -46,9 +50,9 @@ $background-color_1: var(--container-color);
 	p {
 		strong {
 			color: $color_1;
-			font-size: 0.69rem;
+			font-size: 0.85rem;
 		}
-		font-size: 0.69rem;
+		font-size: 0.8rem;
 		color: $color_2;
 	}
 }
@@ -66,7 +70,7 @@ $background-color_1: var(--container-color);
 }
 .footer__social-link {
 	color: $color_1;
-	font-size: 0.9rem;
+	font-size: 1.2rem;
 	display: flex;
 	transition: 0.3s ease;
 	justify-content: center;
@@ -75,22 +79,66 @@ $background-color_1: var(--container-color);
 		transform: scaleZ(1.5);
 		color: $color_3;
 	}
+	margin-right: 1rem;
 }
 .footer__copyright {
+	position: relative;
 	&::before {
 		content: "";
 		display: block;
-		width: 60px;
-		height: 2px;
+		width: 6.75rem;
+		height: 0.125rem;;
 		background: #cccccc;
 		color: $color_1;
-		margin: 1rem 0 0.5rem;
+		left: 8.2rem;
+		top: -1rem;
 		transition: width 0.3s;
+		position: absolute;
 	}
+	margin-top: 2rem;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
 	gap: 0.8rem;
 	color: $color_1;
+	padding-left: 5rem;
+}
+
+
+@media (max-width: 450px)  {
+
+	.footer {
+		margin-top: 2rem;
+		width: 105vw;
+	}
+
+	.footer__container {
+		padding: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+
+	.footer__container h1 {
+		padding-top: 1rem;
+	}
+
+	.footer__social {
+		margin-top: 1.5rem;
+	}
+
+	.footer__copyright {
+		padding-left: 3.3rem;
+		&::before {
+			content: "";
+			display: block;
+			width: 6.75rem;
+			height: 0.125rem;;
+			background: #cccccc;
+			color: $color_1;
+			left: 6.8rem;
+			top: -1rem;
+			transition: width 0.3s;
+			position: absolute;
+		}
+	}
 }
