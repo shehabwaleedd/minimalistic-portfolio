@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "../Data";
-import "./ProjectDetails.css";
+import "./ProjectDetails.scss";
 import ScrollAnimation from "../../../animation/ScrollAnimation/ScrollAnimation";
 
 function ProjectDetails() {

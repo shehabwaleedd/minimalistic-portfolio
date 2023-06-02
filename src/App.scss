@@ -1,0 +1,361 @@
+$color_1: var(--title-color);
+$color_2: var(--accent-color);
+$color_3: var(--container-color);
+$font-family_1: var(--body-font);
+$font-family_2: "Satoshi-Bold", sans-serif;
+$background-color_1: #1b1918;
+$background-color_2: #eee7e1;
+$background-color_3: var(--background-color);
+$background-color_4: var(--title-color);
+$background-color_5: var(--title-color-dark);
+$background-color_6: rgb(94, 94, 94);
+
+@import "//db.onlinewebfonts.com/c/ea250342ec4016561ba9e791c2f39c11?family=Posterama";
+/* ============ VARIABLES CSS ============ */
+/* ========== Base ========== */
+/* ========== REUSABLE CSS CLASSES ========== */
+/* ========== REUSABLE CSS CLASSES ========== */
+/* ========== REUSABLE CSS CLASSES ========== */
+/* ========== BREAKPOINTS ========== */
+/* For Larger Devices */
+@font-face {
+	font-family: 'Satoshi';
+	src: url('../public/fonts/Satoshi-Variable.woff2') format('woff2'), url('../public/fonts/Satoshi-Variable.woff') format('woff'), url('../public/fonts/Satoshi-Variable.woff') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Satoshi-VariableItalic';
+	src: url('../public/fonts/Satoshi-VariableItalic.woff2') format('woff2'), url('../public/fonts/Satoshi-VariableItalic.woff') format('woff'), url('../public/fonts/Satoshi-VariableItalic.ttf') format('truetype');
+	font-weight: 300 900;
+	font-display: swap;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Satoshi-Light';
+	src: url('../public/fonts/Satoshi-Light.woff2') format('woff2'), url('../public/fonts/Satoshi-Light.woff') format('woff'), url('../public/fonts/Satoshi-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-display: swap;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Satoshi-Regular';
+	src: url('../public/fonts/Satoshi-Regular.woff2') format('woff2'), url('../public/fonts/Satoshi-Regular.woff') format('woff'), url('../public/fonts/Satoshi-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Satoshi-Italic';
+	src: url('../public/fonts/Satoshi-Italic.woff2') format('woff2'), url('../public/fonts/Satoshi-Italic.woff') format('woff'), url('../public/fonts/Satoshi-Italic.ttf') format('truetype');
+	font-weight: 400;
+	font-display: swap;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Satoshi-Medium';
+	src: url('../public/fonts/Satoshi-Medium.woff2') format('woff2'), url('../public/fonts/Satoshi-Medium.woff') format('woff'), url('../public/fonts/Satoshi-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Satoshi-MediumItalic';
+	src: url('../public/fonts/Satoshi-MediumItalic.woff2') format('woff2'), url('../public/fonts/Satoshi-MediumItalic.woff') format('woff'), url('../public/fonts/Satoshi-MediumItalic.ttf') format('truetype');
+	font-weight: 500;
+	font-display: swap;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Satoshi-Bold';
+	src: url('../public/fonts/Satoshi-Bold.woff2') format('woff2'), url('../public/fonts/Satoshi-Bold.woff') format('woff'), url('../public/fonts/Satoshi-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Satoshi-BoldItalic';
+	src: url('../public/fonts/Satoshi-BoldItalic.woff2') format('woff2'), url('../public/fonts/Satoshi-BoldItalic.woff') format('woff'), url('../public/fonts/Satoshi-BoldItalic.ttf') format('truetype');
+	font-weight: 700;
+	font-display: swap;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Satoshi-Black';
+	src: url('../public/fonts/Satoshi-Black.woff2') format('woff2'), url('../public/fonts/Satoshi-Black.woff') format('woff'), url('../public/fonts/Satoshi-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-display: swap;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Satoshi-BlackItalic';
+	src: url('../public/fonts/Satoshi-BlackItalic.woff2') format('woff2'), url('../public/fonts/Satoshi-BlackItalic.woff') format('woff'), url('../public/fonts/Satoshi-BlackItalic.ttf') format('truetype');
+	font-weight: 900;
+	font-display: swap;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Posterama";
+	src: url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.eot");
+	src: url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.woff") format("woff"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ea250342ec4016561ba9e791c2f39c11.svg#Posterama") format("svg");
+}
+#light {
+	background-color: $background-color_1;
+	--body-color: #1b1918;
+	--title-color: #FFFFE3;
+	--title-color-dark: hsl(var(--hue), var(--sat), 80%);
+	--text-color: hsl(var(--hue), var(--sat), 65%);
+	--container-color: #1b1918;
+	--box-shadow-img: 0 0 0 9px rgba(254, 254, 254, 1);
+	--rim-color: rgba(254, 254, 254, 0.9);
+	--nav-color: wheat;
+	--accent-color: #f1dbb2;
+	--box-shadow: 1px 0px 19px -1px rgba(245, 222, 179, 0.75);
+	--webkit-shadow: 1px 0px 19px -1px rgba(245, 222, 179, 0.75);
+	--moz-box-shadow: 1px 0px 19px -1px rgba(245, 222, 179, 0.75);
+	--insider-color: #373737;
+	--accent-color-darker: #ffe5b9;
+	--border-color: #c2b08f;
+	--blog-text-color: hsl(var(--hue), var(--sat), 65%);
+	--progressive-bar-color: #d9c39d;
+	--stack-accent-color: #fafafa;
+	--stack-icons-background-color: #1e1e1e;
+	--overlay-color: #10100e;
+	--nav-overlay-color: #eee7e1;
+	--project-text-animation-color: #f3e9e1;
+	--logo-color: #FFFFE3;
+	--experience-text-color: #76ae7b;
+	--education-text-color: #76ae7b;
+	--footer-border-color: 1px solid var(--title-color);
+	--about-transition-color: #eee7e1;
+	--projects-transition-color: #eee7e1;
+	--contact-transition-color: #eee7e1;
+}
+#dark {
+	background-color: $background-color_2;
+	--body-color: #eee7e1;
+	--title-color: hsl(var(--hue), var(--sat), 39%);
+	--title-color-dark: hsl(var(--hue), var(--sat), 0%);
+	--text-color: hsl(var(--hue), var(--sat), 60%);
+	--container-color: #f3e9e1;
+	--nav-color: #698269;
+	--rim-color: #212121;
+	--accent-color: #4E6C50;
+	--box-shadow: -4px 2px 20px 1px rgba(63, 63, 63, 0.3);
+	--webkit-shadow: -4px 6px 31px 0px rgba(93, 110, 96, 0.6);
+	--moz-box-shadow: -4px 6px 31px 0px rgba(93, 110, 96, 0.6);
+	--insider-color: #fff2e0;
+	--accent-color-darker: #244224;
+	--border-color: #698269;
+	--blog-text-color: hsl(var(--hue), var(--sat), 45%);
+	--progressive-bar-color: #6f988a;
+	--stack-accent-color: #fafafa;
+	--stack-icons-background-color: #1e1e1e;
+	--logo-color: hsl(var(--hue), var(--sat), 60%);
+	--overlay-color: #eee7e1;
+	--nav-overlay-color: #1b1b1b;
+	--project-text-animation-color: #6d6d6d;
+	--logo-color: hsl(var(--hue), var(--sat), 39%);
+	--experience-text-color: #557c58;
+	--education-text-color: #557c58;
+	--footer-border-color: 1px solid rgba(0, 0, 0, 0.1);
+	--about-transition-color: #1b1b1b;
+	--projects-transition-color: #1b1b1b;
+	--contact-transition-color: #1b1b1b;
+}
+:root {
+	--header-height: 3rem;
+	--hue: 0;
+	--sat: 0%;
+	--title-color: hsl(var(--hue), var(--sat), 30%);
+	--title-color-dark: hsl(var(--hue), var(--sat), 0%);
+	--text-color: hsl(var(--hue), var(--sat), 46%);
+	--container-color: #fef4ee;
+	--accent-color-darker: #244224;
+	--border-color: #698269;
+	--accent-color: #426342;
+	--accent: var(--pink);
+	--background-color: #eee7e1;
+	--body-color: #eee7e1;
+	--body-font: "Poppins", sans-serif;
+	--big-font-size: 3.5rem;
+	--h1-font-size: 2.25rem;
+	--h2-font-size: 1.5rem;
+	--h3-font-size: 1.25rem;
+	--normal-font-size: 1rem;
+	--small-font-size: 0.875rem;
+	--smaller-font-size: 0.813rem;
+	--tiny-font-size: 0.625rem;
+	--border-radius: 1rem;
+	--speed: 500ms;
+	--font-normal: 400;
+	--font-medium: 500;
+	--font-semi-bold: 600;
+	--mb-0-25: 0.25rem;
+	--mb-0-5: 0.5rem;
+	--mb-0-75: 0.75rem;
+	--mb-1: 1rem;
+	--mb-1-5: 1.5rem;
+	--mb-2: 2rem;
+	--mb-2-5: 2.5rem;
+	--mb-3: 3rem;
+	--z-tooltip: 10;
+	--z-fixed: 100;
+	--z-modal: 1000;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+html {
+	scroll-behavior: smooth;
+	background-color: $background-color_3;
+}
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+	background-color: $background-color_3;
+	font-family: $font-family_1;
+	font-size: var(--normal-font-size);
+}
+.no-scroll {
+	overflow: hidden;
+}
+button {
+	font-family: $font-family_1;
+	font-size: var(--normal-font-size);
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+input {
+	font-family: $font-family_1;
+	font-size: var(--normal-font-size);
+}
+textarea {
+	font-family: $font-family_1;
+	font-size: var(--normal-font-size);
+}
+h1 {
+	color: $color_1;
+	font-weight: var(--font-semi-bold);
+	font-family: $font-family_2;
+}
+h2 {
+	color: $color_1;
+	font-weight: var(--font-semi-bold);
+	font-family: $font-family_2;
+}
+h3 {
+	color: $color_1;
+	font-weight: var(--font-semi-bold);
+	font-family: $font-family_2;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.section {
+	padding: 1.5rem 0 2rem;
+}
+.section__title {
+	font-size: var(--h1-font-size);
+	color: $color_1;
+	text-align: center;
+}
+.section__subtitle {
+	display: block;
+	font-size: var(--small-font-size);
+	margin-bottom: 4rem;
+	color: $color_2;
+	text-align: center;
+}
+.container {
+	max-width: 968px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.containered {
+	max-width: 1268px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.grid {
+	display: grid;
+	gap: 1.5rem;
+}
+.gridded {
+	display: grid;
+	gap: 1.5rem;
+}
+.button {
+	display: inline-block;
+	background-color: $background-color_4;
+	color: $color_3;
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+	font-weight: var(--font-medium);
+}
+.button__icon {
+	margin-left: var(--mb-0-5);
+}
+.button--flex {
+	display: inline-block;
+	align-items: center;
+	&:hover {
+		background-color: $background-color_5;
+		border-radius: 0rem;
+	}
+}
+#trailer {
+	height: 20px;
+	width: 20px;
+	background-color: $background-color_6;
+	position: fixed;
+	border-radius: 20px;
+	left: 0px;
+	top: 0px;
+	z-index: 10000;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 500ms ease;
+}
+::-webkit-scrollbar {
+	width: 0.8rem;
+	height: 0.5rem;
+	margin-block: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+	background: var(--text-color);
+	border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 50px;
+}
+.grid3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 15px;
+}
+.grid2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 15px;
+}
+.flexCenter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.hiddenn {
+	display: none;
+}

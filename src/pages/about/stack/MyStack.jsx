@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Stack.css"
+import "./Stack.scss"
 
 const MyStack = () => {
   return (

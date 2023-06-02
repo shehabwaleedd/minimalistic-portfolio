@@ -1,11 +1,11 @@
 .about {
     padding-bottom: 15rem;
-  
+    background-color: var(--body-color);
     .about__pic {
       position: absolute;
       top: -5rem;
       right: 0rem;
-  
+
       img {
         width: 25vw;
         height: 70vh;
@@ -25,7 +25,7 @@
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 0 2rem;
+    padding: 2rem 2rem;
   
     .detailed__row {
       display: flex;
@@ -178,7 +178,7 @@
     }
   
     .detailed__containerr {
-      padding: 0 1rem;
+      padding: 1rem 1rem;
       height: 80vh;
   
       .about__pic {

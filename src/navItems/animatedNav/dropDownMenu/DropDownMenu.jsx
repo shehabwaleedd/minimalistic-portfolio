@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import i18next from 'i18next';
-import './DropDownMenu.css';
+import './DropDownMenu.scss';
 
 const DropDownMenu = (Props) => {
   const [open, setOpen] = useState(false);

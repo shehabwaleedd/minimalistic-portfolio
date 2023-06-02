@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import DropDownMenu from './dropDownMenu/DropDownMenu'
-import './AnimatedNav.css'
+import './AnimatedNav.scss'
 import { useTranslation } from 'react-i18next'
 import NavComponents from './navComponents/NavComponents'
 import { useLocation } from 'react-router-dom'

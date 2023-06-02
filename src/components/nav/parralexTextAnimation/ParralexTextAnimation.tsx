@@ -1,4 +1,4 @@
-import "./ParralexTextAnimation.css";
+import "./ParralexTextAnimation.scss";
 import React from 'react';
 import { useRef } from "react";
 import {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import './Toggle.css';
+import './Toggle.scss';
 
 const Toggle = (props) => {
   const spring = {

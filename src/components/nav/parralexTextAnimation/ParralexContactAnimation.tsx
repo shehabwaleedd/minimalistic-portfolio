@@ -1,4 +1,4 @@
-import "./ParralexContactAnimation.css";
+import "./ParralexContactAnimation.scss";
 import React from 'react';
 import { useRef } from "react";
 import {

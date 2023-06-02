@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import './Portfolio.css';
+import './Portfolio.scss';
 import projectsData from './Data';
 import { PortfolioAnimations } from '../../animation/PortfolioAnimations';
 import { Link } from 'react-router-dom';

@@ -1,5 +1,4 @@
 import React, { useEffect} from 'react';
-import './Home.css';
 import Main from './main/Main';
 import { HomeAnimations } from '../../animation/HomeAnimations';
 
