@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.249c6ba6.css",
-    "main.js": "/static/js/main.d6f8493a.js",
+    "main.css": "/static/css/main.f02d8e04.css",
+    "main.js": "/static/js/main.6b346bb3.js",
     "static/js/27.755029ae.chunk.js": "/static/js/27.755029ae.chunk.js",
     "static/media/leluweb.png": "/static/media/leluweb.e56bcba2eba840039dcb.png",
     "static/media/bloggg.png": "/static/media/bloggg.574889f4338eabe775c3.png",
@@ -52,7 +52,7 @@
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
-    "static/css/main.249c6ba6.css",
-    "static/js/main.d6f8493a.js"
+    "static/css/main.f02d8e04.css",
+    "static/js/main.6b346bb3.js"
   ]
 }
