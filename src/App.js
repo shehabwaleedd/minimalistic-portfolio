@@ -7,6 +7,7 @@ import AnimatedNav from './navItems/animatedNav/AnimatedNav';
 import ScrollUp from './pages/home/supplements/ScrollUp';
 import MainRoutes from './navItems/routes/MainRoutes';
 import Footer from './pages/footer/Footer';
+import Cursor from './components/cursor/Cursor';
 
 
 export const ThemeContext = createContext(null);
@@ -47,22 +48,26 @@ function App() {
   };
 
   return (
-    <div className="App" id={theme}>
-      {/* {!isAnimationFinished && <OpeningAnimation />}
+    <>
+      <div className="noise"></div>
+      <div className="App" id={theme}>
+        {/* {!isAnimationFinished && <OpeningAnimation />}
         {isAnimationFinished && (
           <> */}
-      <AnimatedNav navOpen={navOpen} setNavOpen={setNavOpen} />
-      <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        <AnimatePresence>
-          <MainRoutes />
-        </AnimatePresence>
-        <ScrollUp />
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
-      </ThemeContext.Provider>
-      {/* </>
+        <AnimatedNav navOpen={navOpen} setNavOpen={setNavOpen} />
+        <Cursor />
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+          <AnimatePresence>
+            <MainRoutes />
+          </AnimatePresence>
+          <ScrollUp />
+          <Toggle theme={theme} toggleTheme={toggleTheme} />
+        </ThemeContext.Provider>
+        {/* </>
         )
         } */}
-    </div>
+      </div>
+    </>
   );
 }
 

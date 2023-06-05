@@ -6,14 +6,15 @@
     font-family: "Satoshi-Bold", sans-serif;
     color: var(--title-color);
     transition: all 5s cubic-bezier(0.16, 1, 0.3, 1 );
-    cursor: pointer;
     letter-spacing: 0.3rem;
     margin: 2rem 0;
+    cursor: none;
 }
 
 .nav-social-media ul {
     display: flex;
     gap: 2rem;
+    cursor: none;
 }
 
 .nav-social-media ul li {
@@ -23,12 +24,14 @@
     font-family: "Posterama", sans-serif;
     color: var(--text-color);
     opacity: 1;
+    cursor: none;
     transition: all 5s cubic-bezier(0.16, 1, 0.3, 1 );
-    cursor: pointer;
     letter-spacing: 0.3rem;
     
 }
-
+.nav-social-media ul li a {
+  cursor: none;
+}
 
 .nav-social-media ul li::after {
     content: "";
@@ -41,15 +44,22 @@
     transform: scaleX(0);
     transform-origin: left;
     transition: all 3s cubic-bezier(0.16, 1, 0.3, 1 );
+    cursor: none;
     
 }
 
 .nav-social-media ul li:hover::after {
     transform: scaleX(1); 
-
+    cursor: none;
   }
 
- 
+.nav-social-media ul li:hover {
+    color: var(--title-color);
+    opacity: 1;
+    transition: all 5s cubic-bezier(0.16, 1, 0.3, 1 );
+    cursor: none;
+    letter-spacing: 0.3rem;
+}
 
 .location {
     position: relative;
