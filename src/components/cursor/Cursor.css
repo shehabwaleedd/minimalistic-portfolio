@@ -48,3 +48,14 @@ li.pointer {
     opacity: 0.03;
 }
 
+
+
+@media (max-width: 454px) {
+    .cursor-dot {
+        display: none;
+    }
+
+    .cursor-outline {
+        display: none;
+    }
+}
