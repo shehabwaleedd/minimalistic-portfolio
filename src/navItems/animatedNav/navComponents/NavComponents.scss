@@ -27,16 +27,14 @@ $background-color_1: var(--container-color);
 		position: absolute;
 		left: 0.8rem;
 		top: 2.2rem;
-		width: 10%;
+		width: 0%;
 		height: 2px;
 		background-color: $background-color_1;
-		transform: scaleX(0);
-		transform-origin: left;
 		transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 	}
 	&:hover {
 		&::after {
-			transform: scaleX(1);
+			width: 50%;
 		}
 	}
 }

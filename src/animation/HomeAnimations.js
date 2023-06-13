@@ -43,7 +43,7 @@ export const HomeAnimations = () => {
   
   gsap.fromTo(
     container.children,
-    { y: "100%",  },
+    { y: "105%",  },
     {
       y: "0%",
       ease: "expo.out",

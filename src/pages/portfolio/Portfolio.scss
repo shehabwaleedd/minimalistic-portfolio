@@ -121,9 +121,16 @@ $background-color_5: #555;
 	}
 }
 .categories {
+	display: flex;
+	align-items: flex-end;
 	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .menu-text {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+	width: 38vw;
 	h1 {
 		span {
 			color: $color_2;

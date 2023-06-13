@@ -8,6 +8,7 @@
     "@iconify/icons-heroicons-solid": "^1.2.6",
     "@motionone/utils": "^10.15.1",
     "@popperjs/core": "^2.11.6",
+    "@studio-freight/lenis": "^1.0.16",
     "@tensorflow/tfjs": "^4.2.0",
     "@tensorflow/tfjs-backend-wasm": "^4.2.0",
     "@tensorflow/tfjs-layers": "^4.2.0",
@@ -49,6 +50,7 @@
     "react-spinners": "^0.13.8",
     "react-transition-group": "^4.4.5",
     "sass": "^1.62.1",
+    "splitting": "^1.0.6",
     "styled-components": "^5.3.9",
     "web-vitals": "^2.1.4"
   },

@@ -86,10 +86,10 @@ const Portfolio = () => {
                       </div>
                       <div className="menu-text">
                         <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
+                        <div className="categories">
+                          <p>{item.category}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="categories">
-                      <p>{item.category}</p>
                     </div>
                   </div>
                 ))}
