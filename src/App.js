@@ -8,6 +8,7 @@ import ScrollUp from './pages/home/supplements/ScrollUp';
 import MainRoutes from './navItems/routes/MainRoutes';
 import Footer from './pages/footer/Footer';
 import Cursor from './components/cursor/Cursor';
+import i18next from 'i18next';
 
 
 export const ThemeContext = createContext(null);
@@ -17,6 +18,10 @@ function App() {
   const [theme, setTheme] = useState('dark');
   const [isAnimationFinished, setIsAnimationFinished] = useState(false);
   const [navOpen, setNavOpen] = useState(false)
+  const [language, setLanguage] = useState(i18next.language);
+  const [languageExpanded, setLanguageExpanded] = useState(false);
+
+
 
 
   // useEffect(() => {
@@ -54,11 +59,11 @@ function App() {
         {/* {!isAnimationFinished && <OpeningAnimation />}
         {isAnimationFinished && (
           <> */}
-        <AnimatedNav navOpen={navOpen} setNavOpen={setNavOpen} />
+        <AnimatedNav navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded}/>
         <Cursor />
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
           <AnimatePresence>
-            <MainRoutes />
+            <MainRoutes navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded}/>
           </AnimatePresence>
           <ScrollUp />
           <Toggle theme={theme} toggleTheme={toggleTheme} />

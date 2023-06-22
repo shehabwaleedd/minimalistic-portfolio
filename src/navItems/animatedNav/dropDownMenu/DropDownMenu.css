@@ -1,0 +1,183 @@
+.dropdown-menu {
+	z-index: 999999;
+	display: block;
+}
+
+.active .dropdown-menu {
+	display: block;
+	z-index: 999999;
+
+}
+
+.dropdown__icon {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	cursor: pointer;
+	transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+	position: relative;
+	z-index: 999999;
+	color: var(--text-color);
+}
+
+
+.dropdown__icon:hover {
+	cursor: pointer;
+}
+
+
+.dropdown__icon.spin {
+	position: relative;
+	color: var(--container-color);
+	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+	transition-delay: 0.3s;
+}
+
+
+
+.dropdown__icon span {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.1rem;
+	font-family: "Satoshi-Bold";
+	gap: 0.6rem;
+	z-index: 999999;
+
+}
+
+.dropdown__icon span i {
+	font-size: 1.3rem;
+}
+
+.language__dropdown {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	right: 5rem;
+	width: 20vw;
+	height: 5.4vh;
+	padding: 1rem;
+	gap: 2.5rem;
+	background: rgba(238, 231, 225, 0.66);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(2.8px);
+	-webkit-backdrop-filter: blur(6.8px);
+	border: 1px solid rgba(238, 231, 225, 0.3);
+	transition: all 0.4s;
+	z-index: 99999999;
+	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.language__dropdown button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+
+.germany-flag {
+	width: 1.7vw;
+	height: 2vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.germany-flag-stripe {
+	flex-grow: 1;
+}
+
+.germany-flag-stripe--black {
+	background-color: black;
+}
+
+.germany-flag-stripe--red {
+	background-color: #f45c5c;
+}
+
+.germany-flag-stripe--yellow {
+	background-color: #f9f943;
+}
+
+.france-flag {
+	width: 1.7vw;
+	height: 2vh;
+	display: flex;
+}
+
+.france-flag-stripe {
+	flex-grow: 1;
+}
+
+.france-flag-stripe--blue {
+	background-color: #3c3cf1;
+}
+
+.france-flag-stripe--white {
+	background-color: white;
+}
+
+.france-flag-stripe--red {
+	background-color: #f45c5c;
+}
+
+.spain-flag {
+	width: 1.7vw;
+	height: 2vh;
+	display: flex;
+	flex-direction: column;
+	border-radius: 1rem;
+}
+
+.spain-flag-stripe {
+	flex-grow: 1;
+
+}
+
+.spain-flag-stripe--red {
+	background-color: #f45c5c;
+	flex: 1;
+}
+
+.spain-flag-stripe--yellow {
+	flex: 2;
+	background-color: #f9f943;
+}
+
+.egypt-flag {
+	width: 1.7vw;
+	height: 2vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.egypt-flag-stripe {
+	flex-grow: 1;
+}
+
+.egypt-flag-stripe--red {
+	background-color: #ff3d3d;
+	flex: 1;
+}
+
+.egypt-flag-stripe--white {
+	flex: 1;
+	background-color: white;
+}
+
+.egypt-flag-stripe--black {
+	flex: 1;
+	background-color: black;
+}
+
+
+
+.uk-flag {
+	position: relative;
+	width: 1.5vw;
+	height: 2vh;
+}

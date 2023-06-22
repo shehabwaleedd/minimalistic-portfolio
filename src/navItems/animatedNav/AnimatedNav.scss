@@ -12,11 +12,7 @@ $background-color_1: var(--nav-overlay-color);
 	width: 100%;
 	transition: all 4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.navbar {
-	display: flex;
-	justify-content: space-between;
-	transition: all 4s cubic-bezier(0.16, 1, 0.3, 1);
-}
+
 .nav-overlay {
 	position: absolute;
 	z-index: -2;
@@ -29,15 +25,18 @@ $background-color_1: var(--nav-overlay-color);
 }
 .navbar__container {
 	display: flex;
-	justify-content: space-between;
-	padding: 5rem;
-	width: 100vw;
+	position: relative;
+    justify-content: space-between;
+    transition: all 4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 999999;
+    width: 100vw;
+    height: 12vh;
+    padding: 5rem;
 }
 .side__navbar {
 	display: flex;
 	justify-content: center;
 	gap: 1rem;
-	overflow: hidden;
 }
 .logo {
 	text-decoration: none;

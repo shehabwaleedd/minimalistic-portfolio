@@ -27,7 +27,7 @@ const MainRoutes = (Props) => {
         <Route path='/about' element={<AboutPage imageDetails={imageDetails}/>} />
         <Route path='/portfolio' element={<Portfolio />} />
         <Route path='/testimonials' element={<Testimonials />} />
-        <Route path="/" element={<BlogHome />} />
+        <Route path="/" element={<BlogHome navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/main" element={<Main navOpen={Props.navOpen}/>} />
         <Route path="/animatednav" element={<AnimatedNav />} />

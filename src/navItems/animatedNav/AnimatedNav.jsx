@@ -19,14 +19,13 @@ const AnimatedNav = (Props) => {
 
   return (
     <nav className='nav'>
-      <div className="navbar">
         <div className="navbar__container">
           <div className={Props.navOpen ? "logo spin" : "logo"} style={{ transitionDuration: Props.navOpen ? "1s" : "1.5s", transition: Props.navOpen ? "1.5s" : "1.5s" }}>
-            <Link to="/">{t("my__name")}</Link>
+          <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "1rem", fontSize: Props.language === "ar" ? "2rem" : "" }}>{t("my__name")}</h1>
           </div>
           <div className="side__navbar">
             <NavComponents navOpen={Props.navOpen} />
-            <DropDownMenu navOpen={Props.navOpen} />
+            <DropDownMenu navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
             <div className="menu-toggle" onClick={() => Props.setNavOpen(!Props.navOpen)}>
               <div className={Props.navOpen ? "hamBox hamBoxOpen" : "hamBox"}>
                 <span className={Props.navOpen ? "lineTop spin" : "lineTop"}></span>
@@ -40,7 +39,6 @@ const AnimatedNav = (Props) => {
           transitionDuration: Props.navOpen ? "1s" : "1.5s",
         }}>
         </div>
-      </div>
     </nav>
   )
 }
