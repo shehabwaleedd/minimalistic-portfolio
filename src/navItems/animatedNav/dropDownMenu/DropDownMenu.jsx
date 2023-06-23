@@ -84,9 +84,6 @@ const DropDownMenu = (Props) => {
                   <button className="language__dropdown-link" onClick={handleFrenchClick}>
                     <span className="language__text">fr</span>
                   </button>
-                  <button className="language__dropdown-link" onClick={handleSpanishClick}>
-                    <span className="language__text">es</span>
-                  </button>
                   <button className="language__dropdown-link" onClick={handleArabicClick}>
                     <span className="language__text">ar</span>
                   </button>

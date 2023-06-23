@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import "./About.scss"
 import cv from "../../assets/Shehab_Waleed.docx"
+import { t } from "i18next";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
 
-const Model = () => {
+const Model = (Props) => {
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
 
@@ -29,9 +30,9 @@ const Model = () => {
         <div className='detailed__row'>
           <div className="aboutttt__container containered">
             <div className="about__content">
-              <h1>About</h1>
-              <p>
-                I am a young gentleman of twenty-four years, hailing from the bustling metropolis of Cairo, situated in the cradle of civilization, Egypt. My journey in the professional realm has been diverse and multifaceted, as I have explored various vocations in search of my true calling. Alas, it was in the domain of front-end development that my ardor for the craft was kindled. In addition to my proficiency in the art of coding, I possess the ability to converse fluently in three distinct languages, and I am perpetually consumed by a fervent desire to expand my horizons and acquire new knowledge.
+              <h1 style={{textAlign: Props.language === "ar" ? "right" : "left", paddingRight: Props.language === "ar" ? "3rem" : "0", fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem"}}>{t("navbar__about")}</h1>
+              <p style={{fontFamily: Props.language === "ar" ? "Almarai" : "", textAlignLast: Props.language === "ar" ? "right" : "left"}}>
+                {t("about__description")}
               </p>
               <div className="cv__button">
                 <button>

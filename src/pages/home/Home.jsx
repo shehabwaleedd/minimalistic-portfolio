@@ -3,7 +3,7 @@ import Main from './main/Main';
 import { HomeAnimations } from '../../animation/HomeAnimations';
 
 
-const Home = () => {
+const Home = (Props) => {
 
 
 
@@ -28,7 +28,7 @@ const Home = () => {
       </div>
       <div className="overlay"></div>
       <div className="main__containerr">
-        <Main />
+        <Main  navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>
       </div>
     </section>
   );

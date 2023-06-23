@@ -6,7 +6,7 @@ import MyStack from './stack/MyStack'
 import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
 
 
-const AboutPage = () => {
+const AboutPage = (Props) => {
 
   let screen = useRef(null);
   let body = useRef(null);
@@ -53,7 +53,7 @@ const AboutPage = () => {
       </div>
       <motion.div>
         <section ref={(el) => (body = el)} className="about section" id='about' >
-          <Model  imageDetails={imageDetails}/>
+          <Model  imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>
           <MyStack />
         </section>
 

@@ -30,22 +30,22 @@ const Main = (Props) => {
 
 
 
-    return (
-        <section className='main section'>
+    return ( 
+        <section className='main section' style={{height: Props.language ? "125vh" : "110vh"}}>
             <div className="main__container container grid">
                 <div className="main__content" style={{ marginTop: Props.navOpen ? "5rem" : "0" }}>
-                    <h1 className="main__titlee">HEY, {t("my__name_im")} <span className="main__title-color">{t("my__name-first")}</span> <span> {t("my__name-last")}</span></h1>
-                    <h1 className="main__subtitle">{t("my__intro")}</h1>
+                    <h1  style={{fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "4rem" : "" }}  className="main__titlee">{t("hey")}{t("my__name_im")} <span  style={{fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "4rem" : "" }}  className="main__title-color">{t("my__name-first")}</span> <span  style={{fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "4rem" : "" }} > {t("my__name-last")}</span></h1>
+                    <h1  style={{fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "4rem" : "" }} className="main__subtitle">{t("my__intro")}</h1>
                 </div>
                 <div className="main__subcontent">
-                    <p className="main__description">{t("Introduction")}</p>
+                    <p className="main__description" style={{fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2rem" : "" }}>{t("Introduction")}</p>
                 </div>
                 <div className="main__links">
                     <Link to='/portfolio' className="main__button button1">
-                        <p><i className='bx bx-right-arrow-alt'></i> {t("button__view_my_projects")} </p>
+                        <p  style={{fontFamily: Props.language === "ar" ? "Cairo" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}><i className='bx bx-right-arrow-alt' style={{fontFamily: Props.language === "ar" ? "Cairo" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}></i> {t("button__view_my_projects")} </p>
                     </Link>
                     <Link to='/about' className="main__button button2">
-                        <p><i className='bx bx-right-arrow-alt'></i> {t("button__more__about_me")}</p>
+                        <p style={{fontFamily: Props.language === "ar" ? "Cairo" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}><i className='bx bx-right-arrow-alt' style={{fontFamily: Props.language === "ar" ? "Cairo" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}></i> {t("button__more__about_me")}</p>
                     </Link>
                 </div>
             </div>
