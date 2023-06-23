@@ -12,7 +12,7 @@ export const BlogHome = (Props) => {
   return (
     <div>
           <motion.div>
-            <Home imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>
+            <Home isAbout={Props.isAbout} setIsAbout={Props.setIsAbout} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>
           </motion.div>
     </div >
   )

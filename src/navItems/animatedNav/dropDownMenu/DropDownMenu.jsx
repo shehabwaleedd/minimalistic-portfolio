@@ -34,6 +34,7 @@ const DropDownMenu = (Props) => {
 
   const handleLanguageChange = (newLanguage) => {
     Props.setLanguage(newLanguage);
+    Props.setShouldReload(true);
     Props.setOpen(false);
   };
 
@@ -73,6 +74,7 @@ const DropDownMenu = (Props) => {
                   animate={{ x: 3, opacity: 1 }}
                   exit={{ x: 15, opacity: 0 }}
                   className="language__dropdown"
+                  style={{top: Props.navOpen? "-3rem" : "" , left: Props.navOpen? "-12rem" : "" ,flexDirection: Props.language === 'ar' ? 'row-reverse' : 'row', right: Props.language === 'ar' ? '-20rem' : '5rem'}}
                 >
                   <button className="language__dropdown-link" onClick={handleEnglishClick}>
                     <span className="language__text">en</span>

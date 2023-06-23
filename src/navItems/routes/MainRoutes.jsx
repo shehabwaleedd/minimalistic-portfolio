@@ -23,15 +23,15 @@ const MainRoutes = (Props) => {
 
   return (
       <Routes location={location} key={location.pathname}>
-        <Route path='/mystack' element={<MyStack />} />
-        <Route path='/about' element={<AboutPage imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>} />
-        <Route path='/portfolio' element={<Portfolio />} />
-        <Route path='/testimonials' element={<Testimonials />} />
-        <Route path="/" element={<BlogHome navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/main" element={<Main navOpen={Props.navOpen}/>} />
+        <Route path='/mystack' element={<MyStack shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>} />
+        <Route path='/about' element={<AboutPage isAbout={Props.isAbout} setIsAbout={Props.setIsAbout}  shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>} />
+        <Route path='/portfolio' element={<Portfolio shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>} />
+        <Route path='/testimonials' element={<Testimonials shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload}/>} />
+        <Route path="/" element={<BlogHome shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>} />
+        <Route path="/contact" element={<Contact shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>} />
+        <Route path="/main" element={<Main  shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>} />
         <Route path="/animatednav" element={<AnimatedNav />} />
-        <Route path="/projectDetails/:id" element={<ProjectDetails />} />
+        <Route path="/projectDetails/:id" element={<ProjectDetails shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>} />
       </Routes>
   )
 }

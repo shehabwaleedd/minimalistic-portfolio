@@ -13,7 +13,6 @@ const Main = (Props) => {
 
         const helloWorld = document.querySelector('.main__content');
 
-
         function handleDoubleClick() {
             helloWorld.classList.toggle('selected');
         }
@@ -23,11 +22,12 @@ const Main = (Props) => {
         // Clean up the event listener on unmount
         return () => {
             helloWorld.removeEventListener('dblclick', handleDoubleClick);
+            
         };
 
+        
 
     }, []);
-
 
 
     return ( 

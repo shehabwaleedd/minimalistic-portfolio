@@ -19,15 +19,15 @@ const AnimatedNav = (Props) => {
 
   return (
     <nav className='nav'>
-      <div className="navbar__container" style={{flexDirection: Props.language === "ar" ? "row-reverse" : "row"}}>
+      <div className="navbar__container" style={{flexDirection: Props.language === "ar" ? "row-reverse" : "row", padding: Props.language === "fr" ? "3.5rem" : "5rem"}}>
         <div style={{ transitionDuration: Props.navOpen ? "1s" : "1.5s", transition: Props.navOpen ? "1.5s" : "1.5s" }}>
           <Link to="/">
-            <h1 className={Props.navOpen ? "logo spin" : "logo"} style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "2rem" : "" }}>{t("my__name")}</h1>
+            <h1 className={Props.navOpen ? "logo spin" : "logo"} style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "2rem" : ""}}>{t("my__name")}</h1>
           </Link>
         </div>
         <div className="side__navbar" style={{flexDirection: Props.language === "ar" ? "row-reverse" : "row", gap: Props.language === "ar" ? "3rem" : "1rem"}}>
-          <NavComponents navOpen={Props.navOpen} />
-          <DropDownMenu navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
+          <NavComponents shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
+          <DropDownMenu shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
           <div className="menu-toggle" onClick={() => Props.setNavOpen(!Props.navOpen)}>
             <div className={Props.navOpen ? "hamBox hamBoxOpen" : "hamBox"}>
               <span className={Props.navOpen ? "lineTop spin" : "lineTop"}></span>

@@ -9,6 +9,7 @@ import MainRoutes from './navItems/routes/MainRoutes';
 import Footer from './pages/footer/Footer';
 import Cursor from './components/cursor/Cursor';
 import i18next from 'i18next';
+import { set } from 'animejs';
 
 
 export const ThemeContext = createContext(null);
@@ -20,9 +21,15 @@ function App() {
   const [navOpen, setNavOpen] = useState(false)
   const [language, setLanguage] = useState(i18next.language);
   const [languageExpanded, setLanguageExpanded] = useState(false);
+  const [shouldReload, setShouldReload] = useState(false);
+  const [isAbout, setIsAbout] = useState(false);
 
 
-
+  useEffect(() => {
+    if (shouldReload) {
+      window.location.reload();
+    }
+  }, [shouldReload]);
 
   // useEffect(() => {
 
@@ -47,7 +54,6 @@ function App() {
   // }, []);
 
 
-
   const toggleTheme = () => {
     theme === 'dark' ? setTheme('light') : setTheme('dark');
   };
@@ -59,11 +65,11 @@ function App() {
         {/* {!isAnimationFinished && <OpeningAnimation />}
         {isAnimationFinished && (
           <> */}
-        <AnimatedNav navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded}/>
+        <AnimatedNav isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded}/>
         <Cursor />
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
           <AnimatePresence>
-            <MainRoutes navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded}/>
+            <MainRoutes isAbout={isAbout} setIsAbout={setIsAbout}  shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded}/>
           </AnimatePresence>
           <ScrollUp />
           <Toggle theme={theme} toggleTheme={toggleTheme} />

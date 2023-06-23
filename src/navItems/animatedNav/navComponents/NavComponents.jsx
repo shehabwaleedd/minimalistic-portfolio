@@ -13,6 +13,8 @@ const NavComponents = (Props) => {
                     opacity: Props.navOpen ? "1" : "0",
                     padding: Props.navOpen ? "0.6rem" : "0",
                     transitionDelay: Props.navOpen ? "3s" : "0",
+                    fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2rem" : "" ,
+                    bottom: Props.language === "ar" ? "1rem" : "0", 
                 }}
             >{t("navbar__about")}</Link>
             <Link
@@ -21,6 +23,8 @@ const NavComponents = (Props) => {
                     opacity: Props.navOpen ? "1" : "0",
                     padding: Props.navOpen ? "0.6rem" : "0",
                     transitionDelay: Props.navOpen ? "3s" : "0",
+                    fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2rem" : "",
+                    bottom: Props.language === "ar" ? "1rem" : "0",
                 }}
             >{t("navbar__projects")}</Link>
             <Link
@@ -29,6 +33,8 @@ const NavComponents = (Props) => {
                     opacity: Props.navOpen ? "1" : "0",
                     padding: Props.navOpen ? "0.6rem" : "0",
                     transitionDelay: Props.navOpen ? "3s" : "0",
+                    fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2rem" : "",
+                    bottom: Props.language === "ar" ? "1rem" : "0",
                 }}
             >{t("navbar__contact")}</Link>
 

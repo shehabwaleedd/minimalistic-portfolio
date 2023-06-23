@@ -18,6 +18,8 @@
 	position: relative;
 	z-index: 999999;
 	color: var(--text-color);
+	position: relative;
+	top: -0.26rem;
 }
 
 
@@ -31,6 +33,7 @@
 	color: var(--container-color);
 	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 	transition-delay: 0.3s;
+	padding: 0.5rem;
 }
 
 
@@ -78,6 +81,12 @@
 	justify-content: space-between;
 	align-items: center;
 	gap: 2rem;
+}
+
+.language__dropdown button span {
+	font-size: 1.1rem;
+	font-family: "Posterama";
+	color: var(--title-color);
 }
 
 .germany-flag {

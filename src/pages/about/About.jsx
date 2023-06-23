@@ -53,7 +53,7 @@ const AboutPage = (Props) => {
       </div>
       <motion.div>
         <section ref={(el) => (body = el)} className="about section" id='about' >
-          <Model  imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>
+          <Model isAbout={Props.isAbout} setIsAbout={Props.setIsAbout}  imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>
           <MyStack />
         </section>
 
