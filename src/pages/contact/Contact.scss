@@ -19,6 +19,7 @@ $border-color_1: var(--title-color);
 	align-items: center;
 	font-family: $font-family_1;
 	padding: 0 1rem;
+	flex-direction: column;
 }
 .let__contact {
 	margin-top: 2rem;
@@ -37,11 +38,12 @@ $border-color_1: var(--title-color);
 	}
 }
 .contact__container {
+	display: grid;
 	grid-template-columns: repeat(2, max-content);
 	justify-content: center;
 	column-gap: 6rem;
 	padding-bottom: 3rem;
-	flex-direction: column;
+	flex-direction: row;
 }
 .contact__title {
 	text-align: left;

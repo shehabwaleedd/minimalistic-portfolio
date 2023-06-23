@@ -48,12 +48,18 @@ $background-color_1: var(--container-color);
 	flex-direction: column;
 	margin-top: 3rem;
 	p {
+		font-family: "Posterama";
 		strong {
 			color: $color_1;
 			font-size: 0.85rem;
 		}
 		font-size: 0.8rem;
 		color: $color_2;
+	}
+
+	.footer__info {
+		display: flex;
+
 	}
 }
 .footer__socials {

@@ -8,7 +8,7 @@ import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
 import Footer from '../footer/Footer';
 
 
-const Contact = () => {
+const Contact = (Props) => {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -112,22 +112,22 @@ const Contact = () => {
 
 
   return (
-    <React.Fragment className='contact_entire'>
+    <React.Fragment className='contact_entire'  >
       <div className="contact__load-container">
         <div className="contact__load-screen" ref={(el) => (screen = el)}></div>
       </div>
-      <div className="let__contact">
-        <h1>LET'S CONNECT</h1>
+      <div className="let__contact" style={{paddingTop: Props.language === "fr" ? "5rem" : "1rem"}}>
+        <h1 style={{fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "8rem" : "6rem", textTransform: Props.language === "fr" || Props.language === "en" || Props.language === "de" ? "uppercase" : "lowercase"}}>{t("contact__lets")}</h1>
       </div>
-      <section className='contact section' id='contact' ref={(el) => (body = el)}>
-        <div className="contact__container container grid">
+      <section className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: Props.language === "fr" ? "80vh" : "60vh"}}>
+        <div className="contact__container container grid" style={{flexDirection: Props.language === "ar" ? "row-reverse" : "column", display: Props.language === "ar" ? "flex" : ""}}>
           <div className="contact__content">
             <div className="contact__details">
-              <h1>{t("contact__title1")}<br />{t("contact__title2")}<br />{t("contact__title3")}</h1>
+              <h1 style={{fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", fontSize: Props.language === "ar" ? "3rem" : "2rem", textAlign: Props.language === "ar" ? "right" : "left"}}>{t("contact__title1")}<br />{t("contact__title2")}<br />{t("contact__title3")}</h1>
             </div>
             <Socials />
-            <div className="contact__info">
-              <div className="contact__email">
+            <div className="contact__info" style={{justifyContent: Props.language === "ar" ? "right" : "left", flexDirection: Props.language === "ar" ? "row-reverse" : "row", gap: Props.language === "ar" ? "6rem" : "10rem"}}>
+              <div className="contact__email" style={{textAlign: Props.language === "ar" ? "right" : "left",}}>
                 <h3>{t("contact__getInTouch")}</h3>
                 <p><a href="mailto:shehabwaleedd@gmail.com">shehabwaleedd@gmail.com</a></p>
               </div>
@@ -204,7 +204,7 @@ const Contact = () => {
                     onChange={(e) => setAgreed(e.target.checked)}
                     required
                   />
-                  <p>I agree with the storage and processing of my personal data</p>
+                  <p>{t("contact__agree")}</p>
                 </label>
                 {formErrors.agreed && <p className="error-message">{formErrors.agreed}</p>}
                 <button type="submit" className="contact__button">
@@ -215,7 +215,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>
     </React.Fragment>
   )
 }

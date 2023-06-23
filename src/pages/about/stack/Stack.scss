@@ -9,7 +9,7 @@ $background-color_1: var(--stack-icons-background-color);
 	width: 100%;
 	height: 20%;
 	background-color: $background-color_1;
-	position: absolute;
+	position: fixed;
 	bottom: 0rem;
 }
 .stack__container {

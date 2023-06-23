@@ -19,7 +19,7 @@ const AnimatedNav = (Props) => {
 
   return (
     <nav className='nav'>
-      <div className="navbar__container" style={{flexDirection: Props.language === "ar" ? "row-reverse" : "row", padding: Props.language === "fr" ? "3.5rem" : "5rem"}}>
+      <div className="navbar__container" style={{flexDirection: Props.language === "ar" ? "row-reverse" : "row", padding: Props.language === "fr" ? "5rem" : "5rem"}}>
         <div style={{ transitionDuration: Props.navOpen ? "1s" : "1.5s", transition: Props.navOpen ? "1.5s" : "1.5s" }}>
           <Link to="/">
             <h1 className={Props.navOpen ? "logo spin" : "logo"} style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "2rem" : ""}}>{t("my__name")}</h1>

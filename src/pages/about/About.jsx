@@ -56,7 +56,6 @@ const AboutPage = (Props) => {
           <Model isAbout={Props.isAbout} setIsAbout={Props.setIsAbout}  imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>
           <MyStack />
         </section>
-
       </motion.div>
     </React.Fragment>
   )

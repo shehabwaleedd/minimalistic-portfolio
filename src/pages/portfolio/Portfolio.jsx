@@ -5,8 +5,9 @@ import { PortfolioAnimations } from '../../animation/PortfolioAnimations';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
+import { useTranslation } from 'react-i18next';
 
-const Portfolio = () => {
+const Portfolio = (Props) => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleTextHover = (imageId) => {
@@ -17,6 +18,8 @@ const Portfolio = () => {
   const handleTextLeave = () => {
     setSelectedImage(null);
   }
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     PortfolioAnimations();
@@ -73,9 +76,9 @@ const Portfolio = () => {
                 ))}
               </div>
             </div>
-            <motion.div className="text-container" >
+            <motion.div className="text-container"  style={{textAlign: Props.language === "ar" ? "right" : "left"}}>
               <div className="workk__work">
-                <h1 className='work__work-text'>WORK</h1>
+                <h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "28rem" : "0"}}>{t("portfolio__work_title")}</h1>
               </div>
               <div className="scrollbarr">
                 {projectsData.map((item, index) => (
