@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.041d10be.css",
-    "main.js": "/static/js/main.af93f30a.js",
+    "main.css": "/static/css/main.65c61e15.css",
+    "main.js": "/static/js/main.f3fbfbce.js",
     "static/js/27.755029ae.chunk.js": "/static/js/27.755029ae.chunk.js",
     "static/media/leluweb.png": "/static/media/leluweb.e56bcba2eba840039dcb.png",
     "static/media/bloggg.png": "/static/media/bloggg.574889f4338eabe775c3.png",
@@ -49,11 +49,12 @@
     "static/media/Satoshi-Black.woff2": "/static/media/Satoshi-Black.b5013d854bb5a8e48651.woff2",
     "static/media/Shehab_Waleed.docx": "/static/media/Shehab_Waleed.64d9e945fcd6b26e0c61.docx",
     "static/media/Satoshi-Light.woff2": "/static/media/Satoshi-Light.df8f06167ee6fd05a131.woff2",
+    "static/media/uk.svg": "/static/media/uk.db091896a49c9a74ce036ba3ac828f80.svg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
-    "static/css/main.041d10be.css",
-    "static/js/main.af93f30a.js"
+    "static/css/main.65c61e15.css",
+    "static/js/main.f3fbfbce.js"
   ]
 }
