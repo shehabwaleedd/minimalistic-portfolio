@@ -121,15 +121,15 @@ const Contact = (Props) => {
           <div className="let__contact" style={{ paddingTop: Props.language === "ar" ? "2rem" : "4rem" }}>
             <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "8rem" : "2rem", textTransform: Props.language === "fr" || Props.language === "en" || Props.language === "de" ? "uppercase" : "lowercase", }}>{t("contact__lets")}</h1>
           </div>
-          <section className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: Props.language === "ar" ? "60vh" : "90vh" }}>
-            <div className="contact__container container grid" style={{ flexDirection: Props.language === "ar" ? "row-reverse" : "column", display: Props.language === "ar" ? "flex" : "flex" }}>
+          <section className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: Props.language === "ar" ? "90vh" : "90vh" }}>
+            <div className="contact__container container grid" style={{ flexDirection: Props.language === "ar" ? "column" : "column", display: Props.language === "ar" ? "flex" : "flex" }}>
               <div className="contact__content">
                 <div className="contact__details">
-                  <h1 style={{ paddingLeft: "1rem" ,fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", fontSize: Props.language === "ar" ? "3rem" : "1.4rem", textAlign: Props.language === "ar" ? "right" : "left" }}>{t("contact__title1")}<br />{t("contact__title2")}<br />{t("contact__title3")}</h1>
+                  <h1 style={{ paddingLeft: "1rem" ,fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", fontSize: Props.language === "ar" ? "2.7rem" : "1.4rem", textAlign: Props.language === "ar" ? "center" : "left"}}>{t("contact__title1")}<br />{t("contact__title2")}<br />{t("contact__title3")}</h1>
                 </div>
                 <Socials />
-                <div className="contact__info" style={{ justifyContent: Props.language === "ar" ? "right" : "center", flexDirection: Props.language === "ar" ? "row-reverse" : "row", gap: Props.language === "ar" ? "6rem" : "3rem" }}>
-                  <div className="contact__email" style={{ textAlign: Props.language === "ar" ? "right" : "center", }}>
+                <div className="contact__info" style={{ justifyContent: Props.language === "ar" ? "center" : "center", flexDirection: Props.language === "ar" ? "row-reverse" : "row", gap: Props.language === "ar" ? "6rem" : "3rem" }}>
+                  <div className="contact__email" style={{ textAlign: Props.language === "ar" ? "center" : "center", }}>
                     <h3>{t("contact__getInTouch")}</h3>
                     <p><a href="mailto:shehabwaleedd@gmail.com">shehabwaleedd@gmail.com</a></p>
                   </div>

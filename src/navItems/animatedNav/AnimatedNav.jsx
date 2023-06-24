@@ -53,8 +53,9 @@ const AnimatedNav = (Props) => {
             </div>
           </div>
           <div className="nav-overlay" style={{
-            top: Props.navOpen ? "0%" : "-200%",
+            top: Props.navOpen ? "0%" : "-180%",
             transitionDuration: Props.navOpen ? "1.4s" : "2s",
+            height: "20vh"
           }}>
           </div>
         </>

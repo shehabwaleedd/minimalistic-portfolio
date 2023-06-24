@@ -56,52 +56,85 @@ const Portfolio = (Props) => {
 
 
   return (
-    <React.Fragment>
-      <div className="projects__load-container">
-        <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
-      </div>
-      <section className="portfolio" ref={(el) => (body = el)}>
-        <div className="portfolio__container" >
-          <div className="menu">
-            <div className="menu__item-image_wrapper">
-              <div className="menu__item-image_inner">
-                {projectsData.map((image) => (
-                  <div className="image-wrapper" key={image.id}>
-                    <img
-                      src={image.image}
-                      alt={image.title}
-                      className={selectedImage === image.image ? 'menu__item-image.fade-in' : 'menu__item-image'}
-                    />
+    <>
+      {Props.isMobile ? (
+        <React.Fragment>
+          <div className="projects__load-container">
+            <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
+          </div>
+          <section className="portfolio" ref={(el) => (body = el)}>
+            <div className="portfolio__container" >
+              <div className="menu">
+                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left" }}>
+                  <div className="workk__work">
+                    <h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "15rem" : "0" }}>{t("portfolio__work_title")}</h1>
                   </div>
-                ))}
+                  <div className="scrollbarr">
+                    {projectsData.map((item, index) => (
+                      <div className="work__title" key={item.id} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>
+                          <div className="menu-text">
+                            <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
+                            <div className="categories">
+                              <p>{item.category}</p>
+                            </div>
+                          </div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
               </div>
             </div>
-            <motion.div className="text-container"  style={{textAlign: Props.language === "ar" ? "right" : "left"}}>
-              <div className="workk__work">
-                <h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "25rem" : "0"}}>{t("portfolio__work_title")}</h1>
-              </div>
-              <div className="scrollbarr">
-                {projectsData.map((item, index) => (
-                  <div className="work__title" key={item.id} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>
-                    <div className="menu-item-wrapper">
-                      <div className="menu-arrow">
-                        <i className='bx bx-right-arrow-alt' ></i>
+          </section>
+        </React.Fragment>
+      ) : (
+        <React.Fragment>
+          <div className="projects__load-container">
+            <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
+          </div>
+          <section className="portfolio" ref={(el) => (body = el)}>
+            <div className="portfolio__container" >
+              <div className="menu">
+                <div className="menu__item-image_wrapper">
+                  <div className="menu__item-image_inner">
+                    {projectsData.map((image) => (
+                      <div className="image-wrapper" key={image.id}>
+                        <img
+                          src={image.image}
+                          alt={image.title}
+                          className={selectedImage === image.image ? 'menu__item-image.fade-in' : 'menu__item-image'}
+                        />
                       </div>
-                      <div className="menu-text">
-                        <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
-                        <div className="categories">
-                          <p>{item.category}</p>
+                    ))}
+                  </div>
+                </div>
+                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left" }}>
+                  <div className="workk__work">
+                    <h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "25rem" : "0" }}>{t("portfolio__work_title")}</h1>
+                  </div>
+                  <div className="scrollbarr">
+                    {projectsData.map((item, index) => (
+                      <div className="work__title" key={item.id} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>
+                        <div className="menu-item-wrapper">
+                          <div className="menu-arrow">
+                            <i className='bx bx-right-arrow-alt' ></i>
+                          </div>
+                          <div className="menu-text">
+                            <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
+                            <div className="categories">
+                              <p>{item.category}</p>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
-                ))}
+                </motion.div>
               </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-    </React.Fragment>
+            </div>
+          </section>
+        </React.Fragment>
+      )}
+    </>
   );
 }
 
