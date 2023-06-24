@@ -355,7 +355,7 @@ $border-color_1: var(--title-color);
 }
 
 
-@media (max-width: 414px) {
+@media (max-width: 454px) {
 	.contact {
 		width: 100%;
 	}
@@ -395,12 +395,12 @@ $border-color_1: var(--title-color);
 	.contact__email {
 		h3 {
 			font-size: var(--smaller-font-size);
-			text-align: left;
-			font-size: 0.8rem;
+			text-align: center;
+			font-size: 1rem;
 		}
 		p {
 			font-size: var(--smaller-font-size);
-			font-size: 0.5rem;
+			font-size: 0.8rem;
 		}
 		margin-bottom: 1.5rem;
 	}
@@ -417,7 +417,7 @@ $border-color_1: var(--title-color);
 		}
 		p {
 			font-size: var(--smaller-font-size);
-			font-size: 0.5rem;
+			font-size: 0.8rem;
 		}
 	}
 	.contact__form-input {
@@ -439,7 +439,7 @@ $border-color_1: var(--title-color);
 	}
 	.contact__merged {
 		input {
-			width: 100%;
+			width: 90%;
 			font-size: 0.6rem;
 			padding: 0 0;
 			margin: 0 0;
@@ -465,7 +465,7 @@ $border-color_1: var(--title-color);
 	}
 	.contact__form-div {
 		textarea {
-			width: 100%;
+			width: 90%;
 			font-size: 0.6rem;
 			padding: 0 0;
 			margin: 0 0;

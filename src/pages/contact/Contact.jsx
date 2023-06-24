@@ -112,110 +112,217 @@ const Contact = (Props) => {
 
 
   return (
-    <React.Fragment className='contact_entire'  >
+    <React.Fragment className='contact_entire'>
       <div className="contact__load-container">
         <div className="contact__load-screen" ref={(el) => (screen = el)}></div>
       </div>
-      <div className="let__contact" style={{paddingTop: Props.language === "fr" ? "5rem" : "1rem"}}>
-        <h1 style={{fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "",  letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "8rem" : "6rem", textTransform: Props.language === "fr" || Props.language === "en" || Props.language === "de" ? "uppercase" : "lowercase"}}>{t("contact__lets")}</h1>
-      </div>
-      <section className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: Props.language === "fr" ? "80vh" : "60vh"}}>
-        <div className="contact__container container grid" style={{flexDirection: Props.language === "ar" ? "row-reverse" : "column", display: Props.language === "ar" ? "flex" : ""}}>
-          <div className="contact__content">
-            <div className="contact__details">
-              <h1 style={{fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", fontSize: Props.language === "ar" ? "3rem" : "2rem", textAlign: Props.language === "ar" ? "right" : "left"}}>{t("contact__title1")}<br />{t("contact__title2")}<br />{t("contact__title3")}</h1>
-            </div>
-            <Socials />
-            <div className="contact__info" style={{justifyContent: Props.language === "ar" ? "right" : "left", flexDirection: Props.language === "ar" ? "row-reverse" : "row", gap: Props.language === "ar" ? "6rem" : "10rem"}}>
-              <div className="contact__email" style={{textAlign: Props.language === "ar" ? "right" : "left",}}>
-                <h3>{t("contact__getInTouch")}</h3>
-                <p><a href="mailto:shehabwaleedd@gmail.com">shehabwaleedd@gmail.com</a></p>
-              </div>
-              <div className="contact__location">
-                <h3>{t("contact__location")}</h3>
-                <p>{t("contact__location-cairo")} {t("contact__location-egypt")}</p>
-              </div>
-            </div>
+      {Props.isMobile ? (
+        <>
+          <div className="let__contact" style={{ paddingTop: Props.language === "ar" ? "2rem" : "4rem" }}>
+            <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "8rem" : "2rem", textTransform: Props.language === "fr" || Props.language === "en" || Props.language === "de" ? "uppercase" : "lowercase", }}>{t("contact__lets")}</h1>
           </div>
-          <div className="contact__content">
-            <form className="contact__form" onSubmit={handleSubmit} ref={form}>
-              <div className="contact__merged">
-                <input
-                  type="text"
-                  name="name"
-                  className={`contact__form-input ${formErrors.name ? "error" : ""}`}
-                  placeholder={t("contact__form__insert_name")}
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
-                {formErrors.name && <p className="error-message">{formErrors.name}</p>}
-                <div className="custom-dropdown">
-                  <select
-                    className={`dropdown-select ${formErrors.budget ? "error" : ""}`}
-                    name="budget"
-                    value={budget}
-                    onChange={handleOptionChange}
-                    required
-                  >
-                    <option value="budget" disabled>
-                      Budget
-                    </option>
-                    <option value="$100">$100</option>
-                    <option value="$100-$500">$100 - $500</option>
-                    <option value="$500-$1000">$500 - $1000</option>
-                    <option value="$1000+">$1000+</option>
-                  </select>
-                  {formErrors.budget && <p className="error-message">{formErrors.budget}</p>}
-                  <div className="dropdown-icon">▼</div>
+          <section className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: Props.language === "ar" ? "60vh" : "90vh" }}>
+            <div className="contact__container container grid" style={{ flexDirection: Props.language === "ar" ? "row-reverse" : "column", display: Props.language === "ar" ? "flex" : "flex" }}>
+              <div className="contact__content">
+                <div className="contact__details">
+                  <h1 style={{ paddingLeft: "1rem" ,fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", fontSize: Props.language === "ar" ? "3rem" : "1.4rem", textAlign: Props.language === "ar" ? "right" : "left" }}>{t("contact__title1")}<br />{t("contact__title2")}<br />{t("contact__title3")}</h1>
+                </div>
+                <Socials />
+                <div className="contact__info" style={{ justifyContent: Props.language === "ar" ? "right" : "center", flexDirection: Props.language === "ar" ? "row-reverse" : "row", gap: Props.language === "ar" ? "6rem" : "3rem" }}>
+                  <div className="contact__email" style={{ textAlign: Props.language === "ar" ? "right" : "center", }}>
+                    <h3>{t("contact__getInTouch")}</h3>
+                    <p><a href="mailto:shehabwaleedd@gmail.com">shehabwaleedd@gmail.com</a></p>
+                  </div>
+                  <div className="contact__location">
+                    <h3>{t("contact__location")}</h3>
+                    <p>{t("contact__location-cairo")} {t("contact__location-egypt")}</p>
+                  </div>
                 </div>
               </div>
-              <div className="contact__form-div">
-                <input
-                  type="email"
-                  name="email"
-                  className={`contact__form-input ${formErrors.email ? "error" : ""}`}
-                  placeholder={t("contact__form__insert_email")}
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                {formErrors.email && <p className="error-message">{formErrors.email}</p>}
+              <div className="contact__content">
+                <form className="contact__form" onSubmit={handleSubmit} ref={form}>
+                  <div className="contact__merged">
+                    <input
+                      type="text"
+                      name="name"
+                      className={`contact__form-input ${formErrors.name ? "error" : ""}`}
+                      placeholder={t("contact__form__insert_name")}
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                    />
+                    {formErrors.name && <p className="error-message">{formErrors.name}</p>}
+                    <div className="custom-dropdown">
+                      <select
+                        className={`dropdown-select ${formErrors.budget ? "error" : ""}`}
+                        name="budget"
+                        value={budget}
+                        onChange={handleOptionChange}
+                        required
+                      >
+                        <option value="budget" disabled>
+                          Budget
+                        </option>
+                        <option value="$100">$100</option>
+                        <option value="$100-$500">$100 - $500</option>
+                        <option value="$500-$1000">$500 - $1000</option>
+                        <option value="$1000+">$1000+</option>
+                      </select>
+                      {formErrors.budget && <p className="error-message">{formErrors.budget}</p>}
+                      <div className="dropdown-icon">▼</div>
+                    </div>
+                  </div>
+                  <div className="contact__form-div">
+                    <input
+                      type="email"
+                      name="email"
+                      className={`contact__form-input ${formErrors.email ? "error" : ""}`}
+                      placeholder={t("contact__form__insert_email")}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                    {formErrors.email && <p className="error-message">{formErrors.email}</p>}
+                  </div>
+                  <div className="contact__form-div contact__form-area">
+                    <textarea
+                      name="message"
+                      cols="30"
+                      rows="5"
+                      className={`contact__form-input ${formErrors.message ? "error" : ""}`}
+                      placeholder={t("contact__form__write_me_your_project")}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      required
+                    ></textarea>
+                    {formErrors.message && <p className="error-message">{formErrors.message}</p>}
+                    <div className="contact__form-line"></div>
+                  </div>
+                  <div className="contact__lower">
+                    <label className="contact__checkbox">
+                      <input
+                        type="checkbox"
+                        checked={agreed}
+                        onChange={(e) => setAgreed(e.target.checked)}
+                        required
+                      />
+                      <p>{t("contact__agree")}</p>
+                    </label>
+                    {formErrors.agreed && <p className="error-message">{formErrors.agreed}</p>}
+                    <button type="submit" className="contact__button">
+                      {t("contact__button_submit")}
+                    </button>
+                  </div>
+                </form>
               </div>
-              <div className="contact__form-div contact__form-area">
-                <textarea
-                  name="message"
-                  cols="30"
-                  rows="5"
-                  className={`contact__form-input ${formErrors.message ? "error" : ""}`}
-                  placeholder={t("contact__form__write_me_your_project")}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
-                ></textarea>
-                {formErrors.message && <p className="error-message">{formErrors.message}</p>}
-                <div className="contact__form-line"></div>
-              </div>
-              <div className="contact__lower">
-                <label className="contact__checkbox">
-                  <input
-                    type="checkbox"
-                    checked={agreed}
-                    onChange={(e) => setAgreed(e.target.checked)}
-                    required
-                  />
-                  <p>{t("contact__agree")}</p>
-                </label>
-                {formErrors.agreed && <p className="error-message">{formErrors.agreed}</p>}
-                <button type="submit" className="contact__button">
-                  {t("contact__button_submit")}
-                </button>
-              </div>
-            </form>
+            </div>
+          </section>
+          <Footer isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
+        </>
+      ) : (
+        <>
+          <div className="let__contact" style={{ paddingTop: Props.language === "fr" ? "5rem" : "1rem" }}>
+            <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "8rem" : "6rem", textTransform: Props.language === "fr" || Props.language === "en" || Props.language === "de" ? "uppercase" : "lowercase" }}>{t("contact__lets")}</h1>
           </div>
-        </div>
-      </section>
-      <Footer shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>
+          <section className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: Props.language === "fr" ? "80vh" : "60vh" }}>
+            <div className="contact__container container grid" style={{ flexDirection: Props.language === "ar" ? "row-reverse" : "column", display: Props.language === "ar" ? "flex" : "" }}>
+              <div className="contact__content">
+                <div className="contact__details">
+                  <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", fontSize: Props.language === "ar" ? "3rem" : "2rem", textAlign: Props.language === "ar" ? "right" : "left" }}>{t("contact__title1")}<br />{t("contact__title2")}<br />{t("contact__title3")}</h1>
+                </div>
+                <Socials />
+                <div className="contact__info" style={{ justifyContent: Props.language === "ar" ? "right" : "left", flexDirection: Props.language === "ar" ? "row-reverse" : "row", gap: Props.language === "ar" ? "6rem" : "10rem" }}>
+                  <div className="contact__email" style={{ textAlign: Props.language === "ar" ? "right" : "left", }}>
+                    <h3>{t("contact__getInTouch")}</h3>
+                    <p><a href="mailto:shehabwaleedd@gmail.com">shehabwaleedd@gmail.com</a></p>
+                  </div>
+                  <div className="contact__location">
+                    <h3>{t("contact__location")}</h3>
+                    <p>{t("contact__location-cairo")} {t("contact__location-egypt")}</p>
+                  </div>
+                </div>
+              </div>
+              <div className="contact__content">
+                <form className="contact__form" onSubmit={handleSubmit} ref={form}>
+                  <div className="contact__merged">
+                    <input
+                      type="text"
+                      name="name"
+                      className={`contact__form-input ${formErrors.name ? "error" : ""}`}
+                      placeholder={t("contact__form__insert_name")}
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                    />
+                    {formErrors.name && <p className="error-message">{formErrors.name}</p>}
+                    <div className="custom-dropdown">
+                      <select
+                        className={`dropdown-select ${formErrors.budget ? "error" : ""}`}
+                        name="budget"
+                        value={budget}
+                        onChange={handleOptionChange}
+                        required
+                      >
+                        <option value="budget" disabled>
+                          Budget
+                        </option>
+                        <option value="$100">$100</option>
+                        <option value="$100-$500">$100 - $500</option>
+                        <option value="$500-$1000">$500 - $1000</option>
+                        <option value="$1000+">$1000+</option>
+                      </select>
+                      {formErrors.budget && <p className="error-message">{formErrors.budget}</p>}
+                      <div className="dropdown-icon">▼</div>
+                    </div>
+                  </div>
+                  <div className="contact__form-div">
+                    <input
+                      type="email"
+                      name="email"
+                      className={`contact__form-input ${formErrors.email ? "error" : ""}`}
+                      placeholder={t("contact__form__insert_email")}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                    {formErrors.email && <p className="error-message">{formErrors.email}</p>}
+                  </div>
+                  <div className="contact__form-div contact__form-area">
+                    <textarea
+                      name="message"
+                      cols="30"
+                      rows="5"
+                      className={`contact__form-input ${formErrors.message ? "error" : ""}`}
+                      placeholder={t("contact__form__write_me_your_project")}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      required
+                    ></textarea>
+                    {formErrors.message && <p className="error-message">{formErrors.message}</p>}
+                    <div className="contact__form-line"></div>
+                  </div>
+                  <div className="contact__lower">
+                    <label className="contact__checkbox">
+                      <input
+                        type="checkbox"
+                        checked={agreed}
+                        onChange={(e) => setAgreed(e.target.checked)}
+                        required
+                      />
+                      <p>{t("contact__agree")}</p>
+                    </label>
+                    {formErrors.agreed && <p className="error-message">{formErrors.agreed}</p>}
+                    <button type="submit" className="contact__button">
+                      {t("contact__button_submit")}
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <Footer isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
+        </>
+      )}
     </React.Fragment>
   )
 }

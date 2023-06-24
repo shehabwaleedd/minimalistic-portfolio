@@ -16,7 +16,7 @@ const AboutPage = (Props) => {
   }, []);
 
 
-  
+
   const runAnimation = () => {
     var tl = new TimelineMax();
     tl.to(screen, {
@@ -52,10 +52,17 @@ const AboutPage = (Props) => {
         <div className="load-screen" ref={(el) => (screen = el)}></div>
       </div>
       <motion.div>
-        <section ref={(el) => (body = el)} className="about section" id='about' >
-          <Model isAbout={Props.isAbout} setIsAbout={Props.setIsAbout}  imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>
-          <MyStack />
-        </section>
+        {Props.isMobile ? (
+          <secion ref={(el) => (body = el)} className="about section" id='about' >
+            <Model isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} isAbout={Props.isAbout} setIsAbout={Props.setIsAbout} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
+            <MyStack isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} />
+          </secion>
+        ) : (
+          <secion ref={(el) => (body = el)} className="about section" id='about' >
+            <Model isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} isAbout={Props.isAbout} setIsAbout={Props.setIsAbout} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
+            <MyStack isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} />
+          </secion>
+        )}
       </motion.div>
     </React.Fragment>
   )
