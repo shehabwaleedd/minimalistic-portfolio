@@ -116,7 +116,8 @@ $background-color_1: var(--container-color);
 
 	.footer {
 		margin-top: 2rem;
-		width: 105vw;
+		width: 100vw;
+		padding-right: 1rem;
 	}
 
 	.footer__container {
@@ -130,6 +131,14 @@ $background-color_1: var(--container-color);
 
 	.footer__social {
 		margin-top: 1.5rem;
+	}
+
+	.footer__social p {
+		font-size: 0.7rem;
+	}
+
+	.footer__socials p strong {
+		font-size: 0.7rem;
 	}
 
 	.footer__copyright {
