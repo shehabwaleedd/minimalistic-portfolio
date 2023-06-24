@@ -20,7 +20,6 @@ $background-color_1: var(--container-color);
 	position: relative;
 	color: $color_2;
 	transition: all 5.5s cubic-bezier(0.16, 1, 0.3, 1);
-	padding: 0.6rem;
 	display: block;
 	&::after {
 		content: "";
@@ -40,8 +39,20 @@ $background-color_1: var(--container-color);
 }
 .nav__links-links {
 	display: flex;
+	gap: 0.3rem;
 	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+.nav__links-links.spin {
+	width: 100%;
+	position: absolute;
+	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+	z-index: 999;
+	gap: 0rem;
+	left: 0.5rem;
+	top: 1.35rem;
+}
+
 @media (max-width: 414px) {
 	.nav__link {
 		font-size: 0.65rem;

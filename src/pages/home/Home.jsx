@@ -28,7 +28,7 @@ const Home = (Props) => {
       </div>
       <div className="overlay"></div>
       <div className="main__containerr">
-        <Main isAbout={Props.isAbout} setIsAbout={Props.setIsAbout} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>
+        <Main isMobile={Props.isMobile} setIsMobile={Props.setIsMobile}   isAbout={Props.isAbout} setIsAbout={Props.setIsAbout} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded}/>
       </div>
     </section>
   );

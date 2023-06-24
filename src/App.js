@@ -23,6 +23,7 @@ function App() {
   const [languageExpanded, setLanguageExpanded] = useState(false);
   const [shouldReload, setShouldReload] = useState(false);
   const [isAbout, setIsAbout] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
 
   useEffect(() => {
@@ -65,11 +66,11 @@ function App() {
         {/* {!isAnimationFinished && <OpeningAnimation />}
         {isAnimationFinished && (
           <> */}
-        <AnimatedNav isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded}/>
+        <AnimatedNav isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded}/>
         <Cursor />
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
           <AnimatePresence>
-            <MainRoutes isAbout={isAbout} setIsAbout={setIsAbout}  shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded}/>
+            <MainRoutes isMobile={isMobile} setIsMobile={setIsMobile}  isAbout={isAbout} setIsAbout={setIsAbout}  shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded}/>
           </AnimatePresence>
           <ScrollUp />
           <Toggle theme={theme} toggleTheme={toggleTheme} />

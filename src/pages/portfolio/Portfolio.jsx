@@ -78,7 +78,7 @@ const Portfolio = (Props) => {
             </div>
             <motion.div className="text-container"  style={{textAlign: Props.language === "ar" ? "right" : "left"}}>
               <div className="workk__work">
-                <h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "28rem" : "0"}}>{t("portfolio__work_title")}</h1>
+                <h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "25rem" : "0"}}>{t("portfolio__work_title")}</h1>
               </div>
               <div className="scrollbarr">
                 {projectsData.map((item, index) => (

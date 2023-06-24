@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
     background: var(--body-color);
 
     &__container {
@@ -17,6 +18,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+
 
         h1 {
             font-size: 3rem;
@@ -46,6 +49,8 @@
         font-size: 5rem;
         display: inline-block;
         vertical-align: middle;
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+
 
         span {
             letter-spacing: 0.6rem;
@@ -60,6 +65,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 
         p {
             font-size: 1rem;
@@ -79,6 +85,8 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+
     }
 
     &__content span {
