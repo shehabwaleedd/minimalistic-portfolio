@@ -1,10 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import i18next from 'i18next';
 import './DropDownMenu.css';
-import { useTranslation } from 'react-i18next';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
-import uk from "../../../assets/uk.svg"
 
 const DropDownMenu = (Props) => {
 
@@ -33,11 +31,7 @@ const DropDownMenu = (Props) => {
   const handleFrenchClick = () => {
     handleLanguageChange('fr');
   };
-
-  const handleSpanishClick = () => {
-    handleLanguageChange('es');
-  };
-
+  
   const handleArabicClick = () => {
     handleLanguageChange('ar');
   }

@@ -6,10 +6,8 @@ import { AnimatePresence } from 'framer-motion';
 import AnimatedNav from './navItems/animatedNav/AnimatedNav';
 import ScrollUp from './pages/home/supplements/ScrollUp';
 import MainRoutes from './navItems/routes/MainRoutes';
-import Footer from './pages/footer/Footer';
 import Cursor from './components/cursor/Cursor';
 import i18next from 'i18next';
-import { set } from 'animejs';
 
 
 export const ThemeContext = createContext(null);
@@ -17,7 +15,7 @@ export const ThemeContext = createContext(null);
 function App() {
 
   const [theme, setTheme] = useState('dark');
-  const [isAnimationFinished, setIsAnimationFinished] = useState(false);
+  // const [isAnimationFinished, setIsAnimationFinished] = useState(false);
   const [navOpen, setNavOpen] = useState(false)
   const [language, setLanguage] = useState(i18next.language);
   const [languageExpanded, setLanguageExpanded] = useState(false);

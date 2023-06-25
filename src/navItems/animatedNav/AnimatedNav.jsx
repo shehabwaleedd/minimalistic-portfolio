@@ -29,7 +29,7 @@ const AnimatedNav = (Props) => {
     return () => {
         window.removeEventListener('resize', handleResize);
     };
-}, []);
+}, [Props]);
 
   return (
     <nav className='nav'>

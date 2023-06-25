@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
 import "./About.scss"
 import cv from "../../assets/Shehab_Waleed.docx"
 import { t } from "i18next";
 
-const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
-
 
 const Model = (Props) => {
-  const { scrollYProgress } = useViewportScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
+  // const { scrollYProgress } = useViewportScroll();
+  // const scale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
 
   // const [canScroll, setCanScroll] = useState(false);
 
