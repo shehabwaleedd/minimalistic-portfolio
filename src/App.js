@@ -24,11 +24,11 @@ function App() {
   const [isMobile, setIsMobile] = useState(false);
 
 
-  useEffect(() => {
-    if (shouldReload) {
-      window.location.reload();
-    }
-  }, [shouldReload]);
+  // useEffect(() => {
+  //   if (shouldReload) {
+  //     window.location.reload();
+  //   }
+  // }, [shouldReload]);
 
   // useEffect(() => {
 
