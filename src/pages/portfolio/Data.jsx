@@ -35,7 +35,7 @@ const projectsData = [
     {
       id: 4,
       image: Work4,
-      title: "First Portfolio",
+      title: "Cairo Brews",
       category: "application",
       link: "https://github.com/shehabwaleedd/first-personal-portfolio",
       date: "2022-08-01",
