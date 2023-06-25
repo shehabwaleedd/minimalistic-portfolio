@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/minimalistic-portfolio/static/css/main.e98e8655.css",
-    "main.js": "/minimalistic-portfolio/static/js/main.863cabf0.js",
+    "main.js": "/minimalistic-portfolio/static/js/main.c5adb05e.js",
     "static/js/27.755029ae.chunk.js": "/minimalistic-portfolio/static/js/27.755029ae.chunk.js",
     "static/media/leluweb.png": "/minimalistic-portfolio/static/media/leluweb.e56bcba2eba840039dcb.png",
     "static/media/bloggg.png": "/minimalistic-portfolio/static/media/bloggg.574889f4338eabe775c3.png",
@@ -49,12 +49,11 @@
     "static/media/Satoshi-Black.woff2": "/minimalistic-portfolio/static/media/Satoshi-Black.b5013d854bb5a8e48651.woff2",
     "static/media/Shehab_Waleed.docx": "/minimalistic-portfolio/static/media/Shehab_Waleed.64d9e945fcd6b26e0c61.docx",
     "static/media/Satoshi-Light.woff2": "/minimalistic-portfolio/static/media/Satoshi-Light.df8f06167ee6fd05a131.woff2",
-    "static/media/uk.svg": "/minimalistic-portfolio/static/media/uk.db091896a49c9a74ce036ba3ac828f80.svg",
     "index.html": "/minimalistic-portfolio/index.html",
     "static/media/getFetch.cjs": "/minimalistic-portfolio/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
     "static/css/main.e98e8655.css",
-    "static/js/main.863cabf0.js"
+    "static/js/main.c5adb05e.js"
   ]
 }
