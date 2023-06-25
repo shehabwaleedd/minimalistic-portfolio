@@ -15,27 +15,12 @@ const DropDownMenu = (Props) => {
   let menuRef = useRef();
 
   useEffect(() => {
-    let handler = (e) => {
-      if (!menuRef.current.contains(e.target)) {
-        Props.setOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handler);
-
-    return () => {
-      document.removeEventListener('mousedown', handler);
-    };
-  }, []);
-
-  useEffect(() => {
     i18next.changeLanguage(Props.language);
   }, [Props.language]);
 
   const handleLanguageChange = (newLanguage) => {
     Props.setLanguage(newLanguage);
     Props.setShouldReload(true);
-    Props.setOpen(false);
   };
 
   const handleEnglishClick = () => {
