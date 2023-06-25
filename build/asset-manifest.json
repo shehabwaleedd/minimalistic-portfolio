@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/minimalistic-portfolio/static/css/main.e98e8655.css",
-    "main.js": "/minimalistic-portfolio/static/js/main.4281d9f1.js",
+    "main.js": "/minimalistic-portfolio/static/js/main.7dc37a17.js",
     "static/js/27.755029ae.chunk.js": "/minimalistic-portfolio/static/js/27.755029ae.chunk.js",
     "static/media/leluweb.png": "/minimalistic-portfolio/static/media/leluweb.e56bcba2eba840039dcb.png",
     "static/media/bloggg.png": "/minimalistic-portfolio/static/media/bloggg.574889f4338eabe775c3.png",
@@ -55,6 +55,6 @@
   },
   "entrypoints": [
     "static/css/main.e98e8655.css",
-    "static/js/main.4281d9f1.js"
+    "static/js/main.7dc37a17.js"
   ]
 }
