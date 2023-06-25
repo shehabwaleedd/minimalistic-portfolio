@@ -69,7 +69,7 @@ const AnimatedNav = (Props) => {
             </div>
             <div className="side__navbar" style={{ flexDirection: Props.language === "ar" ? "row-reverse" : "row", gap: Props.language === "ar" ? "3rem" : "1rem" }}>
               <NavComponents isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
-              <DropDownMenu isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
+              <DropDownMenu isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} setNavOpen={Props.setNavOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
               <div className="menu-toggle" onClick={() => Props.setNavOpen(!Props.navOpen)}>
                 <div className={Props.navOpen ? "hamBox hamBoxOpen" : "hamBox"}>
                   <span className={Props.navOpen ? "lineTop spin" : "lineTop"}></span>
