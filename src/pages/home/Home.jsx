@@ -3,14 +3,29 @@ import Main from './main/Main';
 import "./Home.css"
 import { useRef } from 'react';
 import { HomeAnimations } from '../../animation/HomeAnimations';
+import { useLocation } from 'react-router-dom';
+
 
 const Home = (Props) => {
+  
 
   useEffect(() => {
 
     HomeAnimations()
     
   }, []);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const isHomePage = location.pathname === '/'; // Assuming '/' is the home page route
+
+    if (isHomePage) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [location]);
 
   return (
     <section>

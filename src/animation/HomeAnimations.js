@@ -36,7 +36,7 @@ export const HomeAnimations = () => {
   const animateTitleElements = () => {
     return new Promise((resolve) => {
       titleElements.forEach((element, index) => {
-        const delay = index * 1.5;
+        const delay = index * 1.5 + 2; // Delay the start animation by 2 seconds
   
         gsap.fromTo(
           element,
@@ -44,24 +44,33 @@ export const HomeAnimations = () => {
             x: "0",
             ease: Power3.easeInOut,
             opacity: "0",
-            delay: 3.5,
+            duration: 0.8,
+            transition: "none", // Disable transition initially
           },
           {
             x: "0",
             ease: Power3.easeInOut,
             opacity: "1",
+            duration: 0.8,
             delay,
             onComplete: () => {
               gsap.to(element, {
                 x: "0",
                 ease: Power3.easeInOut,
                 opacity: "0",
+                duration: 0.8,
                 delay: 3.5,
                 onComplete: index === titleElements.length - 1 ? resolve : null,
               });
             },
           }
         );
+  
+        // Enable transition after initial animation
+        gsap.to(element, {
+          transition: "all 1s cubic-bezier(0.16, 1, 0.3, 1)",
+          delay: delay + 1, // Delay the transition enablement to match the animation delay
+        });
       });
     });
   };
@@ -72,7 +81,7 @@ export const HomeAnimations = () => {
 
   const animateOtherElements = () => {
     gsap.to(mainContainer, {
-      y: window.innerWidth > 1440 ? -250 : -250,
+      y: window.innerWidth > 1440 ? -250 : -150,
       opacity: 1,
       ease: "expo.inOut",
       duration: 3,

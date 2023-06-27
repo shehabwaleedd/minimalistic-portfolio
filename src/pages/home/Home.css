@@ -17,13 +17,15 @@ ul.titles {
 }
 
 .titles h1 {
-    font-weight: 500;
-	font-size: 5rem;
-	position: absolute;
-	top: 0;
-	left: 0;
 	transform: translate(-50%, -50%);
+	position: absolute;
+	left: 0;
+	top: 0;
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--title-color);
     font-family: "Posterama";
+    letter-spacing: 0.2rem;
     display: flex;
 }
 
