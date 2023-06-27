@@ -1,26 +1,23 @@
 import React, { useEffect } from 'react';
 import Main from './main/Main';
-import "./Home.css"
+import "./Home.css";
 import { HomeAnimations } from '../../animation/HomeAnimations';
 import { useLocation } from 'react-router-dom';
 
-
 const Home = (Props) => {
-  
-
-  useEffect(() => {
-
-    HomeAnimations()
-    
-  }, []);
-
   const location = useLocation();
 
   useEffect(() => {
     const isHomePage = location.pathname === '/'; // Assuming '/' is the home page route
 
     if (isHomePage) {
-      document.body.classList.add('no-scroll');
+      const hasAnimationShown = localStorage.getItem('hasAnimationShown');
+
+      if (!hasAnimationShown) {
+        HomeAnimations();
+        localStorage.setItem('hasAnimationShown', 'true');
+        document.body.classList.add('no-scroll');
+      }
     } else {
       document.body.classList.remove('no-scroll');
     }

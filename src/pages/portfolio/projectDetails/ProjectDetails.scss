@@ -49,10 +49,11 @@ $font-family_1: "Poppins", sans-serif;
 }
 .project__details-comment {
 	font-size: 1.3rem;
-	font-weight: 400;
+	font-weight: 600;
 	color: $color_1;
 	margin-bottom: 1rem;
-	font-family: $font-family_1;
+	letter-spacing: 0.1rem;
+	font-family: "Aboreto";
 	white-space: pre-wrap;
 	text-align-last: left;
 	text-align: justify;

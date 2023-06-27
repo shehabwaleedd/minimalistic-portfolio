@@ -32,4 +32,5 @@ ul.titles {
 .titled {
     display: flex;
     width: 70vw;
+    opacity: 0;
 }
