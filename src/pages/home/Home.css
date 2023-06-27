@@ -1,0 +1,33 @@
+.titles {
+	position: absolute;
+	top: 50%;
+	left: 85%;
+	transform: translate(-50%, -50%);
+    z-index: 9999999;
+    display: flex;
+
+}
+
+.containererr {
+    position: relative;
+}
+
+ul.titles {
+	display: flex;
+}
+
+.titles h1 {
+    font-weight: 500;
+	font-size: 5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+    font-family: "Posterama";
+    display: flex;
+}
+
+.titled {
+    display: flex;
+    width: 70vw;
+}

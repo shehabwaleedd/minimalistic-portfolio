@@ -1,9 +1,7 @@
 import gsap from "gsap";
-
+import { TweenMax, Power3 } from "gsap";
 
 export const HomeAnimations = () => {
-
-
   const container = document.querySelector(".containererr");
   const navbar = document.querySelector(".nav__menu");
   const logo = document.querySelector(".logo");
@@ -11,7 +9,7 @@ export const HomeAnimations = () => {
   const darkModeToggle = document.querySelector(".toggle__main");
   const mainContainer = document.querySelector(".main__containerr");
   const dropDownMenu = document.querySelector('.dropdown-menu');
-  const overlay = document.querySelector('.overlay');
+  const titleElements = document.querySelectorAll('.titles > div');
 
   gsap.set(logo, {
     y: 0,
@@ -25,103 +23,121 @@ export const HomeAnimations = () => {
     opacity: 0,
     x: 15,
   });
-
-  // gsap.set(overlay, {
-  //   y: 0,
-  //   opacity: 1,
-  // });
   gsap.set(menuToggle, {
     opacity: 0,
     y: 10,
-  })
-
+  });
   gsap.set(mainContainer, {
     opacity: 0,
     ease: "expo.out",
     y: -100,
-  })
+  });
+
+  const animateTitleElements = () => {
+    return new Promise((resolve) => {
+      titleElements.forEach((element, index) => {
+        const delay = index * 1.5;
   
-  gsap.fromTo(
-    container.children,
-    { y: "105%",  },
-    {
-      y: "0%",
-      ease: "expo.out",
-      duration: 0.1,
-      delay: 0,
+        gsap.fromTo(
+          element,
+          {
+            x: "0",
+            ease: Power3.easeInOut,
+            opacity: "0",
+            delay: 3.5,
+          },
+          {
+            x: "0",
+            ease: Power3.easeInOut,
+            opacity: "1",
+            delay,
+            onComplete: () => {
+              gsap.to(element, {
+                x: "0",
+                ease: Power3.easeInOut,
+                opacity: "0",
+                delay: 3.5,
+                onComplete: index === titleElements.length - 1 ? resolve : null,
+              });
+            },
+          }
+        );
+      });
+    });
+  };
+  
+  
+  
+  
+
+  const animateOtherElements = () => {
+    gsap.to(mainContainer, {
+      y: window.innerWidth > 1440 ? -250 : -250,
+      opacity: 1,
+      ease: "expo.inOut",
+      duration: 3,
+      delay: 0.5,
       stagger: 0.4,
-      onComplete: () => {
-        // animation complete
-        gsap.to(mainContainer, {
-          y:  window.innerWidth > 1440 ? -250 : -250,
-          opacity: 1,
-          ease: "expo.inOut",
-          duration: 3,
-          delay: 0.5,
-          stagger: 0.4,
-        });
+    });
 
+    // Rest of the animations
+    gsap.to(container, {
+      scale: "2",
+      y: window.innerWidth > 1440 ? "100%" : "100%",
+      ease: "expo.inOut",
+      duration: 2,
+    });
+    gsap.to(menuToggle, {
+      opacity: 1,
+      y: 0,
+      ease: "expo.inOut",
+      duration: 1,
+      delay: 3.5,
+      stagger: 0.4,
+    });
+    gsap.to(navbar, {
+      y: -10,
+      opacity: 1,
+      ease: "expo.inOut",
+      duration: 1,
+      delay: 2.5,
+      stagger: {
+        amount: 0.08,
+      },
+    });
+    gsap.to(logo, {
+      y: 0,
+      opacity: 1,
+      ease: "expo.inOut",
+      duration: 1,
+      delay: 2.4,
+      stagger: {
+        amount: 0.08,
+      },
+    });
+    gsap.to(darkModeToggle, {
+      x: 10,
+      opacity: 1,
+      ease: "expo.inOut",
+      duration: 1,
+      delay: 4,
+      stagger: {
+        amount: 0.08,
+      },
+    });
+    gsap.to(dropDownMenu, {
+      x: 0,
+      opacity: 1,
+      ease: "expo.inOut",
+      duration: 1,
+      delay: 5,
+      stagger: {
+        amount: 0.08,
+      },
+    });
+  };
 
-        gsap.to(container, {
-          scale: "2",
-          y: window.innerWidth > 1440 ? "100%" : "100%",
-          ease: "expo.inOut",
-          duration: 2,
-        });
-        gsap.to(menuToggle, {
-          opacity: 1,
-          y: 0,
-          ease: "expo.inOut",
-          duration: 1,
-          delay: 3.5,
-          stagger: 0.4,
-        })
-        gsap.to(navbar, {
-          y: -10,
-          opacity: 1,
-          ease: "expo.inOut",
-          duration: 1,
-          delay: 2.5,
-          stagger: {
-            amount: 0.08,
-          }
-        });
-
-        gsap.to(logo, {
-          y: 0,
-          opacity: 1,
-          ease: "expo.inOut",
-          duration: 1,
-          delay: 2.4,
-          stagger: {
-            amount: 0.08,
-          }
-        });
-
-        gsap.to(darkModeToggle, {
-          x: 10,
-          opacity: 1,
-          ease: "expo.inOut",
-          duration: 1,
-          delay: 4,
-          stagger: {
-            amount: 0.08,
-          }
-        });
-
-        gsap.to(dropDownMenu, {
-          x: 0,
-          opacity: 1,
-          ease: "expo.inOut",
-          duration: 1,
-          delay: 5,
-          stagger: {
-            amount: 0.08,
-          }
-        });
-      }
-    }
-  );
-
-
-}
+  animateTitleElements().then(() => {
+    animateOtherElements();
+  });
+};

@@ -19,47 +19,54 @@ const Model = (Props) => {
 
   return (
     <section className="about section">
-      <div className="about__pic">
-        <img src={require("../../assets/profile.jpg")} alt="profile" />
-      </div>
       {Props.isMobile ? (
-        <div className='detailed__containerr'>
-          <div className='detailed__row'>
-            <div className="aboutttt__container containered">
-              <div className="about__content" style={{ marginTop: Props.language === "fr" ? "10rem" : Props.language === "de" || Props.language === "en" ? "35rem" : "22rem" }}>
-                <h1 style={{ textAlign: Props.language === "ar" ? "right" : "left", paddingRight: Props.language === "ar" ? "3rem" : "0", fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "fr" ? "2rem" : "3rem" }}>{t("navbar__about")}</h1>
-                <p style={{ fontSize: Props.language === "fr" ? "0.8rem" : "0.8rem", fontFamily: Props.language === "ar" ? "Almarai" : "", textAlignLast: Props.language === "ar" ? "right" : "left" }}>
-                  {t("about__description")}
-                </p>
-                <div className="cv__button" style={{ justifyContent: Props.language === "ar" ? "flex-end" : "flex-start", paddingRight: Props.language === "ar" ? "1rem" : "0rem", paddingBottom: "6rem"}}>
-                  <button>
-                    <i className='bx bx-down-arrow-alt scroll-down'></i>
-                    <a href={cv} download>{t("about__resume")}</a>
-                  </button>
+        <>
+          <div className="about__pic">
+            <img src={require("../../assets/profile.jpg")} alt="profile" />
+          </div>
+          <div className='detailed__containerr'>
+            <div className='detailed__row'>
+              <div className="aboutttt__container containered">
+                <div className="about__content" style={{ marginTop: Props.language === "fr" ? "12rem" : Props.language === "de" || Props.language === "en" ? "35rem" : "22rem" }}>
+                  <h1 style={{ textAlign: Props.language === "ar" ? "right" : "left", paddingRight: Props.language === "ar" ? "3rem" : "0", fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "fr" ? "2rem" : "3rem" }}>{t("navbar__about")}</h1>
+                  <p style={{ fontSize: Props.language === "fr" ? "0.8rem" : "0.8rem", fontFamily: Props.language === "ar" ? "Almarai" : "", textAlignLast: Props.language === "ar" ? "right" : "left" }}>
+                    {t("about__description")}
+                  </p>
+                  <div className="cv__button" style={{ justifyContent: Props.language === "ar" ? "flex-end" : "flex-start", paddingRight: Props.language === "ar" ? "1rem" : "0rem", paddingBottom: "6rem" }}>
+                    <button>
+                      <i className='bx bx-down-arrow-alt scroll-down'></i>
+                      <a href={cv} download>{t("about__resume")}</a>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </>
       ) : (
-        <div className='detailed__containerr'>
-          <div className='detailed__row'>
-            <div className="aboutttt__container containered">
-              <div className="about__content" style={{ marginTop: Props.language === "fr" ? "10rem" : Props.language === "de" || Props.language === "en" ? "8rem" : "0" }}>
-                <h1 style={{ textAlign: Props.language === "ar" ? "right" : "left", paddingRight: Props.language === "ar" ? "3rem" : "0", fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "fr" ? "2rem" : "3rem" }}>{t("navbar__about")}</h1>
-                <p style={{ fontSize: Props.language === "fr" ? "0.8rem" : "0.8rem", fontFamily: Props.language === "ar" ? "Almarai" : "", textAlignLast: Props.language === "ar" ? "right" : "left" }}>
-                  {t("about__description")}
-                </p>
-                <div className="cv__button" style={{ justifyContent: Props.language === "ar" ? "flex-end" : "flex-start", paddingRight: Props.language === "ar" ? "19rem" : "0rem" }}>
-                  <button>
-                    <i className='bx bx-down-arrow-alt scroll-down'></i>
-                    <a href={cv} download>{t("about__resume")}</a>
-                  </button>
+        <>
+          <div className="about__pic">
+            <img src={require("../../assets/profile.jpg")} alt="profile" />
+          </div>
+          <div className='detailed__containerr'>
+            <div className='detailed__row'>
+              <div className="aboutttt__container containered">
+                <div className="about__content" style={{ marginTop: Props.language === "fr" ? "10rem" : Props.language === "de" || Props.language === "en" ? "8rem" : "0" }}>
+                  <h1 style={{ textAlign: Props.language === "ar" ? "right" : "left", paddingRight: Props.language === "ar" ? "3rem" : "0", fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "fr" ? "2rem" : "3rem" }}>{t("navbar__about")}</h1>
+                  <p style={{ fontSize: Props.language === "fr" ? "0.7rem" : "0.7rem", fontFamily: Props.language === "ar" ? "Almarai" : "", textAlignLast: Props.language === "ar" ? "right" : "left" }}>
+                    {t("about__description")}
+                  </p>
+                  <div className="cv__button" style={{ justifyContent: Props.language === "ar" ? "flex-end" : "flex-start", paddingRight: Props.language === "ar" ? "19rem" : "0rem" }}>
+                    <button>
+                      <i className='bx bx-down-arrow-alt scroll-down'></i>
+                      <a href={cv} download>{t("about__resume")}</a>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </>
       )}
     </section>
   );

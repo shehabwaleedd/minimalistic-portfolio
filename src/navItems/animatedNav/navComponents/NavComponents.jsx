@@ -52,7 +52,7 @@ const NavComponents = (Props) => {
                             transitionDelay: Props.navOpen ? "3s" : "0",
                             fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2rem" : "1rem",
                             bottom: Props.language === "ar" ? "1rem" : "0",
-                            width: Props.language === "ar" ? "100%" : Props.language === "fr" ? "120%" : "100%",
+                            width: Props.language === "ar" ? "100%" : Props.language === "fr" ? "140%" : "100%",
                         }}
                     >{t("navbar__about")}</Link>
                     <Link
