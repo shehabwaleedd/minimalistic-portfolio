@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.e85812d5.css",
-    "main.js": "/static/js/main.6857babd.js",
+    "main.css": "/static/css/main.d8d202a3.css",
+    "main.js": "/static/js/main.e2b07edc.js",
     "static/js/27.755029ae.chunk.js": "/static/js/27.755029ae.chunk.js",
     "static/media/leluweb.png": "/static/media/leluweb.e56bcba2eba840039dcb.png",
+    "static/media/Cairo-Brews.png": "/static/media/Cairo-Brews.bfafcec7afa9d5588e97.png",
     "static/media/bloggg.png": "/static/media/bloggg.574889f4338eabe775c3.png",
     "static/media/project5.png": "/static/media/project5.170a57df1916fb640c3d.png",
-    "static/media/project4.png": "/static/media/project4.28a37ba318c864059e7e.png",
     "static/media/noise.gif": "/static/media/noise.93fe26ae97a4df3d4e67.gif",
     "static/media/profile.jpg": "/static/media/profile.763cd32bc9e9ac0dcf82.jpg",
     "static/media/project3.png": "/static/media/project3.25f8c017cc64fe06337d.png",
@@ -53,7 +53,7 @@
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
-    "static/css/main.e85812d5.css",
-    "static/js/main.6857babd.js"
+    "static/css/main.d8d202a3.css",
+    "static/js/main.e2b07edc.js"
   ]
 }
