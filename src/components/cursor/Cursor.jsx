@@ -34,39 +34,9 @@ const Cursor = () => {
 
         const dotSizeHalf = dotSize / 2;
         const outlineSizeHalf = outlineElement.offsetWidth / 2.5;
-
-        const dotOffsetX = -dotSizeHalf + outlineSizeHalf;
-        const dotOffsetY = -dotSizeHalf + outlineSizeHalf;
-
-        
-
         dotElement.style.transform = `translate(${cursorX - dotSizeHalf}px, ${cursorY - dotSizeHalf}px)`;
         outlineElement.style.transform = `translate(${cursorX - outlineSizeHalf}px, ${cursorY - outlineSizeHalf}px)`;
     }, [cursorX, cursorY]);
-
-    // useEffect(() => {
-    //     const handleHover = () => {
-    //         const heading = document.querySelector('p');
-    //         heading.style.backgroundColor = 'var(--accent-color)';
-    //         heading.style.color = 'var(--container-color)';
-    //         heading.style.transition = 'all 0.3s ease-in-out';
-    //     };
-
-    //     const handleLeave = () => {
-    //         const heading = document.querySelector('p');
-    //         heading.style.backgroundColor = '';
-    //         heading.style.color = '';
-    //     };
-
-    //     const heading = document.querySelector('p');
-    //     heading.addEventListener('mouseenter', handleHover);
-    //     heading.addEventListener('mouseleave', handleLeave);
-
-    //     return () => {
-    //         heading.removeEventListener('mouseenter', handleHover);
-    //         heading.removeEventListener('mouseleave', handleLeave);
-    //     };
-    // }, []);
 
     return (
         <>

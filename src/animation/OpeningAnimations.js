@@ -89,7 +89,7 @@ export const OpeningAnimations = () => {
     delay: (el, i) => 7000 + 40 * i,
   });
 
-  // adjust your animation properties for mobile view using media queries
+  // adjust animation properties for mobile view using media queries
 const mediaQuery = window.matchMedia("(max-width: 768px)");
 
 if (mediaQuery.matches) {

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import "./Main.scss"
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { HomeAnimations } from '../../../animation/HomeAnimations'
 
 const Main = (Props) => {
 
@@ -40,7 +39,7 @@ const Main = (Props) => {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, [Props]);
 
 
 

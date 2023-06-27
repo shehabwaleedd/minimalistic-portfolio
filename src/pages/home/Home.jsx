@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import Main from './main/Main';
 import "./Home.css"
-import { useRef } from 'react';
 import { HomeAnimations } from '../../animation/HomeAnimations';
 import { useLocation } from 'react-router-dom';
 

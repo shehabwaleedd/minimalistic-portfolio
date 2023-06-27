@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import { TweenMax, Power3 } from "gsap";
+import { Power3 } from "gsap";
 
 export const HomeAnimations = () => {
   const container = document.querySelector(".containererr");

@@ -1,14 +1,9 @@
-// Import the functions you need from the SDKs you need
+
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCTiYXKijf8IhZloQnf5-zDj08IYgEu6Xo",
   authDomain: "myblog-c2d41.firebaseapp.com",
@@ -19,7 +14,6 @@ const firebaseConfig = {
   measurementId: "G-N8L8B7WPSP"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);

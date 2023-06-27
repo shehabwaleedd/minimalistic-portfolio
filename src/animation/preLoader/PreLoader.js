@@ -1,5 +1,4 @@
-import gsap from "gsap";
-import { TweenMax, Power3, Expo } from "gsap";
+import { TweenMax, Power3 } from "gsap";
 
 
 export const PreLoaderAnimations = () => {

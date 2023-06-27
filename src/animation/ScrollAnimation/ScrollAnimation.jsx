@@ -18,5 +18,3 @@ const ScrollAnimation = () => {
 
 export default ScrollAnimation
 
-
-// background: "#6f988a"

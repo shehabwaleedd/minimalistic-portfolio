@@ -1,13 +1,5 @@
 
 export const ExperienceData = [
-    // {
-    //     id: 1,
-    //     title: "Purses Factory",
-    //     time: "2011",
-    //     location: "Imbaba, Egypt",
-    //     company: "Purses Factory",
-    //     comment: "My first job ever, I was working as a helper in a factory that makes purses and bags. I was responsible for the quality of the products and making sure that the products are ready to be shipped."
-    //   },
       {
         id: 4,
         title: "AIESEC RNS",
@@ -24,14 +16,7 @@ export const ExperienceData = [
         company: "AMC Cinemas / Amazon UK - Concentrix Egypt",
         comment: "Mainly responsible for handling the customers' complains and inquiries, making sure that the customers are satisfied and that they are not having any problems. "
       },
-    //   {
-    //     id: 7,
-    //     title: "iOS Developer",
-    //     time: "2022",
-    //     location: "Imbaba, Egypt",
-    //     company: "Freelancer",
-    //     comment: "Worked for couple of months as an IOS developer in small projects."
-    //   },
+
       {
         id: 8,
         title: "Airbnb Host",

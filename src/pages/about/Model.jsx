@@ -4,18 +4,6 @@ import { t } from "i18next";
 
 
 const Model = (Props) => {
-  // const { scrollYProgress } = useViewportScroll();
-  // const scale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
-
-  // const [canScroll, setCanScroll] = useState(false);
-
-  // useEffect(() => {
-  //   if (canScroll === false) {
-  //     document.querySelector("body").classList.add("no-scroll");
-  //   } else {
-  //     document.querySelector("body").classList.remove("no-scroll");
-  //   }
-  // }, [canScroll]);
 
   return (
     <section className="about section">
