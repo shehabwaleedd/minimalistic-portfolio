@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.d8d202a3.css",
-    "main.js": "/static/js/main.e2b07edc.js",
+    "main.js": "/static/js/main.a5946511.js",
     "static/js/27.755029ae.chunk.js": "/static/js/27.755029ae.chunk.js",
     "static/media/leluweb.png": "/static/media/leluweb.e56bcba2eba840039dcb.png",
     "static/media/Cairo-Brews.png": "/static/media/Cairo-Brews.bfafcec7afa9d5588e97.png",
@@ -54,6 +54,6 @@
   },
   "entrypoints": [
     "static/css/main.d8d202a3.css",
-    "static/js/main.e2b07edc.js"
+    "static/js/main.a5946511.js"
   ]
 }
