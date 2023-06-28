@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
 import { useTranslation } from 'react-i18next';
+import { BiRightArrowAlt } from 'react-icons/bi';
 
 const Portfolio = (Props) => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -71,13 +72,13 @@ const Portfolio = (Props) => {
                   </div>
                   <div className="scrollbarr">
                     {projectsData.map((item, index) => (
-                      <div className="work__title" key={item.id} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>
-                          <div className="menu-text">
-                            <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
-                            <div className="categories">
-                              <p>{item.category[3]}</p>
-                            </div>
+                      <div className="work__title" key={index} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>
+                        <div className="menu-text">
+                          <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
+                          <div className="categories">
+                            <p>{item.category[0]}</p>
                           </div>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -113,10 +114,10 @@ const Portfolio = (Props) => {
                   </div>
                   <div className="scrollbarr">
                     {projectsData.map((item, index) => (
-                      <div className="work__title" key={item.id} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>
+                      <div className="work__title" key={index} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>
                         <div className="menu-item-wrapper">
                           <div className="menu-arrow">
-                            <i className='bx bx-right-arrow-alt' ></i>
+                            <BiRightArrowAlt style={{fontSize: "2.3rem", marginTop: "1.3rem", color: "var(--title-color)"}}/>
                           </div>
                           <div className="menu-text">
                             <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>

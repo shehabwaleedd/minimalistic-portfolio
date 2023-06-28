@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import "./Main.scss"
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { BiRightArrowAlt } from 'react-icons/bi';
+
 
 const Main = (Props) => {
 
@@ -49,7 +51,7 @@ const Main = (Props) => {
             {Props.isMobile ? (
                 // Mobile view
                 <div className="main__container container grid">
-                    <div className="main__content" style={{ marginTop: Props.navOpen ? "5rem" : "0",}}>
+                    <div className="main__content" style={{ marginTop: Props.navOpen ? "5rem" : "0", }}>
                         <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }} className="main__titlee">{t("hey")}{t("my__name_im")} <span style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }} className="main__title-color">{t("my__name-first")}</span> <span style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }} > {t("my__name-last")}</span></h1>
                         <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }} className="main__subtitle">{t("my__intro")}</h1>
                     </div>
@@ -58,10 +60,16 @@ const Main = (Props) => {
                     </div>
                     <div className="main__links">
                         <Link to='/portfolio' className="main__button button1">
-                            <p style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}><i className='bx bx-right-arrow-alt' style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}></i> {t("button__view_my_projects")} </p>
+                            <p style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}>
+                                <BiRightArrowAlt style={{ fontSize: "1rem", color: "var(--title-color)" }} />
+                                {t("button__view_my_projects")}
+                            </p>
                         </Link>
                         <Link to='/about' className="main__button button2">
-                            <p style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}><i className='bx bx-right-arrow-alt' style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}></i> {t("button__more__about_me")}</p>
+                            <p style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}>
+                                <BiRightArrowAlt style={{ fontSize: "1rem", color: "var(--title-color)" }} />
+                                {t("button__more__about_me")}
+                            </p>
                         </Link>
                     </div>
                 </div>
@@ -76,10 +84,16 @@ const Main = (Props) => {
                     </div>
                     <div className="main__links">
                         <Link to='/portfolio' className="main__button button1">
-                            <p style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}><i className='bx bx-right-arrow-alt' style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}></i> {t("button__view_my_projects")} </p>
+                            <p style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}>
+                                <BiRightArrowAlt style={{ fontSize: "1rem", color: "var(--title-color)" }} />
+                                {t("button__view_my_projects")}
+                            </p>
                         </Link>
                         <Link to='/about' className="main__button button2">
-                            <p style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}><i className='bx bx-right-arrow-alt' style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}></i> {t("button__more__about_me")}</p>
+                            <p style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}>
+                                <BiRightArrowAlt style={{ fontSize: "1rem", color: "var(--title-color)" }} />
+                                {t("button__more__about_me")}
+                            </p>
                         </Link>
                     </div>
                 </div>

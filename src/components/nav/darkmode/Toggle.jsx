@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './Toggle.scss';
+import { BiSun } from 'react-icons/bi';
+import { BiMoon } from 'react-icons/bi';
 
 const Toggle = (props) => {
   const spring = {
@@ -43,8 +45,8 @@ const Toggle = (props) => {
           position: 'relative',
         }}
       >
-        <motion.i 
-          className={`bx bx-sun ${!isOn ? '' : 'acitve'}`} 
+        <BiSun
+          className={`${!isOn ? '' : 'acitve'}`} 
           layout 
           transition={spring} 
           style={{ 
@@ -56,7 +58,7 @@ const Toggle = (props) => {
 
           }} 
         />
-        <motion.i 
+        <BiMoon
           className={`bx bx-moon ${isOn ? 'active' : ''}`} 
           layout 
           transition={spring} 

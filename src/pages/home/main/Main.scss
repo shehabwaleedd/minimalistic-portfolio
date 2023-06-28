@@ -117,6 +117,7 @@
     }
 
     &__button {
+        display: flex;
         position: relative;
         justify-content: center;
         align-items: center;
@@ -133,6 +134,10 @@
     }
 
     .button1 {
+        p {
+            display: flex;
+            gap: 0.2rem;
+        }
         &::after {
             content: "";
             position: absolute;
@@ -162,6 +167,10 @@
     }
 
     .button2 {
+        p {
+            display: flex;
+            gap: 0.2rem;
+        }
         &::after {
             content: "";
             position: absolute;

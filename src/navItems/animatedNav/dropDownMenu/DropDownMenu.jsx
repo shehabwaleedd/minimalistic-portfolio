@@ -3,6 +3,7 @@ import i18next from 'i18next';
 import './DropDownMenu.css';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
+import {FaAngleDown} from 'react-icons/fa';
 
 const DropDownMenu = (Props) => {
 
@@ -46,7 +47,7 @@ const DropDownMenu = (Props) => {
           >
             <span onClick={handleLanguageExpanded}>
               {Props.language}
-              <i className="bx bx-chevron-down"></i>
+              <FaAngleDown />
               <AnimatePresence>
                 {Props.languageExpanded && (
                   <motion.div
@@ -83,7 +84,7 @@ const DropDownMenu = (Props) => {
           >
             <span onClick={handleLanguageExpanded}>
               {Props.language}
-              <i className="bx bx-chevron-down"></i>
+              <FaAngleDown />
               <AnimatePresence>
                 {Props.languageExpanded && (
                   <motion.div

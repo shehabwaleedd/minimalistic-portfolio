@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import projectsData from "../Data";
 import "./ProjectDetails.scss";
 import ScrollAnimation from "../../../animation/ScrollAnimation/ScrollAnimation";
+import {BiRightArrowAlt} from "react-icons/bi";
+
 
 function ProjectDetails() {
     const { id } = useParams();
@@ -38,7 +40,14 @@ function ProjectDetails() {
                             </div>
                             <div className="project__details-comment">
                                 <p>{project.comment}</p>
-                                <a href={`${project.link}`} target="__blank"><i className='bx bx-right-arrow-alt'></i>View The Website</a>
+                                <div className="project__links">
+                                    <div className={`project__link ${project.class}`}>
+                                        <a href={`${project.link}`} target="__blank"><BiRightArrowAlt />View The Website</a>
+                                    </div>
+                                    <div className="project__link">
+                                        <a href={`${project.link}`} target="__blank"><BiRightArrowAlt />View The Code</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

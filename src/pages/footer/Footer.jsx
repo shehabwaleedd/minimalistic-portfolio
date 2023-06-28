@@ -1,6 +1,11 @@
 import React from 'react'
 import "./Footer.scss"
 import { useTranslation } from 'react-i18next'
+import {BiLogoFacebookCircle} from "react-icons/bi"
+import {BiLogoInstagram} from "react-icons/bi"
+import {BiLogoLinkedin} from "react-icons/bi"
+import {BiLogoGithub} from "react-icons/bi"
+import {BiLogoTwitter} from "react-icons/bi"
 
 
 const Footer = (Props) => {
@@ -22,7 +27,7 @@ const Footer = (Props) => {
             </div>
             <div className="footer__socials">
               <a href="https://www.instagram.com/shehabwaleedd/" className="footer__social-link" target='_blank' rel="noreferrer"><i className="uil uil-instagram"></i></a>
-              <a href="https://facebook/shehabwaleedd" className="footer__social-link" target='_blank' rel="noreferrer"><i className="bx bxl-facebook"></i></a>
+              <a href="https://facebook/shehabwaleedd" className="footer__social-link" target='_blank' rel="noreferrer"><BiLogoFacebookCircle /></a>
               <a href="https://twitter.com/waleedjr_" className="footer__social-link" target='_blank' rel="noreferrer"><i className="bx bxl-twitter"></i></a>
               <a href="https://www.linkedin.com/in/shehabwaleedd/" className="footer__social-link" target='_blank' rel="noreferrer"><i className="bx bxl-linkedin"></i></a>
               <a href="https://www.youtube.com/channel/UCP2o3R5yqenBaZfsQjB-HJw" className="footer__social-link" target='_blank' rel="noreferrer"><i className="bx bxl-youtube"></i></a>
@@ -48,12 +53,11 @@ const Footer = (Props) => {
               <p><strong id="mono">{t("footer__info-phone")}</strong>{t("footer__info_number")}</p>
             </div>
             <div className="footer__socials">
-              <a href="https://www.instagram.com/shehabwaleedd/" className="footer__social-link" target='_blank' rel="noreferrer"><i className="uil uil-instagram"></i></a>
-              <a href="https://facebook/shehabwaleedd" className="footer__social-link" target='_blank' rel="noreferrer"><i className="bx bxl-facebook"></i></a>
-              <a href="https://twitter.com/waleedjr_" className="footer__social-link" target='_blank' rel="noreferrer"><i className="bx bxl-twitter"></i></a>
-              <a href="https://www.linkedin.com/in/shehabwaleedd/" className="footer__social-link" target='_blank' rel="noreferrer"><i className="bx bxl-linkedin"></i></a>
-              <a href="https://www.youtube.com/channel/UCP2o3R5yqenBaZfsQjB-HJw" className="footer__social-link" target='_blank' rel="noreferrer"><i className="bx bxl-youtube"></i></a>
-              <a href="https://github.com/shehabwaleedd" className="footer__social-link" target='_blank' rel="noreferrer"><i className="bx bxl-github"></i></a>
+              <a href="https://www.instagram.com/shehabwaleedd/" className="footer__social-link" target='_blank' rel="noreferrer"><BiLogoInstagram /></a>
+              <a href="https://facebook/shehabwaleedd" className="footer__social-link" target='_blank' rel="noreferrer"><BiLogoFacebookCircle/></a>
+              <a href="https://twitter.com/waleedjr_" className="footer__social-link" target='_blank' rel="noreferrer"><BiLogoTwitter /></a>
+              <a href="https://www.linkedin.com/in/shehabwaleedd/" className="footer__social-link" target='_blank' rel="noreferrer"><BiLogoLinkedin /></a>
+              <a href="https://github.com/shehabwaleedd" className="footer__social-link" target='_blank' rel="noreferrer"><BiLogoGithub /></a>
 
             </div>
           </div>

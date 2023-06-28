@@ -177,4 +177,5 @@
   height: 10px;
   background: var(--progressive-bar-color);
   transform-origin: 0%;
+  z-index: 9999999;
 }

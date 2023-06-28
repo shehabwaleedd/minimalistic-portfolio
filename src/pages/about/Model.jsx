@@ -1,6 +1,7 @@
 import "./About.scss"
 import cv from "../../assets/Shehab_Waleed.docx"
 import { t } from "i18next";
+import {BiDownArrowAlt} from "react-icons/bi"
 
 
 const Model = (Props) => {
@@ -22,7 +23,7 @@ const Model = (Props) => {
                   </p>
                   <div className="cv__button" style={{ justifyContent: Props.language === "ar" ? "flex-end" : "flex-start", paddingRight: Props.language === "ar" ? "1rem" : "0rem", paddingBottom: "6rem" }}>
                     <button>
-                      <i className='bx bx-down-arrow-alt scroll-down'></i>
+                      <BiDownArrowAlt className='scroll-down'/>
                       <a href={cv} download>{t("about__resume")}</a>
                     </button>
                   </div>
@@ -46,7 +47,7 @@ const Model = (Props) => {
                   </p>
                   <div className="cv__button" style={{ justifyContent: Props.language === "ar" ? "flex-end" : "flex-start", paddingRight: Props.language === "ar" ? "19rem" : "0rem" }}>
                     <button>
-                      <i className='bx bx-down-arrow-alt scroll-down'></i>
+                      <BiDownArrowAlt className='scroll-down'/>
                       <a href={cv} download>{t("about__resume")}</a>
                     </button>
                   </div>

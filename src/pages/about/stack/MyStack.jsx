@@ -1,21 +1,29 @@
 import React from 'react'
 import "./Stack.scss"
+import { BiLogoJavascript } from "react-icons/bi"
+import { BiLogoReact } from "react-icons/bi"
+import { BiLogoTailwindCss } from "react-icons/bi"
+import { BiLogoBootstrap } from "react-icons/bi"
+import { BiLogoSass } from "react-icons/bi"
+import { BiLogoFirebase } from "react-icons/bi"
+import { BiLogoGithub } from "react-icons/bi"
+import { BiLogoTypescript } from "react-icons/bi"
 
 const MyStack = (Props) => {
   return (
     <section>
       {Props.isMobile ? (
-        <div className='stack section' style={{position: "fixed"}}>
+        <div className='stack section' style={{ position: "fixed" }}>
           <div className="stack__container container">
             <div className="stack__icons">
-              <i className='bx bxl-javascript'></i>
-              <i className='bx bxl-react' ></i>
-              <i className='bx bxl-tailwind-css' ></i>
-              <i className='bx bxl-bootstrap'></i>
-              <i className='bx bxl-sass' ></i>
-              <i className='bx bxl-firebase'></i>
-              <i className='bx bxl-git'></i>
-              <i className='bx bxl-typescript'></i>
+              <BiLogoJavascript style={{ color: "var(--stack-accent-color)" }} />
+              <BiLogoReact style={{ color: "var(--stack-accent-color)" }}/>
+              <BiLogoTailwindCss style={{ color: "var(--stack-accent-color)" }}/>
+              <BiLogoBootstrap style={{ color: "var(--stack-accent-color)" }}/>
+              <BiLogoSass style={{ color: "var(--stack-accent-color)" }}/>
+              <BiLogoFirebase style={{ color: "var(--stack-accent-color)" }}/>
+              <BiLogoGithub style={{ color: "var(--stack-accent-color)" }}/>
+              <BiLogoTypescript style={{ color: "var(--stack-accent-color)" }}/>
             </div>
           </div>
         </div>
@@ -23,14 +31,14 @@ const MyStack = (Props) => {
         <div className='stack section'>
           <div className="stack__container container">
             <div className="stack__icons">
-              <i className='bx bxl-javascript'></i>
-              <i className='bx bxl-react' ></i>
-              <i className='bx bxl-tailwind-css' ></i>
-              <i className='bx bxl-bootstrap'></i>
-              <i className='bx bxl-sass' ></i>
-              <i className='bx bxl-firebase'></i>
-              <i className='bx bxl-git'></i>
-              <i className='bx bxl-typescript'></i>
+              <BiLogoJavascript style={{ color: "var(--stack-accent-color)" }} />
+              <BiLogoReact style={{ color: "var(--stack-accent-color)" }}/>
+              <BiLogoTailwindCss style={{ color: "var(--stack-accent-color)" }}/>
+              <BiLogoBootstrap style={{ color: "var(--stack-accent-color)" }}/>
+              <BiLogoSass style={{ color: "var(--stack-accent-color)" }}/>
+              <BiLogoFirebase style={{ color: "var(--stack-accent-color)" }}/>
+              <BiLogoGithub style={{ color: "var(--stack-accent-color)" }}/>
+              <BiLogoTypescript style={{ color: "var(--stack-accent-color)" }}/>
             </div>
           </div>
         </div>

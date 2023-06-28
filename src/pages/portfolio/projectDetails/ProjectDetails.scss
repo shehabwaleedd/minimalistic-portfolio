@@ -126,6 +126,10 @@ $font-family_1: "Posterama", sans-serif;
 }
 
 
+.shehab {
+	display: none;
+}
+
 
 
 
@@ -171,5 +175,10 @@ $font-family_1: "Posterama", sans-serif;
 			}
 		}
 
+	}
+
+	.project__links {
+		display: flex;
+		justify-content: space-between;
 	}
 }
