@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Main from './main/Main';
 import './Home.css';
-import { HomeAnimations } from '../../animation/HomeAnimations';
 
 const Home = (Props) => {
 

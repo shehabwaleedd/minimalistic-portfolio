@@ -75,7 +75,7 @@ const Portfolio = (Props) => {
                           <div className="menu-text">
                             <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
                             <div className="categories">
-                              <p>{item.category}</p>
+                              <p>{item.category[3]}</p>
                             </div>
                           </div>
                       </div>
@@ -121,7 +121,7 @@ const Portfolio = (Props) => {
                           <div className="menu-text">
                             <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
                             <div className="categories">
-                              <p>{item.category}</p>
+                              <p>{item.category[0]}</p>
                             </div>
                           </div>
                         </div>

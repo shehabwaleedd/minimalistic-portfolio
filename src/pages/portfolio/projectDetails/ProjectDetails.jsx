@@ -17,15 +17,29 @@ function ProjectDetails() {
                         <img src={project.image} alt={project.title} />
                     </div>
                     <div className="project__details_post-text">
-                        <div className="project__details_post-textanddate">
-                            <h1>{project.title}</h1>
-                            <p>{project.date}</p>
-                        </div>
+                        <h1>{project.title}</h1>
                         <div className="project__details-brief">
-                            <h2>BRIEF:</h2>
-                        </div>
-                        <div className="project__details-comment">
-                            <p>{project.comment}</p>
+                            <div className="category__date">
+                                <div className="categoryy">
+                                    <h2>Category: </h2>
+                                    <div className="category__list">
+                                        <h2>{project.category[0]}</h2>
+                                        <h2>{project.category[1]}</h2>
+                                        <h2>{project.category[2]}</h2>
+                                        <h2>{project.category[3]}</h2>
+                                    </div>
+                                </div>
+                                <div className="datee">
+                                    <h2>Year: </h2>
+                                    <div className="datee__list">
+                                        <h2>{project.date}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="project__details-comment">
+                                <p>{project.comment}</p>
+                                <a href={`${project.link}`} target="__blank"><i className='bx bx-right-arrow-alt'></i>View The Website</a>
+                            </div>
                         </div>
                     </div>
                 </div>

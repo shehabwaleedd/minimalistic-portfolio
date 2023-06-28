@@ -1,6 +1,8 @@
 $color_1: var(--text-color);
 $color_2: var(--accent-color);
-$font-family_1: "Poppins", sans-serif;
+$color_3: var(--nav-overlay-color);
+$color_4: var(--title-color);
+$font-family_1: "Posterama", sans-serif;
 
 .project__details {
 	display: flex;
@@ -9,9 +11,33 @@ $font-family_1: "Poppins", sans-serif;
 	align-items: center;
 	padding: 1rem;
 	width: 100%;
-	height: 100%;
-	transition: all 0.3s ease-in-out;
+	min-height: 150vh;
+	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+	position: relative;
+	background-color: var(--body-color);
 }
+
+.project__card_details {
+	position: absolute;
+	width: 68vw;
+	height: 40vh;
+	top: -10rem;
+	background-color: var(--body-color);
+	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+
+	.project__image_container img {
+		position: absolute;
+		width: 73rem;
+		height: 36rem;
+		left: 1rem;
+		object-fit: cover;
+		border-bottom-left-radius: 2rem;
+		border-bottom-right-radius: 2rem;
+		border: 0.2px solid #000;
+		border-top: 0px solid #000;
+	}
+}
+
 .project__details_post-text {
 	display: flex;
 	flex-direction: column;
@@ -22,23 +48,28 @@ $font-family_1: "Poppins", sans-serif;
 	height: 100%;
 	transition: all 0.3s ease-in-out;
 	gap: 1rem;
-}
-.project__details_post-textanddate {
-	display: flex;
-	justify-content: space-between;
-	align-items: left;
-	width: 100%;
-	height: 100%;
-	transition: all 0.3s ease-in-out;
-	gap: 1rem;
-	padding-bottom: 2rem;
-	p {
-		font-size: 0.8rem;
-		font-weight: 500;
-		color: $color_1;
+	position: relative;
+	top: 43rem;
+
+	h1 {
+		font-size: 3rem;
+		font-weight: 600;
+		color: $color_2;
+		margin-bottom: 1rem;
+		font-family: $font-family_1;
+		letter-spacing: 0.5rem;
 	}
 }
+
+
 .project__details-brief {
+	width: 70vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-top: 1px solid #000;
+	padding-top: 2rem;
+
 	h2 {
 		font-size: 1.5rem;
 		font-weight: 600;
@@ -47,14 +78,98 @@ $font-family_1: "Poppins", sans-serif;
 		font-family: $font-family_1;
 	}
 }
+
+.category__date {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	
+	.categoryy {
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+
+		.category__list {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			justify-content: flex-end;
+			align-items: flex-start;
+
+			h2 {
+				color: $color_4;
+			}
+		}
+	}
+	.datee {
+		display: flex;
+		justify-content: space-between;
+		gap: 6rem;
+		.datee__list {
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			justify-content: flex-end;
+			align-items: flex-start;
+			h2 {
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: $color_4;
+				margin-bottom: 1rem;
+				font-family: $font-family_1;
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
 .project__details-comment {
-	font-size: 1.3rem;
+	font-size: 0.8rem;
 	font-weight: 600;
 	color: $color_1;
 	margin-bottom: 1rem;
 	letter-spacing: 0.1rem;
 	font-family: "Aboreto";
-	white-space: pre-wrap;
-	text-align-last: left;
-	text-align: justify;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	a {
+		cursor: pointer;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		color: $color_4;
+		position: relative;
+		font-size: 1.1rem;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 1.4rem;
+			top: 1.9rem;
+			width: 0%;
+			height: 2px;
+			background-color: $color_4;
+			transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+		}
+
+		&:hover {
+			&::after {
+				width: 25%;
+			}
+		}
+
+	}
 }
