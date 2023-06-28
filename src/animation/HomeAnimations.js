@@ -81,7 +81,7 @@ export const HomeAnimations = () => {
 
   const animateOtherElements = () => {
     gsap.to(mainContainer, {
-      y: window.innerWidth > 1440 ? -200 : -100,
+      y: window.innerWidth > 1440 ? -200 : 0,
       opacity: 1,
       ease: "expo.inOut",
       duration: 3,

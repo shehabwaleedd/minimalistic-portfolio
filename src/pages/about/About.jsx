@@ -47,24 +47,29 @@ const AboutPage = (Props) => {
   };
 
   return (
-    <React.Fragment className="smooth-scroll-wrapper">
-      <div className="load-container">
-        <div className="load-screen" ref={(el) => (screen = el)}></div>
-      </div>
       <motion.div>
         {Props.isMobile ? (
-          <secion ref={(el) => (body = el)} className="about section" id='about' >
-            <Model isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} isAbout={Props.isAbout} setIsAbout={Props.setIsAbout} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
-            <MyStack isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} />
-          </secion>
+          <>
+            <div className="load-container">
+              <div className="load-screen" ref={(el) => (screen = el)}></div>
+            </div>
+            <section ref={(el) => (body = el)} className="about section" id='about' >
+              <Model isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} isAbout={Props.isAbout} setIsAbout={Props.setIsAbout} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
+              <MyStack isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} />
+            </section>
+          </>
         ) : (
-          <secion ref={(el) => (body = el)} className="about section" id='about' >
-            <Model isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} isAbout={Props.isAbout} setIsAbout={Props.setIsAbout} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
-            <MyStack isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} />
-          </secion>
+          <>
+            <div className="load-container">
+              <div className="load-screen" ref={(el) => (screen = el)}></div>
+            </div>
+            <section ref={(el) => (body = el)} className="about section" id='about' >
+              <Model isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} isAbout={Props.isAbout} setIsAbout={Props.setIsAbout} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
+              <MyStack isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} />
+            </section>
+          </>
         )}
       </motion.div>
-    </React.Fragment>
   )
 }
 

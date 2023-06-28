@@ -34,3 +34,6 @@ ul.titles {
     width: 70vw;
     opacity: 0;
 }
+homeee .no-scroll {
+    overflow: hidden;
+  }

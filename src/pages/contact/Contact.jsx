@@ -112,7 +112,7 @@ const Contact = (Props) => {
 
 
   return (
-    <React.Fragment className='contact_entire'>
+    <React.Fragment>
       <div className="contact__load-container">
         <div className="contact__load-screen" ref={(el) => (screen = el)}></div>
       </div>
