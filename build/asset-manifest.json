@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.68c34af1.css",
-    "main.js": "/static/js/main.bafee4ab.js",
+    "main.js": "/static/js/main.a1cef9af.js",
     "static/js/27.755029ae.chunk.js": "/static/js/27.755029ae.chunk.js",
     "static/media/profile.jpg": "/static/media/profile.763cd32bc9e9ac0dcf82.jpg",
-    "static/media/moaz.svg": "/static/media/moaz.c4d9e45332902dcd5e34356f64b4714e.svg",
     "static/media/noise.png": "/static/media/noise.a8f3d9df45c2a74aac42.png",
     "static/media/Posterama.ttf": "/static/media/Posterama.6c5b7fa6f0088fdfcb7e.ttf",
     "static/media/Satoshi-MediumItalic.ttf": "/static/media/Satoshi-MediumItalic.5db9ec801a311bdf187b.ttf",
@@ -32,12 +31,13 @@
     "static/media/Shehab_Waleed.docx": "/static/media/Shehab_Waleed.64d9e945fcd6b26e0c61.docx",
     "static/media/Satoshi-Light.woff2": "/static/media/Satoshi-Light.df8f06167ee6fd05a131.woff2",
     "static/media/lelu10.svg": "/static/media/lelu10.1c7f4e6fd5db5f02db7b2067fa10b572.svg",
+    "static/media/moaz2.svg": "/static/media/moaz2.6cbf71b924edc662a724a5e40d5be61b.svg",
     "static/media/blog1.svg": "/static/media/blog1.570c8e23e0baefb47d831283b248af34.svg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
     "static/css/main.68c34af1.css",
-    "static/js/main.bafee4ab.js"
+    "static/js/main.a1cef9af.js"
   ]
 }
