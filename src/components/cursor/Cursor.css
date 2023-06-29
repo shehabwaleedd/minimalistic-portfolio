@@ -38,7 +38,7 @@ li.pointer {
 .noise::before {
     content: "";
     position: fixed;
-    background-image: url("../../assets/noise.gif");
+    background-image: url("../../assets/noise.png");
     pointer-events: none;
     z-index: 1000;
 	height: 300%;
@@ -47,6 +47,7 @@ li.pointer {
 	position: fixed;
 	top: -100%;
 	width: 300%;
+    animation: grain 14s steps(10) infinite;
 }
 
 @keyframes grain {
