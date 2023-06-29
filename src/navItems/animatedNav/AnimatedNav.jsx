@@ -36,7 +36,7 @@ const AnimatedNav = (Props) => {
       {Props.isMobile ? (
         <>
           <div className="navbar__container" style={{ flexDirection: Props.language === "ar" ? "row-reverse" : "row", padding: Props.navOpen ? "3.2rem" : "3.2rem" }}>
-            <div style={{ transitionDuration: Props.navOpen ? "1s" : "1.5s", transition: Props.navOpen ? "1.5s" : "1.5s" }}>
+            <div style={{transition: Props.navOpen ? "1.5s" : "1.5s" }}>
               <Link to="/">
                 <h1 className={Props.navOpen ? "logo spin" : "logo"} style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "2rem" : "1rem" }}>{t("my__name")}</h1>
               </Link>
@@ -62,7 +62,7 @@ const AnimatedNav = (Props) => {
       ) : (
         <>
           <div className="navbar__container" style={{ flexDirection: Props.language === "ar" ? "row-reverse" : "row" }}>
-            <div style={{ transitionDuration: Props.navOpen ? "1s" : "1.5s", transition: Props.navOpen ? "1.5s" : "1.5s" }}>
+            <div style={{transition: Props.navOpen ? "1.5s" : "1.5s" }}>
               <Link to="/">
                 <h1 className={Props.navOpen ? "logo spin" : "logo"} style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "2rem" : "" }}>{t("my__name")}</h1>
               </Link>

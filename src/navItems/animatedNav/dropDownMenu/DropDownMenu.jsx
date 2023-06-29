@@ -1,15 +1,26 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState ,useEffect, useRef } from 'react';
 import i18next from 'i18next';
 import './DropDownMenu.css';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
 import {FaAngleDown} from 'react-icons/fa';
+import { useLocation } from 'react-router-dom';
 
 const DropDownMenu = (Props) => {
 
   const handleLanguageExpanded = () => {
     Props.setLanguageExpanded(!Props.languageExpanded);
   };
+
+  const [isMenuVisible, setMenuVisible] = useState(true);
+
+
+  // useEffect(() => {
+  //   const notHome = Props.locationState === '/';
+  //   setMenuVisible(notHome);
+  //   console.log(notHome);
+  // }, []);
+
 
   let menuRef = useRef();
 
@@ -38,7 +49,7 @@ const DropDownMenu = (Props) => {
   }
 
   return (
-    <div className="menu__container" ref={menuRef}>
+    <div className={`menu__container ${isMenuVisible ? '' : 'hidden'}`} ref={menuRef}>
       {Props.isMobile ? (
         <div className="dropdown-menu">
           <button

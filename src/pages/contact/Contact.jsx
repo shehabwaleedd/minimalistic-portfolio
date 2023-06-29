@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next'
 import Socials from '../home/supplements/socials/Socials';
-import { TweenMax, TimelineMax, Power3, Power4 } from "gsap";
+import { gsap} from "gsap";
 import Footer from '../footer/Footer';
 
 
@@ -75,7 +75,7 @@ const Contact = (Props) => {
 
 
   const runAnimation = () => {
-    var tl = new TimelineMax();
+    const tl = gsap.timeline();
     tl.fromTo(
       screen,
       { width: "0%", left: "100%" },
@@ -83,7 +83,7 @@ const Contact = (Props) => {
         duration: 0.5,
         width: "100%",
         left: "0%",
-        ease: Power3.easeInOut,
+        ease: "power3.inOut",
       }
     );
     tl.fromTo(
@@ -92,20 +92,19 @@ const Contact = (Props) => {
       {
         duration: 0.5,
         left: "-100%",
-        ease: Power3.easeInOut,
+        ease: "power3.inOut",
         delay: 0.1,
       }
     );
     tl.set(screen, { left: "100%" });
-    TweenMax.to(body, 0.3, {
-      css: {
-        opacity: "1",
-        pointerEvents: "auto",
-        ease: Power4.easeInOut,
-      },
-    }).delay(1);
+    gsap.to(body, {
+      opacity: 1,
+      duration: 0.3,
+      pointerEvents: "auto",
+      ease: "power4.inOut",
+      delay: 1,
+    });
   };
-
   useEffect(() => {
     runAnimation();
   }, []);

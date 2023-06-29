@@ -8,7 +8,8 @@ import ScrollUp from './pages/home/supplements/ScrollUp';
 import MainRoutes from './navItems/routes/MainRoutes';
 import Cursor from './components/cursor/Cursor';
 import i18next from 'i18next';
-
+import { useLocation } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
 
 export const ThemeContext = createContext(null);
 
@@ -22,6 +23,7 @@ function App() {
   const [shouldReload, setShouldReload] = useState(false);
   const [isAbout, setIsAbout] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const location = useLocation();
 
 
   // useEffect(() => {
@@ -64,12 +66,13 @@ function App() {
         {/* {!isAnimationFinished && <OpeningAnimation />}
         {isAnimationFinished && (
           <> */}
-        <AnimatedNav isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded}/>
+
+        <AnimatedNav isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
         <Cursor />
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
-          <AnimatePresence>
-            <MainRoutes isMobile={isMobile} setIsMobile={setIsMobile}  isAbout={isAbout} setIsAbout={setIsAbout}  shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded}/>
-          </AnimatePresence>
+            <AnimatePresence>
+              <MainRoutes location={location} key={location.pathname} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
+            </AnimatePresence>
           <ScrollUp />
           <Toggle theme={theme} toggleTheme={toggleTheme} />
         </ThemeContext.Provider>
