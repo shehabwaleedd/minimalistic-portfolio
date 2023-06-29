@@ -47,7 +47,6 @@ const Toggle = (props) => {
       >
         <BiSun
           className={`${!isOn ? '' : 'acitve'}`} 
-          layout 
           transition={spring} 
           style={{ 
             fontSize: '1.35rem', 
@@ -60,7 +59,6 @@ const Toggle = (props) => {
         />
         <BiMoon
           className={`bx bx-moon ${isOn ? 'active' : ''}`} 
-          layout 
           transition={spring} 
           style={{ 
             fontSize: '1.35rem', 

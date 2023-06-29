@@ -1,8 +1,8 @@
-import Work0 from "../../assets/shebo2.png"
-import Work1 from "../../assets/leluweb.png"
-import Work2 from "../../assets/bloggg.png"
-import Work3 from "../../assets/project3.png"
-import Work4 from "../../assets/liquor.png"
+import Work0 from "../../assets/Posters/shebo2.png"
+import Work1 from "../../assets/Posters/lelu10.svg"
+import Work2 from "../../assets/Posters/blog1.svg"
+import Work3 from "../../assets/Posters/moaz.svg"
+import Work4 from "../../assets/Posters/cairo1.svg"
 
 const projectsData = [
   {
