@@ -53,11 +53,10 @@ $background-color_5: #555;
 	width: 50%;
 	position: relative;
 	img {
-		width: 150%;
+		width: 90%;
 		height: 90%;
 		object-fit: cover;
 		position: absolute;
-		object-position: 40% 70%;
 		top: 3rem;
 		left: -20px;
 		transition: 0.3s ease;

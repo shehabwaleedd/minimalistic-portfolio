@@ -1,12 +1,13 @@
+import Work0 from "../../assets/shebo2.png"
 import Work1 from "../../assets/leluweb.png"
 import Work2 from "../../assets/bloggg.png"
 import Work3 from "../../assets/project3.png"
-import Work4 from "../../assets/Cairo-Brews.png"
+import Work4 from "../../assets/liquor.png"
 
 const projectsData = [
   {
     id: 1,
-    image: Work1,
+    image: Work0,
     title: "Sheboo",
     category: ["Branding", "UI/UX Design", "Web Design"],
     website: "https://shehabwaleedd.vercel.app/",
