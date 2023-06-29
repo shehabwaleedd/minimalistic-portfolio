@@ -1,13 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.30f0e996.css",
-    "main.js": "/static/js/main.230bbb44.js",
+    "main.css": "/static/css/main.68c34af1.css",
+    "main.js": "/static/js/main.bafee4ab.js",
     "static/js/27.755029ae.chunk.js": "/static/js/27.755029ae.chunk.js",
-    "static/media/leluweb.png": "/static/media/leluweb.e56bcba2eba840039dcb.png",
-    "static/media/bloggg.png": "/static/media/bloggg.574889f4338eabe775c3.png",
     "static/media/profile.jpg": "/static/media/profile.763cd32bc9e9ac0dcf82.jpg",
-    "static/media/project3.png": "/static/media/project3.25f8c017cc64fe06337d.png",
-    "static/media/liquor.png": "/static/media/liquor.1f8593b176a4985e4348.png",
+    "static/media/moaz.svg": "/static/media/moaz.c4d9e45332902dcd5e34356f64b4714e.svg",
     "static/media/noise.png": "/static/media/noise.a8f3d9df45c2a74aac42.png",
     "static/media/Posterama.ttf": "/static/media/Posterama.6c5b7fa6f0088fdfcb7e.ttf",
     "static/media/Satoshi-MediumItalic.ttf": "/static/media/Satoshi-MediumItalic.5db9ec801a311bdf187b.ttf",
@@ -16,13 +13,9 @@
     "static/media/Satoshi-Bold.ttf": "/static/media/Satoshi-Bold.137a52d9f47dd71c6247.ttf",
     "static/media/Satoshi-Black.ttf": "/static/media/Satoshi-Black.464354ba5a06467ecac5.ttf",
     "static/media/Satoshi-Light.ttf": "/static/media/Satoshi-Light.22ef061781b1162ac317.ttf",
-    "static/media/Emilie.webp": "/static/media/Emilie.062665ec141eaf991003.webp",
-    "static/media/Anas.jpeg": "/static/media/Anas.81d8697cabd5de9e8163.jpeg",
-    "static/media/Zizo.jpeg": "/static/media/Zizo.627122af8a19559a875b.jpeg",
-    "static/media/Poet.jpeg": "/static/media/Poet.7eb5604ce04958feb283.jpeg",
+    "static/media/cairo1.svg": "/static/media/cairo1.a3d51cec9d7b9ee194893c8237fa277c.svg",
     "static/media/Satoshi-Variable.woff2": "/static/media/Satoshi-Variable.353a66cdd8922bb63107.woff2",
     "static/media/Posterama.woff": "/static/media/Posterama.e9424caa50cc9ba6fcc9.woff",
-    "static/media/Ibrahim.jpeg": "/static/media/Ibrahim.4e429f530dcbca13b48c.jpeg",
     "static/media/shebo2.png": "/static/media/shebo2.6b1b68e558b4ebf24973.png",
     "static/media/Satoshi-Variable.woff": "/static/media/Satoshi-Variable.4db206aaad2132de9db7.woff",
     "static/media/Satoshi-MediumItalic.woff": "/static/media/Satoshi-MediumItalic.cb8316e39642de8a12d5.woff",
@@ -31,7 +24,6 @@
     "static/media/Satoshi-Bold.woff": "/static/media/Satoshi-Bold.a875ff682ee232938607.woff",
     "static/media/Satoshi-Black.woff": "/static/media/Satoshi-Black.4261d202e1e9410db1bf.woff",
     "static/media/Satoshi-Light.woff": "/static/media/Satoshi-Light.67e7fa77f107df3491b6.woff",
-    "static/media/rym.jpeg": "/static/media/rym.b792fdab4cc0a8d69457.jpeg",
     "static/media/Satoshi-MediumItalic.woff2": "/static/media/Satoshi-MediumItalic.6be6d51d5fc7402ee45f.woff2",
     "static/media/Satoshi-Medium.woff2": "/static/media/Satoshi-Medium.1ffe968245568e8ba1e7.woff2",
     "static/media/Satoshi-Regular.woff2": "/static/media/Satoshi-Regular.9ec05085c4cd2966eba8.woff2",
@@ -39,11 +31,13 @@
     "static/media/Satoshi-Black.woff2": "/static/media/Satoshi-Black.b5013d854bb5a8e48651.woff2",
     "static/media/Shehab_Waleed.docx": "/static/media/Shehab_Waleed.64d9e945fcd6b26e0c61.docx",
     "static/media/Satoshi-Light.woff2": "/static/media/Satoshi-Light.df8f06167ee6fd05a131.woff2",
+    "static/media/lelu10.svg": "/static/media/lelu10.1c7f4e6fd5db5f02db7b2067fa10b572.svg",
+    "static/media/blog1.svg": "/static/media/blog1.570c8e23e0baefb47d831283b248af34.svg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
-    "static/css/main.30f0e996.css",
-    "static/js/main.230bbb44.js"
+    "static/css/main.68c34af1.css",
+    "static/js/main.bafee4ab.js"
   ]
 }
