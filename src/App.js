@@ -9,7 +9,6 @@ import MainRoutes from './navItems/routes/MainRoutes';
 import Cursor from './components/cursor/Cursor';
 import i18next from 'i18next';
 import { useLocation } from 'react-router-dom';
-import { Routes } from 'react-router-dom';
 
 export const ThemeContext = createContext(null);
 
