@@ -98,11 +98,11 @@ const Portfolio = (Props) => {
                 <div className="menu__item-image_wrapper">
                   <div className="menu__item-image_inner">
                     {projectsData.map((image) => (
-                      <div className="image-wrapper" key={image.id}>
+                      <div className={`image-wrapper ${image.classProject}`} key={image.id}>
                         <img
                           src={image.image}
                           alt={image.title}
-                          className={selectedImage === image.image ? 'menu__item-image.fade-in' : 'menu__item-image'}
+                          className={selectedImage === image.image ? `menu__item-image.fade-in` : 'menu__item-image'}
                         />
                       </div>
                     ))}

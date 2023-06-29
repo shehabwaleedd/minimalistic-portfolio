@@ -1,6 +1,6 @@
 import Work0 from "../../assets/Posters/shebo2.png"
 import Work1 from "../../assets/Posters/lelu10.svg"
-import Work2 from "../../assets/Posters/blog1.svg"
+import Work2 from "../../assets/Posters/blog2.svg"
 import Work3 from "../../assets/Posters/moaz2.svg"
 import Work4 from "../../assets/Posters/cairo1.svg"
 
@@ -17,7 +17,7 @@ const projectsData = [
     comment: "I am commonly known as 'Sheboo' on various social media platforms, shaping my online identity. The primary aim of this project was to establish a versatile and adaptable identity that encompasses both my real name and nickname. As a frontend developer, it was essential to create a website that showcases my expertise, reflects my design principles, and establishes my unique identity. The goal was to develop a cohesive and recognizable personal brand that seamlessly translates between online and offline channels, ensuring a consistent representation across different mediums. This initiative aimed to optimize search engine visibility while presenting a professional and polished image."
   },
   {
-    id: 2,
+    id: 3,
     image: Work1,
     title: "LELU STORE",
     category: ["E-commerce", "Web Application", "UI/UX Design"],
@@ -27,12 +27,13 @@ const projectsData = [
     comment: "Sheboo is the nickname I use on social medias. The goal of this project was to create my own identity, adaptable and modular to work with both my real name and my nickname. First, the identity needed to be defined in brand guidelines and then had to be adapted for digital medias (website, wallpapers, social medias) and physical formats (business cards/stickers, letter paper and resume)."
   },
   {
-    id: 3,
+    id: 2,
     image: Work2,
     title: "Minimalistic Blog",
     category: ["Application", "Web Design", "UI/UX Design"],
     website: "https://blog-shehabwaleedd.vercel.app/",
     link: "https://github.com/shehabwaleedd/blog",
+    classProject: "blog__class",
     date: "December, 2022",
     comment: "I made this small website just to keep always reminding myself of the time left for me to finish my learning process and start to actually make good projects, I used Vanilla JavaScript to make it"
   },
