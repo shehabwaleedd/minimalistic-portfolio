@@ -1,8 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.2a415033.css",
-    "main.js": "/static/js/main.0c6d822e.js",
+    "main.css": "/static/css/main.51354c87.css",
+    "main.js": "/static/js/main.c10aa2bf.js",
     "static/js/945.3c978414.chunk.js": "/static/js/945.3c978414.chunk.js",
+    "static/media/Shehab__mainPageDarkMode3.png": "/static/media/Shehab__mainPageDarkMode3.5bb6a6eb4fcedbd55ca7.png",
+    "static/media/Shehab__AboutPage.png": "/static/media/Shehab__AboutPage.66622b6ec0a7988e0825.png",
+    "static/media/Shehab__mainPageDarkMode4.png": "/static/media/Shehab__mainPageDarkMode4.85971ee31062f2e64918.png",
+    "static/media/Shehab__mainPageDarkMode2.png": "/static/media/Shehab__mainPageDarkMode2.8c9e79d5d75e5eea557f.png",
+    "static/media/Shehab__ContactPage.png": "/static/media/Shehab__ContactPage.d956a7844121592ed4f9.png",
+    "static/media/Shehab__ProjectsPage.png": "/static/media/Shehab__ProjectsPage.e7e4f832c208ceb40757.png",
+    "static/media/Shehab__mainPageDarkMode.png": "/static/media/Shehab__mainPageDarkMode.cc861da399f17d58e534.png",
+    "static/media/Shehab__mainPage.png": "/static/media/Shehab__mainPage.346242c65f58fc49336c.png",
     "static/media/Lelu__testimonial.png": "/static/media/Lelu__testimonial.007dcae2bb70f2e88342.png",
     "static/media/Lelu__BrandMessage.png": "/static/media/Lelu__BrandMessage.c37f3dcfc4babf03dcee.png",
     "static/media/Lelu__MainPage2.png": "/static/media/Lelu__MainPage2.8852a95f968ba7424cba.png",
@@ -41,7 +49,7 @@
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
-    "static/css/main.2a415033.css",
-    "static/js/main.0c6d822e.js"
+    "static/css/main.51354c87.css",
+    "static/js/main.c10aa2bf.js"
   ]
 }
