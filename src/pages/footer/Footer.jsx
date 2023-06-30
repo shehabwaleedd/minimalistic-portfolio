@@ -47,7 +47,7 @@ const Footer = (Props) => {
               <p><strong id="mono">{t("footer__info-address")}</strong>{t("footer__info-street")}, {t("footer__info-egypt")}</p>
             </div>
             <div className="footer__info">
-              <p><strong id="mono">{t("footer__info-freelancing")}</strong>   {t("footer__info_hours")} {t("footer__info-mon-to-sat")}</p>
+              <p><strong id="mono">{t("footer__info-freelancing")}</strong> {t("footer__info-mon-to-sat")} {t("footer__info_hours")} </p>
             </div>
             <div className="footer__info">
               <p><strong id="mono">{t("footer__info-phone")}</strong>{t("footer__info_number")}</p>

@@ -40,13 +40,14 @@ $background-color_1: var(--container-color);
 	margin-left: 2.2rem;
 }
 .footer__social {
-	padding-left: 3rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 0.5rem;
 	flex-direction: column;
 	margin-top: 3rem;
+	transform: translateX(1.3rem);
+
 	p {
 		font-family: "Posterama";
 		strong {
@@ -92,11 +93,11 @@ $background-color_1: var(--container-color);
 	&::before {
 		content: "";
 		display: block;
-		width: 6.75rem;
-		height: 0.125rem;;
-		background: #cccccc;
+		width: 8.75rem;
+		height: 0.040rem;;
+		background: var(--text-color);
 		color: $color_1;
-		left: 8.2rem;
+		left: 5.2rem;
 		top: -1rem;
 		transition: width 0.3s;
 		position: absolute;
@@ -108,7 +109,7 @@ $background-color_1: var(--container-color);
 	align-items: center;
 	gap: 0.8rem;
 	color: $color_1;
-	padding-left: 5rem;
+	padding-left: 2.5rem;
 }
 
 

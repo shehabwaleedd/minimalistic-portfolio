@@ -12,14 +12,10 @@ const DropDownMenu = (Props) => {
     Props.setLanguageExpanded(!Props.languageExpanded);
   };
 
-  const [isMenuVisible, setMenuVisible] = useState(true);
 
 
-  // useEffect(() => {
-  //   const notHome = Props.locationState === '/';
-  //   setMenuVisible(notHome);
-  //   console.log(notHome);
-  // }, []);
+
+
 
 
   let menuRef = useRef();
@@ -49,7 +45,7 @@ const DropDownMenu = (Props) => {
   }
 
   return (
-    <div className={`menu__container ${isMenuVisible ? '' : 'hidden'}`} ref={menuRef}>
+    <div className={`menu__container ${Props.isMenuVisible || Props.navOpen ? '' : 'hidden'}`} ref={menuRef}>
       {Props.isMobile ? (
         <div className="dropdown-menu">
           <button

@@ -36,6 +36,11 @@ const MainRoutes = (Props) => {
     }
   }, [location]);
 
+    useEffect(() => {
+    const notHome = location.pathname === '/';
+    Props.setMenuVisible(notHome);
+    console.log(notHome);
+  }, []);
 
 
 
