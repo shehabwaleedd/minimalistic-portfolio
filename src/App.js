@@ -23,6 +23,7 @@ function App() {
   const [isAbout, setIsAbout] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuVisible, setMenuVisible] = useState(true);
+  const [isAboutPage, setIsAboutPage] = useState(false);
   const location = useLocation();
 
 
@@ -67,7 +68,7 @@ function App() {
         {isAnimationFinished && (
           <> */}
 
-        <AnimatedNav isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
+        <AnimatedNav  isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
         <Cursor />
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             <AnimatePresence>

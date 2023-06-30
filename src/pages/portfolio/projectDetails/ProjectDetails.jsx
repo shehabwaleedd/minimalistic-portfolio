@@ -1,16 +1,32 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import projectsData from "../Data";
 import "./ProjectDetails.scss";
 import ScrollAnimation from "../../../animation/ScrollAnimation/ScrollAnimation";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 
 function ProjectDetails() {
     const { id } = useParams();
     const project = projectsData[id];
+    const navigate = useNavigate();
+
+
+    const goToNextProject = () => {
+        const nextProjectId = (parseInt(id) + 1) % projectsData.length; // Calculate the next project id by taking modulo of the total number of projects
+        navigate(`/projectDetails/${nextProjectId}`);
+    };
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  }, []);
+
+
 
     return (
         <>
@@ -21,7 +37,7 @@ function ProjectDetails() {
                         <LazyLoadImage
                             src={project.image}
                             alt={project.title}
-                            effect="blur" 
+                            effect="blur"
                         />
                     </div>
                     <div className="project__details_post-text">
@@ -56,39 +72,106 @@ function ProjectDetails() {
                                 </div>
                             </div>
                         </div>
-                        <div className="project__details_details">
-                            <div className="project__details-text">
-                                <h2>{project.mainTitle}</h2>
+                        {project?.mainTitle && (
+                            <div className="project__details_details">
+                                <div className="project__details-text">
+                                    <h2>{project.mainTitle}</h2>
+                                </div>
+                                <div className="project__details-img">
+                                    <LazyLoadImage src={project.mainTitleImg} alt={project.mainTitle} effect="blur" />
+                                </div>
                             </div>
-                            <div className="project__details-img">
-                                <LazyLoadImage src={project.mainTitleImg} alt={project.mainTitle} effect="blur"/>
+                        )}
+                        {project?.mainTitle2 && (
+                            <div className="project__details_details">
+                                <div className="project__details-text">
+                                    <h2>{project?.mainTitle2}</h2>
+                                </div>
+                                <div className="project__details-img">
+                                    <LazyLoadImage effect="blur" src={project?.mainTitleImg2} alt={project.mainTitle2} />
+                                </div>
                             </div>
-                        </div>
-                        <div className="project__details_details">
-                            <div className="project__details-text">
-                                <h2>{project.mainTitle2}</h2>
+                        )}
+                        {project?.projectLogins && (
+                            <div className="project__details_details">
+                                <div className="project__details-text">
+                                    <h2>{project?.projectLogins}</h2>
+                                </div>
+                                <div className="project__details-img">
+                                    <LazyLoadImage effect="blur" src={project.projectLoginsImg} alt={project.projectLogins} />
+                                </div>
                             </div>
-                            <div className="project__details-img">
-                                <LazyLoadImage effect="blur" src={project.mainTitleImg2} alt={project.mainTitle} />
+                        )}
+                        {project?.projetTestimonials && (
+                            <div className="project__details_details">
+                                <div className="project__details-text">
+                                    <h2>{project?.projectTestimonials}</h2>
+                                </div>
+                                <div className="project__details-img">
+                                    <LazyLoadImage effect="blur" src={project?.projectTestimonialsImg} alt={project.mainTitle} />
+                                </div>
                             </div>
-                        </div>
-                        <div className="project__details_details">
-                            <div className="project__details-text">
-                                <h2>{project.projectLogins}</h2>
+                        )}
+                        {project?.mainProjectPage && (
+                            <div className="project__details_details">
+                                <div className="project__details-text">
+                                    <h2>{project?.mainProjectsPage}</h2>
+                                </div>
+                                <div className="project__details-img">
+                                    <LazyLoadImage effect="blur" src={project?.mainProjectsPageImg} alt={project.mainProjectsPage} />
+                                </div>
                             </div>
-                            <div className="project__details-img">
-                                <LazyLoadImage effect="blur" src={project.projectLoginsImg} alt={project.mainTitle} />
+                        )}
+                        {project?.mainAboutPage && (
+                            <div className="project__details_details">
+                                <div className="project__details-text">
+                                    <h2>{project?.mainAboutPage}</h2>
+                                </div>
+                                <div className="project__details-img">
+                                    <LazyLoadImage effect="blur" src={project?.mainAboutPageImg} alt={project.mainAboutPage} />
+                                </div>
                             </div>
-                        </div>
-                        <div className="project__details_details">
-                            <div className="project__details-text">
-                                <h2>{project.projectTestimonials}</h2>
+                        )}
+                        {project?.mainContactPage && (
+                            <div className="project__details_details">
+                                <div className="project__details-text">
+                                    <h2>{project?.mainContactPage}</h2>
+                                </div>
+                                <div className="project__details-img">
+                                    <LazyLoadImage effect="blur" src={project?.mainContactPageImg} alt={project.mainContactPage} />
+                                </div>
                             </div>
-                            <div className="project__details-img">
-                                <LazyLoadImage effect="blur" src={project.projectTestimonialsImg} alt={project.mainTitle} />
+                        )}
+                        {project?.mainDarkMode && (
+                            <div className="project__details_details">
+                                <div className="project__details-text">
+                                    <h2>{project?.mainDarkMode}</h2>
+                                </div>
+                                <div className="project__details-img">
+                                    <LazyLoadImage effect="blur" src={project?.mainDarkModeImg} alt={project.mainContactPage} />
+                                    <LazyLoadImage effect="blur" src={project?.mainDarkModeImg2} alt={project.mainContactPage} />
+                                    <LazyLoadImage effect="blur" src={project?.mainDarkModeImg3} alt={project.mainContactPage} />
+                                    <LazyLoadImage effect="blur" src={project?.mainDarkModeImg4} alt={project.mainContactPage} />
+
+                                </div>
                             </div>
-                        </div>
+                        )}
                     </div>
+                        <div className="project__next_project">
+                            <div className="menu-item-wrapper">
+                                <div className="menu-arrow">
+                                    <BiRightArrowAlt style={{ fontSize: "2.3rem", marginTop: "0.4rem", color: "var(--title-color)" }} />
+                                </div>
+                                <div className="menu-text">
+                                    <div className="next__project">
+                                        <h1 onClick={goToNextProject}>Next Project</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="project__next_project_name">
+                                <h1>{projectsData[(parseInt(id) + 1) % projectsData.length].title}</h1>
+                            </div>
+                        </div>
                 </div>
             </div>
         </>
