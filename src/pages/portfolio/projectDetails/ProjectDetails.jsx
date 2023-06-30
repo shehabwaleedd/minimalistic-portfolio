@@ -3,7 +3,9 @@ import { useParams } from "react-router-dom";
 import projectsData from "../Data";
 import "./ProjectDetails.scss";
 import ScrollAnimation from "../../../animation/ScrollAnimation/ScrollAnimation";
-import {BiRightArrowAlt} from "react-icons/bi";
+import { BiRightArrowAlt } from "react-icons/bi";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 function ProjectDetails() {
@@ -16,7 +18,11 @@ function ProjectDetails() {
             <div className="project__details container">
                 <div className="project__card_details">
                     <div className="project__image_container">
-                        <img src={project.image} alt={project.title} />
+                        <LazyLoadImage
+                            src={project.image}
+                            alt={project.title}
+                            effect="blur" 
+                        />
                     </div>
                     <div className="project__details_post-text">
                         <h1>{project.title}</h1>
@@ -50,38 +56,38 @@ function ProjectDetails() {
                                 </div>
                             </div>
                         </div>
-                            <div className="project__details_details">
-                                <div className="project__details-text">
-                                    <h2>{project.mainTitle}</h2>
-                                </div>
-                                <div className="project__details-img">
-                                    <img src={project.mainTitleImg} alt={project.mainTitle} />
-                                </div>
+                        <div className="project__details_details">
+                            <div className="project__details-text">
+                                <h2>{project.mainTitle}</h2>
                             </div>
-                            <div className="project__details_details">
-                                <div className="project__details-text">
-                                    <h2>{project.mainTitle2}</h2>
-                                </div>
-                                <div className="project__details-img">
-                                    <img src={project.mainTitleImg2} alt={project.mainTitle} />
-                                </div>
+                            <div className="project__details-img">
+                                <LazyLoadImage src={project.mainTitleImg} alt={project.mainTitle} effect="blur"/>
                             </div>
-                            <div className="project__details_details">
-                                <div className="project__details-text">
-                                    <h2>{project.projectLogins}</h2>
-                                </div>
-                                <div className="project__details-img">
-                                    <img src={project.projectLoginsImg} alt={project.mainTitle} />
-                                </div>
+                        </div>
+                        <div className="project__details_details">
+                            <div className="project__details-text">
+                                <h2>{project.mainTitle2}</h2>
                             </div>
-                            <div className="project__details_details">
-                                <div className="project__details-text">
-                                    <h2>{project.projectTestimonials}</h2>
-                                </div>
-                                <div className="project__details-img">
-                                    <img src={project.projectTestimonialsImg} alt={project.mainTitle} />
-                                </div>
+                            <div className="project__details-img">
+                                <LazyLoadImage effect="blur" src={project.mainTitleImg2} alt={project.mainTitle} />
                             </div>
+                        </div>
+                        <div className="project__details_details">
+                            <div className="project__details-text">
+                                <h2>{project.projectLogins}</h2>
+                            </div>
+                            <div className="project__details-img">
+                                <LazyLoadImage effect="blur" src={project.projectLoginsImg} alt={project.mainTitle} />
+                            </div>
+                        </div>
+                        <div className="project__details_details">
+                            <div className="project__details-text">
+                                <h2>{project.projectTestimonials}</h2>
+                            </div>
+                            <div className="project__details-img">
+                                <LazyLoadImage effect="blur" src={project.projectTestimonialsImg} alt={project.mainTitle} />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
