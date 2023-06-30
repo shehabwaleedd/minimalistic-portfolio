@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.aaa4e3c7.css",
-    "main.js": "/static/js/main.8d9b6034.js",
+    "main.css": "/static/css/main.2a415033.css",
+    "main.js": "/static/js/main.0c6d822e.js",
     "static/js/945.3c978414.chunk.js": "/static/js/945.3c978414.chunk.js",
     "static/media/Lelu__testimonial.png": "/static/media/Lelu__testimonial.007dcae2bb70f2e88342.png",
     "static/media/Lelu__BrandMessage.png": "/static/media/Lelu__BrandMessage.c37f3dcfc4babf03dcee.png",
@@ -41,7 +41,7 @@
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
-    "static/css/main.aaa4e3c7.css",
-    "static/js/main.8d9b6034.js"
+    "static/css/main.2a415033.css",
+    "static/js/main.0c6d822e.js"
   ]
 }
