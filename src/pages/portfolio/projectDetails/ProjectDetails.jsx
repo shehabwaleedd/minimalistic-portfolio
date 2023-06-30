@@ -31,18 +31,18 @@ function ProjectDetails(Props) {
     return (
         <>
             {Props.isMobile ? (
-                <div style={{overflowX: "hidden"}}>
+                <>
                     <ScrollAnimation />
-                    <div className="project__details" style={{ width: "100vw" }}>
+                    <div className="project__details" style={{ width: "100vw" , touchAction: "pan-y"}}>
                         <div className="project__card_details">
-                            <div className="project__image_container" style={{ width: "100vw", position: "relative", left: "-5rem", top: "-10" }}>
+                            <div className="project__image_container" style={{ width: "100vw", position: "relative", left: "-5rem", top: "2rem" }}>
                                 <LazyLoadImage
                                     src={project.image}
                                     alt={project.title}
                                     effect="blur"
                                 />
                             </div>
-                            <div className="project__details_post-text" style={{ transform: "translateX(-4rem)" }}>
+                            <div className="project__details_post-text" style={{ transform: "translateX(-4rem)",}}>
                                 <h1 style={{ fontSize: "1.5rem" }}>{project.title}</h1>
                                 <div className="project__details-brief" style={{ flexDirection: "column", width: "90vw", justifyContent: "center", alignContent: "center" }}>
                                     <div className="category__date">
@@ -62,7 +62,7 @@ function ProjectDetails(Props) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="project__details-comment" style={{ width: "90vw", paddintTop: "5rem" }}>
+                                    <div className="project__details-comment" style={{ width: "90vw", paddintTop: "5rem", }}>
                                         <p >{project.comment}</p>
                                         <div className="project__links" style={{ width: "80vw" }}>
                                             <div className={`project__link ${project.class}`}>
@@ -173,7 +173,7 @@ function ProjectDetails(Props) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </>
             ) : (
                 <>
                     <ScrollAnimation />
