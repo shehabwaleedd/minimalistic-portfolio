@@ -50,6 +50,38 @@ function ProjectDetails() {
                                 </div>
                             </div>
                         </div>
+                            <div className="project__details_details">
+                                <div className="project__details-text">
+                                    <h2>{project.mainTitle}</h2>
+                                </div>
+                                <div className="project__details-img">
+                                    <img src={project.mainTitleImg} alt={project.mainTitle} />
+                                </div>
+                            </div>
+                            <div className="project__details_details">
+                                <div className="project__details-text">
+                                    <h2>{project.mainTitle2}</h2>
+                                </div>
+                                <div className="project__details-img">
+                                    <img src={project.mainTitleImg2} alt={project.mainTitle} />
+                                </div>
+                            </div>
+                            <div className="project__details_details">
+                                <div className="project__details-text">
+                                    <h2>{project.projectLogins}</h2>
+                                </div>
+                                <div className="project__details-img">
+                                    <img src={project.projectLoginsImg} alt={project.mainTitle} />
+                                </div>
+                            </div>
+                            <div className="project__details_details">
+                                <div className="project__details-text">
+                                    <h2>{project.projectTestimonials}</h2>
+                                </div>
+                                <div className="project__details-img">
+                                    <img src={project.projectTestimonialsImg} alt={project.mainTitle} />
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>

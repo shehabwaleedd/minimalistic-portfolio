@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import {FaArrowUp} from 'react-icons/fa';
 import './ScrollUp.css'
 
 const ScrollUp = () => {
@@ -37,7 +38,7 @@ const ScrollUp = () => {
     transition={{ duration: 0.2 }}
     >
       <div className="home__scroll-up" onClick={scrollToTop}>
-        <i className="bx bx-up-arrow-alt"></i>
+        <FaArrowUp style={{fontSize: "1.8rem"}}/>
       </div>
     </motion.div>
   );

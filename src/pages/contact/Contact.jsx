@@ -3,7 +3,7 @@ import "./Contact.scss"
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next'
-import Socials from '../home/supplements/socials/Socials';
+import Socials from '../../components/socials/Socials';
 import { gsap} from "gsap";
 import Footer from '../footer/Footer';
 

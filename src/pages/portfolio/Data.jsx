@@ -3,6 +3,10 @@ import Work1 from "../../assets/Posters/lelu10.svg"
 import Work2 from "../../assets/Posters/blog2.svg"
 import Work3 from "../../assets/Posters/moaz2.svg"
 import Work4 from "../../assets/Posters/cairo1.svg"
+import LeluMainImg from "../../assets/ProjectDetails/Lelu/Lelu__MainPage2.png"
+import LeluMessageImg from "../../assets/ProjectDetails/Lelu/Lelu__BrandMessage.png"
+import LeluLoginsImg from "../../assets/ProjectDetails/Lelu/Lelu__logins.png"
+import LeluTestimonialsImg from "../../assets/ProjectDetails/Lelu/Lelu__testimonial.png"
 
 const projectsData = [
   {
@@ -24,7 +28,15 @@ const projectsData = [
     website: "https://lelu-store.vercel.app/",
     link: "https://github.com/shehabwaleedd/lelu-store",
     date: "March, 2023",
-    comment: "Sheboo is the nickname I use on social medias. The goal of this project was to create my own identity, adaptable and modular to work with both my real name and my nickname. First, the identity needed to be defined in brand guidelines and then had to be adapted for digital medias (website, wallpapers, social medias) and physical formats (business cards/stickers, letter paper and resume)."
+    comment: "Sheboo is the nickname I use on social medias. The goal of this project was to create my own identity, adaptable and modular to work with both my real name and my nickname. First, the identity needed to be defined in brand guidelines and then had to be adapted for digital medias (website, wallpapers, social medias) and physical formats (business cards/stickers, letter paper and resume).",
+    mainTitle: "Main Page",
+    mainTitleImg: LeluMainImg,
+    mainTitle2: "Main Message",
+    mainTitleImg2: LeluMessageImg,
+    projectLogins: "Project Login/Sign Up Page",
+    projectLoginsImg: LeluLoginsImg,
+    projectTestimonials: "Project Testimonials Section",
+    projectTestimonialsImg: LeluTestimonialsImg,
   },
   {
     id: 2,
