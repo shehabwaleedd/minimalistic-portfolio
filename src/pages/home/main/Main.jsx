@@ -46,6 +46,7 @@ const Main = (Props) => {
 
 
 
+
     return (
         <section className='main section'>
             {Props.isMobile ? (

@@ -155,12 +155,12 @@ $background-color_1: var(--nav-overlay-color);
 }
 @media (max-width: 414px) {
 	.nav {
-		width: 140%;
+		width: 100vw;
 	}
 	.navbar {
-		padding: 1rem;
+
 		padding-top: 0rem;
-		justify-content: center;
+		justify-content: space-between;
 		align-content: center;
 		text-align: center;
 		line-height: 0.1rem;
@@ -168,11 +168,13 @@ $background-color_1: var(--nav-overlay-color);
 		height: 10rem;
 		display: flex;
 	}
+
+
 	.side__navbar {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-content: center;
-		width: 90%;
+		width: 100%;
 		gap: 0rem;
 		z-index: 999;
 		position: relative;
@@ -180,39 +182,39 @@ $background-color_1: var(--nav-overlay-color);
 	.navbar__container {
 		
 		display: flex;
-		justify-content: center;
-		padding: 1rem;
+		justify-content: space-between;
+		padding: 0rem;
 		width: 100%;
-		margin-top: 1rem;
+		margin-top: 0rem;
+		padding-bottom: 2rem;
 	}
 	.logo {
-		font-size: 0.9rem;
-		margin-top: 1.5rem;
+		font-size: 0.8rem;
 	}
+
 	.dropdown__icon {
 		font-size: 0.8rem;
 		position: absolute;
 		top: 0rem;
-		right: 0.5rem;
 		font-size: 0.8rem;
 		position: absolute;
-		top: 1.5rem;
-		left: -1.5rem;
+		top: -0.2rem;
+		left: 6.5rem;
 	}
 	.hamBox {
 		width: 2.375rem;
 		height: 2.5rem;
 		position: absolute;
-		top: 1rem;
-		left: 0rem;
+		top: 0rem;
+		left: 10.5rem;
 		z-index: 9999;
 	}
 	.hamBoxOpen {
 		width: 1.375rem;
 		height: 1.5rem;
 		position: absolute;
-		top: 1.5rem;
-		left: -0.9rem;
+		top: 0rem;
+		left: 11.5rem;
 		z-index: 9999;
 	}
 	.lineTop {
@@ -223,25 +225,25 @@ $background-color_1: var(--nav-overlay-color);
 		display: none;
 	}
 	.nav-overlay {
-		height: 13vh;
+		height: 20vh;
 		width: 105%;
 	}
 	.lineTop.spin {
 		top: 0.35em;
-		left: 2rem;
+		left: 0.5rem;
 		transform: rotate(135deg);
 		background: var(--container-color);
 	}
 	.lineBottom.spin {
 		top: 0.40em;
-		left: 2rem;
+		left: 0.5rem;
 		transform: rotate(225deg);
 		background: var(--container-color);
 	}
 	.logo.spin {
 		letter-spacing: 0.4rem;
 		font-size: 0.9rem;
-		padding-top: 0.5rem;
+		padding-top: 0rem;
 	}
 	.nav__footer {
 		display: none;

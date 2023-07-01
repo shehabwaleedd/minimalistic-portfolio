@@ -13,7 +13,7 @@ const DropDownMenu = (Props) => {
   };
 
 
-
+  const smallScreen = window.innerWidth <= 414 ? true : false;
 
 
 
@@ -64,7 +64,7 @@ const DropDownMenu = (Props) => {
                     className="language__dropdown"
                     style={{
                       top: Props.navOpen ? "-3rem" : "3rem",
-                      left: Props.navOpen ? Props.language === "ar" ? "-4rem" : "-8rem" : Props.language === "ar" ? "-6rem" : "-7rem",
+                      left: Props.navOpen ? Props.language === "ar" ? "-4rem" : "-8rem" : Props.language === "ar" ? "-6rem" : smallScreen ? "-10rem" : "-5rem",
                       flexDirection: Props.language === 'ar' ? 'row-reverse' : 'row',
                       width: "16rem"
                     }}

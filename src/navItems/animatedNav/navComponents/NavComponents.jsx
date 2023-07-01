@@ -8,7 +8,7 @@ const NavComponents = (Props) => {
     return (
         <>
             {Props.isMobile ? (
-                <div className='nav__links-links' style={{width: Props.navOpen ? "64vw" : "", position: Props.navOpen ? "absolute" : "relative", left: Props.navOpen ? "4rem" : "", top: Props.navOpen ? Props.language === "ar" ? "6rem" : "4rem" : "0"}}>
+                <div className={`${Props.navOpen ? "nav__links-links spin" : "nav__links-links"}`} style={{width: Props.navOpen ? "64vw" : "", position: Props.navOpen ? "absolute" : "relative", left: Props.navOpen ? "-3rem" : "", top: Props.navOpen ? Props.language === "ar" ? "6rem" : "1rem" : "0"}}>
                     <Link
                         className={Props.navOpen ? "nav__link spin" : "nav__link"} to="/about"
                         style={{

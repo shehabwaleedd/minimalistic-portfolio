@@ -1,5 +1,5 @@
 import './App.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Toggle from './components/nav/darkmode/Toggle';
 import { createContext } from 'react';
 import { AnimatePresence } from 'framer-motion';
@@ -23,7 +23,6 @@ function App() {
   const [isAbout, setIsAbout] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isMenuVisible, setMenuVisible] = useState(true);
-  const [isAboutPage, setIsAboutPage] = useState(false);
   const location = useLocation();
 
 
@@ -56,6 +55,8 @@ function App() {
   // }, []);
 
 
+
+
   const toggleTheme = () => {
     theme === 'dark' ? setTheme('light') : setTheme('dark');
   };
@@ -68,7 +69,7 @@ function App() {
         {isAnimationFinished && (
           <> */}
 
-        <AnimatedNav  isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
+        <AnimatedNav isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
         <Cursor />
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             <AnimatePresence>

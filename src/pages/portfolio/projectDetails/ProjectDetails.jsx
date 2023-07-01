@@ -163,7 +163,7 @@ function ProjectDetails(Props) {
                             </div>
                             <div className="project__next_project" style={{ width: "100%", left: "0", gap: "3rem", overflow: "visible" }}>
                                 <div className="menu-item-wrapper" style={{ justifyContent: "space-between", width: "100vw" }}>
-                                    <div className="next__project" style={{ left: "0", width: "30vw" }}>
+                                    <div className="next__project" style={{ left: "0", width: "35vw" }}>
                                         <h1 onClick={goToNextProject} style={{ fontSize: "0.8rem" }}>Next Project</h1>
                                     </div>
                                     <div className="project__next_project_name" style={{ width: "50vw" }}>

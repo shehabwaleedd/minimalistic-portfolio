@@ -204,6 +204,9 @@ body {
 	font-family: $font-family_1;
 	font-size: var(--normal-font-size);
 	background: $background;
+	padding-top: env(safe-area-inset-top);
+	padding-top: constant(safe-area-inset-top);
+
 
 
 }
