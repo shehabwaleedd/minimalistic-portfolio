@@ -13,19 +13,7 @@ const MyStack = (Props) => {
   return (
     <section>
       {Props.isMobile ? (
-        <div className='stack section' style={{ position: "fixed" }}>
-          <div className="stack__container container">
-            <div className="stack__icons">
-              <BiLogoJavascript style={{ color: "var(--stack-accent-color)" }} />
-              <BiLogoReact style={{ color: "var(--stack-accent-color)" }}/>
-              <BiLogoTailwindCss style={{ color: "var(--stack-accent-color)" }}/>
-              <BiLogoBootstrap style={{ color: "var(--stack-accent-color)" }}/>
-              <BiLogoSass style={{ color: "var(--stack-accent-color)" }}/>
-              <BiLogoFirebase style={{ color: "var(--stack-accent-color)" }}/>
-              <BiLogoGithub style={{ color: "var(--stack-accent-color)" }}/>
-              <BiLogoTypescript style={{ color: "var(--stack-accent-color)" }}/>
-            </div>
-          </div>
+        <div className='stack section' style={{ display: "none" }}>
         </div>
       ) : (
         <div className='stack section'>

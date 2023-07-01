@@ -48,27 +48,13 @@ const AboutPage = (Props) => {
 
   return (
       <motion.div>
-        {Props.isMobile ? (
-          <>
             <div className="load-container">
               <div className="load-screen" ref={(el) => (screen = el)}></div>
             </div>
             <section ref={(el) => (body = el)} className="about section" id='about' >
               <Model isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} isAbout={Props.isAbout} setIsAbout={Props.setIsAbout} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
-              <MyStack isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} />
+              <MyStack isMobile={Props.isMobile} setIsMobile={Props.setIsMobile}/>
             </section>
-          </>
-        ) : (
-          <>
-            <div className="load-container">
-              <div className="load-screen" ref={(el) => (screen = el)}></div>
-            </div>
-            <section ref={(el) => (body = el)} className="about section" id='about' >
-              <Model isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} isAbout={Props.isAbout} setIsAbout={Props.setIsAbout} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
-              <MyStack isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} />
-            </section>
-          </>
-        )}
       </motion.div>
   )
 }

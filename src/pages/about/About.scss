@@ -202,3 +202,46 @@
       }
     }
   }
+
+  @media (max-width: 420px) {
+    .about {
+      padding-bottom: 1rem;
+  
+      .about__pic {
+        img {
+          position: relative;
+          left: 0.2rem;
+          width: 150vw;
+          height: 45vh;
+          object-fit: cover;
+          border-radius: 0rem;
+          border: none;
+        }
+      }
+    }
+  
+    .detailed__containerr {
+      padding: 1rem 0.5rem;
+      height: 80vh;
+  
+      .about__pic {
+        display: none;
+      }
+  
+      .aboutttt__container h1 {
+        font-size: 1.7rem;
+        width: 100%;
+        text-align: left;
+      }
+  
+      .detailed__row p {
+        font-size: 0.7rem;
+        line-height: 1rem;
+        width: 100%;
+      }
+  
+      .cv__button button {
+        font-size: 1rem;
+      }
+    }
+  }

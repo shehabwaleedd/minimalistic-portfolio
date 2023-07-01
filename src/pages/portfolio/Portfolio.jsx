@@ -66,13 +66,13 @@ const Portfolio = (Props) => {
           <section className="portfolio" ref={(el) => (body = el)}>
             <div className="portfolio__container" >
               <div className="menu">
-                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left" }}>
+                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left"}}>
                   <div className="workk__work">
                     <h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "15rem" : "0" }}>{t("portfolio__work_title")}</h1>
                   </div>
                   <div className="scrollbarr">
                     {projectsData.map((item, index) => (
-                      <div className="work__title" key={index} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>
+                      <div className="work__title" key={index} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()} style={{height: "4rem", gap: "2rem" }}>
                         <div className="menu-text">
                           <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
                           <div className="categories">

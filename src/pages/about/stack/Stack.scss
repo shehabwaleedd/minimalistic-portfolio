@@ -39,14 +39,6 @@ $background-color_1: var(--stack-icons-background-color);
 	}
 }
 @media (max-width: 480px) {
-	.stack {
-		position: relative;
-		height: 10%;
-	}
-	.stack__icons {
-		i {
-			font-size: 1.9rem;
-			margin: 0 0.5rem;
-		}
-	}
+
+	
 }
