@@ -33,7 +33,7 @@ const MainRoutes = (Props) => {
       if(Props.isMobile) {
         document.body.classList.remove('no-scroll');
       } else {
-        document.body.classList.add('no-scroll');
+        document.body.classList.add('no-scroll')
       }
     } else {
       document.body.classList.remove('no-scroll');
