@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.dcd35440.css",
-    "main.js": "/static/js/main.09e355f1.js",
+    "main.css": "/static/css/main.6b495acf.css",
+    "main.js": "/static/js/main.ac41012f.js",
     "static/js/945.3c978414.chunk.js": "/static/js/945.3c978414.chunk.js",
     "static/media/Shehab__mainPageDarkMode3.png": "/static/media/Shehab__mainPageDarkMode3.5bb6a6eb4fcedbd55ca7.png",
     "static/media/Shehab__AboutPage.png": "/static/media/Shehab__AboutPage.66622b6ec0a7988e0825.png",
@@ -49,7 +49,7 @@
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
-    "static/css/main.dcd35440.css",
-    "static/js/main.09e355f1.js"
+    "static/css/main.6b495acf.css",
+    "static/js/main.ac41012f.js"
   ]
 }
