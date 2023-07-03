@@ -3,8 +3,8 @@ import './Portfolio.scss';
 import projectsData from './Data';
 import { PortfolioAnimations } from '../../animation/PortfolioAnimations';
 import { Link } from 'react-router-dom';
-import { motion } from "framer-motion";
-import { gsap} from "gsap";
+import { AnimatePresence, motion } from "framer-motion";
+import { gsap } from "gsap";
 import { useTranslation } from 'react-i18next';
 import { BiRightArrowAlt } from 'react-icons/bi';
 
@@ -23,7 +23,7 @@ const Portfolio = (Props) => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    PortfolioAnimations();
+    // PortfolioAnimations();
     runAnimation();
   }, []);
 
@@ -63,16 +63,16 @@ const Portfolio = (Props) => {
           <div className="projects__load-container">
             <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
           </div>
-          <section className="portfolio" ref={(el) => (body = el)}>
+          <motion.section className="portfolio" ref={(el) => (body = el)}>
             <div className="portfolio__container" >
               <div className="menu">
-                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left"}}>
+                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left" }}>
                   <div className="workk__work">
                     <h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "15rem" : "0" }}>{t("portfolio__work_title")}</h1>
                   </div>
                   <div className="scrollbarr">
                     {projectsData.map((item, index) => (
-                      <div className="work__title" key={index} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()} style={{height: "4rem", gap: "2rem" }}>
+                      <div className="work__title" key={index} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()} style={{ height: "4rem", gap: "2rem" }}>
                         <div className="menu-text">
                           <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
                           <div className="categories">
@@ -85,55 +85,57 @@ const Portfolio = (Props) => {
                 </motion.div>
               </div>
             </div>
-          </section>
+          </motion.section>
         </React.Fragment>
       ) : (
-        <React.Fragment>
+        <motion.div>
           <div className="projects__load-container">
             <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
           </div>
-          <section className="portfolio" ref={(el) => (body = el)}>
-            <div className="portfolio__container" >
-              <div className="menu">
-                <div className="menu__item-image_wrapper">
+          <motion.section className="portfolio" ref={(el) => (body = el)} >
+            <motion.div className="portfolio__container" >
+              <motion.div className="menu">
+                <motion.div className="menu__item-image_wrapper">
                   <div className="menu__item-image_inner">
                     {projectsData.map((image) => (
-                      <div className={`image-wrapper ${image.classProject}`} key={image.id}>
+                      <motion.div className={`image-wrapper ${image.classProject}`} key={image.id}>
                         <img
                           src={image.image}
                           alt={image.title}
                           className={selectedImage === image.image ? `menu__item-image.fade-in` : 'menu__item-image'}
                         />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left" }}>
-                  <div className="workk__work">
-                    <h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "25rem" : "0" }}>{t("portfolio__work_title")}</h1>
-                  </div>
-                  <div className="scrollbarr">
-                    {projectsData.map((item, index) => (
-                      <div className="work__title" key={index} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}>
-                        <div className="menu-item-wrapper">
-                          <div className="menu-arrow">
-                            <BiRightArrowAlt style={{fontSize: "2.3rem", marginTop: "1.3rem", color: "var(--title-color)"}}/>
-                          </div>
-                          <div className="menu-text">
-                            <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
-                            <div className="categories">
-                              <p>{item.category[0]}</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
                 </motion.div>
-              </div>
-            </div>
-          </section>
-        </React.Fragment>
+                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left" }}  initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100 }}>
+                  <motion.div className="workk__work">
+                    <motion.h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "25rem" : "0" }}>{t("portfolio__work_title")}</motion.h1>
+                  </motion.div>
+                  <AnimatePresence mode='wait'>
+                    <motion.div className="scrollbarr" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100 }}>
+                      {projectsData.map((item, index) => (
+                        <motion.div className="work__title" key={index} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}  initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100}}>
+                          <motion.div className="menu-item-wrapper"  initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100}}>
+                            <motion.div className="menu-arrow">
+                              <BiRightArrowAlt style={{ fontSize: "2.3rem", marginTop: "1.75rem", color: "var(--title-color)" }} />
+                            </motion.div>
+                            <motion.div className="menu-text"  initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100 }}>
+                              <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
+                              <motion.div className="categories">
+                                <motion.p>{item.category[0]}</motion.p>
+                              </motion.div>
+                            </motion.div>
+                          </motion.div>
+                        </motion.div>
+                      ))}
+                    </motion.div>
+                  </AnimatePresence>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          </motion.section>
+        </motion.div>
       )}
     </>
   );
