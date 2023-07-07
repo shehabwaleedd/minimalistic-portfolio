@@ -15,6 +15,32 @@ import ShebooDarkModeImg from "../../assets/ProjectDetails/Sheboo/Shehab__mainPa
 import ShebooDarkModeImg2 from "../../assets/ProjectDetails/Sheboo/Shehab__mainPageDarkMode2.png"
 import ShebooDarkModeImg3 from "../../assets/ProjectDetails/Sheboo/Shehab__mainPageDarkMode3.png"
 import ShebooDarkModeImg4 from "../../assets/ProjectDetails/Sheboo/Shehab__mainPageDarkMode4.png"
+import BlogMainPage from "../../assets/ProjectDetails/Blog/blog_mainPage.png"
+import BlogSuBMenu from "../../assets/ProjectDetails/Blog/Blog__subMenu.png"
+import BlogPageOnHover from "../../assets/ProjectDetails/Blog/Blog__mainPageOnHover.png"
+import BlogArticleDetails from "../../assets/ProjectDetails/Blog/Blog__articleDetails.png"
+import BlogEditPage from "../../assets/ProjectDetails/Blog/Blog__editPage.png"
+import BlogCreatePost from "../../assets/ProjectDetails/Blog/Blog__createPost.png"
+import BlogSubMenu from "../../assets/ProjectDetails/Blog/Blog__subMenu.png"
+import BlogAccount from "../../assets/ProjectDetails/Blog/Blog__AccountPage.png"
+import BlogAbout from "../../assets/ProjectDetails/Blog/Blog__aboutPage.png"
+import BlogLogin from "../../assets/ProjectDetails/Blog/Blog__logInPage.png"
+import BlogRegister from "../../assets/ProjectDetails/Blog/Blog__signUpPage.png"
+import BlogLightMode1 from "../../assets/ProjectDetails/Blog/Blog__lightMode.png"
+import BlogLightMode2 from "../../assets/ProjectDetails/Blog/Blog__lightMode2.png"
+import BlogLightMode3 from "../../assets/ProjectDetails/Blog/Blog__lightMode3.png"
+import BlogLightMode4 from "../../assets/ProjectDetails/Blog/Blog__lightMode4.png"
+import BlogLightMode5 from "../../assets/ProjectDetails/Blog/Blog__lightMode5.png"
+import BlogLightMode6 from "../../assets/ProjectDetails/Blog/Blog__lightMode6.png"
+import BlogLightMode7 from "../../assets/ProjectDetails/Blog/Blog__lightMode7.png"
+import BlogLightMode8 from "../../assets/ProjectDetails/Blog/Blog__lightMode8.png"
+
+
+
+
+
+
+
 
 const projectsData = [
   {
@@ -68,7 +94,40 @@ const projectsData = [
     link: "https://github.com/shehabwaleedd/blog",
     classProject: "blog__class",
     date: "December, 2022",
-    comment: "I made this small website just to keep always reminding myself of the time left for me to finish my learning process and start to actually make good projects, I used Vanilla JavaScript to make it"
+    comment: "I made this small website just to keep always reminding myself of the time left for me to finish my learning process and start to actually make good projects, I used Vanilla JavaScript to make it",
+    mainTitle: "Main Page",
+    mainTitleImg: BlogMainPage,
+    mainTitleSubMenu: "Sub Menu",
+    mainTitleSubMenuImg: BlogSuBMenu,
+    mainPageOnHover: "Main Page On Hover",
+    mainPageOnHoverImg: BlogPageOnHover,
+    articleDetails: "Article Details",
+    articleDetailsImg: BlogArticleDetails,
+    editPage: "Edit Page",
+    editPageImg: BlogEditPage,
+    createPost: "Create Post",
+    createPostImg: BlogCreatePost,
+    subMenu: "Sub Menu",
+    subMenuImg: BlogSubMenu,
+    accountPage: "Account Page",
+    accountPageImg: BlogAccount,
+    mainAboutPage: "About Page",
+    mainAboutPageImg: BlogAbout,
+    projectLogins: "Login Page",
+    projectLoginsImg: BlogLogin,
+    registerPage: "Register Page",
+    registerPageImg: BlogRegister,
+    lightMode: "Light Mode",
+    lightModeImg1: BlogLightMode1,
+    lightModeImg2: BlogLightMode2,
+    lightModeImg3: BlogLightMode3,
+    lightModeImg4: BlogLightMode4,
+    lightModeImg5: BlogLightMode5,
+    lightModeImg6: BlogLightMode6,
+    lightModeImg7: BlogLightMode7,
+    lightModeImg8: BlogLightMode8,
+    
+
   },
   {
     id: 4,
