@@ -1,11 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.6b495acf.css",
-    "main.js": "/static/js/main.ac41012f.js",
+    "main.css": "/static/css/main.dedfdb5f.css",
+    "main.js": "/static/js/main.ae3fa2c5.js",
     "static/js/945.3c978414.chunk.js": "/static/js/945.3c978414.chunk.js",
+    "static/media/Blog__articleDetails.png": "/static/media/Blog__articleDetails.be1fcf6e17c4a10692ac.png",
+    "static/media/Blog__lightMode4.png": "/static/media/Blog__lightMode4.06f0b86537e777799cb2.png",
     "static/media/Shehab__mainPageDarkMode3.png": "/static/media/Shehab__mainPageDarkMode3.5bb6a6eb4fcedbd55ca7.png",
     "static/media/Shehab__AboutPage.png": "/static/media/Shehab__AboutPage.66622b6ec0a7988e0825.png",
     "static/media/Shehab__mainPageDarkMode4.png": "/static/media/Shehab__mainPageDarkMode4.85971ee31062f2e64918.png",
+    "static/media/Blog__lightMode5.png": "/static/media/Blog__lightMode5.62fe94c69ef72504625e.png",
+    "static/media/Blog__editPage.png": "/static/media/Blog__editPage.f52bf8b31ac795d7e0ad.png",
     "static/media/Shehab__mainPageDarkMode2.png": "/static/media/Shehab__mainPageDarkMode2.8c9e79d5d75e5eea557f.png",
     "static/media/Shehab__ContactPage.png": "/static/media/Shehab__ContactPage.d956a7844121592ed4f9.png",
     "static/media/Shehab__ProjectsPage.png": "/static/media/Shehab__ProjectsPage.e7e4f832c208ceb40757.png",
@@ -14,8 +18,23 @@
     "static/media/Lelu__testimonial.png": "/static/media/Lelu__testimonial.007dcae2bb70f2e88342.png",
     "static/media/Lelu__BrandMessage.png": "/static/media/Lelu__BrandMessage.c37f3dcfc4babf03dcee.png",
     "static/media/Lelu__MainPage2.png": "/static/media/Lelu__MainPage2.8852a95f968ba7424cba.png",
+    "static/media/Blog__mainPageOnHover.png": "/static/media/Blog__mainPageOnHover.dc90347a8e8ee32442d2.png",
     "static/media/Lelu__logins.png": "/static/media/Lelu__logins.89b8af5e7e00d44f2c76.png",
+    "static/media/Blog__aboutPage.png": "/static/media/Blog__aboutPage.ed25bec9c4074eccbc12.png",
+    "static/media/Blog__lightMode2.png": "/static/media/Blog__lightMode2.f99d93da5894c1c8e2c8.png",
+    "static/media/Blog__AccountPage.png": "/static/media/Blog__AccountPage.1bcb9ed4921085817c94.png",
+    "static/media/blog_mainPage.png": "/static/media/blog_mainPage.5afa8645788336f80b4a.png",
+    "static/media/Blog__lightMode.png": "/static/media/Blog__lightMode.8397262444c39e8ba72a.png",
+    "static/media/blog5.png": "/static/media/blog5.6b661e977079859bbd3e.png",
+    "static/media/Blog__lightMode8.png": "/static/media/Blog__lightMode8.707956d02083ffb477b1.png",
+    "static/media/Blog__signUpPage.png": "/static/media/Blog__signUpPage.47bbcc25a9b111c09b7a.png",
     "static/media/profile.jpg": "/static/media/profile.763cd32bc9e9ac0dcf82.jpg",
+    "static/media/Blog__lightMode3.png": "/static/media/Blog__lightMode3.f1432381e6469d886c05.png",
+    "static/media/Blog__logInPage.png": "/static/media/Blog__logInPage.a9dbf231641f9e9959fd.png",
+    "static/media/Blog__lightMode7.png": "/static/media/Blog__lightMode7.4d60a19b668880a411d5.png",
+    "static/media/Blog__subMenu.png": "/static/media/Blog__subMenu.3e2d64bc93feb7600e70.png",
+    "static/media/Blog__lightMode6.png": "/static/media/Blog__lightMode6.900f3a3b2ff1d53b2354.png",
+    "static/media/Blog__createPost.png": "/static/media/Blog__createPost.151cee799efbcb278a6a.png",
     "static/media/noise.png": "/static/media/noise.a8f3d9df45c2a74aac42.png",
     "static/media/Posterama.ttf": "/static/media/Posterama.6c5b7fa6f0088fdfcb7e.ttf",
     "static/media/Satoshi-MediumItalic.ttf": "/static/media/Satoshi-MediumItalic.5db9ec801a311bdf187b.ttf",
@@ -33,7 +52,6 @@
     "static/media/Satoshi-Medium.woff": "/static/media/Satoshi-Medium.2419b46c96ed15331ba2.woff",
     "static/media/Satoshi-Regular.woff": "/static/media/Satoshi-Regular.ca3da5fd2b609836ef69.woff",
     "static/media/Satoshi-Bold.woff": "/static/media/Satoshi-Bold.a875ff682ee232938607.woff",
-    "static/media/blog2.svg": "/static/media/blog2.c9f34cfa62c190943015ed993afb5ebe.svg",
     "static/media/Satoshi-Black.woff": "/static/media/Satoshi-Black.4261d202e1e9410db1bf.woff",
     "static/media/Satoshi-Light.woff": "/static/media/Satoshi-Light.67e7fa77f107df3491b6.woff",
     "static/media/Satoshi-MediumItalic.woff2": "/static/media/Satoshi-MediumItalic.6be6d51d5fc7402ee45f.woff2",
@@ -49,7 +67,7 @@
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
-    "static/css/main.6b495acf.css",
-    "static/js/main.ac41012f.js"
+    "static/css/main.dedfdb5f.css",
+    "static/js/main.ae3fa2c5.js"
   ]
 }
