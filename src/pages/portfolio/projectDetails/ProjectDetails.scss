@@ -258,3 +258,26 @@ $font-family_1: "Posterama", sans-serif;
 		}
 	
 }
+
+@media (min-width: 1850px) {
+	.project__card_details {
+		position: relative;
+		width: 68vw;
+		min-height: fit-content;
+		top: -11rem;
+		background-color: var(--body-color);
+		transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+	
+		.project__image_container img {
+			position: relative;
+			width: 73rem;
+			height: 36rem;
+			left: 5rem;
+			object-fit: cover;
+			border-bottom-left-radius: 2rem;
+			border-bottom-right-radius: 2rem;
+			border: 0.2px solid var(--text-color);
+			border-top: 0px solid #000;
+		}
+	}
+}
