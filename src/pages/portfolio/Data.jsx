@@ -1,6 +1,6 @@
 import Work0 from "../../assets/Posters/shebo2.png"
 import Work1 from "../../assets/Posters/lelu10.svg"
-import Work2 from "../../assets/Posters/blog2.svg"
+import Work2 from "../../assets/Posters/blog5.png"
 import Work3 from "../../assets/Posters/moaz2.svg"
 import Work4 from "../../assets/Posters/cairo1.svg"
 import LeluMainImg from "../../assets/ProjectDetails/Lelu/Lelu__MainPage2.png"

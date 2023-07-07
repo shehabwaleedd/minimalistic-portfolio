@@ -1,5 +1,5 @@
 import './App.scss';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Toggle from './components/nav/darkmode/Toggle';
 import { createContext } from 'react';
 import { AnimatePresence } from 'framer-motion';

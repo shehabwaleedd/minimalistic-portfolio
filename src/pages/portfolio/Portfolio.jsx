@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './Portfolio.scss';
 import projectsData from './Data';
-import { PortfolioAnimations } from '../../animation/PortfolioAnimations';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from "framer-motion";
 import { gsap } from "gsap";
