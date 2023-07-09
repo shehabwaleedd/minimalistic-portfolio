@@ -60,7 +60,7 @@ const Main = (Props) => {
                         <p className="main__description" style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}>{t("Introduction")}</p>
                     </div>
                     <div className="main__links">
-                        <Link to='/portfolio' className="main__button button1">
+                        <Link to='/projects' className="main__button button1">
                             <p style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}>
                                 <BiRightArrowAlt style={{ fontSize: "1rem", color: "var(--title-color)" }} />
                                 {t("button__view_my_projects")}
@@ -84,7 +84,7 @@ const Main = (Props) => {
                         <p className="main__description" style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2rem" : "" }}>{t("Introduction")}</p>
                     </div>
                     <div className="main__links">
-                        <Link to='/portfolio' className="main__button button1">
+                        <Link to='/projects' className="main__button button1">
                             <p style={{ fontFamily: Props.language === "ar" ? "Cairo" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1rem" : "" }}>
                                 <BiRightArrowAlt style={{ fontSize: "1rem", color: "var(--title-color)" }} />
                                 {t("button__view_my_projects")}

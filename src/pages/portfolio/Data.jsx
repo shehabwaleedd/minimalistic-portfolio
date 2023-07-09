@@ -1,8 +1,10 @@
 import Work0 from "../../assets/Posters/shebo2.png"
 import Work1 from "../../assets/Posters/lelu10.svg"
 import Work2 from "../../assets/Posters/blog5.png"
-import Work3 from "../../assets/Posters/moaz2.svg"
+import Work3 from "../../assets/Posters/moaz3.png"
 import Work4 from "../../assets/Posters/cairo1.svg"
+import Work5 from "../../assets/Posters/blog7.png"
+import Work6 from "../../assets/Posters/Jin2.png"
 import LeluMainImg from "../../assets/ProjectDetails/Lelu/Lelu__MainPage2.png"
 import LeluMessageImg from "../../assets/ProjectDetails/Lelu/Lelu__BrandMessage.png"
 import LeluLoginsImg from "../../assets/ProjectDetails/Lelu/Lelu__logins.png"
@@ -34,6 +36,7 @@ import BlogLightMode5 from "../../assets/ProjectDetails/Blog/Blog__lightMode5.pn
 import BlogLightMode6 from "../../assets/ProjectDetails/Blog/Blog__lightMode6.png"
 import BlogLightMode7 from "../../assets/ProjectDetails/Blog/Blog__lightMode7.png"
 import BlogLightMode8 from "../../assets/ProjectDetails/Blog/Blog__lightMode8.png"
+import RollDiceMainPage from "../../assets/ProjectDetails/RollDice/RollDice__mainPage.png"
 
 
 
@@ -86,6 +89,16 @@ const projectsData = [
     projectTestimonialsImg: LeluTestimonialsImg,
   },
   {
+    id: 7,
+    image: Work6,
+    title: "Jinghui Ma",
+    category: ["Branding", "Web Design", "UI/UX Design"],
+    website: "https://cairobrews.vercel.app/",
+    link: "https://github.com/shehabwaleedd/liquor",
+    date: "2023, July",
+    comment: "I made this website using HTML and CSS, I was trying to make it as close as possible to the original twitter website, I used flexbox to make it responsive"
+  },
+  {
     id: 3,
     image: Work2,
     title: "Minimalistic Blog",
@@ -126,8 +139,6 @@ const projectsData = [
     lightModeImg6: BlogLightMode6,
     lightModeImg7: BlogLightMode7,
     lightModeImg8: BlogLightMode8,
-    
-
   },
   {
     id: 4,
@@ -139,6 +150,19 @@ const projectsData = [
     date: "2023, July",
     comment: "I made this website using HTML and CSS, I was trying to make it as close as possible to the original twitter website, I used flexbox to make it responsive"
   },
+
+  {
+    id: 6,
+    image: Work5,
+    title: "Roll The Dice",
+    category: ["Game", "Web Application"],
+    website: "https://rollthedice-one.vercel.app/",
+    link: "https://github.com/shehabwaleedd/rollthedice",
+    date: "June, 2023",
+    comment: "Inspired by witnessing my friends indulge in online casino games, I was intrigued and decided to embark on my own practice journey. This led me to create a simple yet captivating game, offering the perfect opportunity to refine skills and experience the excitement of online gambling.",
+    mainTitle: "Main Page",
+    mainTitleImg: RollDiceMainPage,
+  },
   {
     id: 5,
     image: Work4,
@@ -149,6 +173,7 @@ const projectsData = [
     date: "June, 2023",
     comment: "Cairo Brews is an elegant and seamless online alcohol shop created by a passionate frontend developer. The website offers a premium selection of wines, beers, and spirits, catering to the discerning tastes of customers in Cairo. With a focus on fast and reliable delivery, Cairo Brews ensures customers receive their chosen beverages promptly. Meticulous attention to detail is evident in the website's design, which provides an immersive and visually pleasing experience. Smooth animations and transitions enhance user engagement. The user-friendly account system allows customers to manage preferences, track orders, and receive personalized recommendations. Cairo Brews is the destination for premium beverages, combining convenience and curated excellence."
   },
+
 
 
 ]

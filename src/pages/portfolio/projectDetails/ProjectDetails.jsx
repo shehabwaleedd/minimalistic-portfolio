@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import projectsData from "../Data";
 import "./ProjectDetails.scss";
 import ScrollAnimation from "../../../animation/ScrollAnimation/ScrollAnimation";
@@ -8,6 +8,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { IoChevronBack } from "react-icons/io5";
 
 function ProjectDetails(Props) {
     const { id } = useParams();
@@ -187,6 +188,10 @@ function ProjectDetails(Props) {
                                     />
                                 </div>
                                 <div className="project__details_post-text">
+                                    <Link to="/projects" className="project__back">
+                                        <IoChevronBack style={{fontSize: "1.2rem", marginTop: "0.2rem", color: "var(--accent-color)"}}/>
+                                        <h2>Back To Projects</h2>
+                                    </Link>
                                     <h1>{project.title}</h1>
                                     <div className="project__details-brief">
                                         <div className="category__date">

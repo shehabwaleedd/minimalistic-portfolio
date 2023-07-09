@@ -21,7 +21,7 @@ const NavComponents = (Props) => {
                             }}
                         >{t("navbar__about")}</Link>
                         <Link
-                            className={Props.navOpen ? "nav__link spin" : "nav__link"} to="/portfolio"
+                            className={Props.navOpen ? "nav__link spin" : "nav__link"} to="/projects"
                             style={{
                                 opacity: Props.navOpen ? "1" : "0",
                                 padding: Props.navOpen ? "0.1rem" : "0",
@@ -54,7 +54,7 @@ const NavComponents = (Props) => {
                         }}
                     >{t("navbar__about")}</Link>
                     <Link
-                        className={Props.navOpen ? "nav__link spin" : "nav__link"} to="/portfolio"
+                        className={Props.navOpen ? "nav__link spin" : "nav__link"} to="/projects"
                         style={{
                             opacity: Props.navOpen ? "1" : "0",
                             padding: Props.navOpen ? "0.6rem" : "0",

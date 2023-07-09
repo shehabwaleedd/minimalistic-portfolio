@@ -51,6 +51,18 @@ $font-family_1: "Posterama", sans-serif;
 	position: relative;
 	top: 7rem;
 
+	.project__back {
+		display: flex;
+		gap: 0.7rem;
+		h2 {
+			font-size: 1rem;
+			font-weight: 600;
+			color: $color_2;
+			margin-bottom: 1rem;
+			font-family: $font-family_1;
+		}
+	}
+
 	h1 {
 		font-size: 3rem;
 		font-weight: 600;
