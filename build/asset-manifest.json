@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.dedfdb5f.css",
-    "main.js": "/static/js/main.ae3fa2c5.js",
-    "static/js/945.3c978414.chunk.js": "/static/js/945.3c978414.chunk.js",
+    "main.css": "/static/css/main.77726bc9.css",
+    "main.js": "/static/js/main.d745fded.js",
+    "static/js/945.a2b930d1.chunk.js": "/static/js/945.a2b930d1.chunk.js",
     "static/media/Blog__articleDetails.png": "/static/media/Blog__articleDetails.be1fcf6e17c4a10692ac.png",
     "static/media/Blog__lightMode4.png": "/static/media/Blog__lightMode4.06f0b86537e777799cb2.png",
     "static/media/Shehab__mainPageDarkMode3.png": "/static/media/Shehab__mainPageDarkMode3.5bb6a6eb4fcedbd55ca7.png",
@@ -30,11 +30,15 @@
     "static/media/Blog__signUpPage.png": "/static/media/Blog__signUpPage.47bbcc25a9b111c09b7a.png",
     "static/media/profile.jpg": "/static/media/profile.763cd32bc9e9ac0dcf82.jpg",
     "static/media/Blog__lightMode3.png": "/static/media/Blog__lightMode3.f1432381e6469d886c05.png",
+    "static/media/RollDice__mainPage.png": "/static/media/RollDice__mainPage.a67c80bb49115f688f32.png",
     "static/media/Blog__logInPage.png": "/static/media/Blog__logInPage.a9dbf231641f9e9959fd.png",
     "static/media/Blog__lightMode7.png": "/static/media/Blog__lightMode7.4d60a19b668880a411d5.png",
     "static/media/Blog__subMenu.png": "/static/media/Blog__subMenu.3e2d64bc93feb7600e70.png",
     "static/media/Blog__lightMode6.png": "/static/media/Blog__lightMode6.900f3a3b2ff1d53b2354.png",
+    "static/media/moaz3.png": "/static/media/moaz3.94a3832343ffd03ead69.png",
     "static/media/Blog__createPost.png": "/static/media/Blog__createPost.151cee799efbcb278a6a.png",
+    "static/media/blog7.png": "/static/media/blog7.17ec79cddb79d3fe1a98.png",
+    "static/media/Jin2.png": "/static/media/Jin2.b06e29672f1ae884221c.png",
     "static/media/noise.png": "/static/media/noise.a8f3d9df45c2a74aac42.png",
     "static/media/Posterama.ttf": "/static/media/Posterama.6c5b7fa6f0088fdfcb7e.ttf",
     "static/media/Satoshi-MediumItalic.ttf": "/static/media/Satoshi-MediumItalic.5db9ec801a311bdf187b.ttf",
@@ -62,12 +66,11 @@
     "static/media/Shehab_Waleed.docx": "/static/media/Shehab_Waleed.64d9e945fcd6b26e0c61.docx",
     "static/media/Satoshi-Light.woff2": "/static/media/Satoshi-Light.df8f06167ee6fd05a131.woff2",
     "static/media/lelu10.svg": "/static/media/lelu10.1c7f4e6fd5db5f02db7b2067fa10b572.svg",
-    "static/media/moaz2.svg": "/static/media/moaz2.6cbf71b924edc662a724a5e40d5be61b.svg",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
-    "static/css/main.dedfdb5f.css",
-    "static/js/main.ae3fa2c5.js"
+    "static/css/main.77726bc9.css",
+    "static/js/main.d745fded.js"
   ]
 }
