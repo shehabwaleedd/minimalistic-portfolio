@@ -10,13 +10,12 @@ import AnimatedNav from '../animatedNav/AnimatedNav';
 import ProjectDetails from '../../pages/portfolio/projectDetails/ProjectDetails';
 import { useEffect } from 'react';
 import { HomeAnimations } from '../../animation/HomeAnimations';
-import { useState } from 'react';
 
 
 const MainRoutes = (Props) => {
 
   const location = useLocation();
-  const [locationState, setLocationState] = useState(location);
+
 
 
   useEffect(() => {
