@@ -1,6 +1,6 @@
 import Work0 from "../../assets/Posters/shebo2.png"
 import Work1 from "../../assets/Posters/lelu10.svg"
-import Work2 from "../../assets/Posters/blog5.png"
+import Work2 from "../../assets/Posters/blog2.svg"
 import Work3 from "../../assets/Posters/moaz3.png"
 import Work4 from "../../assets/Posters/cairo1.svg"
 import Work5 from "../../assets/Posters/blog7.png"
