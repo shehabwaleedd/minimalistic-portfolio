@@ -37,7 +37,14 @@ import BlogLightMode6 from "../../assets/ProjectDetails/Blog/Blog__lightMode6.pn
 import BlogLightMode7 from "../../assets/ProjectDetails/Blog/Blog__lightMode7.png"
 import BlogLightMode8 from "../../assets/ProjectDetails/Blog/Blog__lightMode8.png"
 import RollDiceMainPage from "../../assets/ProjectDetails/RollDice/RollDice__mainPage.png"
-
+import JingMainPage from "../../assets/ProjectDetails/Jing/Jin__mainPage.png"
+import JinGridView from "../../assets/ProjectDetails/Jing/Jin__gridView.png"
+import JinAboutPage from "../../assets/ProjectDetails/Jing/Jin__aboutPage.png"
+import JinContactPage from "../../assets/ProjectDetails/Jing/Jin__contactPage.png"
+import JinDarkMode from "../../assets/ProjectDetails/Jing/Jin__darkMode1.png"
+import JinDarkMode2 from "../../assets/ProjectDetails/Jing/Jing__darkMode2.png"
+import JinDarkMode3 from "../../assets/ProjectDetails/Jing/Jin__darkMode3.png"
+import JinDarkMode4 from "../../assets/ProjectDetails/Jing/Jin__darkMode4.png"
 
 
 
@@ -93,10 +100,26 @@ const projectsData = [
     image: Work6,
     title: "Jinghui Ma",
     category: ["Branding", "Web Design", "UI/UX Design"],
-    website: "https://cairobrews.vercel.app/",
-    link: "https://github.com/shehabwaleedd/liquor",
+    website: "https://jinghui-mmaa.vercel.app/",
+    link: "https://github.com/shehabwaleedd/JINGHUI-MA",
     date: "2023, July",
-    comment: "I made this website using HTML and CSS, I was trying to make it as close as possible to the original twitter website, I used flexbox to make it responsive"
+    comment: "Jin, a friend of mine, approached me with a request to create a website that elegantly showcases her work and resume. She wanted a simple yet sophisticated design to highlight her talents and achievements, I used React.js to make it and I used Framer Motion to make the animations",
+    mainTitle: "Main Page",
+    mainTitleImg: JingMainPage,
+    mainTitle2: "Grid View",
+    mainTitleImg2: JinGridView,
+    mainAboutPage: "About Page",
+    mainAboutPageImg: JinAboutPage,
+    mainContactPage: "Contact Page",
+    mainContactPageImg: JinContactPage,
+    mainDarkMode: "Dark Mode",
+    mainDarkModeImg: JinDarkMode,
+    mainDarkModeImg2: JinDarkMode2,
+    mainDarkModeIm3: JinDarkMode4,
+    mainDarkModeImg4: JinDarkMode3,
+
+
+
   },
   {
     id: 3,

@@ -23,23 +23,28 @@ function ProjectDetails(Props) {
 
 
     useEffect(() => {
-        window.scrollTo(0, 0); // Scroll to the top of the page
+        console.log("ProjectDetails component mounted");
+
+        // Scroll to the top of the page
+        window.scrollTo(0, 0);
+
+        // Clean-up function
+        return () => {
+            console.log("ProjectDetails component unmounted");
+        };
     }, []);
-
-
 
     return (
         <>
             {Props.isMobile ? (
                 <>
                     <ScrollAnimation />
-                    <div className="project__details" style={{ width: "100vw", touchAction: "pan-y" }}>
+                    <div key={id} className="project__details" style={{ width: "100vw", touchAction: "pan-y" }}>
                         <div className="project__card_details">
                             <div className="project__image_container" style={{ width: "100vw", position: "relative", left: "-5rem", top: "2rem" }}>
-                                <LazyLoadImage
+                                <img
                                     src={project.image}
                                     alt={project.title}
-                                    effect="blur"
                                 />
                             </div>
                             <div className="project__details_post-text" style={{ transform: "translateX(-4rem)", }}>
@@ -81,7 +86,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project.mainTitle}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage src={project.mainTitleImg} alt={project.mainTitle} effect="blur" />
+                                                <img src={project.mainTitleImg} alt={project.mainTitle} />
                                             </div>
                                         </div>
                                     )}
@@ -91,7 +96,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.mainTitle2}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.mainTitleImg2} alt={project.mainTitle2} />
+                                                <img src={project?.mainTitleImg2} alt={project.mainTitle2} />
                                             </div>
                                         </div>
                                     )}
@@ -101,7 +106,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.projectLogins}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project.projectLoginsImg} alt={project.projectLogins} />
+                                                <img src={project.projectLoginsImg} alt={project.projectLogins} />
                                             </div>
                                         </div>
                                     )}
@@ -111,7 +116,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.projectTestimonials}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.projectTestimonialsImg} alt={project.mainTitle} />
+                                                <img src={project?.projectTestimonialsImg} alt={project.mainTitle} />
                                             </div>
                                         </div>
                                     )}
@@ -121,7 +126,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.mainProjectsPage}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.mainProjectsPageImg} alt={project.mainProjectsPage} />
+                                                <img src={project?.mainProjectsPageImg} alt={project.mainProjectsPage} />
                                             </div>
                                         </div>
                                     )}
@@ -131,7 +136,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.mainAboutPage}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.mainAboutPageImg} alt={project.mainAboutPage} />
+                                                <img src={project?.mainAboutPageImg} alt={project.mainAboutPage} />
                                             </div>
                                         </div>
                                     )}
@@ -141,7 +146,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.mainContactPage}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.mainContactPageImg} alt={project.mainContactPage} />
+                                                <img src={project?.mainContactPageImg} alt={project.mainContactPage} />
                                             </div>
                                         </div>
                                     )}
@@ -151,10 +156,10 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.mainDarkMode}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.mainDarkModeImg} alt={project.mainContactPage} />
-                                                <LazyLoadImage effect="blur" src={project?.mainDarkModeImg2} alt={project.mainContactPage} />
-                                                <LazyLoadImage effect="blur" src={project?.mainDarkModeImg3} alt={project.mainContactPage} />
-                                                <LazyLoadImage effect="blur" src={project?.mainDarkModeImg4} alt={project.mainContactPage} />
+                                                <img src={project?.mainDarkModeImg} alt={project.mainContactPage} />
+                                                <img src={project?.mainDarkModeImg2} alt={project.mainContactPage} />
+                                                <img src={project?.mainDarkModeImg3} alt={project.mainContactPage} />
+                                                <img src={project?.mainDarkModeImg4} alt={project.mainContactPage} />
 
                                             </div>
                                         </div>
@@ -176,20 +181,19 @@ function ProjectDetails(Props) {
                 </>
             ) : (
                 <AnimatePresence>
-                    <motion.div initial={{ opacity: 0, y: -110 }} animate={{ opacity: 1, y: 0 }} transitionDelay={{ duration: 0.5 }} transition={{ duration: 1 }} exit={{ opacity: 0, transitionDelay: "5s" }}>
+                    <motion.div key={id} initial={{ opacity: 0, y: -110 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0 }}>
                         <ScrollAnimation />
                         <div className="project__details container">
                             <div className="project__card_details">
                                 <div className="project__image_container">
-                                    <LazyLoadImage
+                                    <img
                                         src={project.image}
                                         alt={project.title}
-                                        effect="blur"
                                     />
                                 </div>
                                 <div className="project__details_post-text">
                                     <Link to="/projects" className="project__back">
-                                        <IoChevronBack style={{fontSize: "1.2rem", marginTop: "0.2rem", color: "var(--accent-color)"}}/>
+                                        <IoChevronBack style={{ fontSize: "1.2rem", marginTop: "0.2rem", color: "var(--accent-color)" }} />
                                         <h2>Back To Projects</h2>
                                     </Link>
                                     <h1>{project.title}</h1>
@@ -229,7 +233,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project.mainTitle}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage src={project.mainTitleImg} alt={project.mainTitle} effect="blur" />
+                                                <img src={project.mainTitleImg} alt={project.mainTitle} />
                                             </div>
                                         </div>
                                     )}
@@ -239,7 +243,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.mainPageOnHover}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.mainPageOnHoverImg} alt={project.mainPageOnHover} />
+                                                <img src={project?.mainPageOnHoverImg} alt={project.mainPageOnHover} />
                                             </div>
                                         </div>
                                     )}
@@ -249,7 +253,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.mainTitle2}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.mainTitleImg2} alt={project.mainTitle2} />
+                                                <img src={project?.mainTitleImg2} alt={project.mainTitle2} />
                                             </div>
                                         </div>
                                     )}
@@ -259,7 +263,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.articleDetails}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project.articleDetailsImg} alt={project.articleDetails} />
+                                                <img  src={project.articleDetailsImg} alt={project.articleDetails} />
                                             </div>
                                         </div>
                                     )}
@@ -269,7 +273,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.editPage}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project.editPageImg} alt={project.editPage} />
+                                                <img  src={project.editPageImg} alt={project.editPage} />
                                             </div>
                                         </div>
                                     )}
@@ -279,7 +283,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.createPost}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project.createPostImg} alt={project.createPost} />
+                                                <img src={project.createPostImg} alt={project.createPost} />
                                             </div>
                                         </div>
                                     )}
@@ -289,7 +293,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.mainTitleSubMenu}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project.mainTitleSubMenuImg} alt={project.mainTitleSubMenu} />
+                                                <img src={project.mainTitleSubMenuImg} alt={project.mainTitleSubMenu} />
                                             </div>
                                         </div>
                                     )}
@@ -299,7 +303,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.projectLogins}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project.projectLoginsImg} alt={project.projectLogins} />
+                                                <img  src={project.projectLoginsImg} alt={project.projectLogins} />
                                             </div>
                                         </div>
                                     )}
@@ -309,7 +313,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.registerPage}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project.registerPageImg} alt={project.registerPage} />
+                                                <img src={project.registerPageImg} alt={project.registerPage} />
                                             </div>
                                         </div>
                                     )}
@@ -319,7 +323,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.projectTestimonials}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.projectTestimonialsImg} alt={project.mainTitle} />
+                                                <img  src={project?.projectTestimonialsImg} alt={project.mainTitle} />
                                             </div>
                                         </div>
                                     )}
@@ -329,7 +333,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.mainProjectsPage}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.mainProjectsPageImg} alt={project.mainProjectsPage} />
+                                                <img src={project?.mainProjectsPageImg} alt={project.mainProjectsPage} />
                                             </div>
                                         </div>
                                     )}
@@ -339,7 +343,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.accountPage}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.accountPageImg} alt={project.accountPage} />
+                                                <img  src={project?.accountPageImg} alt={project.accountPage} />
                                             </div>
                                         </div>
                                     )}
@@ -349,7 +353,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.mainAboutPage}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.mainAboutPageImg} alt={project.mainAboutPage} />
+                                                <img  src={project?.mainAboutPageImg} alt={project.mainAboutPage} />
                                             </div>
                                         </div>
                                     )}
@@ -359,7 +363,7 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.mainContactPage}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.mainContactPageImg} alt={project.mainContactPage} />
+                                                <img  src={project?.mainContactPageImg} alt={project.mainContactPage} />
                                             </div>
                                         </div>
                                     )}
@@ -369,10 +373,10 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.mainDarkMode}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.mainDarkModeImg} alt={project.mainContactPage} />
-                                                <LazyLoadImage effect="blur" src={project?.mainDarkModeImg2} alt={project.mainContactPage} />
-                                                <LazyLoadImage effect="blur" src={project?.mainDarkModeImg3} alt={project.mainContactPage} />
-                                                <LazyLoadImage effect="blur" src={project?.mainDarkModeImg4} alt={project.mainContactPage} />
+                                                <img  src={project?.mainDarkModeImg} alt={project.mainContactPage} />
+                                                <img  src={project?.mainDarkModeImg2} alt={project.mainContactPage} />
+                                                <img  src={project?.mainDarkModeImg3} alt={project.mainContactPage} />
+                                                <img  src={project?.mainDarkModeImg4} alt={project.mainContactPage} />
 
                                             </div>
                                         </div>
@@ -383,14 +387,14 @@ function ProjectDetails(Props) {
                                                 <h2>{project?.lightMode}</h2>
                                             </div>
                                             <div className="project__details-img">
-                                                <LazyLoadImage effect="blur" src={project?.lightModeImg1} alt={project.mainContactPage} />
-                                                <LazyLoadImage effect="blur" src={project?.lightModeImg2} alt={project.mainContactPage} />
-                                                <LazyLoadImage effect="blur" src={project?.lightModeImg3} alt={project.mainContactPage} />
-                                                <LazyLoadImage effect="blur" src={project?.lightModeImg4} alt={project.mainContactPage} />
-                                                <LazyLoadImage effect="blur" src={project?.lightModeImg5} alt={project.mainContactPage} />
-                                                <LazyLoadImage effect="blur" src={project?.lightModeImg6} alt={project.mainContactPage} />
-                                                <LazyLoadImage effect="blur" src={project?.lightModeImg7} alt={project.mainContactPage} />
-                                                <LazyLoadImage effect="blur" src={project?.lightModeImg8} alt={project.mainContactPage} />
+                                                <img  src={project?.lightModeImg1} alt={project.mainContactPage} />
+                                                <img  src={project?.lightModeImg2} alt={project.mainContactPage} />
+                                                <img  src={project?.lightModeImg3} alt={project.mainContactPage} />
+                                                <img  src={project?.lightModeImg4} alt={project.mainContactPage} />
+                                                <img  src={project?.lightModeImg5} alt={project.mainContactPage} />
+                                                <img  src={project?.lightModeImg6} alt={project.mainContactPage} />
+                                                <img  src={project?.lightModeImg7} alt={project.mainContactPage} />
+                                                <img  src={project?.lightModeImg8} alt={project.mainContactPage} />
                                             </div>
                                         </div>
                                     )}

@@ -70,7 +70,7 @@ const MainRoutes = (Props) => {
       <Route path="/main" element={<Main
       />} />
       <Route path="/animatednav" element={<AnimatedNav />} />
-      <Route path="/projectDetails/:id" element={<ProjectDetails isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />} />
+      <Route path="/projectDetails/:id" element={<ProjectDetails  isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />} />
     </Routes>
   )
 }
