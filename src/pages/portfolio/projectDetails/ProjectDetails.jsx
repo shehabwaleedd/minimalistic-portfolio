@@ -12,13 +12,26 @@ import { IoChevronBack } from "react-icons/io5";
 
 function ProjectDetails(Props) {
     const { id } = useParams();
-    const project = projectsData[id];
+    const post = projectsData[id];
     const navigate = useNavigate();
 
 
     const goToNextProject = () => {
         const nextProjectId = (parseInt(id) + 1) % projectsData.length; // Calculate the next project id by taking modulo of the total number of projects
         navigate(`/projectDetails/${nextProjectId}`);
+    };
+
+    const renderDetails = (title, img, alt) => {
+        return (
+            <div className="project__details_details">
+                <div className="project__details-text">
+                    <h2>{title}</h2>
+                </div>
+                <div className="project__details-img">
+                    <img src={img} alt={alt} />
+                </div>
+            </div>
+        );
     };
 
 
@@ -43,127 +56,87 @@ function ProjectDetails(Props) {
                         <div className="project__card_details">
                             <div className="project__image_container" style={{ width: "100vw", position: "relative", left: "-5rem", top: "2rem" }}>
                                 <img
-                                    src={project.image}
-                                    alt={project.title}
+                                    src={post.image}
+                                    alt={post.title}
                                 />
                             </div>
                             <div className="project__details_post-text" style={{ transform: "translateX(-4rem)", }}>
-                                <h1 style={{ fontSize: "1.5rem" }}>{project.title}</h1>
+                                <h1 style={{ fontSize: "1.5rem" }}>{post.title}</h1>
                                 <div className="project__details-brief" style={{ flexDirection: "column", width: "90vw", justifyContent: "center", alignContent: "center" }}>
                                     <div className="category__date">
                                         <div className="categoryy">
                                             <h2>Category: </h2>
                                             <div className="category__list">
-                                                <h2>{project.category[0]}</h2>
-                                                <h2>{project.category[1]}</h2>
-                                                <h2>{project.category[2]}</h2>
-                                                <h2>{project.category[3]}</h2>
+                                                <h2>{post.category[0]}</h2>
+                                                <h2>{post.category[1]}</h2>
+                                                <h2>{post.category[2]}</h2>
+                                                <h2>{post.category[3]}</h2>
                                             </div>
                                         </div>
                                         <div className="datee">
                                             <h2>Year: </h2>
                                             <div className="datee__list">
-                                                <h2>{project.date}</h2>
+                                                <h2>{post.date}</h2>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="project__details-comment" style={{ width: "90vw", paddintTop: "5rem", }}>
-                                        <p >{project.comment}</p>
+                                        <p >{post.comment}</p>
                                         <div className="project__links" style={{ width: "80vw" }}>
-                                            <div className={`project__link ${project.class}`}>
-                                                <a href={`${project.link}`} target="__blank" style={{ fontSize: "0.8rem" }}><BiRightArrowAlt />View The Website</a>
+                                            <div className={`project__link ${post.class}`}>
+                                                <a href={`${post.link}`} target="__blank" style={{ fontSize: "0.8rem" }}><BiRightArrowAlt />View The Website</a>
                                             </div>
                                             <div className="project__link">
-                                                <a href={`${project.link}`} target="__blank" style={{ fontSize: "0.8rem" }}><BiRightArrowAlt />View The Code</a>
+                                                <a href={`${post.link}`} target="__blank" style={{ fontSize: "0.8rem" }}><BiRightArrowAlt />View The Code</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="project__img_container" style={{ display: "flex", justifyContent: "center", alignContent: "center", alignItems: "center", flexDirection: "column", transform: "translateX(4rem)" }}>
-                                    {project?.mainTitle && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project.mainTitle}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project.mainTitleImg} alt={project.mainTitle} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.mainTitle2 && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.mainTitle2}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project?.mainTitleImg2} alt={project.mainTitle2} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.projectLogins && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.projectLogins}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project.projectLoginsImg} alt={project.projectLogins} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.projetTestimonials && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.projectTestimonials}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project?.projectTestimonialsImg} alt={project.mainTitle} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.mainProjectPage && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.mainProjectsPage}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project?.mainProjectsPageImg} alt={project.mainProjectsPage} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.mainAboutPage && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.mainAboutPage}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project?.mainAboutPageImg} alt={project.mainAboutPage} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.mainContactPage && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.mainContactPage}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project?.mainContactPageImg} alt={project.mainContactPage} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.mainDarkMode && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.mainDarkMode}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project?.mainDarkModeImg} alt={project.mainContactPage} />
-                                                <img src={project?.mainDarkModeImg2} alt={project.mainContactPage} />
-                                                <img src={project?.mainDarkModeImg3} alt={project.mainContactPage} />
-                                                <img src={project?.mainDarkModeImg4} alt={project.mainContactPage} />
-
-                                            </div>
-                                        </div>
-                                    )}
+                                {post.mainTitle && renderDetails(post.mainTitle, post.mainTitleImg, post.mainTitle)}
+                            {post.mainPageOnHover && renderDetails(post.mainPageOnHover, post.mainPageOnHoverImg, post.mainPageOnHover)}
+                            {post.mainTitle2 && renderDetails(post.mainTitle2, post.mainTitleImg2, post.mainTitle2)}
+                            {post.articleDetails && renderDetails(post.articleDetails, post.articleDetailsImg, post.articleDetails)}
+                            {post.editPage && renderDetails(post.editPage, post.editPageImg, post.editPage)}
+                            {post.createPost && renderDetails(post.createPost, post.createPostImg, post.createPost)}
+                            {post.mainTitleSubMenu && renderDetails(post.mainTitleSubMenu, post.mainTitleSubMenuImg, post.mainTitleSubMenu)}
+                            {post.projectLogins && renderDetails(post.projectLogins, post.projectLoginsImg, post.projectLogins)}
+                            {post.registerPage && renderDetails(post.registerPage, post.registerPageImg, post.registerPage)}
+                            {post.projetTestimonials && renderDetails(post.projetTestimonials, post.projetTestimonialsImg, post.projetTestimonials)}
+                            {post.mainProjectsPage && renderDetails(post.mainProjectsPage, post.mainProjectsPageImg, post.mainProjectsPage)}
+                            {post.accountPage && renderDetails(post.accountPage, post.accountPageImg, post.accountPage)}
+                            {post.mainAboutPage && renderDetails(post.mainAboutPage, post.mainAboutPageImg, post.mainAboutPage)}
+                            {post.mainContactPage && renderDetails(post.mainContactPage, post.mainContactPageImg, post.mainContactPage)}
+                            {post.mainDarkMode && (
+                                <div className="project__details_details">
+                                    <div className="project__details-text">
+                                        <h2>{post.mainDarkMode}</h2>
+                                    </div>
+                                    <div className="project__details-img">
+                                        <img src={post.mainDarkModeImg} alt={post.mainContactPage} />
+                                        <img src={post.mainDarkModeImg2} alt={post.mainContactPage} />
+                                        <img src={post.mainDarkModeImg3} alt={post.mainContactPage} />
+                                        <img src={post.mainDarkModeImg4} alt={post.mainContactPage} />
+                                    </div>
+                                </div>
+                            )}
+                            {post.lightMode && (
+                                <div className="project__details_details">
+                                    <div className="project__details-text">
+                                        <h2>{post.lightMode}</h2>
+                                    </div>
+                                    <div className="project__details-img">
+                                        <img src={post.lightModeImg1} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg2} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg3} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg4} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg5} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg6} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg7} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg8} alt={post.mainContactPage} />
+                                    </div>
+                                </div>
+                            )}
                                 </div>
                             </div>
                             <div className="project__next_project" style={{ width: "100%", left: "0", gap: "3rem", overflow: "visible" }}>
@@ -187,8 +160,8 @@ function ProjectDetails(Props) {
                             <div className="project__card_details">
                                 <div className="project__image_container">
                                     <img
-                                        src={project.image}
-                                        alt={project.title}
+                                        src={post.image}
+                                        alt={post.title}
                                     />
                                 </div>
                                 <div className="project__details_post-text">
@@ -196,208 +169,80 @@ function ProjectDetails(Props) {
                                         <IoChevronBack style={{ fontSize: "1.2rem", marginTop: "0.2rem", color: "var(--accent-color)" }} />
                                         <h2>Back To Projects</h2>
                                     </Link>
-                                    <h1>{project.title}</h1>
+                                    <h1>{post.title}</h1>
                                     <div className="project__details-brief">
                                         <div className="category__date">
                                             <div className="categoryy">
                                                 <h2>Category: </h2>
                                                 <div className="category__list">
-                                                    <h2>{project.category[0]}</h2>
-                                                    <h2>{project.category[1]}</h2>
-                                                    <h2>{project.category[2]}</h2>
-                                                    <h2>{project.category[3]}</h2>
+                                                    <h2>{post.category[0]}</h2>
+                                                    <h2>{post.category[1]}</h2>
+                                                    <h2>{post.category[2]}</h2>
                                                 </div>
                                             </div>
                                             <div className="datee">
                                                 <h2>Year: </h2>
                                                 <div className="datee__list">
-                                                    <h2>{project.date}</h2>
+                                                    <h2>{post.date}</h2>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="project__details-comment">
-                                            <p>{project.comment}</p>
+                                            <p>{post.comment}</p>
                                             <div className="project__links">
-                                                <div className={`project__link ${project.class}`}>
-                                                    <a href={`${project.link}`} target="__blank"><BiRightArrowAlt />View The Website</a>
+                                                <div className={`project__link ${post.class}`}>
+                                                    <a href={`${post.link}`} target="__blank"><BiRightArrowAlt />View The Website</a>
                                                 </div>
                                                 <div className="project__link">
-                                                    <a href={`${project.link}`} target="__blank"><BiRightArrowAlt />View The Code</a>
+                                                    <a href={`${post.link}`} target="__blank"><BiRightArrowAlt />View The Code</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    {project?.mainTitle && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project.mainTitle}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project.mainTitleImg} alt={project.mainTitle} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.mainPageOnHover && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.mainPageOnHover}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project?.mainPageOnHoverImg} alt={project.mainPageOnHover} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.mainTitle2 && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.mainTitle2}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project?.mainTitleImg2} alt={project.mainTitle2} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.articleDetails && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.articleDetails}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img  src={project.articleDetailsImg} alt={project.articleDetails} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.editPage && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.editPage}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img  src={project.editPageImg} alt={project.editPage} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.createPost && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.createPost}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project.createPostImg} alt={project.createPost} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.mainTitleSubMenu && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.mainTitleSubMenu}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project.mainTitleSubMenuImg} alt={project.mainTitleSubMenu} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.projectLogins && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.projectLogins}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img  src={project.projectLoginsImg} alt={project.projectLogins} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.registerPage && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.registerPage}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project.registerPageImg} alt={project.registerPage} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.projetTestimonials && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.projectTestimonials}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img  src={project?.projectTestimonialsImg} alt={project.mainTitle} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.mainProjectPage && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.mainProjectsPage}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img src={project?.mainProjectsPageImg} alt={project.mainProjectsPage} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.accountPage && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.accountPage}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img  src={project?.accountPageImg} alt={project.accountPage} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.mainAboutPage && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.mainAboutPage}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img  src={project?.mainAboutPageImg} alt={project.mainAboutPage} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.mainContactPage && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.mainContactPage}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img  src={project?.mainContactPageImg} alt={project.mainContactPage} />
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.mainDarkMode && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.mainDarkMode}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img  src={project?.mainDarkModeImg} alt={project.mainContactPage} />
-                                                <img  src={project?.mainDarkModeImg2} alt={project.mainContactPage} />
-                                                <img  src={project?.mainDarkModeImg3} alt={project.mainContactPage} />
-                                                <img  src={project?.mainDarkModeImg4} alt={project.mainContactPage} />
-
-                                            </div>
-                                        </div>
-                                    )}
-                                    {project?.lightMode && (
-                                        <div className="project__details_details">
-                                            <div className="project__details-text">
-                                                <h2>{project?.lightMode}</h2>
-                                            </div>
-                                            <div className="project__details-img">
-                                                <img  src={project?.lightModeImg1} alt={project.mainContactPage} />
-                                                <img  src={project?.lightModeImg2} alt={project.mainContactPage} />
-                                                <img  src={project?.lightModeImg3} alt={project.mainContactPage} />
-                                                <img  src={project?.lightModeImg4} alt={project.mainContactPage} />
-                                                <img  src={project?.lightModeImg5} alt={project.mainContactPage} />
-                                                <img  src={project?.lightModeImg6} alt={project.mainContactPage} />
-                                                <img  src={project?.lightModeImg7} alt={project.mainContactPage} />
-                                                <img  src={project?.lightModeImg8} alt={project.mainContactPage} />
-                                            </div>
-                                        </div>
-                                    )}
+                                    {post.mainTitle && renderDetails(post.mainTitle, post.mainTitleImg, post.mainTitle)}
+                            {post.mainPageOnHover && renderDetails(post.mainPageOnHover, post.mainPageOnHoverImg, post.mainPageOnHover)}
+                            {post.mainTitle2 && renderDetails(post.mainTitle2, post.mainTitleImg2, post.mainTitle2)}
+                            {post.articleDetails && renderDetails(post.articleDetails, post.articleDetailsImg, post.articleDetails)}
+                            {post.editPage && renderDetails(post.editPage, post.editPageImg, post.editPage)}
+                            {post.createPost && renderDetails(post.createPost, post.createPostImg, post.createPost)}
+                            {post.mainTitleSubMenu && renderDetails(post.mainTitleSubMenu, post.mainTitleSubMenuImg, post.mainTitleSubMenu)}
+                            {post.projectLogins && renderDetails(post.projectLogins, post.projectLoginsImg, post.projectLogins)}
+                            {post.registerPage && renderDetails(post.registerPage, post.registerPageImg, post.registerPage)}
+                            {post.projetTestimonials && renderDetails(post.projetTestimonials, post.projetTestimonialsImg, post.projetTestimonials)}
+                            {post.mainProjectsPage && renderDetails(post.mainProjectsPage, post.mainProjectsPageImg, post.mainProjectsPage)}
+                            {post.accountPage && renderDetails(post.accountPage, post.accountPageImg, post.accountPage)}
+                            {post.mainAboutPage && renderDetails(post.mainAboutPage, post.mainAboutPageImg, post.mainAboutPage)}
+                            {post.mainContactPage && renderDetails(post.mainContactPage, post.mainContactPageImg, post.mainContactPage)}
+                            {post.mainDarkMode && (
+                                <div className="project__details_details">
+                                    <div className="project__details-text">
+                                        <h2>{post.mainDarkMode}</h2>
+                                    </div>
+                                    <div className="project__details-img">
+                                        <img src={post.mainDarkModeImg} alt={post.mainContactPage} />
+                                        <img src={post.mainDarkModeImg2} alt={post.mainContactPage} />
+                                        <img src={post.mainDarkModeImg3} alt={post.mainContactPage} />
+                                        <img src={post.mainDarkModeImg4} alt={post.mainContactPage} />
+                                    </div>
+                                </div>
+                            )}
+                            {post.lightMode && (
+                                <div className="project__details_details">
+                                    <div className="project__details-text">
+                                        <h2>{post.lightMode}</h2>
+                                    </div>
+                                    <div className="project__details-img">
+                                        <img src={post.lightModeImg1} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg2} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg3} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg4} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg5} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg6} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg7} alt={post.mainContactPage} />
+                                        <img src={post.lightModeImg8} alt={post.mainContactPage} />
+                                    </div>
+                                </div>
+                            )}
                                 </div>
                                 <div className="project__next_project">
                                     <div className="menu-item-wrapper">

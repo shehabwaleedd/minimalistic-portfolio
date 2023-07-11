@@ -143,8 +143,6 @@ const projectsData = [
     editPageImg: BlogEditPage,
     createPost: "Create Post",
     createPostImg: BlogCreatePost,
-    subMenu: "Sub Menu",
-    subMenuImg: BlogSubMenu,
     accountPage: "Account Page",
     accountPageImg: BlogAccount,
     mainAboutPage: "About Page",
@@ -169,7 +167,7 @@ const projectsData = [
     title: "Moaaz Askaar",
     category: ["Branding", "Web Design", "UI/UX Design"],
     website: "https://cairobrews.vercel.app/",
-    link: "https://github.com/shehabwaleedd/liquor",
+    link: "https://github.com/shehabwaleedd/moaaz-askaar",
     date: "2023, July",
     comment: "I made this website using HTML and CSS, I was trying to make it as close as possible to the original twitter website, I used flexbox to make it responsive"
   },
