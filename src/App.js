@@ -12,11 +12,10 @@ import { Routes, Route } from 'react-router-dom';
 import ProjectDetails from './pages/portfolio/projectDetails/ProjectDetails';
 import AboutPage from './pages/about/About';
 import Portfolio from './pages/portfolio/Portfolio';
-import { BlogHome } from './navItems/siteHome/BlogHome';
 import Contact from './pages/contact/Contact';
 import Main from './pages/home/main/Main';
 import { HomeAnimations } from './animation/HomeAnimations';
-
+import Home from './pages/home/Home';
 
 export const ThemeContext = createContext(null);
 
@@ -116,7 +115,7 @@ function App() {
             <Routes location={location} key={location.pathname} >
               <Route path='/about' element={<AboutPage isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
               <Route path='/projects' element={<Portfolio isMobile={isMobile} setIsMobile={setIsMobile} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
-              <Route path="/" element={<BlogHome isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
+              <Route path="/" element={<Home isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
               <Route path="/contact" element={<Contact isMobile={isMobile} setIsMobile={setIsMobile} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
               <Route path="/main" element={<Main />} />
               <Route path="/animatednav" element={<AnimatedNav />} />

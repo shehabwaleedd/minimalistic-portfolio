@@ -7,7 +7,7 @@ import i18next from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import HttpApi from 'i18next-http-backend'
 import LanguageDetector from 'i18next-browser-languagedetector'
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 
@@ -36,7 +36,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
       <Router>
-        <App />
+        <Routes>
+          <Route path="/*" element={<App />} />
+        </Routes>
       </Router>
     </React.StrictMode>
 );

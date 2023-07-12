@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { BiRightArrowAlt } from 'react-icons/bi';
 import DropDownMenu from '../../../navItems/animatedNav/dropDownMenu/DropDownMenu';
+import { motion } from 'framer-motion';
 
 const Main = (Props) => {
 
@@ -75,7 +76,7 @@ const Main = (Props) => {
                     </div>
                 </div>
             ) :  (
-                <div className="main__container container grid">
+                <motion.div className="main__container container grid" >
                     <div className="main__content" style={{ marginTop: Props.navOpen ? "0rem" : "0" }}>
                         <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "4rem" : "2.8rem" }} className="main__titlee">{t("hey")}{t("my__name_im")} <span style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "4rem" : "2.8rem" }} className="main__title-color">{t("my__name-first")}</span> <span style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "4rem" : "2.8rem" }} > {t("my__name-last")}</span></h1>
                         <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "4rem" : "2.8rem" }} className="main__subtitle">{t("my__intro")}</h1>
@@ -97,7 +98,7 @@ const Main = (Props) => {
                             </p>
                         </Link>
                     </div>
-                </div>
+                </motion.div>
             )
             }
         </section>

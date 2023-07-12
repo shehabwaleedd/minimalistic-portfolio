@@ -14,6 +14,8 @@ function ProjectDetails(Props) {
     const { id } = useParams();
     const post = projectsData[id];
     const navigate = useNavigate();
+    const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
+
 
 
     const goToNextProject = () => {
@@ -36,15 +38,7 @@ function ProjectDetails(Props) {
 
 
     useEffect(() => {
-        console.log("ProjectDetails component mounted");
-
-        // Scroll to the top of the page
         window.scrollTo(0, 0);
-
-        // Clean-up function
-        return () => {
-            console.log("ProjectDetails component unmounted");
-        };
     }, []);
 
     return (
@@ -154,7 +148,7 @@ function ProjectDetails(Props) {
                 </>
             ) : (
                 <AnimatePresence>
-                    <motion.div key={id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} exit={{ opacity: 0 }}>
+                    <motion.div key={id} initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 ,transition: { delay: 1.2, duration: 1, ease: [0.42, 0, 0.58, 1]}}} exit={{ opacity: 0 ,transition: { delay: 0.2 }, duration: 1, ease: [0.42, 0, 0.58, 1]}}>
                         <ScrollAnimation />
                         <div className="project__details container">
                             <div className="project__card_details">

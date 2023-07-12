@@ -23,10 +23,10 @@ const Portfolio = (Props) => {
 
   const { t } = useTranslation();
 
-  useEffect(() => {
-    // PortfolioAnimations();
-    runAnimation();
-  }, []);
+  // useEffect(() => {
+  //   // PortfolioAnimations();
+  //   runAnimation();
+  // }, []);
 
   let screen = useRef(null);
   let body = useRef(null);
@@ -93,7 +93,7 @@ const Portfolio = (Props) => {
           <div className="projects__load-container">
             <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
           </div>
-          <motion.section className="portfolio" ref={(el) => (body = el)}  initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: 2 }} exit={{ opacity: 0, transitionDelay: 1}}>
+          <motion.section className="portfolio" ref={(el) => (body = el)}  initial={{ opacity: 0}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.7, duration: 1, ease: [0.42, 0, 0.58, 1]}}} transition={{ duration: 2 }} exit={{ opacity: 0, transition: { delay: 1,}}}>
             <motion.div className="portfolio__container" >
               <motion.div className="menu">
                 <motion.div className="menu__item-image_wrapper">

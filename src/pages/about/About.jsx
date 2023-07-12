@@ -51,10 +51,10 @@ const AboutPage = (Props) => {
             <div className="load-container">
               <div className="load-screen" ref={(el) => (screen = el)}></div>
             </div>
-            <section ref={(el) => (body = el)} className="about section" id='about' >
+            <motion.section ref={(el) => (body = el)} className="about section" id='about' >
               <Model isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} isAbout={Props.isAbout} setIsAbout={Props.setIsAbout} imageDetails={imageDetails} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
               <MyStack isMobile={Props.isMobile} setIsMobile={Props.setIsMobile}/>
-            </section>
+            </motion.section>
       </motion.div>
   )
 }
