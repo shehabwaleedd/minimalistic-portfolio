@@ -1,4 +1,4 @@
-import './App.scss';
+import './App.css';
 import { useState, useEffect } from 'react';
 import Toggle from './components/nav/darkmode/Toggle';
 import { createContext } from 'react';
