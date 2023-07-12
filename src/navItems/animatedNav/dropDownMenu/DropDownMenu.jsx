@@ -111,16 +111,16 @@ const DropDownMenu = (Props) => {
                     }}
                   >
                     <div className="language__dropdown-link" onClick={handleEnglishClick}>
-                      <span className="language__text">en</span>
+                      <span className="language__text" style={{color: Props.navOpen? "var(--overlay-color)" : "var(--title-color)"}}>en</span>
                     </div>
                     <div className="language__dropdown-link" onClick={handleGermanClick}>
-                      <span className="language__text">de</span>
+                      <span className="language__text" style={{color: Props.navOpen? "var(--overlay-color)" : "var(--title-color)"}}>de</span>
                     </div>
                     <div className="language__dropdown-link" onClick={handleFrenchClick}>
-                      <span className="language__text">fr</span>
+                      <span className="language__text" style={{color: Props.navOpen? "var(--overlay-color)" : "var(--title-color)"}}>fr</span>
                     </div>
                     <div className="language__dropdown-link" onClick={handleArabicClick}>
-                      <span className="language__text">ar</span>
+                      <span className="language__text" style={{color: Props.navOpen? "var(--overlay-color)" : "var(--title-color)"}}>ar</span>
                     </div>
                   </motion.div>
                 )}
