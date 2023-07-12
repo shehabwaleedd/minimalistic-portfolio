@@ -147,7 +147,7 @@ function ProjectDetails(Props) {
                     </div>
                 </>
             ) : (
-                <AnimatePresence>
+                <AnimatePresence mode="wait">
                     <motion.div key={id} initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 ,transition: { delay: 1.2, duration: 1, ease: [0.42, 0, 0.58, 1]}}} exit={{ opacity: 0 ,transition: { delay: 0.2 }, duration: 1, ease: [0.42, 0, 0.58, 1]}}>
                         <ScrollAnimation />
                         <div className="project__details container">

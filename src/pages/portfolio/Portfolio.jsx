@@ -23,10 +23,10 @@ const Portfolio = (Props) => {
 
   const { t } = useTranslation();
 
-  // useEffect(() => {
-  //   // PortfolioAnimations();
-  //   runAnimation();
-  // }, []);
+  useEffect(() => {
+    // PortfolioAnimations();
+    runAnimation();
+  }, []);
 
   let screen = useRef(null);
   let body = useRef(null);
