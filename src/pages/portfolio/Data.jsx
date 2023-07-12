@@ -23,7 +23,6 @@ import BlogPageOnHover from "../../assets/ProjectDetails/Blog/Blog__mainPageOnHo
 import BlogArticleDetails from "../../assets/ProjectDetails/Blog/Blog__articleDetails.png"
 import BlogEditPage from "../../assets/ProjectDetails/Blog/Blog__editPage.png"
 import BlogCreatePost from "../../assets/ProjectDetails/Blog/Blog__createPost.png"
-import BlogSubMenu from "../../assets/ProjectDetails/Blog/Blog__subMenu.png"
 import BlogAccount from "../../assets/ProjectDetails/Blog/Blog__AccountPage.png"
 import BlogAbout from "../../assets/ProjectDetails/Blog/Blog__aboutPage.png"
 import BlogLogin from "../../assets/ProjectDetails/Blog/Blog__logInPage.png"

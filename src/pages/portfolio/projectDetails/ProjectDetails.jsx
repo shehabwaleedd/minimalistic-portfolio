@@ -4,7 +4,6 @@ import projectsData from "../Data";
 import "./ProjectDetails.scss";
 import ScrollAnimation from "../../../animation/ScrollAnimation/ScrollAnimation";
 import { BiRightArrowAlt } from "react-icons/bi";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
@@ -14,7 +13,6 @@ function ProjectDetails(Props) {
     const { id } = useParams();
     const post = projectsData[id];
     const navigate = useNavigate();
-    const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
 
 

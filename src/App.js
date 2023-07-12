@@ -80,17 +80,17 @@ function App() {
     } else {
       document.body.classList.remove('no-scroll');
     }
-  }, [location]);
+  }, [isMobile, location]);
 
   useEffect(() => {
     const notHome = location.pathname === '/';
     setMenuVisible(notHome);
-  }, []);
+  }, [location.pathname]);
 
   useEffect(() => {
     const isAbout = location.pathname === '/about';
     setIsAbout(isAbout);
-  }, []);
+  }, [location.pathname]);
 
 
 
