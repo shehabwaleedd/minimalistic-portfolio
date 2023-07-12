@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 import Socials from '../../components/socials/Socials';
 import { gsap} from "gsap";
 import Footer from '../footer/Footer';
+import { motion } from 'framer-motion';
 
 
 const Contact = (Props) => {
@@ -105,10 +106,15 @@ const Contact = (Props) => {
       delay: 1,
     });
   };
-  useEffect(() => {
-    runAnimation();
-  }, []);
 
+  useEffect(() => {
+    const hasContactShown = sessionStorage.getItem('hasContactShown');
+
+    if (!hasContactShown) {
+      runAnimation();
+      sessionStorage.setItem('hasContactShown', 'true');
+    }
+  }, []);
 
   return (
     <React.Fragment>
@@ -219,11 +225,11 @@ const Contact = (Props) => {
           <Footer isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
         </>
       ) : (
-        <>
+        <motion.div  initial={{ opacity: 0, y: 100}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.7, duration: 1, ease: [0.42, 0, 0.58, 1]}}} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: "easeInOut" }}}>
           <div className="let__contact" style={{ paddingTop: Props.language === "fr" ? "5rem" : "1rem" }}>
             <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "8rem" : "6rem", textTransform: Props.language === "fr" || Props.language === "en" || Props.language === "de" ? "uppercase" : "lowercase" }}>{t("contact__lets")}</h1>
           </div>
-          <section className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: Props.language === "fr" ? "80vh" : "60vh" }}>
+          <motion.section className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: Props.language === "fr" ? "80vh" : "60vh" }} >
             <div className="contact__container container grid" style={{ flexDirection: Props.language === "ar" ? "row-reverse" : "column", display: Props.language === "ar" ? "flex" : "" }}>
               <div className="contact__content">
                 <div className="contact__details">
@@ -318,9 +324,9 @@ const Contact = (Props) => {
                 </form>
               </div>
             </div>
-          </section>
+          </motion.section>
           <Footer isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
-        </>
+        </motion.div>
       )}
     </React.Fragment>
   )

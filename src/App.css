@@ -133,6 +133,8 @@
 }
 
 :root {
+	--text-color: hsl(var(--hue), var(--sat), 60%);
+	--title-color: hsl(var(--hue), var(--sat), 39%);
 	--header-height: 3rem;
 	--hue: 0;
 	--sat: 0%;
