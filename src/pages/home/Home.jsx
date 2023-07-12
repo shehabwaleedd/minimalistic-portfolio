@@ -1,13 +1,14 @@
 import React from 'react';
 import Main from './main/Main';
 import './Home.css';
+import { motion } from 'framer-motion';
 
 const Home = (Props) => {
 
 
 
   return (
-    <section className="homeee">
+    <motion.section className="homeee" >
       <div className="containererr"></div>
       {Props.isMobile ? (
         <div className="titles">
@@ -36,7 +37,7 @@ const Home = (Props) => {
           setLanguageExpanded={Props.setLanguageExpanded}
         />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

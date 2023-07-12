@@ -24,8 +24,12 @@ const Portfolio = (Props) => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    // PortfolioAnimations();
-    runAnimation();
+    const hasProjectsShown = sessionStorage.getItem('hasProjectsShown');
+
+    if (!hasProjectsShown) {
+      runAnimation();
+      sessionStorage.setItem('hasProjectsShown', 'true');
+    }
   }, []);
 
   let screen = useRef(null);
@@ -99,7 +103,7 @@ const Portfolio = (Props) => {
                 <motion.div className="menu__item-image_wrapper">
                   <div className="menu__item-image_inner">
                     {projectsData.map((image) => (
-                      <motion.div className={`image-wrapper ${image.classProject}`} key={image.id}>
+                      <motion.div className={`image-wrapper ${image.classProject}`} key={image.id} >
                         <img
                           src={image.image}
                           alt={image.title}

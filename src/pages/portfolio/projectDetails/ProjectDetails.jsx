@@ -44,7 +44,7 @@ function ProjectDetails(Props) {
             {Props.isMobile ? (
                 <>
                     <ScrollAnimation />
-                    <div key={id} className="project__details" style={{ width: "100vw", touchAction: "pan-y" }}>
+                    <div className="project__details" style={{ width: "100vw", touchAction: "pan-y" }}>
                         <div className="project__card_details">
                             <div className="project__image_container" style={{ width: "100vw", position: "relative", left: "-5rem", top: "2rem" }}>
                                 <img
@@ -145,8 +145,7 @@ function ProjectDetails(Props) {
                     </div>
                 </>
             ) : (
-                <AnimatePresence mode="wait">
-                    <motion.div key={id} initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 ,transition: { delay: 1.2, duration: 1, ease: [0.42, 0, 0.58, 1]}}} exit={{ opacity: 0 ,transition: { delay: 0.2 }, duration: 1, ease: [0.42, 0, 0.58, 1]}}>
+                    <motion.div initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 ,transition: { delay: 1.2, duration: 1, ease: [0.42, 0, 0.58, 1]}}} exit={{ opacity: 0, y: -500 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: "easeInOut" }}}>
                         <ScrollAnimation />
                         <div className="project__details container">
                             <div className="project__card_details">
@@ -254,7 +253,6 @@ function ProjectDetails(Props) {
                             </div>
                         </div>
                     </motion.div>
-                </AnimatePresence>
             )}
         </>
     );

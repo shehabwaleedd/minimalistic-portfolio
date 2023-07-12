@@ -1,0 +1,243 @@
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    background: var(--body-color);
+    transform: translateY(-20%);
+    &__container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        h1 {
+            font-size: 3rem;
+            font-weight: 400;
+            color: var(--title-color);
+            font-family: "Posterama";
+            letter-spacing: 0.2rem;
+        }
+        h1::selection {
+            color: var(--container-color);
+            background-color: var(--accent-color);
+        }
+        p {
+            font-size: 1rem;
+            width: 100%;
+            color: var(--title-color);
+            margin-bottom: 1rem;
+            font-family: "Posterama";
+            letter-spacing: 0.1rem;
+        }
+    }
+    &__titlee,
+    &__subtitle {
+        font-size: 5rem;
+        display: inline-block;
+        vertical-align: middle;
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+
+
+        span {
+            letter-spacing: 0.6rem;
+        }
+    }
+    &__subcontent {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        p {
+            font-size: 1rem;
+            width: 100%;
+            color: var(--title-color);
+            margin-bottom: 1rem;
+            font-family: "Posterama";
+            letter-spacing: 0.1rem;
+        }
+    }
+    &__description {
+        position: relative;
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    &__content span {
+        font-size: 3rem;
+        font-weight: 400;
+        font-family: "Posterama";
+        color: var(--accent-color-darker);
+    }
+    &__links {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        line-height: 1rem;
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--title-color);
+            letter-spacing: 0.2rem;
+            font-family: "Posterama";
+        }
+    }
+    &__button {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        i {
+            font-size: 0.9rem;
+            color: var(--title-color);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+            text-align: center;
+            margin-top: 1.4rem;
+        }
+    }
+    .button1 {
+        p {
+            display: flex;
+            gap: 0.2rem;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 1.5rem;
+            bottom: 0;
+            width: 65%;
+            height: 2px;
+            background-color: var(--text-color);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        &:hover::after {
+            transform: scaleX(1);
+        }
+        &:hover {
+            p {
+                color: var(--title-color);
+            }
+            p>i {
+                color: var(--title-color);
+            }
+        }
+    }
+    .button2 {
+        p {
+            display: flex;
+            gap: 0.2rem;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 1.5rem;
+            bottom: 0;
+            width: 65%;
+            height: 2px;
+            background-color: var(--text-color);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        &:hover::after {
+            transform: scaleX(1);
+        }
+        &:hover {
+            p {
+                color: var(--title-color);
+            }
+
+            p>i {
+                color: var(--title-color);
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        &__titlee {
+            font-size: 3.5rem;
+        }
+        &__subtitle {
+            font-size: 2.5rem;
+        }
+        &__description {
+            width: 80%;
+        }
+        &__container h1 {
+            font-size: 2rem;
+        }
+        &__container p {
+            font-size: 0.9rem;
+        }
+        &__links p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 436px) {
+        &__container {
+            padding-top: 5rem;
+        }
+        &__container h1 {
+            width: 100%;
+            letter-spacing: 0.3rem;
+            font-size: 1.5rem;
+        }
+        &__content span {
+            letter-spacing: 0.3rem;
+            font-size: 1.5rem;
+        }
+        & {
+            width: 100%;
+        }
+        &__subcontent p {
+            width: 90.8%;
+            font-size: 0.77rem;
+            padding-left: 0.6rem;
+            letter-spacing: 0;
+        }
+        &__links {
+            position: relative;
+            width: 99.1%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            gap: 0rem;
+            line-height: 1rem;
+            p {
+                width: 80%;
+                font-size: 0.8rem;
+                padding: 0 1rem;
+                letter-spacing: normal;
+                
+            }
+            i {
+                font-size: 0.7rem;
+            }
+        }
+    }
+}

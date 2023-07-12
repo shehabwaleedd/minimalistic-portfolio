@@ -77,11 +77,17 @@
 	--title-color-dark: hsl(var(--hue), var(--sat), 80%);
 	--text-color: hsl(var(--hue), var(--sat), 65%);
 	--container-color: #1b1918;
+	--box-shadow-img: 0 0 0 9px rgba(254, 254, 254, 1);
 	--rim-color: rgba(254, 254, 254, 0.9);
 	--nav-color: wheat;
 	--accent-color: #f1dbb2;
+	--box-shadow: 1px 0px 19px -1px rgba(245, 222, 179, 0.75);
+	--webkit-shadow: 1px 0px 19px -1px rgba(245, 222, 179, 0.75);
+	--moz-box-shadow: 1px 0px 19px -1px rgba(245, 222, 179, 0.75);
+	--insider-color: #373737;
 	--accent-color-darker: #ffe5b9;
 	--border-color: #c2b08f;
+	--blog-text-color: hsl(var(--hue), var(--sat), 65%);
 	--progressive-bar-color: #d9c39d;
 	--stack-accent-color: #fafafa;
 	--stack-icons-background-color: #1e1e1e;
@@ -105,8 +111,13 @@
 	--nav-color: #698269;
 	--rim-color: #212121;
 	--accent-color: #4E6C50;
+	--box-shadow: -4px 2px 20px 1px rgba(63, 63, 63, 0.3);
+	--webkit-shadow: -4px 6px 31px 0px rgba(93, 110, 96, 0.6);
+	--moz-box-shadow: -4px 6px 31px 0px rgba(93, 110, 96, 0.6);
+	--insider-color: #fff2e0;
 	--accent-color-darker: #244224;
 	--border-color: #698269;
+	--blog-text-color: hsl(var(--hue), var(--sat), 45%);
 	--progressive-bar-color: #6f988a;
 	--stack-accent-color: #fafafa;
 	--stack-icons-background-color: #1e1e1e;
@@ -150,6 +161,7 @@
 	--z-tooltip: 10;
 	--z-fixed: 100;
 	--z-modal: 1000;
+	background-color: #eee7e1;
 }
 #light, #dark {
 	background-color: var(--body-color);

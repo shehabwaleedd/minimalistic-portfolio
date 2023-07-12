@@ -13,7 +13,7 @@ import ProjectDetails from './pages/portfolio/projectDetails/ProjectDetails';
 import AboutPage from './pages/about/About';
 import Portfolio from './pages/portfolio/Portfolio';
 import Contact from './pages/contact/Contact';
-import Main from './pages/home/main/Main';
+
 import { HomeAnimations } from './animation/HomeAnimations';
 import Home from './pages/home/Home';
 
@@ -62,7 +62,7 @@ function App() {
   // }, []);
 
   useEffect(() => {
-    const isHomePage = location.pathname === '/' || location.pathname === '/about'; // Assuming '/' is the home page route
+    const isHomePage = location.pathname === '/' || location.pathname === '/about';
 
     if (isHomePage) {
       const hasAnimationShown = sessionStorage.getItem('hasAnimationShown');
@@ -111,15 +111,13 @@ function App() {
         <AnimatedNav isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
         <Cursor />
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
-          <AnimatePresence>
+          <AnimatePresence mode='wait'>
             <Routes location={location} key={location.pathname} >
-              <Route path='/about' element={<AboutPage isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
-              <Route path='/projects' element={<Portfolio isMobile={isMobile} setIsMobile={setIsMobile} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
-              <Route path="/" element={<Home isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
-              <Route path="/contact" element={<Contact isMobile={isMobile} setIsMobile={setIsMobile} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
-              <Route path="/main" element={<Main />} />
-              <Route path="/animatednav" element={<AnimatedNav />} />
-              <Route path="/projectDetails/:id" element={<ProjectDetails isMobile={isMobile} setIsMobile={setIsMobile} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
+              <Route path='/about' key={location.pathname} element={<AboutPage isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
+              <Route path='/projects' key={location.pathname} element={<Portfolio isMobile={isMobile} setIsMobile={setIsMobile} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
+              <Route path="/" element={<Home key={location.pathname} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
+              <Route path="/contact" element={<Contact key={location.pathname} isMobile={isMobile} setIsMobile={setIsMobile} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
+              <Route path="/projectDetails/:id" element={<ProjectDetails key={location.pathname} isMobile={isMobile} setIsMobile={setIsMobile} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
             </Routes>
           </AnimatePresence>
           <ScrollUp />
