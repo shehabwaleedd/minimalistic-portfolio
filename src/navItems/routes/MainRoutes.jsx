@@ -9,7 +9,7 @@ import Main from '../../pages/home/main/Main';
 import AnimatedNav from '../animatedNav/AnimatedNav';
 import ProjectDetails from '../../pages/portfolio/projectDetails/ProjectDetails';
 import { useEffect } from 'react';
-import { HomeAnimations } from '../../animation/HomeAnimations';
+
 
 
 const MainRoutes = (Props) => {
@@ -18,59 +18,10 @@ const MainRoutes = (Props) => {
 
 
 
-  useEffect(() => {
-    const isHomePage = location.pathname === '/' || location.pathname === '/about'; // Assuming '/' is the home page route
-
-    if (isHomePage) {
-      const hasAnimationShown = localStorage.getItem('hasAnimationShown');
-
-      if (!hasAnimationShown) {
-        HomeAnimations();
-        localStorage.setItem('hasAnimationShown', 'true');
-      }
-
-      if(Props.isMobile) {
-        document.body.classList.remove('no-scroll');
-      } else {
-        document.body.classList.add('no-scroll')
-      }
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
-  }, [location]);
-
-  useEffect(() => {
-    const notHome = location.pathname === '/';
-    Props.setMenuVisible(notHome);
-  }, []);
-
-  useEffect(() => {
-    const isAbout = location.pathname === '/about';
-    Props.setIsAbout(isAbout);
-  }, []);
-
 
   return (
     <Routes location={location} key={location.pathname} >
-      <Route path='/mystack' element={<MyStack shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />} />
-      <Route path='/about' element={<AboutPage isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} isAbout={Props.isAbout} setIsAbout={Props.setIsAbout} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />} />
-      <Route path='/projects' element={<Portfolio isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />} />
-      <Route path="/" element={<BlogHome isMobile={Props.isMobile}
-        setIsMobile={Props.setIsMobile}
-        isAbout={Props.isAbout}
-        setIsAbout={Props.setIsAbout}
-        navOpen={Props.navOpen}
-        language={Props.language}
-        setLanguage={Props.setLanguage}
-        languageExpanded={Props.languageExpanded}
-        setLanguageExpanded={Props.setLanguageExpanded}
-        isIphone={Props.isIphone}
-        setIsIphone={Props.setIsIphone} />} />
-      <Route path="/contact" element={<Contact isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />} />
-      <Route path="/main" element={<Main
-      />} />
-      <Route path="/animatednav" element={<AnimatedNav />} />
-      <Route path="/projectDetails/:id" element={<ProjectDetails  isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />} />
+
     </Routes>
   )
 }

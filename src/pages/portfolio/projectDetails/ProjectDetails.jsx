@@ -154,7 +154,7 @@ function ProjectDetails(Props) {
                 </>
             ) : (
                 <AnimatePresence>
-                    <motion.div key={id} initial={{ opacity: 0, y: -110 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0 }}>
+                    <motion.div key={id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} exit={{ opacity: 0 }}>
                         <ScrollAnimation />
                         <div className="project__details container">
                             <div className="project__card_details">

@@ -26,12 +26,12 @@ function Transition({ timeline }) {
 
     return (
         <>
-        <div>
-            <div className="transition__effect" ref={trans}></div>
-        </div>
-        <div>
-        <div className="transition__effect2" ref={trans2}></div>
-        </div>
+            <div>
+                <div className="transition__effect" ref={trans}></div>
+            </div>
+            <div>
+                <div className="transition__effect2" ref={trans2}></div>
+            </div>
         </>
     );
 }

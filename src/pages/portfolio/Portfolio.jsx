@@ -93,7 +93,7 @@ const Portfolio = (Props) => {
           <div className="projects__load-container">
             <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
           </div>
-          <motion.section className="portfolio" ref={(el) => (body = el)} >
+          <motion.section className="portfolio" ref={(el) => (body = el)}  initial={{ opacity: 0}} animate={{ opacity: 1 }} transition={{ duration: 2 }} exit={{ opacity: 0, transitionDelay: 1}}>
             <motion.div className="portfolio__container" >
               <motion.div className="menu">
                 <motion.div className="menu__item-image_wrapper">
@@ -109,19 +109,19 @@ const Portfolio = (Props) => {
                     ))}
                   </div>
                 </motion.div>
-                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left" }}  initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0, y: -100 }}>
+                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left" }}  initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0 }}>
                   <motion.div className="workk__work">
                     <motion.h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "25rem" : "0" }}>{t("portfolio__work_title")}</motion.h1>
                   </motion.div>
                   <AnimatePresence mode='wait'>
                     <motion.div className="scrollbarr" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0, y: -100 }}>
                       {projectsData.map((item, index) => (
-                        <motion.div className="work__title" key={index} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}  initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100}}>
-                          <motion.div className="menu-item-wrapper"  initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0, y: -100}}>
+                        <motion.div className="work__title" key={index} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}  initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} exit={{ opacity: 0,}}>
+                          <motion.div className="menu-item-wrapper"  initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0}}>
                             <motion.div className="menu-arrow">
                               <BiRightArrowAlt style={{ fontSize: "2.3rem", marginTop: "1.75rem", color: "var(--title-color)" }} />
                             </motion.div>
-                            <motion.div className="menu-text"  initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0, y: -100 }}>
+                            <motion.div className="menu-text"  initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0}}>
                               <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
                               <motion.div className="categories">
                                 <motion.p>{item.category[0]}</motion.p>
