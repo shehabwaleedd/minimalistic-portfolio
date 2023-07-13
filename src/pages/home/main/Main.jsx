@@ -54,15 +54,15 @@ const Main = (Props) => {
                 // Mobile view
                 <div className="main__container container grid">
                     <div className="main__content" style={{ marginTop: Props.navOpen ? "5rem" : "0", }}>
-                        <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }} className="main__titlee">{t("hey")}{t("my__name_im")} 
-                            <span style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }} className="main__title-color">
+                        <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.1rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }} className="main__titlee">{t("hey")}{t("my__name_im")} 
+                            <span style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.1rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }} className="main__title-color">
                                 {t("my__name-first")}
                             </span>
-                            <span style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }}>
+                            <span style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.1rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }}>
                                 {t("my__name-last")}
                             </span>
                         </h1>
-                        <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }} className="main__subtitle">
+                        <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.1rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }} className="main__subtitle">
                             {t("my__intro")
                         }</h1>
                     </div>
