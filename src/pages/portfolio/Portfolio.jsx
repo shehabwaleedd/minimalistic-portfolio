@@ -69,9 +69,9 @@ const Portfolio = (Props) => {
             <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
           </div>
           <motion.section className="portfolio" ref={(el) => (body = el)} initial={{ opacity: 0}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.7, duration: 1, ease: [0.42, 0, 0.58, 1]}}} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: "easeInOut" }}}>
-            <div className="portfolio__container" >
+            <div className="portfolio__container">
               <div className="menu">
-                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left" }} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: "easeInOut" }}}>
+                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left", }} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: "easeInOut" }}}>
                   <div className="workk__work">
                     <h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "15rem" : "0" }}>{t("portfolio__work_title")}</h1>
                   </div>

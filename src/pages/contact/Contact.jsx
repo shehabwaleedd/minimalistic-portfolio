@@ -225,11 +225,11 @@ const Contact = (Props) => {
           <Footer isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
         </>
       ) : (
-        <motion.div  initial={{ opacity: 0, y: 100}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.7, duration: 1, ease: [0.42, 0, 0.58, 1]}}} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: "easeInOut" }}}>
+        <motion.section className='contact__section' initial={{ opacity: 0, y: 100}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.7, duration: 1, ease: [0.42, 0, 0.58, 1]}}} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: "easeInOut" }}}>
           <div className="let__contact" style={{ paddingTop: Props.language === "fr" ? "5rem" : "1rem" }}>
             <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "8rem" : "6rem", textTransform: Props.language === "fr" || Props.language === "en" || Props.language === "de" ? "uppercase" : "lowercase" }}>{t("contact__lets")}</h1>
           </div>
-          <motion.section className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: Props.language === "fr" ? "80vh" : "60vh" }} >
+          <motion.div className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: Props.language === "fr" ? "80vh" : "60vh" }} >
             <div className="contact__container container grid" style={{ flexDirection: Props.language === "ar" ? "row-reverse" : "column", display: Props.language === "ar" ? "flex" : "" }}>
               <div className="contact__content">
                 <div className="contact__details">
@@ -324,10 +324,10 @@ const Contact = (Props) => {
                 </form>
               </div>
             </div>
-          </motion.section>
-          <Footer isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
-        </motion.div>
+          </motion.div>
+        </motion.section>
       )}
+      <Footer isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
     </React.Fragment>
   )
 }

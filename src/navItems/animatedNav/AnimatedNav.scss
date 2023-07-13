@@ -5,7 +5,7 @@ $font-family_1: "Posterama", sans-serif;
 $background-color_1: var(--nav-overlay-color);
 
 .nav {
-	position: relative;
+	position: fixed;
 	z-index: 2;
 	top: 0;
 	left: 0;
@@ -197,9 +197,11 @@ $background-color_1: var(--nav-overlay-color);
 	color: $color_2;
 }
 
-@media (max-width: 414px) {
+
+
+@media (max-width: 454px) {
 	.nav {
-		width: 100vw;
+		width: 70vw;
 	}
 
 	.navbar {
@@ -278,7 +280,7 @@ $background-color_1: var(--nav-overlay-color);
 
 	.nav-overlay {
 		height: 20vh;
-		width: 105%;
+		width: 100%;
 	}
 
 	.lineTop.spin {

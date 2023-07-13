@@ -6,6 +6,7 @@ $background-color_1: var(--container-color);
 .footer {
 	background-color: $background-color_1;
 	border-top: var(--footer-border-color);
+
 }
 .footer__container {
 	padding: 1.5rem 2rem 1rem 2rem;
@@ -13,6 +14,7 @@ $background-color_1: var(--container-color);
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 	h1 {
 		font-family: "Posterama";
 	}

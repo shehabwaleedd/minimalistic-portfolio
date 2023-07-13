@@ -10,11 +10,11 @@ $background-color_3: #f5f5f5;
 $background-color_4: #aaa;
 $background-color_5: #555;
 
-/* Add custom scrollbar styles */
+
 .portfolio {
 	display: flex;
 	justify-content: center;
-	height: 100vh;
+	height: 130vh;
 	width: 100%;
 	align-items: center;
 	flex-direction: column;
@@ -23,11 +23,12 @@ $background-color_5: #555;
 	overflow-x: hidden;
 	position: fixed;
 	background-color: $background-color_1;
-	padding-bottom: 5rem;
 	border-top: 0.2px solid var(--text-color);
 	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 
+
 }
+
 .portfolio__container {
 	display: flex;
 	justify-content: space-between;
@@ -35,7 +36,9 @@ $background-color_5: #555;
 	margin: 2rem;
 	height: calc(100vh - 4rem);
 	width: 100%;
+	
 }
+
 .menu {
 	display: flex;
 	justify-content: center;
@@ -44,6 +47,7 @@ $background-color_5: #555;
 	width: 100%;
 	position: relative;
 }
+
 .menu__item-image_wrapper {
 	flex: 1;
 	display: flex;
@@ -52,6 +56,7 @@ $background-color_5: #555;
 	height: 100%;
 	width: 50%;
 	position: relative;
+
 	img {
 		width: 90%;
 		height: 90%;
@@ -95,6 +100,7 @@ $background-color_5: #555;
 	position: relative;
 	gap: 3.5rem;
 	border-bottom: 1px solid var(--title-color);
+
 	p {
 		font-size: var(--smaller-font-size);
 		font-weight: var(--font-medium);
@@ -102,6 +108,7 @@ $background-color_5: #555;
 		font-family: $font-family_1;
 		color: $color_1;
 	}
+
 	h1 {
 		width: 100%;
 		color: $color_1;
@@ -118,22 +125,26 @@ $background-color_5: #555;
 		padding-left: 0.2rem;
 
 	}
+
 	&:hover {
 		.menu-item-wrapper {
 			left: 0%;
 		}
 	}
 }
+
 .categories {
 	display: flex;
 	align-items: flex-end;
 	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 	justify-content: center;
 	margin-top: 1rem;
+
 	p {
 		text-transform: lowercase;
 	}
 }
+
 .menu-text {
 	display: flex;
 	justify-content: space-between;
@@ -141,6 +152,7 @@ $background-color_5: #555;
 	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 	width: 38vw;
 	height: 10vh;
+
 	h1 {
 		span {
 			color: $color_2;
@@ -159,6 +171,7 @@ $background-color_5: #555;
 .workk__work {
 	display: flex;
 	position: relative;
+
 	h1 {
 		display: flex;
 		transition: 0.3s ease;
@@ -182,11 +195,13 @@ $background-color_5: #555;
 	transform: translateY(50px);
 	transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .menu__item-image.fade-in {
 	opacity: 1;
 	transform: translateY(0);
 	transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .projects__load-container {
 	position: fixed;
 	top: 0;
@@ -197,6 +212,7 @@ $background-color_5: #555;
 	z-index: 10;
 	pointer-events: none;
 }
+
 .projects__load-screen {
 	position: relative;
 	padding-top: 0px;
@@ -206,29 +222,36 @@ $background-color_5: #555;
 	width: 100%;
 	height: 0%;
 }
+
 .scrollbarr {
 	overflow-y: scroll;
 	scrollbar-width: none;
 	overflow-x: hidden;
+
 	&::-webkit-scrollbar {
 		width: 0;
 	}
+
 	&::-webkit-scrollbar-track {
 		background-color: $background-color_3;
 	}
+
 	&::-webkit-scrollbar-thumb {
 		background-color: $background-color_4;
 		border-radius: 10px;
+
 		&:hover {
 			background-color: $background-color_5;
 		}
 	}
 }
+
 .menu-item-wrapper {
 	display: flex;
 	position: relative;
 	left: -7%;
 	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+
 	.menu-arrow {
 		i {
 			position: relative;
@@ -239,11 +262,12 @@ $background-color_5: #555;
 		}
 	}
 }
+
 @media (max-width: 480px) {
 	.portfolio {
 		height: 95vh;
 		display: flex;
-		width: 100vw;
+		width: 75vw;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -254,6 +278,15 @@ $background-color_5: #555;
 		background-color: $background-color_1;
 		padding-bottom: 1em;
 		border-top: 0px solid var(--text-color);
+	}
+
+	.portfolio__container {
+		transform: translateX(6rem);
+	}
+
+	body {
+		overscroll-behavior-x: none;
+		touch-action: pan-y;
 	}
 	.text-container {
 		width: 60vw;
@@ -271,13 +304,14 @@ $background-color_5: #555;
 		height: 65.25rem;
 		overflow: visible;
 		margin-right: 8.5rem;
-		transform: translate(3rem, -6.5rem);
 	}
+
 	.work__title {
-		.menu-text{
+		.menu-text {
 			width: 85vw;
 			justify-content: space-between;
 		}
+
 		p {
 			font-size: 0.6rem;
 			font-weight: var(--font-medium);
@@ -286,6 +320,7 @@ $background-color_5: #555;
 			color: $color_1;
 			text-align: right;
 		}
+
 		h1 {
 			width: 100%;
 			color: $color_1;
@@ -301,6 +336,7 @@ $background-color_5: #555;
 			letter-spacing: 0.1rem;
 		}
 	}
+
 	.menu-arrow {
 		display: none;
 	}
@@ -325,14 +361,17 @@ $background-color_5: #555;
 		overflow: hidden;
 		margin-right: 6.5rem;
 	}
-	
+
 	.menu-arrow {
 		margin-top: 0.5rem;
 	}
+
 	.menu-text {
 		width: 38vw;
+
 		h1 {
 			padding-left: 1.1rem;
+
 			span {
 				padding-left: 1rem;
 			}

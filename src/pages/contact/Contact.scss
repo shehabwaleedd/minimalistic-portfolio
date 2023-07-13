@@ -12,8 +12,17 @@ $background-color_6: red;
 $border-color_1: var(--title-color);
 
 /* Styles for mobile phones */
+.contact__section {
+	min-height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0 1rem;
+	padding-top: 10rem;
+}
+
 .contact {
-	height: 60vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -32,6 +41,7 @@ $border-color_1: var(--title-color);
 	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 	position: relative;
 	top: -6rem;
+	width: 100vw;
 	h1 {
 		color: $color_1;
 		letter-spacing: 1rem;
@@ -42,7 +52,6 @@ $border-color_1: var(--title-color);
 	grid-template-columns: repeat(2, max-content);
 	justify-content: center;
 	column-gap: 6rem;
-	padding-bottom: 3rem;
 	flex-direction: row;
 }
 .contact__title {

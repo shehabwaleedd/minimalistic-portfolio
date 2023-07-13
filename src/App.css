@@ -165,21 +165,27 @@
 	--z-modal: 1000;
 	background-color: #eee7e1;
 }
-#light, #dark {
+
+#light,
+#dark {
 	background-color: var(--body-color);
 }
 
 /* ========== Base ========== */
+
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+
 }
 
 html {
 	scroll-behavior: smooth;
 	background-color: var(--background-color);
+
 }
 
 body {
@@ -226,6 +232,8 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
+
 
 /* ========== REUSABLE CSS CLASSES ========== */
 .section {
