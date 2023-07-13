@@ -8,7 +8,7 @@ $background-color_2: transparent;
 $background-color_3: var(--text-color);
 $background-color_4: var(--contaienr-color);
 $background-color_5: var(--contact-transition-color);
-$background-color_6: red;
+$background-color_6: var(--contaienr-color);
 $border-color_1: var(--title-color);
 
 /* Styles for mobile phones */
@@ -365,14 +365,25 @@ $border-color_1: var(--title-color);
 
 
 @media (max-width: 454px) {
+	.contact__section {
+		min-height: 90vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 0 1rem;
+		padding-top: 10rem;
+
+	}
 	.contact {
 		width: 100%;
+		padding-bottom: 6rem;
+
 	}
 	.let__contact {
-		padding-top: 2rem;
+		padding-bottom: 1rem;
 		font-size: 3rem;
 		letter-spacing: normal;
-		margin-bottom: 3rem;
 	}
 	.contact__entire {
 		overflow-x: hidden;
@@ -385,6 +396,7 @@ $border-color_1: var(--title-color);
 		justify-content: center;
 		align-items: center;
 		height: 100%;
+		padding-top: 2rem;
 	}
 	.contact__title {
 		text-align: center;

@@ -46,8 +46,8 @@ const AnimatedNav = (Props) => {
               <DropDownMenu  isMenuVisible={Props.isMenuVisible} setMenuVisible={Props.setMenuVisible} isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
               <div className="menu-toggle" onClick={() => Props.setNavOpen(!Props.navOpen)}>
                 <div className={Props.navOpen ? "hamBox hamBoxOpen" : Props.isAbout ? "hamBoxAbout" : "hamBox"}>
-                <span className={Props.navOpen ? "lineTop spin" : Props.isAbout ? "lineTopAbout" : "lineTop"}></span>
-                  <span className={Props.navOpen ? "lineBottom spin" : Props.isAbout ? "lineBottomAbout" : "lineBottom"}></span>
+                    <span className={Props.navOpen ? "lineTop spin" : Props.isAbout ? "lineTopAbout" : "lineTop"}></span>
+                    <span className={Props.navOpen ? "lineBottom spin" : Props.isAbout ? "lineBottomAbout" : "lineBottom"}></span>
                 </div>
               </div>
             </div>

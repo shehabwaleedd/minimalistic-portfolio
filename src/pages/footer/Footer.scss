@@ -118,7 +118,7 @@ $background-color_1: var(--container-color);
 @media (max-width: 450px)  {
 
 	.footer {
-		margin-top: 2rem;
+		margin-top: 4rem;
 		width: 100vw;
 		padding-right: 1rem;
 	}
@@ -149,11 +149,11 @@ $background-color_1: var(--container-color);
 		&::before {
 			content: "";
 			display: block;
-			width: 6.75rem;
+			width: 12.75rem;
 			height: 0.125rem;;
 			background: #cccccc;
 			color: $color_1;
-			left: 6.8rem;
+			left: 5.3rem;
 			top: -1rem;
 			transition: width 0.3s;
 			position: absolute;

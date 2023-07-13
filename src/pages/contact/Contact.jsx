@@ -122,15 +122,19 @@ const Contact = (Props) => {
         <div className="contact__load-screen" ref={(el) => (screen = el)}></div>
       </div>
       {Props.isMobile ? (
-        <>
+        <motion.section className='contact__section' initial={{ opacity: 0, y: 100}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.7, duration: 1, ease: [0.42, 0, 0.58, 1]}}} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: "easeInOut" }}}>
+          <div className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: Props.language === "ar" ? "90vh" : "90vh" }}>
           <div className="let__contact" style={{ paddingTop: Props.language === "ar" ? "2rem" : "4rem" }}>
             <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "8rem" : "2rem", textTransform: Props.language === "fr" || Props.language === "en" || Props.language === "de" ? "uppercase" : "lowercase", }}>{t("contact__lets")}</h1>
           </div>
-          <section className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: Props.language === "ar" ? "90vh" : "90vh" }}>
             <div className="contact__container container grid" style={{ flexDirection: Props.language === "ar" ? "column" : "column", display: Props.language === "ar" ? "flex" : "flex" }}>
               <div className="contact__content">
                 <div className="contact__details">
-                  <h1 style={{ paddingLeft: "1rem" ,fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", fontSize: Props.language === "ar" ? "2.7rem" : "1.4rem", textAlign: Props.language === "ar" ? "center" : "left"}}>{t("contact__title1")}<br />{t("contact__title2")}<br />{t("contact__title3")}</h1>
+                  <h1 style={{ paddingLeft: "1rem" ,fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", fontSize: Props.language === "ar" ? "2.7rem" : "1.5rem", textAlign: Props.language === "ar" ? "center" : "left"}}>
+                    {t("contact__title1")}
+                    {t("contact__title2")}
+                    {t("contact__title3")}
+                  </h1>
                 </div>
                 <Socials />
                 <div className="contact__info" style={{ justifyContent: Props.language === "ar" ? "center" : "center", flexDirection: Props.language === "ar" ? "row-reverse" : "row", gap: Props.language === "ar" ? "6rem" : "3rem" }}>
@@ -221,9 +225,8 @@ const Contact = (Props) => {
                 </form>
               </div>
             </div>
-          </section>
-          <Footer isMobile={Props.isMobile} setIsMobile={Props.setIsMobile} shouldReload={Props.shouldReload} setShouldReload={Props.setShouldReload} navOpen={Props.navOpen} language={Props.language} setLanguage={Props.setLanguage} languageExpanded={Props.languageExpanded} setLanguageExpanded={Props.setLanguageExpanded} />
-        </>
+          </div>
+        </motion.section>
       ) : (
         <motion.section className='contact__section' initial={{ opacity: 0, y: 100}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.7, duration: 1, ease: [0.42, 0, 0.58, 1]}}} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: "easeInOut" }}}>
           <div className="let__contact" style={{ paddingTop: Props.language === "fr" ? "5rem" : "1rem" }}>

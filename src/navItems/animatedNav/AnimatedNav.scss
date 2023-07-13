@@ -306,4 +306,68 @@ $background-color_1: var(--nav-overlay-color);
 	.nav__footer {
 		display: none;
 	}
+
+	.lineBottomAbout {
+	background: #fff;
+	margin: 0 auto;
+	position: absolute;
+	display: block;
+	width: 1.5rem;
+	height: 0.225rem;
+	border-radius: 0.625rem;
+
+	transform: rotate(0deg);
+	transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+	color: $color_3;
+	top: 0.35em;
+	}
+	.lineTopAbout {
+		background: #fff;
+		margin: 0 auto;
+		position: absolute;
+		display: block;
+		width: 1.5rem;
+		height: 0.225rem;
+		border-radius: 0.625rem;
+
+		transform: rotate(0deg);
+		transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+		color: $color_3;
+		top: 1em;
+		}
+		.hamBoxAbout {
+			position: relative;
+			width: 2rem;
+			height: 1.75rem;
+			cursor: pointer;
+			border-radius: 50%;
+			transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+			background: rgba(158, 158, 158, 0.2);
+			border-radius: 16px;
+			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+			backdrop-filter: blur(5px);
+			-webkit-backdrop-filter: blur(1px);
+			border: 0.1px solid rgba(158, 158, 158, 0.3);
+			right: -9.5rem;
+			top: 0.5rem;
+		}
+		
+.logoAbout {
+	text-decoration: none;
+	color: #ffffeb;
+	font-family: $font-family_1;
+	letter-spacing: 0.3rem;
+	font-weight: bolder;
+	cursor: pointer;
+	transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+	background: rgba(54, 54, 54, 0.2);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(1px);
+	-webkit-backdrop-filter: blur(1px);
+	border: 0.1px solid rgba(158, 158, 158, 0.3);
+	padding: 0.3rem;
+}
+
+
 }

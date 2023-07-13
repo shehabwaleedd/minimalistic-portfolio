@@ -62,7 +62,7 @@ const AboutPage = (Props) => {
             <div className='detailed__containerr'>
               <div className='detailed__row'>
                 <div className="aboutttt__container containered">
-                  <div className="about__content" style={{ marginTop: Props.language === "fr" ? "12rem" : Props.language === "de" || Props.language === "en" ? "35rem" : "22rem" }}>
+                  <div className="about__content" style={{ marginTop: Props.language === "fr" ? "12rem" : Props.language === "de" || Props.language === "en" ? "50rem" : "22rem" }}>
                     <h1 style={{ textAlign: Props.language === "ar" ? "right" : "left", paddingRight: Props.language === "ar" ? "3rem" : "0", fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "fr" ? "2rem" : "3rem" }}>{t("navbar__about")}</h1>
                     <p style={{ fontSize: Props.language === "fr" ? "0.8rem" : "0.8rem", fontFamily: Props.language === "ar" ? "Almarai" : "", textAlignLast: Props.language === "ar" ? "right" : "left" }}>
                       {t("about__description")}
