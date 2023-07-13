@@ -100,7 +100,7 @@ const Portfolio = (Props) => {
           <motion.section className="portfolio" ref={(el) => (body = el)}  initial={{ opacity: 0}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.3, duration: 1, ease: [0.42, 0, 0.58, 1]}}} exit={{ opacity: 0, y: 100 ,transition: { delay: 0.3,  velocity: 2, staggerChildren: 1.5,  duration: 1, ease: [0.42, 0, 0.58, 1]} }}>
             <motion.div className="portfolio__container" >
               <motion.div className="menu">
-                <motion.div className="menu__item-image_wrapper" initial={{ opacity: 0}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.3, duration: 1, ease: [0.42, 0, 0.58, 1]}}} exit={{ opacity: 0, y: 100 ,transition: { delay: 0.3,  velocity: 2, staggerChildren: 1.5,  duration: 1, ease: [0.42, 0, 0.58, 1]} }}>
+                <motion.div className="menu__item-image_wrapper" style={{display: window.innerWidth <= 868 ? "none" : "block"}} initial={{ opacity: 0}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.3, duration: 1, ease: [0.42, 0, 0.58, 1]}}} exit={{ opacity: 0, y: 100 ,transition: { delay: 0.3,  velocity: 2, staggerChildren: 1.5,  duration: 1, ease: [0.42, 0, 0.58, 1]} }}>
                   <div className="menu__item-image_inner">
                     {projectsData.map((image) => (
                       <motion.div className={`image-wrapper ${image.classProject}`} key={image.id} >
