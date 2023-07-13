@@ -471,3 +471,19 @@ $background-color_5: #555;
 	}
 	
 }
+
+
+@media (max-width: 416px) {
+	.menu-arrow {
+		font-size: 1.5rem;
+	}
+	.menu-text {
+		h1 {
+			font-size: 1rem;
+			letter-spacing: 0.2rem;
+		}
+	}
+	.portfolio__container {
+		transform: translate(0rem, 5rem);
+	}
+}

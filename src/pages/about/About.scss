@@ -203,10 +203,10 @@
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 416px) {
     .about {
       padding-bottom: 1rem;
-  
+      height: 40vh;
       .about__pic {
         img {
           position: relative;
@@ -221,9 +221,7 @@
     }
   
     .detailed__containerr {
-      padding: 1rem 0.5rem;
-      height: 80vh;
-  
+
       .about__pic {
         display: none;
       }

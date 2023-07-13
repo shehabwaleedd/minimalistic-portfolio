@@ -362,7 +362,15 @@ $border-color_1: var(--title-color);
 	width: 0%;
 	height: 100%;
 }
-
+@media (max-width: 416px) {
+	.let__contact {
+		margin-top: 8rem;
+	}
+	.contact__container {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+}
 
 @media (max-width: 454px) {
 	.contact__section {

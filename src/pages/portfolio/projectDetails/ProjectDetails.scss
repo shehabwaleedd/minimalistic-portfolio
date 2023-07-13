@@ -284,6 +284,29 @@ $font-family_1: "Posterama", sans-serif;
 	}
 }
 
+@media (max-width: 416px) {
+	.project__card_details {
+		position: relative;
+		width: 100vw;
+		.project__image_container  {
+			padding-bottom: 2rem;
+		}
+		.project__details_post-text {
+			width: 100%;
+			position: relative;
+			transform: translateX(-2rem);
+			margin-left: 2rem;
+		}
+	}
+	.project__img_container {
+		margin-right: 3.3rem;
+	}
+	.menu-item-wrapper {
+		padding-left: 4rem;
+	}
+
+}
+
 @media (min-width: 1850px) {
 	.project__card_details {
 		position: relative;

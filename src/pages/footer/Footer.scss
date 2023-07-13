@@ -160,3 +160,14 @@ $background-color_1: var(--container-color);
 		}
 	}
 }
+
+@media (max-width: 414px) {
+	.footer {
+		margin-top: 4rem;
+		position: relative;
+		top: 8rem;
+	}
+	.footer__container h1 {
+		width: 100vw;
+	}
+}
