@@ -6,12 +6,13 @@ import {BiLogoInstagram} from "react-icons/bi"
 import {BiLogoLinkedin} from "react-icons/bi"
 import {BiLogoGithub} from "react-icons/bi"
 import {BiLogoTwitter} from "react-icons/bi"
+import {motion} from "framer-motion"
 
 
 const Footer = (Props) => {
   const { t } = useTranslation()
   return (
-    <footer className="footer">
+    <motion.footer className="footer" initial={{ opacity: 0, y: 100}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.7, duration: 1, ease: [0.42, 0, 0.58, 1]}}} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: "easeInOut" }}}>
       {Props.isMobile ? (
         <div className="footer__container container">
           <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "1.7rem" }} className="footer__title">{t("my__name")} {t("my__name-last")}</h1>
@@ -39,7 +40,7 @@ const Footer = (Props) => {
           </div>
         </div>
       ) : (
-        <div className="footer__container container">
+        <motion.div className="footer__container container"  >
           <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "1.8rem" }} className="footer__title">{t("my__name")} {t("my__name-last")}</h1>
           <div className="footer__social">
             <div className="footer__info" style={{ flexDirection: Props.language === "ar" ? "row-reverse" : "row", gap: Props.language === "ar" ? "1rem" : "" }}>
@@ -63,9 +64,9 @@ const Footer = (Props) => {
           <div className="footer__copyright">
             <small>&copy; Shehab Waleed. {t("footer__credits")}</small>
           </div>
-        </div>
+        </motion.div>
       )}
-    </footer>
+    </motion.footer>
   )
 }
 
