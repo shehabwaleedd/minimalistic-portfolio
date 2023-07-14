@@ -257,16 +257,16 @@ $background-color_1: var(--nav-overlay-color);
 		position: absolute;
 		top: 0rem;
 		left: 10.5rem;
-		z-index: 9999;
+		z-index: 999999999;
 	}
 
-	.hamBoxOpen {
+	.hamBox.hamBoxOpen {
 		width: 1.375rem;
 		height: 1.5rem;
-		position: absolute;
-		top: 0rem;
-		left: 11.5rem;
-		z-index: 9999;
+		position: relative;
+		top: 0.3rem;
+		left: 5.7rem;
+		z-index: 99999999;
 	}
 
 	.lineTop {
@@ -280,19 +280,18 @@ $background-color_1: var(--nav-overlay-color);
 
 	.nav-overlay {
 		height: 20vh;
-		width: 100%;
+		width: 100vw;
+		z-index: -2;
 	}
 
 	.lineTop.spin {
 		top: 0.35em;
-		left: 0rem;
 		transform: rotate(135deg);
 		background: var(--container-color);
 	}
 
 	.lineBottom.spin {
 		top: 0.40em;
-		left: 0rem;
 		transform: rotate(225deg);
 		background: var(--container-color);
 	}
@@ -304,7 +303,7 @@ $background-color_1: var(--nav-overlay-color);
 	}
 
 	.nav__footer {
-		display: none;
+		display: block;
 	}
 
 	.lineBottomAbout {
