@@ -62,3 +62,27 @@ $background-color_1: var(--container-color);
 	}
 }
 
+@media (max-width: 466px) {
+	.nav__link.spin {
+		position: relative;
+		color: $color_2;
+		transition: all 3.5s cubic-bezier(0.16, 1, 0.3, 1);
+		display: block;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0.8rem;
+			top: 2.2rem;
+			width: 0;
+			height: 0px;
+			background-color: $background-color_1;
+			transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+		}
+		&:hover {
+			&::after {
+				width: 0%;
+			}
+		}
+	}
+}
+
