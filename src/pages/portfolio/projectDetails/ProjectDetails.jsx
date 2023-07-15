@@ -25,7 +25,7 @@ function ProjectDetails(Props) {
         return (
             <div className="project__details_details">
                 <div className="project__details-text">
-                    <h2 style={{width: "100vw", }}>{title}</h2>
+                    <h2 style={{width: window.innerWidth >= 1060 ? "" : "100vw", }}>{title}</h2>
                 </div>
                 <div className="project__details-img">
                     <img src={img} alt={alt} />
@@ -80,7 +80,7 @@ function ProjectDetails(Props) {
                                         <p >{post.comment}</p>
                                         <div className="project__links" style={{ width: "100vw", flexDirection: "column", borderTop: "0.5px solid var(--text-color)", }}>
                                             <div className={`project__link ${post.class}`} style={{marginTop: "1rem"}}>
-                                                <a href={`${post.link}`} target="__blank" style={{ fontSize: "1rem" }}><BiRightArrowAlt />View The Website</a>
+                                                <a href={`${post.website}`} target="__blank" style={{ fontSize: "1rem" }}><BiRightArrowAlt />View The Website</a>
                                             </div>
                                             <div className="project__link" style={{marginTop: "1rem"}}>
                                                 <a href={`${post.link}`} target="__blank" style={{ fontSize: "1rem" }}><BiRightArrowAlt />View The Code</a>
@@ -186,7 +186,7 @@ function ProjectDetails(Props) {
                                         <p>{post.comment}</p>
                                         <div className="project__links">
                                             <div className={`project__link ${post.class}`}>
-                                                <a href={`${post.link}`} target="__blank"><BiRightArrowAlt />View The Website</a>
+                                                <a href={`${post.website}`} target="__blank"><BiRightArrowAlt />View The Website</a>
                                             </div>
                                             <div className="project__link">
                                                 <a href={`${post.link}`} target="__blank"><BiRightArrowAlt />View The Code</a>
