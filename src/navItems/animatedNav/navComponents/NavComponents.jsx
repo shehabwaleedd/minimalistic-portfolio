@@ -32,7 +32,7 @@ const NavComponents = (Props) => {
                             left: "-3.1rem"
                         }}>
                         <Link
-                            className={Props.navOpen ? "nav__link spin" : "nav__link"} to="/about"
+                            className={Props.navOpen ? "nav__link spin" : "nav__link"} to="/"
                             style={{
                                 opacity: Props.navOpen ? "1" : "0",
                                 padding: Props.navOpen ? "0.1rem" : "0",

@@ -84,6 +84,7 @@ const projectsData = [
     website: "https://lelu-store.vercel.app/",
     link: "https://github.com/shehabwaleedd/lelu-store",
     date: "March, 2023",
+    class: "lelu",
     comment: "Sheboo is the nickname I use on social medias. The goal of this project was to create my own identity, adaptable and modular to work with both my real name and my nickname. First, the identity needed to be defined in brand guidelines and then had to be adapted for digital medias (website, wallpapers, social medias) and physical formats (business cards/stickers, letter paper and resume).",
     mainTitle: "Main Page",
     mainTitleImg: LeluMainImg,
@@ -116,7 +117,7 @@ const projectsData = [
     mainDarkModeImg2: JinDarkMode2,
     mainDarkModeIm3: JinDarkMode4,
     mainDarkModeImg4: JinDarkMode3,
-
+    class: "jing",
 
 
   },
@@ -159,6 +160,7 @@ const projectsData = [
     lightModeImg6: BlogLightMode6,
     lightModeImg7: BlogLightMode7,
     lightModeImg8: BlogLightMode8,
+    class:"blog"
   },
   {
     id: 4,
@@ -168,7 +170,8 @@ const projectsData = [
     website: "https://cairobrews.vercel.app/",
     link: "https://github.com/shehabwaleedd/moaaz-askaar",
     date: "2023, July",
-    comment: "I made this website using HTML and CSS, I was trying to make it as close as possible to the original twitter website, I used flexbox to make it responsive"
+    comment: "I made this website using HTML and CSS, I was trying to make it as close as possible to the original twitter website, I used flexbox to make it responsive",
+    class: "moaaz",
   },
 
   {
@@ -191,7 +194,8 @@ const projectsData = [
     website: "https://cairobrews.vercel.app/",
     link: "https://github.com/shehabwaleedd/liquor",
     date: "June, 2023",
-    comment: "Cairo Brews is an elegant and seamless online alcohol shop created by a passionate frontend developer. The website offers a premium selection of wines, beers, and spirits, catering to the discerning tastes of customers in Cairo. With a focus on fast and reliable delivery, Cairo Brews ensures customers receive their chosen beverages promptly. Meticulous attention to detail is evident in the website's design, which provides an immersive and visually pleasing experience. Smooth animations and transitions enhance user engagement. The user-friendly account system allows customers to manage preferences, track orders, and receive personalized recommendations. Cairo Brews is the destination for premium beverages, combining convenience and curated excellence."
+    comment: "Cairo Brews is an elegant and seamless online alcohol shop created by a passionate frontend developer. The website offers a premium selection of wines, beers, and spirits, catering to the discerning tastes of customers in Cairo. With a focus on fast and reliable delivery, Cairo Brews ensures customers receive their chosen beverages promptly. Meticulous attention to detail is evident in the website's design, which provides an immersive and visually pleasing experience. Smooth animations and transitions enhance user engagement. The user-friendly account system allows customers to manage preferences, track orders, and receive personalized recommendations. Cairo Brews is the destination for premium beverages, combining convenience and curated excellence.",
+    class: "cairo",
   },
 
 

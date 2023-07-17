@@ -25,7 +25,7 @@ function ProjectDetails(Props) {
         return (
             <div className="project__details_details">
                 <div className="project__details-text">
-                    <h2 style={{width: window.innerWidth >= 1060 ? "" : "100vw", }}>{title}</h2>
+                    <h2 style={{ width: window.innerWidth >= 1060 ? "" : "100vw", }}>{title}</h2>
                 </div>
                 <div className="project__details-img">
                     <img src={img} alt={alt} />
@@ -44,7 +44,7 @@ function ProjectDetails(Props) {
             {Props.isMobile ? (
                 <>
                     <ScrollAnimation />
-                    <motion.div className="project__details" style={{ width: "100vw", touchAction: "pan-y" }} initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, type: "spring", transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
+                    <motion.div className="project__details" style={{ width: "100vw", touchAction: "pan-y", }} initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, type: "spring", transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
                         <div className="project__card_details">
                             <div className="project__image_container" style={{ width: "100vw", position: "relative", left: window.innerWidth <= 408 ? "" : "-5rem", top: "2rem" }}>
                                 <img
@@ -79,10 +79,10 @@ function ProjectDetails(Props) {
                                     <div className="project__details-comment" style={{ width: "90vw", paddintTop: "5rem", }}>
                                         <p >{post.comment}</p>
                                         <div className="project__links" style={{ width: "100vw", flexDirection: "column", borderTop: "0.5px solid var(--text-color)", }}>
-                                            <div className={`project__link ${post.class}`} style={{marginTop: "1rem"}}>
+                                            <div className={`project__link ${post.class}`} style={{ marginTop: "1rem" }}>
                                                 <a href={`${post.website}`} target="__blank" style={{ fontSize: "1rem" }}><BiRightArrowAlt />View The Website</a>
                                             </div>
-                                            <div className="project__link" style={{marginTop: "1rem"}}>
+                                            <div className="project__link" style={{ marginTop: "1rem" }}>
                                                 <a href={`${post.link}`} target="__blank" style={{ fontSize: "1rem" }}><BiRightArrowAlt />View The Code</a>
                                             </div>
                                         </div>
@@ -138,10 +138,10 @@ function ProjectDetails(Props) {
                             <div className="project__next_project" style={{ width: "100vw", left: "0", gap: "3rem", overflow: "visible" }}>
                                 <div className="menu-item-wrapper" style={{ justifyContent: "space-between", width: "100vw" }}>
                                     <div className="next__project" style={{ left: "0", width: "35vw" }}>
-                                        <h1 onClick={goToNextProject} style={{ fontSize: "0.8rem", letterSpacing: 0}}>Next Project</h1>
+                                        <h1 onClick={goToNextProject} style={{ fontSize: "0.8rem", letterSpacing: 0 }}>Next Project</h1>
                                     </div>
                                     <div className="project__next_project_name" style={{ width: "50vw" }}>
-                                        <h1 style={{ fontSize: "0.8rem",letterSpacing: 0 }}>{projectsData[(parseInt(id) + 1) % projectsData.length].title}</h1>
+                                        <h1 style={{ fontSize: "0.8rem", letterSpacing: 0 }}>{projectsData[(parseInt(id) + 1) % projectsData.length].title}</h1>
                                     </div>
                                 </div>
                             </div>
@@ -151,6 +151,7 @@ function ProjectDetails(Props) {
             ) : (
                 <motion.div initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, type: "spring", transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
                     <ScrollAnimation />
+
                     <div className="project__details container">
                         <div className="project__card_details">
                             <div className="project__image_container">
@@ -159,6 +160,9 @@ function ProjectDetails(Props) {
                                     alt={post.title}
                                 />
                             </div>
+                                <motion.div className="background__img" initial={{ opacity: 0, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1,transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
+                                    <motion.img src={post.image} alt={post.title} style={{transform: post.class === "shehab" || post.class === "lelu" ? "translate(40%, -65%)" : post.class === "cairo" ? "translate(20rem, -65%" : post.class === "jing" || post.class === "blog" ? "translate(35%, -65%" : "translate(15%, -65%", height: post.class === "cairo" ? "100%" : "", filter: "blur(10px)"}} initial={{ opacity: 0, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}/>
+                                </motion.div>
                             <div className="project__details_post-text">
                                 <Link to="/projects" className="project__back">
                                     <IoChevronBack style={{ fontSize: "1.2rem", marginTop: "0.2rem", color: "var(--accent-color)" }} />
@@ -256,6 +260,7 @@ function ProjectDetails(Props) {
                             </div>
                         </div>
                     </div>
+
                 </motion.div>
             )}
         </>
