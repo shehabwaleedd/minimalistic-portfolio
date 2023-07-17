@@ -1,6 +1,7 @@
 $color_1: var(--title-color);
 $color_2: var(--text-color);
 $color_3: var(--accent-color);
+$color_4: var(--container-color);
 $font-family_1: "Satoshi-Light", sans-serif;
 $font-family_2: "Posterama", sans-serif;
 $font-family_3: "Satoshi-BoldItalic", sans-serif;
@@ -164,6 +165,22 @@ $background-color_5: #555;
 			cursor: pointer;
 			padding-top: 0.5rem;
 			padding-right: 0.5rem;
+		}
+	}
+
+	.isNew {
+		position: relative;
+		top: 0.3rem;
+		h3 {
+			color: $color_4;
+			font-family: $font-family_3;
+			font-size: 0.9rem;
+			transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+			position: relative;
+			white-space: nowrap;
+			cursor: pointer;
+			padding: 0 0.3rem;
+			background-color: var(--accent-color);
 		}
 	}
 }
@@ -482,8 +499,24 @@ $background-color_5: #555;
 			font-size: 1rem;
 			letter-spacing: 0.2rem;
 		}
+		.isNew {
+			position: relative;
+			top: 0.3rem;
+			h3 {
+				color: $color_4;
+				font-family: $font-family_3;
+				font-size: 0.7rem;
+				transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+				position: relative;
+				white-space: nowrap;
+				cursor: pointer;
+				padding: 0 0.3rem;
+				background-color: var(--accent-color);
+			}
+		}
 	}
 	.portfolio__container {
 		transform: translate(0rem, 5rem);
 	}
+
 }

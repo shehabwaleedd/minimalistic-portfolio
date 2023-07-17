@@ -75,6 +75,8 @@ const projectsData = [
     mainDarkModeImg2: ShebooDarkModeImg2,
     mainDarkModeImg3: ShebooDarkModeImg3,
     mainDarkModeImg4: ShebooDarkModeImg4,
+    workingOnIt: false,
+    newProject: true,
   },
   {
     id: 2,
@@ -94,6 +96,8 @@ const projectsData = [
     projectLoginsImg: LeluLoginsImg,
     projectTestimonials: "Project Testimonials Section",
     projectTestimonialsImg: LeluTestimonialsImg,
+    workingOnIt: true,
+    newProject: false,
   },
   {
     id: 7,
@@ -118,8 +122,8 @@ const projectsData = [
     mainDarkModeIm3: JinDarkMode4,
     mainDarkModeImg4: JinDarkMode3,
     class: "jing",
-
-
+    workingOnIt: false,
+    newProject: false,
   },
   {
     id: 3,
@@ -160,7 +164,9 @@ const projectsData = [
     lightModeImg6: BlogLightMode6,
     lightModeImg7: BlogLightMode7,
     lightModeImg8: BlogLightMode8,
-    class:"blog"
+    class:"blog",
+    workingOnIt: false,
+    newProject: false,
   },
   {
     id: 4,
@@ -172,6 +178,8 @@ const projectsData = [
     date: "2023, July",
     comment: "I made this website using HTML and CSS, I was trying to make it as close as possible to the original twitter website, I used flexbox to make it responsive",
     class: "moaaz",
+    workingOnIt: true,
+    newProject: false,
   },
 
   {
@@ -185,6 +193,8 @@ const projectsData = [
     comment: "Inspired by witnessing my friends indulge in online casino games, I was intrigued and decided to embark on my own practice journey. This led me to create a simple yet captivating game, offering the perfect opportunity to refine skills and experience the excitement of online gambling.",
     mainTitle: "Main Page",
     mainTitleImg: RollDiceMainPage,
+    workingOnIt: false,
+    newProject: false,
   },
   {
     id: 5,
@@ -196,6 +206,8 @@ const projectsData = [
     date: "June, 2023",
     comment: "Cairo Brews is an elegant and seamless online alcohol shop created by a passionate frontend developer. The website offers a premium selection of wines, beers, and spirits, catering to the discerning tastes of customers in Cairo. With a focus on fast and reliable delivery, Cairo Brews ensures customers receive their chosen beverages promptly. Meticulous attention to detail is evident in the website's design, which provides an immersive and visually pleasing experience. Smooth animations and transitions enhance user engagement. The user-friendly account system allows customers to manage preferences, track orders, and receive personalized recommendations. Cairo Brews is the destination for premium beverages, combining convenience and curated excellence.",
     class: "cairo",
+    workingOnIt: true,
+    newProject: false,
   },
 
 
