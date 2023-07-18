@@ -244,6 +244,7 @@ $font-family_1: "Posterama", sans-serif;
 			transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 	
 			.menu-arrow {
+
 					position: relative;
 					top: 0.5rem;
 					margin-right: 10px;
@@ -274,9 +275,9 @@ $font-family_1: "Posterama", sans-serif;
 
 .background__img {
 	position: fixed;
-	width: 40%;
+	width: 80%;
 	height: 80%;
-	object-fit: contain;
+	object-fit: cover;
 }
 
 @media (max-width: 470px)  {

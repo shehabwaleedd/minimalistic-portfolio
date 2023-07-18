@@ -19,7 +19,7 @@ const Portfolio = (Props) => {
     setSelectedImage(null);
   }
 
-  
+
 
   const { t } = useTranslation();
 
@@ -68,30 +68,30 @@ const Portfolio = (Props) => {
           <div className="projects__load-container">
             <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
           </div>
-          <motion.section className="portfolio" ref={(el) => (body = el)}  initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}  exit={{ opacity: 0, y: 100 ,transition: { delay: 0.3,  velocity: 2, staggerChildren: 1.5,  duration: 1, ease: [0.42, 0, 0.58, 1]} }}>
+          <motion.section className="portfolio" ref={(el) => (body = el)} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0, y: 100, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
             <div className="portfolio__container">
               <div className="menu">
-                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left", }} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}  exit={{ opacity: 0, y: 100 ,transition: { delay: 0.3,  velocity: 2, staggerChildren: 1.5,  duration: 1, ease: [0.42, 0, 0.58, 1]} }}>
+                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left", }} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0, y: 100, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
                   <div className="workk__work">
                     <h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "15rem" : "0" }}>{t("portfolio__work_title")}</h1>
                   </div>
-                  <motion.div className="scrollbarr"  initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}  exit={{ opacity: 0, y: 100 ,transition: { delay: 0.3,  velocity: 2, staggerChildren: 1.5,  duration: 1, ease: [0.42, 0, 0.58, 1]} }}>
+                  <motion.div className="scrollbarr" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0, y: 100, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
                     {projectsData.map((item, index) => (
                       <div className="work__title" key={index} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()} style={{ height: "4rem", gap: "2rem" }}>
                         <div className="menu-text">
                           <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
-                          <div className="isNew" style={{right: item.class === "shehab" ? "3rem" : item.class === "lelu" || item.class === "cairo" ? "0.5em" : ""}}>
-                                  {item.workingOnIt && (
-                                    <h3 className='workingonit'>
-                                      Workin' On It
-                                    </h3>
-                                  )}
-                                  {item.newProject && (
-                                    <h3 className='newproject'>
-                                      New Project
-                                    </h3>
-                                  )}
-                                </div>
+                          <div className="isNew" style={{ right: item.class === "shehab" ? "3rem" : item.class === "lelu" || item.class === "cairo" ? "0.5em" : "" }}>
+                            {item.workingOnIt && (
+                              <h3 className='workingonit'>
+                                Workin' On It
+                              </h3>
+                            )}
+                            {item.newProject && (
+                              <h3 className='newproject'>
+                                New Project
+                              </h3>
+                            )}
+                          </div>
                           <div className="categories">
                             <p>{item.category[0]}</p>
                           </div>
@@ -109,10 +109,10 @@ const Portfolio = (Props) => {
           <div className="projects__load-container">
             <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
           </div>
-          <motion.section className="portfolio" ref={(el) => (body = el)}  initial={{ opacity: 0}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.3, duration: 1, ease: [0.42, 0, 0.58, 1]}}} exit={{ opacity: 0, y: 100 ,transition: { delay: 0.3,  velocity: 2, staggerChildren: 1.5,  duration: 1, ease: [0.42, 0, 0.58, 1]} }}>
-            <motion.div className="portfolio__container" >
+          <motion.section className="portfolio" ref={(el) => (body = el)} initial={{ opacity: 0 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.3, duration: 1, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 100, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
+            <motion.div className="portfolio__container">
               <motion.div className="menu">
-                <motion.div className="menu__item-image_wrapper" style={{display: window.innerWidth <= 868 ? "none" : "block"}} initial={{ opacity: 0}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.3, duration: 1, ease: [0.42, 0, 0.58, 1]}}} exit={{ opacity: 0, y: 100 ,transition: { delay: 0.3,  velocity: 2, staggerChildren: 1.5,  duration: 1, ease: [0.42, 0, 0.58, 1]} }}>
+                <motion.div className="menu__item-image_wrapper" style={{ display: window.innerWidth <= 868 ? "none" : "block" }} initial={{ opacity: 0 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.3, duration: 1, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 100, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
                   <div className="menu__item-image_inner">
                     {projectsData.map((image) => (
                       <motion.div className={`image-wrapper ${image.classProject}`} key={image.id} >
@@ -125,34 +125,34 @@ const Portfolio = (Props) => {
                     ))}
                   </div>
                 </motion.div>
-                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left" }}  initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0, y: 100 ,transition: { delay: 0.3,  velocity: 2, staggerChildren: 1.5,  duration: 1, ease: [0.42, 0, 0.58, 1]} }}>
+                <motion.div className="text-container" style={{ textAlign: Props.language === "ar" ? "right" : "left" }} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0, y: 100, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
                   <motion.div className="workk__work">
                     <motion.h1 className='work__work-text' style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "", left: Props.language === "ar" ? "25rem" : "0" }}>{t("portfolio__work_title")}</motion.h1>
                   </motion.div>
                   <AnimatePresence mode='wait'>
-                    <motion.div className="scrollbarr" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}  exit={{ opacity: 0, y: 100 ,transition: { delay: 0.3,  velocity: 2, staggerChildren: 1.5,  duration: 1, ease: [0.42, 0, 0.58, 1]} }}>
+                    <motion.div className="scrollbarr" initial={{ opacity: 0, y: 50 }}  animate={{ opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 100, transition: { delay: 0.05, velocity: 2, staggerChildren: 1.5, duration: 0.3, ease: [0.42, 0, 0.58, 1] } }}>
                       {projectsData.map((item, index) => (
-                        <motion.div className="work__title" key={index} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()}  initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2 }}  exit={{ opacity: 0, y: 100 ,transition: { delay: 0.3,  velocity: 2, staggerChildren: 1.5,  duration: 1, ease: [0.42, 0, 0.58, 1]} }}>
-                          <motion.div className="menu-item-wrapper"  initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} exit={{ opacity: 0, y: 100 ,transition: { delay: 0.3,  velocity: 2, staggerChildren: 1.5,  duration: 1, ease: [0.42, 0, 0.58, 1]} }}>
+                        <motion.div className="work__title" key={index} onMouseOver={() => handleTextHover(item.id)} onMouseLeave={() => handleTextLeave()} initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 2 }} exit={{ opacity: 0, y: 100, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
+                          <motion.div className="menu-item-wrapper" initial={{ opacity: 0, y: 50 }}animate={{ opacity: 1, y: 0, transition: { duration: 1, ease: [0.42, 0, 0.58, 1] } }}  exit={{ opacity: 0, y: 100, transition: { velocity: 2, staggerChildren: 1.5, duration: 0.3, ease: [0.42, 0, 0.58, 1] } }}>
                             <motion.div className="menu-arrow">
                               <BiRightArrowAlt style={{ fontSize: "2.3rem", marginTop: "1.75rem", color: "var(--title-color)" }} />
                             </motion.div>
-                            <motion.div className="menu-text"  initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}  exit={{ opacity: 0, y: 100 ,transition: { delay: 0.3,  velocity: 2, staggerChildren: 1.5,  duration: 1, ease: [0.42, 0, 0.58, 1]} }}>
+                            <motion.div className="menu-text" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0, transition: { duration: 1, ease: [0.42, 0, 0.58, 1] } }}  exit={{ opacity: 0, y: 100, transition: { velocity: 2, staggerChildren: 1.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }}>
                               <Link to={`/projectDetails/${index}`}>
-                                <h1 data-text={item.title}>{item.title}</h1>
+                                <motion.h1 data-text={item.title} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0, transition: { duration: 1, ease: [0.42, 0, 0.58, 1] } }}  exit={{ opacity: 0, y: 100, transition: { velocity: 2, staggerChildren: 1.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }}>{item.title}</motion.h1 >
                               </Link>
-                                <div className="isNew" style={{right: item.class === "shehab" ? "5rem" : item.class === "lelu" || item.class === "cairo" ? "2rem" : ""}}>
-                                  {item.workingOnIt && (
-                                    <h3 className='workingonit'>
-                                      Workin' On It
-                                    </h3>
-                                  )}
-                                  {item.newProject && (
-                                    <h3 className='newproject'>
-                                      New Project
-                                    </h3>
-                                  )}
-                                </div>
+                              <div className="isNew" style={{ right: item.class === "shehab" ? "5rem" : item.class === "lelu" || item.class === "cairo" ? "2rem" : "" }}>
+                                {item.workingOnIt && (
+                                  <h3 className='workingonit'>
+                                    Workin' On It
+                                  </h3>
+                                )}
+                                {item.newProject && (
+                                  <h3 className='newproject'>
+                                    New Project
+                                  </h3>
+                                )}
+                              </div>
                               <motion.div className="categories">
                                 <motion.p>{item.category[0]}</motion.p>
                               </motion.div>

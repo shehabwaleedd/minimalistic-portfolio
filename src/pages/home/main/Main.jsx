@@ -52,8 +52,12 @@ const Main = (Props) => {
         <section className='main section'>
             {Props.isMobile ? (
                 // Mobile view
-                <motion.div className="main__container container grid" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0, transition: { delay: 1.2, duration: 1, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: [0.42, 0, 0.58, 1] } }}>
-                    <div className="main__content" style={{ marginTop: Props.navOpen ? "5rem" : "0", }}>
+                <motion.div className="main__container container grid" 
+                initial={{ opacity: 0, y: 100 }} 
+                animate={{ opacity: 1, y: 0, transition: { delay: 1.2, duration: 1, ease: [0.42, 0, 0.58, 1] } }} 
+                exit={{ opacity: 0, transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: [0.42, 0, 0.58, 1] } }}
+                >
+                    <div className="main__content" style={{ marginTop: Props.navOpen ? "0rem" : "0",}}>
                         <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.1rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }} className="main__titlee">{t("hey")}{t("my__name_im")} 
                             <span style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.1rem", fontSize: Props.language === "ar" ? "2.5rem" : "" }} className="main__title-color">
                                 {t("my__name-first")}
@@ -87,8 +91,8 @@ const Main = (Props) => {
                     </div>
                 </motion.div>
             ) : (
-                <motion.div className="main__container container grid" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0, transition: { delay: 1.2, duration: 1, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: [0.42, 0, 0.58, 1] } }}>
-                    <div className="main__content" style={{ marginTop: Props.navOpen ? "0rem" : "0" }}>
+                <motion.div className="main__container container grid" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, transition: { delay: 0.1, staggerChildren: 1.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }}>
+                    <div className="main__content" style={{ marginTop: Props.navOpen ? "0" : "0" }}>
                         <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "4rem" : "2.8rem" }} className="main__titlee">{t("hey")}{t("my__name_im")}
                             <span style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "4rem" : "2.8rem" }} className="main__title-color">
                                 {t("my__name-first")}

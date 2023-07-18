@@ -122,7 +122,7 @@ const Contact = (Props) => {
         <div className="contact__load-screen" ref={(el) => (screen = el)}></div>
       </div>
       {Props.isMobile ? (
-        <motion.section className='contact__section' initial={{ opacity: 0, y: 100}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.7, duration: 1, ease: [0.42, 0, 0.58, 1]}}} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: "easeInOut" }}}>
+        <motion.section className='contact__section' initial={{ opacity: 0, y: 100}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.2, duration: 0.5, ease: [0.42, 0, 0.58, 1]}}} transition={{ duration: 1 }} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 1, ease: "easeInOut" }}}>
           <div className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: Props.language === "ar" ? "90vh" : "90vh" }}>
           <div className="let__contact" style={{ paddingTop: Props.language === "ar" ? "2rem" : "4rem" }}>
             <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "8rem" : "2rem", textTransform: Props.language === "fr" || Props.language === "en" || Props.language === "de" ? "uppercase" : "lowercase", }}>{t("contact__lets")}</h1>
@@ -228,7 +228,7 @@ const Contact = (Props) => {
           </div>
         </motion.section>
       ) : (
-        <motion.section className='contact__section' initial={{ opacity: 0, y: 100}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.7, duration: 1, ease: [0.42, 0, 0.58, 1]}}} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: "easeInOut" }}}>
+        <motion.section className='contact__section'  initial={{ opacity: 0, y: 100 ,transition: { delay: 0.2, duration: 0.5, ease: [0.42, 0, 0.58, 1]}}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.2, duration: 0.5, ease: [0.42, 0, 0.58, 1]}}} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 0.7, ease: [0.42, 0, 0.58, 1]  }}}>
           <div className="let__contact" style={{ paddingTop: Props.language === "fr" ? "5rem" : "1rem" }}>
             <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "8rem" : "6rem", textTransform: Props.language === "fr" || Props.language === "en" || Props.language === "de" ? "uppercase" : "lowercase" }}>{t("contact__lets")}</h1>
           </div>

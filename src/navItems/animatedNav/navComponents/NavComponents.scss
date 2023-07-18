@@ -53,6 +53,36 @@ $background-color_1: var(--container-color);
 	top: 1.35rem;
 }
 
+.navbar-social-media ul {
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+	transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar-social-media ul li a {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+}
+
+.navbar__location {
+	position: absolute;
+	bottom: -4rem;
+	right: -8rem;
+	h2 {
+		font-size: 1rem;
+		font-weight: 600;
+		color: var(--container-color);
+		margin-bottom: 1rem;
+		font-family: $font-family_1;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+}
+
 @media (max-width: 414px) {
 
 	.nav__link.spin {

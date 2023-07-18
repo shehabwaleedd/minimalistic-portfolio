@@ -12,7 +12,7 @@ import {motion} from "framer-motion"
 const Footer = (Props) => {
   const { t } = useTranslation()
   return (
-    <motion.footer className="footer" initial={{ opacity: 0, y: 100}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.7, duration: 1, ease: [0.42, 0, 0.58, 1]}}} transition={{ duration: 2 }} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: "easeInOut" }}}>
+    <motion.footer className="footer" initial={{ opacity: 0, y: 100 ,transition: { delay: 0.2, duration: 0.5, ease: [0.42, 0, 0.58, 1]}}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.2, duration: 0.5, ease: [0.42, 0, 0.58, 1]}}} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 0.7, ease: [0.42, 0, 0.58, 1]  }}}>
       {Props.isMobile ? (
         <div className="footer__container container">
           <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "1.7rem" }} className="footer__title">{t("my__name")} {t("my__name-last")}</h1>

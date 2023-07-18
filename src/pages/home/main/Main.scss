@@ -198,9 +198,10 @@
     }
 
     @media (max-width: 436px) {
-        &__container {
 
-        }
+        & {
+        transform: translateY(-3.2rem);
+    }
         &__container h1 {
             width: 120%;
             letter-spacing: 0.1rem;
@@ -241,6 +242,11 @@
             i {
                 font-size: 0.7rem;
             }
+        }
+    }
+    @media (max-width: 380px) {
+        & {
+            transform: translateY(-1rem);
         }
     }
 }
