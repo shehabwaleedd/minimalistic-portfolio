@@ -35,7 +35,6 @@ $font-family_1: "Posterama", sans-serif;
 		border-bottom-right-radius: 2rem;
 		border: 0.2px solid #000;
 		border-top: 0px solid #000;
-		z-index: 9999999;
 	}
 }
 
@@ -245,13 +244,12 @@ $font-family_1: "Posterama", sans-serif;
 			transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 	
 			.menu-arrow {
-				i {
 					position: relative;
-					top: 1.5rem;
+					top: 0.5rem;
 					margin-right: 10px;
 					font-size: 2rem;
 					color: $color_1;
-				}
+					transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 			}
 			.menu-text {
 				display: flex;
