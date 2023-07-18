@@ -98,7 +98,7 @@
 	--footer-border-color: 1px solid var(--title-color);
 	--about-transition-color: #eee7e1;
 	--projects-transition-color: #eee7e1;
-	--contact-transition-color: #eee7e1;
+	--contact-transition-color: #0f2e448a;
 }
 
 #dark {
@@ -106,7 +106,7 @@
 	--body-color: #eee7e1;
 	--title-color: hsl(var(--hue), var(--sat), 39%);
 	--title-color-dark: hsl(var(--hue), var(--sat), 0%);
-	--text-color: hsl(var(--hue), var(--sat), 50%);
+	--text-color: hsl(var(--hue), var(--sat), 45%);
 	--container-color: #eee6e1;
 	--nav-color: #698269;
 	--rim-color: #212121;

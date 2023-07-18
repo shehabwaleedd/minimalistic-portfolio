@@ -14,7 +14,7 @@ $font-family_1: "Posterama", sans-serif;
 	min-height: 150vh;
 	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 	position: relative;
-	background-color: var(--body-color);
+
 }
 
 .project__card_details {
@@ -22,7 +22,7 @@ $font-family_1: "Posterama", sans-serif;
 	width: 68vw;
 	min-height: fit-content;
 	top: -2rem;
-	background-color: var(--body-color);
+
 	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 
 	.project__image_container img {
@@ -165,7 +165,7 @@ $font-family_1: "Posterama", sans-serif;
 }
 
 .project__details-comment {
-	font-size: 0.8rem;
+	font-size: 1rem;
 	font-weight: 600;
 	color: $color_1;
 	margin-bottom: 1rem;
@@ -277,7 +277,7 @@ $font-family_1: "Posterama", sans-serif;
 .background__img {
 	position: fixed;
 	width: 40%;
-	height: 50%;
+	height: 80%;
 	object-fit: contain;
 }
 

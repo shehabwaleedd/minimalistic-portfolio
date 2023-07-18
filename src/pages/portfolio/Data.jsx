@@ -77,6 +77,7 @@ const projectsData = [
     mainDarkModeImg4: ShebooDarkModeImg4,
     workingOnIt: false,
     newProject: true,
+    backgroundColor: "#63b7b7ae",
   },
   {
     id: 2,
@@ -98,6 +99,7 @@ const projectsData = [
     projectTestimonialsImg: LeluTestimonialsImg,
     workingOnIt: true,
     newProject: false,
+    backgroundColor: "#ffdebeb4",
   },
   {
     id: 7,
@@ -124,6 +126,7 @@ const projectsData = [
     class: "jing",
     workingOnIt: false,
     newProject: false,
+    backgroundColor: "#ed293999",
   },
   {
     id: 3,
@@ -167,6 +170,7 @@ const projectsData = [
     class:"blog",
     workingOnIt: false,
     newProject: false,
+    backgroundColor: "#0f2e449a",
   },
   {
     id: 4,
@@ -180,6 +184,7 @@ const projectsData = [
     class: "moaaz",
     workingOnIt: true,
     newProject: false,
+    backgroundColor: "#006F469a",
   },
 
   {
@@ -195,6 +200,7 @@ const projectsData = [
     mainTitleImg: RollDiceMainPage,
     workingOnIt: false,
     newProject: false,
+    backgroundColor: "#4D2CF19a",
   },
   {
     id: 5,
@@ -208,6 +214,7 @@ const projectsData = [
     class: "cairo",
     workingOnIt: true,
     newProject: false,
+    backgroundColor: "#E19C007b",
   },
 
 
