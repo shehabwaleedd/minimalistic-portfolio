@@ -3,8 +3,7 @@ import "./Main.scss"
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { BiRightArrowAlt } from 'react-icons/bi';
-import DropDownMenu from '../../../navItems/animatedNav/dropDownMenu/DropDownMenu';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Main = (Props) => {
 

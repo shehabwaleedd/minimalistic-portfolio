@@ -6,7 +6,7 @@ import ScrollAnimation from "../../../animation/ScrollAnimation/ScrollAnimation"
 import { BiRightArrowAlt } from "react-icons/bi";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useNavigate } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { IoChevronBack } from "react-icons/io5";
 
 function ProjectDetails(Props) {
