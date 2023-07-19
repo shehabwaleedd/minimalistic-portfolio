@@ -66,7 +66,9 @@ function App() {
 
     if (isHomePage) {
       const hasAnimationShown = sessionStorage.getItem('hasAnimationShown');
-
+      if (isMobile && navOpen) {
+        document.body.classList.add('no-scroll')
+      }
       if (!hasAnimationShown) {
         HomeAnimations();
         sessionStorage.setItem('hasAnimationShown', 'true');
@@ -74,7 +76,8 @@ function App() {
 
       if(isMobile) {
         document.body.classList.remove('no-scroll');
-      } else {
+      }
+      else {
         document.body.classList.add('no-scroll')
       }
     } else {

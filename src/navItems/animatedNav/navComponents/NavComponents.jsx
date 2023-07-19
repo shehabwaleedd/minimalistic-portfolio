@@ -14,12 +14,13 @@ const NavComponents = (Props) => {
                     style={{
                         width: Props.navOpen ? "100vw" : "",
                         position: Props.navOpen ? "absolute" : "absolute",
-                        left: Props.navOpen ? "-3rem" : "",
+                        left: Props.navOpen ? "-3rem" : "-30rem",
                         top: Props.navOpen ? Props.language === "ar" ? "6rem" : "1rem" : "0",
                         display: "flex",
                         opacity: Props.navOpen ? "1" : "0",
                         flexDirection: "column",
-                        alignItems: "flex-start"
+                        alignItems: "flex-start",
+                        zIndex: "99999999",
                     }}
                     initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, type: "spring", transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}
                 >

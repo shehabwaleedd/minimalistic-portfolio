@@ -57,6 +57,7 @@ const AnimatedNav = (Props) => {
             transitionDuration: Props.navOpen ? "3s" : "2s",
             height: Props.navOpen ? "100vh" : "0vh",
             width: Props.navOpen ? "100vw" : "100vw",
+
           }}>
           </div>
         </>
