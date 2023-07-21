@@ -284,6 +284,7 @@ $font-family_1: "Posterama", sans-serif;
 	width: 80%;
 	height: 80%;
 	object-fit: cover;
+
 }
 
 @media (max-width: 470px)  {
@@ -296,6 +297,13 @@ $font-family_1: "Posterama", sans-serif;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
+	}
+	.background__img {
+		position: fixed;
+		width: 80%;
+		height: 80%;
+		object-fit: cover;
+		filter: blur(55px);
 	}
 }
 

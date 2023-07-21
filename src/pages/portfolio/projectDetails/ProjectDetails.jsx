@@ -63,7 +63,7 @@ function ProjectDetails(Props) {
                                         d="M22.1,-22.2C24.8,-19.5,20.3,-9.8,16.2,-4.1C12.2,1.7,8.6,3.3,5.9,6.8C3.3,10.4,1.7,15.8,-4.3,20.1C-10.2,24.3,-20.3,27.4,-25.7,23.9C-31,20.3,-31.5,10.2,-27.1,4.4C-22.6,-1.3,-13.3,-2.6,-7.9,-5.3C-2.6,-7.9,-1.3,-12,4.2,-16.2C9.8,-20.4,19.5,-24.8,22.1,-22.2Z"
                                         transform="translate(45 50)"
                                         strokeWidth="1px"
-                                        style={{ transition: "all 0.3s ease 0s", zIndex: "9999999999", filter: "blur(15px)" }}
+                                        style={{ transition: "all 0.3s ease 0s", zIndex: "9999999999"}}
                                         stroke={post.backgroundColor}
                                     ></path>
                                 </svg>
