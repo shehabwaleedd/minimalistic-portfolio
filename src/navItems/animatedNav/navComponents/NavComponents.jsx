@@ -15,12 +15,12 @@ const NavComponents = (Props) => {
                         width: Props.navOpen ? "100vw" : "",
                         position: Props.navOpen ? "absolute" : "absolute",
                         left: Props.navOpen ? "-3rem" : "-30rem",
-                        top: Props.navOpen ? Props.language === "ar" ? "6rem" : "1rem" : "0",
+                        top: Props.navOpen ? Props.language === "ar" ? "1rem" : "1rem" : "0",
                         display: "flex",
                         opacity: Props.navOpen ? "1" : "0",
                         flexDirection: "column",
                         alignItems: "flex-start",
-                        zIndex: "99999999",
+                        zIndex: "99",
                     }}
                     initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, type: "spring", transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}
                 >
@@ -34,7 +34,7 @@ const NavComponents = (Props) => {
                             justifyContent: "center",
                             height: "60vh",
                             position: "relative",
-                            left: "-3.1rem",
+                            left: Props.language === "ar" ? "-8rem" : "-3.1rem",
                         }}>
                         <Link
                             className={Props.navOpen ? "nav__link spin" : "nav__link"} to="/"
@@ -42,7 +42,7 @@ const NavComponents = (Props) => {
                                 opacity: Props.navOpen ? "1" : "0",
                                 padding: Props.navOpen ? "0.1rem" : "0",
                                 transitionDelay: Props.navOpen ? "3s" : "3s",
-                                fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1.5rem" : "2.5rem",
+                                fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2.5rem" : "2.5rem",
 
                             }}
                         >{t("navbar__home")}</Link>
@@ -52,7 +52,7 @@ const NavComponents = (Props) => {
                                 opacity: Props.navOpen ? "1" : "0",
                                 padding: Props.navOpen ? "0.1rem" : "0",
                                 transitionDelay: Props.navOpen ? "3s" : "0",
-                                fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1.5rem" : "2.5rem",
+                                fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2.5rem" : "2.5rem",
 
                             }}
                         >{t("navbar__about")}</Link>
@@ -62,7 +62,7 @@ const NavComponents = (Props) => {
                                 opacity: Props.navOpen ? "1" : "0",
                                 padding: Props.navOpen ? "0.1rem" : "0",
                                 transitionDelay: Props.navOpen ? "3s" : "0",
-                                fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1.5rem" : "2.5rem",
+                                fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2.5rem" : "2.5rem",
                             }}
                         >{t("navbar__projects")}</Link>
                         <Link
@@ -71,10 +71,16 @@ const NavComponents = (Props) => {
                                 opacity: Props.navOpen ? "1" : "0",
                                 padding: Props.navOpen ? "0.1rem" : "0",
                                 transitionDelay: Props.navOpen ? "3s" : "0",
-                                fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "1.5rem" : "2.5rem",
+                                fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.2rem", fontSize: Props.language === "ar" ? "2.5rem" : "2.5rem",
                             }}
                         >{t("navbar__contact")}</Link>
-                        <div className="nav-footer">
+                        <div className="nav-footer"
+                            style={{
+                                position: "absolute",
+                                bottom: Props.language === "ar" ? "-2rem" : "-1rem",
+                            }}
+
+                        >
                             <div className="navbar-social-media">
                                 <ul>
                                     <li>
@@ -97,8 +103,15 @@ const NavComponents = (Props) => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="navbar__location">
-                                <h2>Cairo, Egypt</h2>
+                            <div className="navbar__location"
+                                style={{
+                                    right: Props.language === "ar" ? "0.2rem" : "0",
+                                    bottom: Props.language === "ar" ? "-7rem" : "-5rem",
+                                    width: Props.language === "ar" ? "40vw" : "100%",
+
+                                }}
+                            >
+                                <h2>{t("contact__location-cairo")} {t("footer__info-egypt")}</h2>
                             </div>
                         </div>
                     </div>

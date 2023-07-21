@@ -47,10 +47,12 @@ const DropDownMenu = (Props) => {
   return (
     <div className={`menu__container ${Props.isMenuVisible || Props.navOpen ? '' : 'hidden'}`} ref={menuRef}>
       {Props.isMobile ? (
-        <div className="dropdown-menu">
-          <div // Change button to div
+        <div className={`dropdown-menu`}>
+          <div 
             onClick={handleLanguageExpanded}
             className={Props.navOpen ? 'dropdown__icon spin' : 'dropdown__icon'}
+            style={{zIndex: 999999999,
+            }}
           >
             <span onClick={handleLanguageExpanded}>
               {Props.language}
@@ -64,9 +66,9 @@ const DropDownMenu = (Props) => {
                     className="language__dropdown"
                     style={{
                       top: Props.navOpen ? "-3rem" : "3rem",
-                      left: Props.navOpen ? Props.language === "ar" ? "-4rem" : "-8rem" : Props.language === "ar" ? "-6rem" : smallScreen ? "-10rem" : "-5rem",
-                      flexDirection: Props.language === 'ar' ? 'row-reverse' : 'row',
-                      width: "16rem"
+                      right: Props.navOpen ? Props.language === "ar" ? "-10rem" : "10rem" : Props.language === "ar" ? "-6rem" : "-6rem",
+                      width: "16rem",
+                      zIndex: 999999999,
                     }}
                   >
                     <div className="language__dropdown-link" onClick={handleEnglishClick}>
@@ -90,7 +92,7 @@ const DropDownMenu = (Props) => {
         </div>
       ) : (
         <div className="dropdown-menu">
-          <div // Change button to div
+          <div
             onClick={handleLanguageExpanded}
             className={Props.navOpen ? 'dropdown__icon spin' : 'dropdown__icon'}
           >
@@ -105,8 +107,8 @@ const DropDownMenu = (Props) => {
                     exit={{ x: 15, opacity: 0 }}
                     className="language__dropdown"
                     style={{
-                      top: Props.navOpen ? "-3rem" : "",
-                      left: Props.navOpen ? Props.language === "ar" ? "-10rem" : "-10rem" : Props.language === "ar" ? "4rem" : "-20rem",
+                      top: Props.navOpen ? "-4rem" : "",
+                      left: Props.navOpen ? Props.language === "ar" ? "-8rem" : "-10rem" : Props.language === "ar" ? "4rem" : "-20rem",
                       flexDirection: Props.language === 'ar' ? 'row-reverse' : 'row'
                     }}
                   >
