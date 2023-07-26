@@ -76,7 +76,7 @@ const projectsData = [
     mainDarkModeImg3: ShebooDarkModeImg3,
     mainDarkModeImg4: ShebooDarkModeImg4,
     workingOnIt: false,
-    newProject: true,
+    newProject: false,
     backgroundColor: "#63b7b777",
   },
   {
@@ -142,7 +142,7 @@ const projectsData = [
     lightModeImg8: BlogLightMode8,
     class:"blog",
     workingOnIt: false,
-    newProject: false,
+    newProject: true,
     backgroundColor: "#0f2e449a",
   },
   {

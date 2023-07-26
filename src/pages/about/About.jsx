@@ -5,7 +5,7 @@ import MyStack from './stack/MyStack'
 import { gsap } from "gsap";
 import { useTranslation } from 'react-i18next'
 import { BiDownArrowAlt } from "react-icons/bi"
-import cv from "../../assets/Shehab_Waleed.docx"
+import cv from "../../assets/Shehab Waleed Resume.docx"
 
 const AboutPage = (Props) => {
 
