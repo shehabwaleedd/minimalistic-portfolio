@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ee8e0aa6.css",
-    "main.js": "/static/js/main.b2ff5d86.js",
+    "main.js": "/static/js/main.c1869b50.js",
     "static/js/945.a2b930d1.chunk.js": "/static/js/945.a2b930d1.chunk.js",
     "static/media/Jin__darkMode1.png": "/static/media/Jin__darkMode1.00ddd0efe1e1d8002886.png",
     "static/media/Jin__gridView.png": "/static/media/Jin__gridView.073875bd42a42aaf339c.png",
@@ -67,11 +67,11 @@
     "static/media/Satoshi-Black.woff": "/static/media/Satoshi-Black.4261d202e1e9410db1bf.woff",
     "static/media/Satoshi-Light.woff": "/static/media/Satoshi-Light.67e7fa77f107df3491b6.woff",
     "static/media/Satoshi-MediumItalic.woff2": "/static/media/Satoshi-MediumItalic.6be6d51d5fc7402ee45f.woff2",
+    "static/media/Shehab Waleed Resume.docx": "/static/media/Shehab Waleed Resume.d03770b8764786cc7907.docx",
     "static/media/Satoshi-Medium.woff2": "/static/media/Satoshi-Medium.1ffe968245568e8ba1e7.woff2",
     "static/media/Satoshi-Regular.woff2": "/static/media/Satoshi-Regular.9ec05085c4cd2966eba8.woff2",
     "static/media/Satoshi-Bold.woff2": "/static/media/Satoshi-Bold.a0e6d25529eab537426c.woff2",
     "static/media/Satoshi-Black.woff2": "/static/media/Satoshi-Black.b5013d854bb5a8e48651.woff2",
-    "static/media/Shehab_Waleed.docx": "/static/media/Shehab_Waleed.64d9e945fcd6b26e0c61.docx",
     "static/media/Satoshi-Light.woff2": "/static/media/Satoshi-Light.df8f06167ee6fd05a131.woff2",
     "static/media/lelu10.svg": "/static/media/lelu10.1c7f4e6fd5db5f02db7b2067fa10b572.svg",
     "index.html": "/index.html",
@@ -79,6 +79,6 @@
   },
   "entrypoints": [
     "static/css/main.ee8e0aa6.css",
-    "static/js/main.b2ff5d86.js"
+    "static/js/main.c1869b50.js"
   ]
 }
