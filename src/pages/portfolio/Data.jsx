@@ -44,8 +44,11 @@ import JinDarkMode from "../../assets/ProjectDetails/Jing/Jin__darkMode1.png"
 import JinDarkMode2 from "../../assets/ProjectDetails/Jing/Jing__darkMode2.png"
 import JinDarkMode3 from "../../assets/ProjectDetails/Jing/Jin__darkMode3.png"
 import JinDarkMode4 from "../../assets/ProjectDetails/Jing/Jin__darkMode4.png"
-
-
+import MoaazMainPage from "../../assets/ProjectDetails/Moaaz/Moaaz__mainPage.png"
+import MoaazWorkPage from "../../assets/ProjectDetails/Moaaz/Moaaz__workPage.png"
+import MoaazOverlayNav from "../../assets/ProjectDetails/Moaaz/Moaaz__overlayNav.png"
+import MoaazAboutPage from "../../assets/ProjectDetails/Moaaz/Moaaz__aboutPage.png"
+import MoaazContactPage from "../../assets/ProjectDetails/Moaaz/Moaaz__contactPage.png"
 
 
 
@@ -178,14 +181,24 @@ const projectsData = [
     image: Work3,
     title: "Moaaz Askaar",
     category: ["Branding", "Web Design", "UI/UX Design"],
-    website: "https://cairobrews.vercel.app/",
+    website: "https://moaaz.vercel.app/",
     link: "https://github.com/shehabwaleedd/moaaz-askaar",
     date: "2023, July",
     comment: "I made this website using HTML and CSS, I was trying to make it as close as possible to the original twitter website, I used flexbox to make it responsive",
     class: "moaaz",
-    workingOnIt: true,
-    newProject: false,
+    workingOnIt: false,
+    newProject: true,
     backgroundColor: "#006F469a",
+    mainTitle: "Main Page",
+    mainTitleImg: MoaazMainPage,
+    mainTitle2: "Overlayed Navbar",
+    mainTitleImg2: MoaazOverlayNav,
+    mainAboutPage: "About Page",
+    mainAboutPageImg: MoaazAboutPage,
+    mainContactPage: "Contact Page",
+    mainContactPageImg: MoaazContactPage,
+    mainWorkPage: "Work Page",
+    mainWorkPageImg: MoaazWorkPage,
   },
 
   {

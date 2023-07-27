@@ -75,12 +75,7 @@ const NavComponents = (Props) => {
                             }}
                         >{t("navbar__contact")}</Link>
                         <div className="nav-footer"
-                            style={{
-                                position: "absolute",
-                                bottom: Props.language === "ar" ? "-2rem" : "-1rem",
-                            }}
-
-                        >
+                            style={{ position: "absolute", bottom: Props.language === "ar" ? "-2rem" : "-1rem",}}>
                             <div className="navbar-social-media">
                                 <ul>
                                     <li>
@@ -104,13 +99,7 @@ const NavComponents = (Props) => {
                                 </ul>
                             </div>
                             <div className="navbar__location"
-                                style={{
-                                    right: Props.language === "ar" ? "0.2rem" : "0",
-                                    bottom: Props.language === "ar" ? "-7rem" : "-5rem",
-                                    width: Props.language === "ar" ? "40vw" : "100%",
-
-                                }}
-                            >
+                                style={{right: Props.language === "ar" ? "0.2rem" : "0",bottom: Props.language === "ar" ? "-7rem" : "-5rem",width: Props.language === "ar" ? "40vw" : "100%",}}>
                                 <h2>{t("contact__location-cairo")} {t("footer__info-egypt")}</h2>
                             </div>
                         </div>

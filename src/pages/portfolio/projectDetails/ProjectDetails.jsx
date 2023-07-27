@@ -247,6 +247,7 @@ function ProjectDetails(Props) {
                                 {post.accountPage && renderDetails(post.accountPage, post.accountPageImg, post.accountPage)}
                                 {post.mainAboutPage && renderDetails(post.mainAboutPage, post.mainAboutPageImg, post.mainAboutPage)}
                                 {post.mainContactPage && renderDetails(post.mainContactPage, post.mainContactPageImg, post.mainContactPage)}
+                                {post.mainWorkPage && renderDetails(post.mainWorkPage, post.mainWorkPageImg, post.mainWorkPage)}
                                 {post.mainDarkMode && (
                                     <div className="project__details_details">
                                         <div className="project__details-text">
