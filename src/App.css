@@ -75,6 +75,7 @@
 	--body-color: #1b1918;
 	--title-color: #FFFFE3;
 	--title-color-dark: hsl(var(--hue), var(--sat), 80%);
+	--text-project-details-color: hsl(var(--hue), var(--sat), 55%);
 	--text-color: hsl(var(--hue), var(--sat), 65%);
 	--container-color: #1b1918;
 	--box-shadow-img: 0 0 0 9px rgba(254, 254, 254, 1);
@@ -106,6 +107,7 @@
 	--body-color: #eee7e1;
 	--title-color: hsl(var(--hue), var(--sat), 39%);
 	--title-color-dark: hsl(var(--hue), var(--sat), 0%);
+	--text-project-details-color: hsl(var(--hue), var(--sat), 25%);
 	--text-color: hsl(var(--hue), var(--sat), 45%);
 	--container-color: #eee6e1;
 	--nav-color: #698269;

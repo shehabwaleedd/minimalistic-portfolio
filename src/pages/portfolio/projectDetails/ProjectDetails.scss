@@ -2,6 +2,8 @@ $color_1: var(--text-color);
 $color_2: var(--accent-color);
 $color_3: var(--nav-overlay-color);
 $color_4: var(--title-color);
+$color_5: var(--text-project-details-color);
+
 $font-family_1: "Posterama", sans-serif;
 
 .project__details {
@@ -11,19 +13,19 @@ $font-family_1: "Posterama", sans-serif;
 	align-items: center;
 	padding: 1rem;
 	width: 100%;
-	min-height: 150vh;
+	height: fit-content;
 	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 	position: relative;
-
+	overflow-y: hidden;
 }
 
 .project__card_details {
 	position: relative;
 	width: 68vw;
-	min-height: fit-content;
 	top: -2rem;
-
+	z-index: 99999;
 	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+
 
 	.project__image_container img {
 		position: relative;
@@ -33,7 +35,7 @@ $font-family_1: "Posterama", sans-serif;
 		object-fit: cover;
 		border-bottom-left-radius: 2rem;
 		border-bottom-right-radius: 2rem;
-		border: 0.2px solid #000;
+		border: 0.2px solid var(--text-color);
 		border-top: 0px solid #000;
 	}
 }
@@ -172,7 +174,7 @@ $font-family_1: "Posterama", sans-serif;
 .project__details-comment {
 	font-size: 1rem;
 	font-weight: 600;
-	color: $color_1;
+	color: $color_5;
 	margin-bottom: 1rem;
 	letter-spacing: 0.1rem;
 	font-family: "Aboreto";
@@ -186,7 +188,7 @@ $font-family_1: "Posterama", sans-serif;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		color: $color_4;
+		color: $color_5;
 		position: relative;
 		font-size: 1.1rem;
 
