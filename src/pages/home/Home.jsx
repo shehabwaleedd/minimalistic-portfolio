@@ -3,7 +3,7 @@ import Main from './main/Main';
 import './Home.css';
 import { motion } from 'framer-motion';
 
-const Home = ({ isMobile, setIsMobile, isAbout, setIsAbout, navOpen, language, setLanguage, languageExpanded, setLanguageExpanded, isTablet}) => {
+const Home = ({ isMobile, navOpen, language, isTablet}) => {
   return (
     <motion.section className="homeee" >
       <div className="containererr"></div>

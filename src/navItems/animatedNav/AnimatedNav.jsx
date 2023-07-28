@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom'
 import MobileNavbar from './animatedNavResponsive/mobileNavbar/MobileNavbar'
 import DesktopNavbar from './animatedNavResponsive/desktopNavbar/DesktopNavbar'
 
-const AnimatedNav = ({ isTablet, setIsTablet, isMobile, setIsMobile, isAbout, setIsAbout, setOpen, navOpen, setNavOpen, language, isMenuVisible, setLanguage, languageExpanded, setLanguageExpanded, setMenuVisible, shouldReload, setShouldReload }) => {
+const AnimatedNav = ({ setIsTablet, isMobile, setIsMobile, isAbout, setIsAbout, setOpen, navOpen, setNavOpen, language, isMenuVisible, setLanguage, languageExpanded, setLanguageExpanded, setMenuVisible, shouldReload, setShouldReload }) => {
   const location = useLocation();
 
 

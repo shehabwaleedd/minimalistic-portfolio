@@ -9,15 +9,15 @@ import {BiLogoTwitter} from "react-icons/bi"
 import {motion} from "framer-motion"
 
 
-const Footer = (Props) => {
+const Footer = ({ isMobile, language }) => {
   const { t } = useTranslation()
   return (
     <motion.footer className="footer" initial={{ opacity: 0, y: 100 ,transition: { delay: 0.2, duration: 0.5, ease: [0.42, 0, 0.58, 1]}}} animate={{ opacity: 1, y: 0 ,transition: { delay: 0.2, duration: 0.5, ease: [0.42, 0, 0.58, 1]}}} exit={{ opacity: 0, y: -100 , transition: { delay: 0.3, staggerChildren: 1.5, duration: 0.7, ease: [0.42, 0, 0.58, 1]  }}}>
-      {Props.isMobile ? (
+      {isMobile ? (
         <div className="footer__container container">
-          <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "1.7rem" }} className="footer__title">{t("my__name")} {t("my__name-last")}</h1>
+          <h1 style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.3rem", fontSize: language === "ar" ? "4rem" : "1.7rem" }} className="footer__title">{t("my__name")} {t("my__name-last")}</h1>
           <div className="footer__social">
-            <div className="footer__info" style={{ flexDirection: Props.language === "ar" ? "row-reverse" : "row", gap: Props.language === "ar" ? "1rem" : "0.2rem", }}>
+            <div className="footer__info" style={{ flexDirection: language === "ar" ? "row-reverse" : "row", gap: language === "ar" ? "1rem" : "0.2rem", }}>
               <p style={{fontSize: "0.7rem" }}><strong id="mono" style={{fontSize: "0.7rem" }}>{t("footer__info-address")}</strong>{t("footer__info-street")}, {t("footer__info-egypt")}</p>
             </div>
             <div className="footer__info">
@@ -41,9 +41,9 @@ const Footer = (Props) => {
         </div>
       ) : (
         <motion.div className="footer__container container"  >
-          <h1 style={{ fontFamily: Props.language === "ar" ? "Aref Ruqaa" : "", letterSpacing: Props.language === "ar" ? "0" : "0.3rem", fontSize: Props.language === "ar" ? "4rem" : "1.8rem" }} className="footer__title">{t("my__name")} {t("my__name-last")}</h1>
+          <h1 style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.3rem", fontSize: language === "ar" ? "4rem" : "1.8rem" }} className="footer__title">{t("my__name")} {t("my__name-last")}</h1>
           <div className="footer__social">
-            <div className="footer__info" style={{ flexDirection: Props.language === "ar" ? "row-reverse" : "row", gap: Props.language === "ar" ? "1rem" : "" }}>
+            <div className="footer__info" style={{ flexDirection: language === "ar" ? "row-reverse" : "row", gap: language === "ar" ? "1rem" : "" }}>
               <p><strong id="mono">{t("footer__info-address")}</strong>{t("footer__info-street")}, {t("footer__info-egypt")}</p>
             </div>
             <div className="footer__info">
