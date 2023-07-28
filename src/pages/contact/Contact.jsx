@@ -2,14 +2,11 @@ import React, { useState, useEffect } from 'react'
 import "./Contact.scss"
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { useTranslation } from 'react-i18next'
-import Socials from '../../components/socials/Socials';
-import { gsap} from "gsap";
+import { gsap } from "gsap";
 import Footer from '../footer/Footer';
-import { motion } from 'framer-motion';
 import MobileContact from './contactResponsive/mobileContact/MobileContact';
 import DesktopContact from './contactResponsive/desktopContact/DesktopContact';
-const Contact = ({ isMobile, language  }) => {
+const Contact = ({ isMobile, language }) => {
   const form = useRef();
   const sendEmail = (e) => {
     emailjs.sendForm('service_5y7rll1', 'template_jdpz7a3', e.target, '4nyzjigYhVGMwCX0W')
@@ -20,7 +17,6 @@ const Contact = ({ isMobile, language  }) => {
       });
     e.target.reset();
   };
-  const { t } = useTranslation()
   const [name, setName] = useState("");
   const [budget, setBudget] = useState("budget");
   const [email, setEmail] = useState("");
@@ -107,11 +103,11 @@ const Contact = ({ isMobile, language  }) => {
         <div className="contact__load-screen" ref={(el) => (screen = el)}></div>
       </div>
       {isMobile ? (
-        <MobileContact language={language}body={body}screen={screen}name={name}setName={setName}email={email}setEmail={setEmail}message={message}setMessage={setMessage}agreed={agreed}setAgreed={setAgreed}budget={budget}handleOptionChange={handleOptionChange}handleSubmit={handleSubmit}formErrors={formErrors}form={form}/>
+        <MobileContact language={language} body={body} screen={screen} name={name} setName={setName} email={email} setEmail={setEmail} message={message} setMessage={setMessage} agreed={agreed} setAgreed={setAgreed} budget={budget} handleOptionChange={handleOptionChange} handleSubmit={handleSubmit} formErrors={formErrors} form={form} />
       ) : (
-        <DesktopContact language={language}body={body}screen={screen}name={name}setName={setName}email={email}setEmail={setEmail}message={message}setMessage={setMessage}agreed={agreed}setAgreed={setAgreed}budget={budget}handleOptionChange={handleOptionChange}handleSubmit={handleSubmit}formErrors={formErrors}form={form} />
+        <DesktopContact language={language} body={body} screen={screen} name={name} setName={setName} email={email} setEmail={setEmail} message={message} setMessage={setMessage} agreed={agreed} setAgreed={setAgreed} budget={budget} handleOptionChange={handleOptionChange} handleSubmit={handleSubmit} formErrors={formErrors} form={form} />
       )}
-      <Footer isMobile={isMobile} language={language}  />
+      <Footer isMobile={isMobile} language={language} />
     </React.Fragment>
   )
 }
