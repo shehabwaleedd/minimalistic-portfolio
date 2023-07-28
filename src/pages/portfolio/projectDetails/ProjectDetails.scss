@@ -289,48 +289,7 @@ $font-family_1: "Posterama", sans-serif;
 
 }
 
-@media (max-width: 470px)  {
-	project__details_details {
-		padding: 0 1rem;
-	}
 
-	.project__details-text {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-	}
-	.background__img {
-		position: fixed;
-		width: 80%;
-		height: 80%;
-		object-fit: cover;
-		filter: blur(55px);
-	}
-}
-
-@media (max-width: 416px) {
-	.project__card_details {
-		position: relative;
-		width: 100vw;
-		.project__image_container  {
-			padding-bottom: 2rem;
-		}
-		.project__details_post-text {
-			width: 100%;
-			position: relative;
-			transform: translateX(-2rem);
-			margin-left: 2rem;
-		}
-	}
-	.project__img_container {
-		margin-right: 3.3rem;
-	}
-	.menu-item-wrapper {
-		padding-left: 4rem;
-	}
-
-}
 
 @media (min-width: 1850px) {
 	.project__card_details {
@@ -448,5 +407,12 @@ $font-family_1: "Posterama", sans-serif;
 			}
 		
 		}
+	}
+	.background__img {
+		position: fixed;
+		width: 80%;
+		height: 80%;
+		object-fit: cover;
+		filter: blur(55px);
 	}
 }

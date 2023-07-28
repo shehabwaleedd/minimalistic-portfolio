@@ -55,9 +55,9 @@ const Portfolio = ({ language, isMobile, isTablet }) => {
   return (
     <>
       {isMobile ? (
-        <MobilePortfolio language={language} body={body} screen={screen} />
+        <MobilePortfolio language={language} body={body} screen={screen}/>
       ) : isTablet ? (
-          <TabletPortfolio language={language} body={body} screen={screen} />
+          <TabletPortfolio language={language} body={body} screen={screen}/>
       ) : (
           <DesktopPortfolio language={language} body={body} screen={screen} handleTextHover={handleTextHover} handleTextLeave={handleTextLeave} selectedImage={selectedImage}/>
       )}

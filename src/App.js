@@ -121,7 +121,7 @@ function App() {
               <Route path='/projects' key={location.pathname} element={<Portfolio  isTablet={isTablet} isMobile={isMobile} setIsMobile={setIsMobile} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
               <Route path="/" element={<Home key={location.pathname}  isTablet={isTablet} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
               <Route path="/contact" element={<Contact key={location.pathname}  isTablet={isTablet} isMobile={isMobile} setIsMobile={setIsMobile} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
-              <Route path="/projectDetails/:id" element={<ProjectDetails key={location.pathname}  isTablet={isTablet} isMobile={isMobile} setIsMobile={setIsMobile} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />} />
+              <Route path="/projectDetails/:id" element={<ProjectDetails key={location.pathname}  isTablet={isTablet} isMobile={isMobile}/>} />
             </Routes>
           </AnimatePresence>
           <ScrollUp />
