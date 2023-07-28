@@ -1,6 +1,6 @@
 import Work0 from "../../assets/Posters/shebo2.png"
 import Work1 from "../../assets/Posters/lelu10.svg"
-import Work2 from "../../assets/Posters/blog2.svg"
+import Work2 from "../../assets/Posters/blog4.webp"
 import Work3 from "../../assets/Posters/moaz3.png"
 import Work4 from "../../assets/Posters/cairo1.svg"
 import Work5 from "../../assets/Posters/blog7.png"
@@ -113,7 +113,7 @@ const projectsData = [
     link: "https://github.com/shehabwaleedd/blog",
     classProject: "blog__class",
     date: "December, 2022",
-    comment: "I made this small website just to keep always reminding myself of the time left for me to finish my learning process and start to actually make good projects, I used Vanilla JavaScript to make it",
+    comment: "Lumos was conceived as an online digital blog platform, tailored for individuals with intellectual inclinations, to provide them with a space to freely express their thoughts. It served as my inaugural full-fledged web application, built entirely from scratch. The platform integrated Firebase for authentication and database functionalities, employed Framer Motion for animations, and utilized i18next for seamless translation into four languages. The design was characterized by sharp angles and squares, complemented by a simple color palette to enhance user experience.",
     mainTitle: "Main Page",
     mainTitleImg: BlogMainPage,
     mainTitleSubMenu: "Sub Menu",
@@ -146,7 +146,7 @@ const projectsData = [
     class:"blog",
     workingOnIt: false,
     newProject: true,
-    backgroundColor: "#0f2e449a",
+    backgroundColor: "#f9e5bf9a",
   },
   {
     id: 7,
@@ -184,7 +184,7 @@ const projectsData = [
     website: "https://moaaz.vercel.app/",
     link: "https://github.com/shehabwaleedd/moaaz-askaar",
     date: "2023, July",
-    comment: "I made this website using HTML and CSS, I was trying to make it as close as possible to the original twitter website, I used flexbox to make it responsive",
+    comment: "Moaaz, a percussionist, requested a simple yet elegant personal website that reflects Nubian culture and his musical perspective for better branding and professionalism. Inspired by the Nubian flag, the design represents the rich musical and human heritage of Nubia.",
     class: "moaaz",
     workingOnIt: false,
     newProject: true,
