@@ -1,17 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './Portfolio.scss';
 import projectsData from './Data';
-import { Link } from 'react-router-dom';
-import { AnimatePresence, motion } from "framer-motion";
 import { gsap } from "gsap";
-import { useTranslation } from 'react-i18next';
-import { BiRightArrowAlt } from 'react-icons/bi';
 import MobilePortfolio from './portfolioResponsive/mobilePortfolioResponsive/MobilePortfolio';
 import TabletPortfolio from './portfolioResponsive/tabletPortfolioResponsive/TabletPortfolio';
 import DesktopPortfolio from './portfolioResponsive/desktopPortfolioResponsive/DesktopPortfolio';
-
-
-const Portfolio = ({ navOpen, language, isMobile, isTablet }) => {
+const Portfolio = ({ language, isMobile, isTablet }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const handleTextHover = (imageId) => {
     const selected = projectsData.find((image) => image.id === imageId);
@@ -20,7 +14,6 @@ const Portfolio = ({ navOpen, language, isMobile, isTablet }) => {
   const handleTextLeave = () => {
     setSelectedImage(null);
   }
-  const { t } = useTranslation();
   useEffect(() => {
     const hasProjectsShown = sessionStorage.getItem('hasProjectsShown');
 
@@ -66,7 +59,7 @@ const Portfolio = ({ navOpen, language, isMobile, isTablet }) => {
       ) : isTablet ? (
           <TabletPortfolio language={language} body={body} screen={screen} />
       ) : (
-          <DesktopPortfolio language={language} body={body} screen={screen} />
+          <DesktopPortfolio language={language} body={body} screen={screen} handleTextHover={handleTextHover} handleTextLeave={handleTextLeave} selectedImage={selectedImage}/>
       )}
     </>
   );
