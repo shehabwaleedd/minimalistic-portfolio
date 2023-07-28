@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.82288715.css",
-    "main.js": "/static/js/main.cca73b85.js",
+    "main.js": "/static/js/main.37dee3b2.js",
     "static/js/945.a2b930d1.chunk.js": "/static/js/945.a2b930d1.chunk.js",
     "static/media/Jin__darkMode1.png": "/static/media/Jin__darkMode1.00ddd0efe1e1d8002886.png",
     "static/media/Moaaz__workPage.png": "/static/media/Moaaz__workPage.ef2de7d155f04dadb19a.png",
@@ -34,7 +34,6 @@
     "static/media/Moaaz__mainPage.png": "/static/media/Moaaz__mainPage.1f697ec9f23a7ce62294.png",
     "static/media/blog_mainPage.png": "/static/media/blog_mainPage.5afa8645788336f80b4a.png",
     "static/media/Blog__lightMode.png": "/static/media/Blog__lightMode.8397262444c39e8ba72a.png",
-    "static/media/blog2.svg": "/static/media/blog2.b152fb7b2ee994be355bc92cb8578ef5.svg",
     "static/media/Blog__lightMode8.png": "/static/media/Blog__lightMode8.707956d02083ffb477b1.png",
     "static/media/Blog__signUpPage.png": "/static/media/Blog__signUpPage.47bbcc25a9b111c09b7a.png",
     "static/media/profile.jpg": "/static/media/profile.763cd32bc9e9ac0dcf82.jpg",
@@ -79,11 +78,12 @@
     "static/media/Satoshi-Black.woff2": "/static/media/Satoshi-Black.b5013d854bb5a8e48651.woff2",
     "static/media/Satoshi-Light.woff2": "/static/media/Satoshi-Light.df8f06167ee6fd05a131.woff2",
     "static/media/lelu10.svg": "/static/media/lelu10.1c7f4e6fd5db5f02db7b2067fa10b572.svg",
+    "static/media/blog4.webp": "/static/media/blog4.c22f3a9ef5c64eef8e47.webp",
     "index.html": "/index.html",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
     "static/css/main.82288715.css",
-    "static/js/main.cca73b85.js"
+    "static/js/main.37dee3b2.js"
   ]
 }
