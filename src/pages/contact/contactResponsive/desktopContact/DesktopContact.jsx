@@ -6,12 +6,12 @@ import Socials from '../../../../components/socials/Socials';
 const DesktopContact = ({ language, body, name, setName, email, setEmail, message, setMessage, form, formErrors, handleSubmit, budget, handleOptionChange, agreed, setAgreed}) => {
     const { t } = useTranslation()
     return (
-        <motion.section className='contact__section' ref={(el) => (body = el)} initial={{ opacity: 0, y: 100, transition: { delay: 0.2, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 1.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }}>
+        <motion.section className='contact__section ' ref={(el) => (body = el)} initial={{ opacity: 0, y: 100, transition: { delay: 0.2, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 1.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }}>
             <div className="let__contact" style={{ paddingTop: language === "fr" ? "5rem" : "1rem" }}>
                 <h1 style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.2rem", fontSize: language === "ar" ? "8rem" : "6rem", textTransform: language === "fr" || language === "en" || language === "de" ? "uppercase" : "lowercase" }}>{t("contact__lets")}</h1>
             </div>
             <motion.div className='contact section' id='contact' ref={(el) => (body = el)} style={{ height: language === "fr" ? "80vh" : "60vh" }} >
-                <div className="contact__container container grid" style={{ flexDirection: language === "ar" ? "row-reverse" : "column", display: language === "ar" ? "flex" : "" }}>
+                <div className="contact__container " style={{ flexDirection: language === "ar" ? "row-reverse" : "column", display: language === "ar" ? "flex" : "" }}>
                     <div className="contact__content">
                         <div className="contact__details">
                             <h1 style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", fontSize: language === "ar" ? "3rem" : "2rem", textAlign: language === "ar" ? "right" : "left" }}>{t("contact__title1")}<br />{t("contact__title2")}<br />{t("contact__title3")}</h1>

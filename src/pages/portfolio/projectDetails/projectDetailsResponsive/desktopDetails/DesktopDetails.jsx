@@ -1,5 +1,4 @@
 import React from 'react'
-import './DesktopDetails.scss'
 import { motion } from 'framer-motion'
 import ScrollAnimation from '../../../../../animation/ScrollAnimation/ScrollAnimation'
 import { Link } from 'react-router-dom'
@@ -10,10 +9,10 @@ import projectsData from '../../../Data'
 
 const DesktopDetails = ({ post, renderDetails, goToNextProject, id }) => {
     return (
-        <motion.div initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, type: "spring", transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
+        <motion.div initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
             <ScrollAnimation />
             <div className="project__details">
-                <div className="project__card_details">
+                <div className="project__card_details container">
                     <motion.div className="background__img" initial={{ opacity: 0, y: 100, transition: { delay: 0.1, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.1, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 500, transition: { delay: 1, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }} style={{ transform: "translateY(-40%)" }}>
                         <svg id="sw-js-blob-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" version="1.1" width="1300" height="1000">
                             <path
@@ -26,11 +25,8 @@ const DesktopDetails = ({ post, renderDetails, goToNextProject, id }) => {
                             ></path>
                         </svg>
                     </motion.div>
-                    <div className="project__image_container">
-                        <img
-                            src={post.image}
-                            alt={post.title}
-                        />
+                    <div className="project__image_container container">
+                        <img src={post.image}alt={post.title}/>
                     </div>
                     <div className="project__details_post-text">
                         <Link to="/projects" className="project__back">

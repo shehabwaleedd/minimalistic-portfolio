@@ -7,7 +7,7 @@ $background-color_1: var(--title-color);
 $background-color_2: transparent;
 $background-color_3: var(--text-color);
 $background-color_4: var(--contaienr-color);
-$background-color_5: var(--contact-transition-color);
+$background-color_5: var(--transition-color);
 $background-color_6: var(--contaienr-color);
 $border-color_1: var(--title-color);
 
@@ -18,7 +18,6 @@ $border-color_1: var(--title-color);
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 0 1rem;
 	padding-top: 10rem;
 }
 
@@ -30,6 +29,7 @@ $border-color_1: var(--title-color);
 	padding: 0 1rem;
 	flex-direction: column;
 }
+
 .let__contact {
 	margin-top: 2rem;
 	display: flex;
@@ -51,7 +51,7 @@ $border-color_1: var(--title-color);
 	display: grid;
 	grid-template-columns: repeat(2, max-content);
 	justify-content: center;
-	column-gap: 6rem;
+	column-gap: 3rem;
 	flex-direction: row;
 }
 .contact__title {
