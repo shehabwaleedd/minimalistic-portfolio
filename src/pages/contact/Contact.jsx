@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import "./Contact.scss"
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { gsap } from "gsap";
 import Footer from '../footer/Footer';
 import MobileContact from './contactResponsive/mobileContact/MobileContact';
 import DesktopContact from './contactResponsive/desktopContact/DesktopContact';
+import RunAnimations from '../../animation/RunAnimations';
 const Contact = ({ isMobile, language }) => {
   const form = useRef();
   const sendEmail = (e) => {
@@ -58,47 +58,17 @@ const Contact = ({ isMobile, language }) => {
   };
   let screen = useRef(null);
   let body = useRef(null);
-  const runAnimation = () => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      screen,
-      { width: "0%", left: "100%" },
-      {
-        duration: 0.5,
-        width: "100%",
-        left: "0%",
-        ease: "power3.inOut",
-      }
-    );
-    tl.fromTo(
-      screen,
-      { left: "0%" },
-      {
-        duration: 0.5,
-        left: "-100%",
-        ease: "power3.inOut",
-        delay: 0.1,
-      }
-    );
-    tl.set(screen, { left: "100%" });
-    gsap.to(body, {
-      opacity: 1,
-      duration: 0.3,
-      pointerEvents: "auto",
-      ease: "power4.inOut",
-      delay: 1,
-    });
-  };
+
 
   useEffect(() => {
     const hasContactShown = sessionStorage.getItem('hasContactShown');
     if (!hasContactShown) {
-      runAnimation();
+      RunAnimations(screen, body);
       sessionStorage.setItem('hasContactShown', 'true');
     }
   }, []);
   return (
-    <React.Fragment>
+    <>
       <div className="contact__load-container">
         <div className="contact__load-screen" ref={(el) => (screen = el)}></div>
       </div>
@@ -108,7 +78,7 @@ const Contact = ({ isMobile, language }) => {
         <DesktopContact language={language} body={body} screen={screen} name={name} setName={setName} email={email} setEmail={setEmail} message={message} setMessage={setMessage} agreed={agreed} setAgreed={setAgreed} budget={budget} handleOptionChange={handleOptionChange} handleSubmit={handleSubmit} formErrors={formErrors} form={form} />
       )}
       <Footer isMobile={isMobile} language={language} />
-    </React.Fragment>
+    </>
   )
 }
 

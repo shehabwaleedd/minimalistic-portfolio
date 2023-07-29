@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './Portfolio.scss';
 import projectsData from './Data';
-import { gsap } from "gsap";
 import MobilePortfolio from './portfolioResponsive/mobilePortfolioResponsive/MobilePortfolio';
 import TabletPortfolio from './portfolioResponsive/tabletPortfolioResponsive/TabletPortfolio';
 import DesktopPortfolio from './portfolioResponsive/desktopPortfolioResponsive/DesktopPortfolio';
+import RunAnimations from '../../animation/RunAnimations';
 const Portfolio = ({ language, isMobile, isTablet }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const handleTextHover = (imageId) => {
@@ -16,50 +16,25 @@ const Portfolio = ({ language, isMobile, isTablet }) => {
   }
   useEffect(() => {
     const hasProjectsShown = sessionStorage.getItem('hasProjectsShown');
-
     if (!hasProjectsShown) {
-      runAnimation();
+      RunAnimations(screen, body);
       sessionStorage.setItem('hasProjectsShown', 'true');
     }
   }, []);
-
   let screen = useRef(null);
   let body = useRef(null);
 
-
-  const runAnimation = () => {
-    const tl = gsap.timeline();
-    tl.to(screen, {
-      duration: 0.5,
-      height: "100%",
-      top: "0%",
-      ease: "power3.inOut",
-    });
-    tl.to(screen, {
-      duration: 0.5,
-      top: "-100%",
-      ease: "power3.inOut",
-      delay: 0.1,
-    });
-    tl.set(screen, { top: "100%" });
-    gsap.to(body, {
-      opacity: 1,
-      duration: 0.3,
-      pointerEvents: "auto",
-      ease: "power4.inOut",
-      delay: 1,
-    });
-  };
-
-
   return (
     <>
+      <div className="projects__load-container">
+        <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
+      </div>
       {isMobile ? (
-        <MobilePortfolio language={language} body={body} screen={screen}/>
+        <MobilePortfolio language={language} body={body} screen={screen} />
       ) : isTablet ? (
-          <TabletPortfolio language={language} body={body} screen={screen}/>
+        <TabletPortfolio language={language} body={body} screen={screen} />
       ) : (
-          <DesktopPortfolio language={language} body={body} screen={screen} handleTextHover={handleTextHover} handleTextLeave={handleTextLeave} selectedImage={selectedImage}/>
+        <DesktopPortfolio language={language} body={body} screen={screen} handleTextHover={handleTextHover} handleTextLeave={handleTextLeave} selectedImage={selectedImage} />
       )}
     </>
   );
