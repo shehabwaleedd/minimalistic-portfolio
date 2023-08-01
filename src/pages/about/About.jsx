@@ -21,7 +21,7 @@ const AboutPage = ({ isMobile, language, isTablet }) => {
       <div className="load-container">
         <div className="load-screen" ref={(el) => (screen = el)}></div>
       </div>
-      <motion.section ref={(el) => (body = el)} className="about section" id='about' initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 0.7, duration: 2, ease: "easeInOut" } }} exit={{ opacity: 0, transition: { delay: 0.4, duration: 1, ease: "easeInOut" } }}>
+      <motion.section ref={(el) => (body = el)} className="about section" id='about' initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" } }} exit={{ opacity: 0, y: -100, transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" } }}>
         {isMobile ? (
           <MobileAbout language={language} isMobile={isMobile} />
         ) : isTablet ? (

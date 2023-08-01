@@ -2,6 +2,7 @@ $color_1: var(--title-color);
 $color_2: var(--text-color);
 $color_3: var(--accent-color);
 $color_4: var(--container-color);
+$color_5: #973636;
 $font-family_1: "Satoshi-Light", sans-serif;
 $font-family_2: "Posterama", sans-serif;
 $font-family_3: "Satoshi-BoldItalic", sans-serif;
@@ -171,7 +172,18 @@ $background-color_5: #555;
 	.isNew {
 		position: relative;
 		top: 0.3rem;
-		h3 {
+		.workingonit {
+			color: $color_4;
+			font-family: $font-family_3;
+			font-size: 0.9rem;
+			transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+			position: relative;
+			white-space: nowrap;
+			cursor: pointer;
+			padding: 0 0.3rem;
+			background-color: $color_5;
+		}
+		.newproject {
 			color: $color_4;
 			font-family: $font-family_3;
 			font-size: 0.9rem;
