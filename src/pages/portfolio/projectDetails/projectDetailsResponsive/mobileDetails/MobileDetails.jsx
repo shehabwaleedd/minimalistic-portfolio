@@ -71,9 +71,9 @@ const MobileDetails = ({ post, renderDetails, goToNextProject, id }) => {
                                     <div className={`project__link ${post.class}`} style={{ marginTop: "1rem" }}>
                                         <a href={`${post.website}`} target="__blank" style={{ fontSize: "1rem" }}><BiRightArrowAlt />View The Website</a>
                                     </div>
-                                    <div className="project__link" style={{ marginTop: "1rem" }}>
+                                    {/* <div className="project__link" style={{ marginTop: "1rem" }}>
                                         <a href={`${post.link}`} target="__blank" style={{ fontSize: "1rem" }}><BiRightArrowAlt />View The Code</a>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
