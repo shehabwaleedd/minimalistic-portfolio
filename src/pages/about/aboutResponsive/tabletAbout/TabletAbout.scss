@@ -1,0 +1,240 @@
+.about {
+    padding-bottom: 10rem;
+    background-color: var(--body-color);
+    display: flex;
+    flex-direction: column;
+
+    .about_tablet {
+        .about__pic_tablet {
+            position: absolute;
+            top: 9rem;
+            left: 0rem;
+            z-index: 1;
+
+            img {
+                aspect-ratio: 4/1;
+                object-fit: cover;
+                object-position: 8% 50%;
+                border: 0.5px solid var(--nav-overlay-color);
+            }
+        }
+
+        .detailed__containerr_tablet {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            width: 100%;
+            height: 160vh;
+            padding: 2rem 2rem;
+            margin-left: 2rem;
+            .detailed__row_tablet {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: left;
+                width: 100%;
+                gap: 2rem;
+                flex-direction: column;
+                position: relative;
+                z-index: 3;
+                margin-right: 4rem;
+
+                .aboutttt__container_tablet {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: left;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .about__content_tablet {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+
+                        h1 {
+                            font-size: 3rem;
+                            font-weight: var(--font-medium);
+                            color: var(--container-color);
+                            margin-bottom: 2rem;
+                            padding: 1rem;
+                            width: 80%;
+                            letter-spacing: 0.3rem;
+                            text-transform: uppercase;
+                            font-family: "Posterama", sans-serif;
+                        }
+
+                        h2 {
+                            font-size: 2rem;
+                            font-weight: var(--font-medium);
+                            color: var(--nav-overlay-color);
+                            margin-bottom: 1rem;
+                            width: 80%;
+                            letter-spacing: 0.3rem;
+                            text-transform: uppercase;
+                            font-family: "Posterama", sans-serif;
+                            z-index: 9;
+                        }
+                    }
+
+                    .about__description_tablet {
+                        white-space: pre-wrap;
+                        text-align-last: left;
+                        text-align: justify;
+                        gap: 1rem;
+                        display: flex;
+                        flex-direction: column;
+
+                        p {
+                            font-family: "Satoshi-Light", sans-serif;
+                            font-size: 1.5rem;
+                            line-height: 28px;
+                            width: 62%;
+                            letter-spacing: 0.05rem;
+                            color: var(--title-color);
+                            white-space: pre-wrap;
+                            text-align-last: left;
+                            text-align: justify;
+                        }
+                    }
+
+                    .about__quote_tablet {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 3rem;
+
+                        span {
+                            color: var(--title-color);
+                        }
+
+                        h1 {
+                            font-family: "Posterama", sans-serif;
+                            font-size: 3.5rem;
+                            width: 92%;
+                            letter-spacing: 0.05rem;
+                            color: var(--title-color);
+                        }
+
+                        .quote__explain_tablet {
+                            width: 75%;
+
+                            span {
+                                font-family: "Satoshi-Light", sans-serif;
+                                font-size: 1.1rem;
+                                letter-spacing: 0.05rem;
+                                color: var(--title-color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .about__bottom_tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            min-height: 100vh;
+
+            h1 {
+                font-size: 3rem;
+                text-align: end;
+                font-weight: var(--font-medium);
+                color: var(--title-color);
+                margin-bottom: 2rem;
+                padding: 1rem;
+                width: 80%;
+                letter-spacing: 0.3rem;
+                text-transform: uppercase;
+                font-family: "Posterama", sans-serif;
+            }
+
+            .exp_desc_tablet {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                width: 100%;
+                margin-bottom: 2rem;
+                gap: 0.5rem;
+                
+                h2 {
+                    font-family: "Posterama", sans-serif;
+                    font-size: 1.2rem;
+                    line-height: 28px;
+                    width: 62%;
+                    letter-spacing: 0.3rem;
+                    color: var(--title-color);
+                    white-space: pre-wrap;
+                    text-align-last: right;
+                    text-align: justify;
+                }
+            }
+
+            .skills_desc_tablet {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                width: 100%;
+                margin-bottom: 2rem;
+                gap: 0.5rem;
+
+                h2 {
+                    font-family: "Posterama", sans-serif;
+                    font-size: 1.2rem;
+                    line-height: 28px;
+                    width: 62%;
+                    letter-spacing: 0.3rem;
+                    color: var(--title-color);
+                    white-space: pre-wrap;
+                    text-align-last: right;
+                    text-align: justify;
+                }
+            }
+
+            .kudos_desc_tablet {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 100%;
+                margin-bottom: 2rem;
+                gap: 0.5rem;
+
+                h1 {
+                    text-align: left;
+                }
+
+                h2 {
+                    font-family: "Posterama", sans-serif;
+                    font-size: 1rem;
+                    line-height: 28px;
+                    width: 62%;
+                    letter-spacing: 0.3rem;
+                    color: var(--title-color);
+                    text-align: justify;
+                    margin-left: 1rem;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media (max-width: 776px) {
+    .about_tablet {
+        .detailed__containerr_tablet{ 
+            margin-top: 17rem;
+            margin-bottom: 7rem;
+        }
+    }
+}

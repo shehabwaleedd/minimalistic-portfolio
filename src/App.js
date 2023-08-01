@@ -117,7 +117,7 @@ function App() {
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
           <AnimatePresence mode='wait'>
             <Routes location={location} key={location.pathname} >
-              <Route path='/about' key={location.pathname} element={<AboutPage isMobile={isMobile} language={language} />} />
+              <Route path='/about' key={location.pathname} element={<AboutPage isMobile={isMobile} language={language} isTablet={isTablet}/>} />
               <Route path='/projects' key={location.pathname} element={<Portfolio isTablet={isTablet} isMobile={isMobile} language={language} l />} />
               <Route path="/" element={<Home key={location.pathname} isTablet={isTablet} isMobile={isMobile} navOpen={navOpen} language={language} />} />
               <Route path="/contact" element={<Contact key={location.pathname} isTablet={isTablet} isMobile={isMobile} language={language} />} />
