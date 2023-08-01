@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import MyStack from '../../stack/MyStack'
 import cv from "../../../../assets/Shehab Waleed Resume.docx"
 import "./DesktopAbout.scss"
+import { Link } from 'react-router-dom'
 
 const DesktopAbout = ({ language }) => {
 
@@ -64,8 +65,13 @@ const DesktopAbout = ({ language }) => {
                 <div className="kudos_desc">
                     <motion.h1 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>KUDOS</motion.h1>
                     <motion.h2 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>{t("about__kudos")}</motion.h2>
+                    <Link to="/contact">
+                        <button>
+                            Contact Me
+                        </button>
+                    </Link>
                 </div>
-                <motion.img src={require("../../../../assets/profile2.JPG")} alt="profile" initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}/>
+                <motion.img src={require("../../../../assets/profile2.JPG")} alt="profile" initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }} />
             </div>
         </motion.div>
     )
