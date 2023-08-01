@@ -4,12 +4,13 @@ import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
 import MyStack from '../../stack/MyStack'
 import cv from "../../../../assets/Shehab Waleed Resume.docx"
+import { Link } from 'react-router-dom'
 
 const TabletAbout = ({ language }) => {
     const { t } = useTranslation();
     const aboutRef = useRef()
     return (
-        <motion.div className='about_tablet'  ref={aboutRef}>
+        <motion.div className='about_tablet' ref={aboutRef}>
             <motion.div className="about__pic_tablet" >
                 <motion.img src={require("../../../../assets/profile3.JPG")} alt="profile" />
             </motion.div>
@@ -63,8 +64,13 @@ const TabletAbout = ({ language }) => {
                 <div className="kudos_desc_tablet">
                     <motion.h1 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>KUDOS</motion.h1>
                     <motion.h2 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>{t("about__kudos")}</motion.h2>
+                    <Link to="/contact">
+                        <motion.button initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>
+                            Contact Me
+                        </motion.button>
+                    </Link>
                 </div>
-                <motion.img src={require("../../../../assets/profile2.JPG")} alt="profile" initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}/>
+                <motion.img src={require("../../../../assets/profile2.JPG")} alt="profile" initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }} />
             </div>
         </motion.div>
     )

@@ -4,7 +4,7 @@ import cv from "../../../../assets/Shehab Waleed Resume.docx"
 import MyStack from '../../stack/MyStack'
 import { motion } from "framer-motion"
 import "./MobileAbout.scss"
-
+import { Link } from 'react-router-dom'
 const MobileAbout = ({ language, isMobile }) => {
     const { t } = useTranslation()
     const aboutRef = useRef()
@@ -59,12 +59,17 @@ const MobileAbout = ({ language, isMobile }) => {
                     <h2>GSAP/FRAMER MOTION</h2>
                     <h2>FIREBASE/GITHUB/GITLAB</h2>
                 </motion.div>
-                <MyStack isMobile={isMobile}/>
+                <MyStack isMobile={isMobile} />
                 <div className="kudos_desc_mobile">
                     <motion.h1 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>KUDOS</motion.h1>
                     <motion.h2 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>{t("about__kudos")}</motion.h2>
+                    <Link to="/contact">
+                        <motion.button initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>
+                            Contact Me
+                        </motion.button>
+                    </Link>
                 </div>
-                <motion.img src={require("../../../../assets/profile2.JPG")} alt="profile" initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}/>
+                <motion.img src={require("../../../../assets/profile2.JPG")} alt="profile" initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }} />
             </div>
         </div>
     )
