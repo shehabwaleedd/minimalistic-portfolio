@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { BiDownArrowAlt } from 'react-icons/bi'
 import MyStack from '../../stack/MyStack'
 import cv from "../../../../assets/Shehab Waleed Resume.docx"
-
+import "./DesktopAbout.scss"
 
 const DesktopAbout = ({ language }) => {
     const { t } = useTranslation()
