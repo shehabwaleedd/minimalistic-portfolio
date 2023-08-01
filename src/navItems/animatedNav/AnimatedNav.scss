@@ -6,7 +6,7 @@ $background-color_1: var(--nav-overlay-color);
 
 .nav {
 	position: fixed;
-	z-index: 999;
+	z-index: 9;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -15,7 +15,7 @@ $background-color_1: var(--nav-overlay-color);
 
 .nav-overlay {
 	position: absolute;
-	z-index: -2;
+	z-index: -1;
 	top: 0;
 	bottom: 0;
 	width: 100%;
@@ -40,7 +40,7 @@ $background-color_1: var(--nav-overlay-color);
 	justify-content: center;
 	gap: 1rem;
 	position: relative;
-	z-index: 99999999;
+	z-index: 9;
 }
 
 .logo {

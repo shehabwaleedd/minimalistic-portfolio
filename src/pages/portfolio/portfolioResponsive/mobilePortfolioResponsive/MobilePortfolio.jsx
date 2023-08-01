@@ -20,7 +20,7 @@ const MobilePortfolio = ({ language, body }) => {
                             {projectsData.map((item, index) => (
                                 <div className="work__title" key={index} style={{ height: "4rem", gap: "2rem" }}>
                                     <div className="menu-text">
-                                        <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title}</h1></Link>
+                                        <Link to={`/projectDetails/${index}`}><h1 data-text={item.title}>{item.title.slice(0,8)}..</h1></Link>
                                         <div className="isNew" style={{ right: item.class === "shehab" ? "3rem" : item.class === "lelu" || item.class === "cairo" ? "0.5em" : "" }}>
                                             {item.workingOnIt && (
                                                 <h3 className='workingonit'>

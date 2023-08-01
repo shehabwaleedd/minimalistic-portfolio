@@ -3,7 +3,7 @@ import { Power3 } from "gsap";
 
 export const HomeAnimations = () => {
   const container = document.querySelector(".containererr");
-  const navbar = document.querySelector(".nav__menu");
+  const navbar = document.querySelector(".nav");
   const logo = document.querySelector(".logo");
   const menuToggle = document.querySelector(".menu-toggle");
   const darkModeToggle = document.querySelector(".toggle__main");
