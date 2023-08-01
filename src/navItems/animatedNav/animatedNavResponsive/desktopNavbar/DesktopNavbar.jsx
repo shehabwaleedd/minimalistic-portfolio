@@ -17,10 +17,10 @@ const DesktopNavbar = ({ isAbout, setIsAbout, isMobile, setIsMobile, setOpen, na
                 <div className="side__navbar" style={{ flexDirection: language === "ar" ? "row-reverse" : "row", gap: language === "ar" ? "3rem" : "1rem" }}>
                     <NavComponents isMobile={isMobile} navOpen={navOpen} language={language}/>
                     <DropDownMenu isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} setOpen={setOpen} isMobile={isMobile} setIsMobile={setIsMobile} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
-                    <div className={`${isAbout ? "menu-toggled" : "menu-toggle"}`} onClick={() => setNavOpen(!navOpen)}>
+                    <div className={`${isAbout ? "menu-toggle" : "menu-toggle"}`} onClick={() => setNavOpen(!navOpen)}>
                         <div className={navOpen ? "hamBox hamBoxOpen" : "hamBox"}>
-                            <span className={navOpen ? "lineTop spin" : isAbout && language === "ar" ? "lineTopAboutAr" : isAbout ? "lineTopAbout" : "lineTop"}></span>
-                            <span className={navOpen ? "lineBottom spin" : isAbout && language === "ar" ? "lineBottomAboutAr" : isAbout ? "lineBottomAbout" : "lineBottom"}></span>
+                            <span className={navOpen ? "lineTop spin" : isAbout && language === "ar" ? "lineTopAboutAr" : isAbout ? "lineTop" : "lineTop"}></span>
+                            <span className={navOpen ? "lineBottom spin" : isAbout && language === "ar" ? "lineBottomAboutAr" : isAbout ? "lineBottom" : "lineBottom"}></span>
                         </div>
                     </div>
                 </div>
