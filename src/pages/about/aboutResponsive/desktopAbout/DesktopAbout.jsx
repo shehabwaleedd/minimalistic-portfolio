@@ -9,7 +9,7 @@ import "./DesktopAbout.scss"
 const DesktopAbout = ({ language }) => {
     const { t } = useTranslation()
     return (
-        <motion.div className='about'>
+        <motion.div className='about_desktop'>
             <motion.div className="about__pic" >
                 <motion.img src={require("../../../../assets/profile3.JPG")} alt="profile" />
             </motion.div>
@@ -34,13 +34,11 @@ const DesktopAbout = ({ language }) => {
                                     <span>{t("about__quote_exp")}</span>
                                 </div>
                             </div>
-
                             <div className="cv__button" style={{ justifyContent: language === "ar" ? "flex-end" : "flex-start", paddingRight: language === "ar" ? "19rem" : "0rem" }}>
                                 <button>
                                     <a href={cv} download>{t("about__resume")}</a>
                                 </button>
                             </div>
-
                         </div>
                     </div>
                 </motion.div>

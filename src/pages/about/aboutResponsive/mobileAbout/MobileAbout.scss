@@ -1,0 +1,223 @@
+.about_mobile {
+    .about__pic_mobile {
+        position: absolute;
+        top: 9rem;
+        left: 0rem;
+        z-index: 1;
+
+        img {
+            aspect-ratio: 4/1.5;
+            object-fit: cover;
+            object-position: 8% 50%;
+            border: 0.5px solid var(--nav-overlay-color);
+        }
+    }
+
+    .detailed__containerr_mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        height: 145vh;
+        padding: 2rem 2rem;
+        margin-left: 1rem;
+
+        .detailed__row_mobile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            width: 100%;
+            gap: 2rem;
+            flex-direction: column;
+            position: relative;
+            z-index: 3;
+            margin-right: 4rem;
+
+            .aboutttt__container_mobile {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: left;
+                flex-direction: column;
+                width: 100%;
+
+                .about__content_mobile {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    h1 {
+                        font-weight: var(--font-medium);
+                        color: var(--container-color);
+                        margin-bottom: 2rem;
+                        padding: 1rem;
+                        width: 80%;
+                        letter-spacing: 0.3rem;
+                        text-transform: uppercase;
+                        font-family: "Posterama", sans-serif;
+                    }
+
+                    h2 {
+                        font-size: 1.2rem;
+                        font-weight: var(--font-medium);
+                        color: var(--nav-overlay-color);
+                        margin-bottom: 1rem;
+                        width: 100%;
+                        letter-spacing: 0.15rem;
+                        text-transform: uppercase;
+                        font-family: "Posterama", sans-serif;
+                        z-index: 9;
+                    }
+                }
+
+                .about__description_mobile {
+                    white-space: pre-wrap;
+                    text-align-last: left;
+                    text-align: justify;
+                    gap: 1rem;
+                    display: flex;
+                    flex-direction: column;
+
+                    p {
+                        font-family: "Satoshi-Light", sans-serif;
+                        font-size: 1rem;
+                        line-height: 28px;
+                        width: 100%;
+                        letter-spacing: 0.05rem;
+                        color: var(--title-color);
+                        white-space: pre-wrap;
+                        text-align-last: left;
+                        text-align: justify;
+                    }
+                }
+
+                .about__quote_mobile {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 3rem;
+
+                    span {
+                        font-size: 1rem;
+                        color: var(--title-color);
+                    }
+
+                    h1 {
+                        font-family: "Posterama", sans-serif;
+                        font-size: 1.6rem;
+                        width: 92%;
+                        letter-spacing: 0.05rem;
+                        color: var(--title-color);
+                    }
+
+                    .quote__explain {
+                        width: 100%;
+
+                        span {
+                            font-family: "Satoshi-Light", sans-serif;
+                            font-size: 1.1rem;
+                            letter-spacing: 0.05rem;
+                            color: var(--title-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .about__bottom_mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        min-height: 265vh;
+        h1 {
+            font-size: 3rem;
+            text-align: end;
+            font-weight: var(--font-medium);
+            color: var(--title-color);
+            margin-bottom: 2rem;
+            padding: 1rem;
+            width: 80%;
+            letter-spacing: 0.3rem;
+            text-transform: uppercase;
+            font-family: "Posterama", sans-serif;
+        }
+
+        .exp_desc_mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            margin-bottom: 2rem;
+            gap: 0.5rem;
+            margin-left: 1rem;
+            h2 {
+                font-family: "Posterama", sans-serif;
+                font-size: 1.2rem;
+                line-height: 28px;
+                width: 100%;
+                letter-spacing: 0.3rem;
+                color: var(--title-color);
+                white-space: pre-wrap;
+                text-align-last: left;
+                text-align: left;
+            }
+        }
+
+        .skills_desc_mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            margin-bottom: 2rem;
+            gap: 0.5rem;
+
+            h2 {
+                font-family: "Posterama", sans-serif;
+                font-size: 1.2rem;
+                line-height: 28px;
+                width: 92%;
+                letter-spacing: 0.3rem;
+                color: var(--title-color);
+                white-space: pre-wrap;
+                text-align-last: left;
+                text-align: justify;
+                margin-left: 1rem;
+            }
+        }
+        .kudos_desc_mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            margin-bottom: 2rem;
+            gap: 0.5rem;
+            padding: 1rem;
+            h1 {
+                text-align: left;
+            }
+
+            h2 {
+                font-family: "Posterama", sans-serif;
+                font-size: 1rem;
+                line-height: 28px;
+                width: 96%;
+                letter-spacing: 0.15rem;
+                color: var(--title-color);
+                text-align: justify;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

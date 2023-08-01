@@ -37,5 +37,16 @@ $background-color_1: var(--stack-icons-background-color);
 }
 @media (max-width: 480px) {
 
-	
+	.stack__icons_mobile {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		padding: 0rem;
+		margin: 0rem;
+		gap: 1rem;
+		color: $color_1;
+	}
 }
