@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { motion, useScroll, useSpring } from 'framer-motion'
+import { motion, useScroll } from 'framer-motion'
 import ScrollAnimation from '../../../../../animation/ScrollAnimation/ScrollAnimation'
 import { Link } from 'react-router-dom'
 import { BiRightArrowAlt } from 'react-icons/bi'

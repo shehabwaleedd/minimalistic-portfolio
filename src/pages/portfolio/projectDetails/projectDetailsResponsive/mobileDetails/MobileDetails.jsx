@@ -1,13 +1,19 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import './MobileDetails.scss'
 import ScrollAnimation from '../../../../../animation/ScrollAnimation/ScrollAnimation';
-import { motion } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { BiRightArrowAlt } from 'react-icons/bi';
 import { IoChevronBack } from 'react-icons/io5';
 import projectsData from '../../../Data';
 
 const MobileDetails = ({ post, renderDetails, goToNextProject, id }) => {
+    const containerRef = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "start start"]
+    });
     return (
         <>
             <ScrollAnimation />
@@ -66,7 +72,7 @@ const MobileDetails = ({ post, renderDetails, goToNextProject, id }) => {
                                 </div>
                             </div>
                             <div className="project__details-comment" style={{ width: "90vw", paddintTop: "5rem", }}>
-                                <p style={{fontSize: "0.8rem"}}>{post.comment}</p>
+                                <p style={{ fontSize: "0.8rem" }}>{post.comment}</p>
                                 <div className="project__links" style={{ width: "100vw", flexDirection: "column", borderTop: "0.5px solid var(--text-color)", }}>
                                     <div className={`project__link ${post.class}`} style={{ marginTop: "1rem" }}>
                                         <a href={`${post.website}`} target="__blank" style={{ fontSize: "1rem" }}><BiRightArrowAlt />View The Website</a>
@@ -93,17 +99,17 @@ const MobileDetails = ({ post, renderDetails, goToNextProject, id }) => {
                             {post.mainAboutPage && renderDetails(post.mainAboutPage, post.mainAboutPageImg, post.mainAboutPage)}
                             {post.mainContactPage && renderDetails(post.mainContactPage, post.mainContactPageImg, post.mainContactPage)}
                             {post.mainDarkMode && (
-                                <div className="project__details_details">
+                                <motion.div className="project__details_details" ref={containerRef}>
                                     <div className="project__details-text">
                                         <h2>{post.mainDarkMode}</h2>
                                     </div>
-                                    <div className="project__details-img">
+                                    <motion.div className="project__details-img" style={{ scale: scrollYProgress}}>
                                         <img src={post.mainDarkModeImg} alt={post.mainContactPage} />
                                         <img src={post.mainDarkModeImg2} alt={post.mainContactPage} />
                                         <img src={post.mainDarkModeImg3} alt={post.mainContactPage} />
                                         <img src={post.mainDarkModeImg4} alt={post.mainContactPage} />
-                                    </div>
-                                </div>
+                                    </motion.div>
+                                </motion.div>
                             )}
                             {post.lightMode && (
                                 <div className="project__details_details">

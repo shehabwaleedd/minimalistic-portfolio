@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './TabletDetails.scss'
-import { motion } from 'framer-motion'
+import { motion, useScroll } from 'framer-motion'
 import ScrollAnimation from '../../../../../animation/ScrollAnimation/ScrollAnimation'
 import { Link } from 'react-router-dom'
 import { BiRightArrowAlt } from 'react-icons/bi'
@@ -9,6 +9,12 @@ import projectsData from '../../../Data'
 
 
 const TabletDetails = ({ post, renderDetails, goToNextProject, id }) => {
+    const containerRef = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "start start"]
+    });
     return (
         <motion.div initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
             <ScrollAnimation />
@@ -83,16 +89,16 @@ const TabletDetails = ({ post, renderDetails, goToNextProject, id }) => {
                         {post.mainContactPage && renderDetails(post.mainContactPage, post.mainContactPageImg, post.mainContactPage)}
                         {post.mainWorkPage && renderDetails(post.mainWorkPage, post.mainWorkPageImg, post.mainWorkPage)}
                         {post.mainDarkMode && (
-                            <div className="project__details_details">
-                                <div className="project__details-text">
+                            <div className="project__details_details" ref={containerRef}>
+                                <motion.div className="project__details-text">
                                     <h2>{post.mainDarkMode}</h2>
-                                </div>
-                                <div className="project__details-img">
+                                </motion.div>
+                                <motion.div className="project__details-img"  style={{ scale: scrollYProgress}}>
                                     <img src={post.mainDarkModeImg} alt={post.mainContactPage} />
                                     <img src={post.mainDarkModeImg2} alt={post.mainContactPage} />
                                     <img src={post.mainDarkModeImg3} alt={post.mainContactPage} />
                                     <img src={post.mainDarkModeImg4} alt={post.mainContactPage} />
-                                </div>
+                                </motion.div>
                             </div>
                         )}
                         {post.lightMode && (
