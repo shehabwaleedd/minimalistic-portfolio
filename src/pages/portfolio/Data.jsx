@@ -81,6 +81,7 @@ const projectsData = [
     workingOnIt: false,
     newProject: false,
     backgroundColor: "#63b7b777",
+    backgroundColor_mobile: "#63b7b777",
   },
   {
     id: 2,
@@ -103,6 +104,7 @@ const projectsData = [
     workingOnIt: true,
     newProject: false,
     backgroundColor: "#ffdebeb4",
+    backgroundColor_mobile: "#ffdebeb4",
   },
   {
     id: 3,

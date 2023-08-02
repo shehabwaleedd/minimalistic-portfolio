@@ -29,7 +29,7 @@ function ProjectDetails({ isMobile, isTablet }) {
         return (
             <motion.div className="project__details_details" ref={ref}>
                 <motion.div className="project__details-text">
-                    <h2 style={{ width: window.innerWidth >= 1060 ? "" : "100vw", }}>{title}</h2>
+                    <h2 style={{ width: window.innerWidth >= 860 ? "" : "100vw", }}>{title}</h2>
                 </motion.div>
                 <motion.div className="project__details-img"
                     initial={{ scale: 0.8 }}
