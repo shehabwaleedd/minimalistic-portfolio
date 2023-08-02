@@ -147,6 +147,7 @@ const projectsData = [
     workingOnIt: false,
     newProject: true,
     backgroundColor: "#f9e5bf9a",
+    backgroundColor_mobile: "#f9e5bf9a",
   },
   {
     id: 7,
@@ -174,6 +175,7 @@ const projectsData = [
     workingOnIt: false,
     newProject: false,
     backgroundColor: "#ed293999",
+    backgroundColor_mobile: "#ed293969",
   },
 
   {
@@ -189,6 +191,7 @@ const projectsData = [
     workingOnIt: false,
     newProject: true,
     backgroundColor: "#006F469a",
+    backgroundColor_mobile : "#006F469a",
     mainTitle: "Main Page",
     mainTitleImg: MoaazMainPage,
     mainTitle2: "Overlayed Navbar",
@@ -199,6 +202,7 @@ const projectsData = [
     mainContactPageImg: MoaazContactPage,
     mainWorkPage: "Work Page",
     mainWorkPageImg: MoaazWorkPage,
+    
   },
 
   {
@@ -215,6 +219,7 @@ const projectsData = [
     workingOnIt: false,
     newProject: false,
     backgroundColor: "#4D2CF19a",
+    backgroundColor_mobile: "#4D2CF19a",
   },
   {
     id: 5,
@@ -229,6 +234,7 @@ const projectsData = [
     workingOnIt: true,
     newProject: false,
     backgroundColor: "#E19C007b",
+    backgroundColor_mobile: "#E19C007b",
   },
 
 
