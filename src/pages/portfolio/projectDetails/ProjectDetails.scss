@@ -286,7 +286,7 @@ $font-family_1: "Posterama", sans-serif;
 	width: 80%;
 	height: 80%;
 	object-fit: cover;
-
+	filter: blur(205px);
 }
 
 
@@ -302,14 +302,29 @@ $font-family_1: "Posterama", sans-serif;
 	
 		.project__image_container img {
 			position: relative;
-			width: 73rem;
-			height: 36rem;
-			left: 5rem;
+			width: 83rem;
+			height: 46rem;
+			left: 0rem;
 			object-fit: cover;
 			border-bottom-left-radius: 2rem;
 			border-bottom-right-radius: 2rem;
 			border: 0.2px solid var(--text-color);
 			border-top: 0px solid #000;
+		}
+		.project__back {
+			position: relative;
+			left: -10rem;
+		}
+		.project__title {
+			position: relative;
+			left: -10rem;
+		}
+		.project__details-brief{
+			position: relative;
+			left: -10rem;
+		}
+		.background__img {
+			filter: blur(205px);
 		}
 	}
 }
@@ -413,6 +428,6 @@ $font-family_1: "Posterama", sans-serif;
 		width: 80%;
 		height: 80%;
 		object-fit: cover;
-		filter: blur(55px);
+		filter: blur(85px);
 	}
 }
