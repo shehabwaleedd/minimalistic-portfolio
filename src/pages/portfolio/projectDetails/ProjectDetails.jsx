@@ -10,20 +10,21 @@ import TabletDetails from "./projectDetailsResponsive/tabletDetails/TabletDetail
 import DesktopDetails from "./projectDetailsResponsive/desktopDetails/DesktopDetails";
 
 function ProjectDetails({ isMobile, isTablet }) {
-    const { id } = useParams();
-    const post = projectsData[id];
+    const { title } = useParams();
+    const post = projectsData.find(project => project.title === title);
     const navigate = useNavigate();
     const goToNextProject = () => {
-        const nextProjectId = (parseInt(id) + 1) % projectsData.length; // Calculate the next project id by taking modulo of the total number of projects
-        navigate(`/projectDetails/${nextProjectId}`);
+        const currentIndex = projectsData.findIndex(project => project.title === title);
+        const nextIndex = (currentIndex + 1) % projectsData.length;
+        const nextTitle = projectsData[nextIndex].title;
+        navigate(`/project/${projectsData[nextIndex].title}`);
+    };
+    const nextTitleName = () => {
+        const currentIndex = projectsData.findIndex(project => project.title === title);
+        const nextIndex = (currentIndex + 1) % projectsData.length;
+        return projectsData[nextIndex].title;
     };
     const ref = useRef(null);
-    const { scrollYProgress } = useScroll(
-        {
-            target: ref,
-            offset: ["start end", "center start"]
-        }
-    );
 
     const renderDetails = (title, img, alt) => {
         return (
@@ -49,11 +50,11 @@ function ProjectDetails({ isMobile, isTablet }) {
     return (
         <div >
             {isMobile ? (
-                <MobileDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} id={id} />
+                <MobileDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName}/>
             ) : isTablet ? (
-                <TabletDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} id={id} />
+                <TabletDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName}/>
             ) : (
-                <DesktopDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} id={id} />
+                <DesktopDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName}/>
             )}
         </div>
     );

@@ -121,7 +121,7 @@ function App() {
               <Route path='/projects' key={location.pathname} element={<Portfolio isTablet={isTablet} isMobile={isMobile} language={language} l />} />
               <Route path="/" element={<Home key={location.pathname} isTablet={isTablet} isMobile={isMobile} navOpen={navOpen} language={language} />} />
               <Route path="/contact" element={<Contact key={location.pathname} isTablet={isTablet} isMobile={isMobile} language={language} />} />
-              <Route path="/projectDetails/:id" element={<ProjectDetails key={location.pathname} isTablet={isTablet} isMobile={isMobile} />} />
+              <Route path="/project/:title" element={<ProjectDetails key={location.pathname} isTablet={isTablet} isMobile={isMobile} />} />
             </Routes>
           </AnimatePresence>
           <ScrollUp />

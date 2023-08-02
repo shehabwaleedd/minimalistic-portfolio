@@ -63,12 +63,12 @@ const projectsData = [
     website: "https://shehabwaleedd.vercel.app/",
     link: "https://github.com/shehabwaleedd/minimalistic-portfolio",
     date: "March, 2023",
-    class:"shehab",
+    class: "shehab",
     comment: "I am commonly known as 'Sheboo' on various social media platforms, shaping my online identity. The primary aim of this project was to establish a versatile and adaptable identity that encompasses both my real name and nickname. As a frontend developer, it was essential to create a website that showcases my expertise, reflects my design principles, and establishes my unique identity. The goal was to develop a cohesive and recognizable personal brand that seamlessly translates between online and offline channels, ensuring a consistent representation across different mediums. This initiative aimed to optimize search engine visibility while presenting a professional and polished image.",
     mainTitle: "Main Page",
     mainTitleImg: ShebooMainImg,
     mainProjectsPage: "Projects Page",
-    mainProjectsPageImg: ShebooMainProjectPageImg,  
+    mainProjectsPageImg: ShebooMainProjectPageImg,
     mainContactPage: "Contact Page",
     mainContactPageImg: ShebooMainContactPageImg,
     mainAboutPage: "About Page",
@@ -145,7 +145,7 @@ const projectsData = [
     lightModeImg6: BlogLightMode6,
     lightModeImg7: BlogLightMode7,
     lightModeImg8: BlogLightMode8,
-    class:"blog",
+    class: "blog",
     workingOnIt: false,
     newProject: true,
     backgroundColor: "#f9e5bf9a",
@@ -193,7 +193,7 @@ const projectsData = [
     workingOnIt: false,
     newProject: true,
     backgroundColor: "#006F469a",
-    backgroundColor_mobile : "#006F469a",
+    backgroundColor_mobile: "#006F469a",
     mainTitle: "Main Page",
     mainTitleImg: MoaazMainPage,
     mainTitle2: "Overlayed Navbar",
@@ -204,7 +204,7 @@ const projectsData = [
     mainContactPageImg: MoaazContactPage,
     mainWorkPage: "Work Page",
     mainWorkPageImg: MoaazWorkPage,
-    
+
   },
 
   {

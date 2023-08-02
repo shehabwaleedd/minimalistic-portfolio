@@ -39,7 +39,7 @@ const DesktopPortfolio = ({ language, selectedImage, handleTextHover, handleText
                                                     <BiRightArrowAlt style={{ fontSize: "2.3rem", marginTop: "1.75rem", color: "var(--title-color)" }} />
                                                 </motion.div>
                                                 <motion.div className="menu-text" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0, transition: { duration: 1, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 100, transition: { velocity: 2, staggerChildren: 1.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }}>
-                                                    <Link to={`/projectDetails/${index}`}>
+                                                    <Link to={`/project/${item.title}`}>
                                                         <motion.h1 data-text={item.title} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0, transition: { duration: 1, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 100, transition: { velocity: 2, staggerChildren: 1.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }}>{item.title}</motion.h1 >
                                                     </Link>
                                                     <div className="isNew" style={{ right: item.class === "shehab" ? "5rem" : item.class === "lelu" || item.class === "cairo" ? "2rem" : "" }}>
