@@ -5,10 +5,10 @@ import ScrollAnimation from '../../../../../animation/ScrollAnimation/ScrollAnim
 import { Link } from 'react-router-dom'
 import { BiRightArrowAlt } from 'react-icons/bi'
 import { IoChevronBack } from 'react-icons/io5'
-import projectsData from '../../../Data'
 
 
-const TabletDetails = ({ post, renderDetails, goToNextProject, id }) => {
+
+const TabletDetails = ({ post, renderDetails, goToNextProject, nextTitleName }) => {
     const containerRef = useRef(null);
 
     const { scrollYProgress } = useScroll({
@@ -49,23 +49,23 @@ const TabletDetails = ({ post, renderDetails, goToNextProject, id }) => {
                                 <div className="categoryy">
                                     <h2>Category: </h2>
                                     <div className="category__list">
-                                        <h2 style={{fontSize: "0.9rem"}}>{post.category[0]}</h2>
-                                        <h2 style={{fontSize: "1rem"}}>{post.category[1]}</h2>
-                                        <h2 style={{fontSize: "1rem"}}>{post.category[2]}</h2>
+                                        <h2 style={{ fontSize: "0.9rem" }}>{post.category[0]}</h2>
+                                        <h2 style={{ fontSize: "1rem" }}>{post.category[1]}</h2>
+                                        <h2 style={{ fontSize: "1rem" }}>{post.category[2]}</h2>
                                     </div>
                                 </div>
                                 <div className="datee">
                                     <h2>Year: </h2>
                                     <div className="datee__list">
-                                        <h2 style={{fontSize: "1rem"}}>{post.date}</h2>
+                                        <h2 style={{ fontSize: "1rem" }}>{post.date}</h2>
                                     </div>
                                 </div>
                             </div>
                             <div className="project__details-comment">
-                                <p style={{fontSize: "1rem"}}>{post.comment}</p>
+                                <p style={{ fontSize: "1rem" }}>{post.comment}</p>
                                 <div className="project__links">
                                     <div className={`project__link ${post.class}`}>
-                                        <a style={{fontSize: "1rem"}} href={`${post.website}`} target="__blank"><BiRightArrowAlt />View The Website</a>
+                                        <a style={{ fontSize: "1rem" }} href={`${post.website}`} target="__blank"><BiRightArrowAlt />View The Website</a>
                                     </div>
                                     {/* <div className="project__link">
                                         <a href={`${post.link}`} target="__blank"><BiRightArrowAlt />View The Code</a>
@@ -93,7 +93,7 @@ const TabletDetails = ({ post, renderDetails, goToNextProject, id }) => {
                                 <motion.div className="project__details-text">
                                     <h2>{post.mainDarkMode}</h2>
                                 </motion.div>
-                                <motion.div className="project__details-img"  style={{ scale: scrollYProgress}}>
+                                <motion.div className="project__details-img" style={{ scale: scrollYProgress }}>
                                     <img src={post.mainDarkModeImg} alt={post.mainContactPage} />
                                     <img src={post.mainDarkModeImg2} alt={post.mainContactPage} />
                                     <img src={post.mainDarkModeImg3} alt={post.mainContactPage} />
@@ -131,7 +131,7 @@ const TabletDetails = ({ post, renderDetails, goToNextProject, id }) => {
                             </div>
                         </div>
                         <div className="project__next_project_name">
-                            <h1>{projectsData[(parseInt(id) + 1) % projectsData.length].title}</h1>
+                            <h1>{nextTitleName()}</h1>
                         </div>
                     </div>
                 </div>

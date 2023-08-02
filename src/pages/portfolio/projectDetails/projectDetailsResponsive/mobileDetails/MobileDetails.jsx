@@ -5,9 +5,9 @@ import { motion, useScroll } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { BiRightArrowAlt } from 'react-icons/bi';
 import { IoChevronBack } from 'react-icons/io5';
-import projectsData from '../../../Data';
 
-const MobileDetails = ({ post, renderDetails, goToNextProject, id }) => {
+
+const MobileDetails = ({ post, renderDetails, goToNextProject, nextTitleName }) => {
     const containerRef = useRef(null);
 
     const { scrollYProgress } = useScroll({
@@ -136,7 +136,7 @@ const MobileDetails = ({ post, renderDetails, goToNextProject, id }) => {
                                 <h1 onClick={goToNextProject} style={{ fontSize: "0.8rem", letterSpacing: 0 }}>Next Project</h1>
                             </div>
                             <div className="project__next_project_name" style={{ width: "50vw" }}>
-                                <h1 style={{ fontSize: "0.8rem", letterSpacing: 0 }}>{projectsData[(parseInt(id) + 1) % projectsData.length].title}</h1>
+                                <h1 style={{ fontSize: "0.8rem", letterSpacing: 0 }}>{nextTitleName()}</h1>
                             </div>
                         </div>
                     </div>

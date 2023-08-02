@@ -4,8 +4,6 @@ import ScrollAnimation from '../../../../../animation/ScrollAnimation/ScrollAnim
 import { Link } from 'react-router-dom'
 import { BiRightArrowAlt } from 'react-icons/bi'
 import { IoChevronBack } from 'react-icons/io5'
-import projectsData from '../../../Data'
-
 
 const DesktopDetails = ({ post, renderDetails, goToNextProject, title, nextTitleName }) => {
     const containerRef = useRef(null);
@@ -127,7 +125,6 @@ const DesktopDetails = ({ post, renderDetails, goToNextProject, title, nextTitle
                             </div>
                         </div>
                         <div className="project__next_project_name">
-                            {/* Call the 'nextTitleName' function to get the next project's title */}
                             <h1>{nextTitleName()}</h1>
                         </div>
                     </div>
