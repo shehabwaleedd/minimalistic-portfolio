@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useRef } from 'react'
+import { motion, useScroll, useSpring } from 'framer-motion'
 import ScrollAnimation from '../../../../../animation/ScrollAnimation/ScrollAnimation'
 import { Link } from 'react-router-dom'
 import { BiRightArrowAlt } from 'react-icons/bi'
@@ -8,8 +8,14 @@ import projectsData from '../../../Data'
 
 
 const DesktopDetails = ({ post, renderDetails, goToNextProject, id }) => {
+    const containerRef = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "start start"]
+    });
     return (
-        <motion.div initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
+        <motion.div  initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
             <ScrollAnimation />
             <div className="project__details">
                 <div className="project__card_details container">
@@ -26,9 +32,9 @@ const DesktopDetails = ({ post, renderDetails, goToNextProject, id }) => {
                         </svg>
                     </motion.div>
                     <div className="project__image_container container">
-                        <img src={post.image}alt={post.title}/>
+                        <img src={post.image} alt={post.title} />
                     </div>
-                    <div className="project__details_post-text">
+                    <motion.div className="project__details_post-text">
                         <Link to="/projects" className="project__back">
                             <IoChevronBack style={{ fontSize: "1.2rem", marginTop: "0.2rem", color: "var(--accent-color)" }} />
                             <h2>Back To Projects</h2>
@@ -79,17 +85,17 @@ const DesktopDetails = ({ post, renderDetails, goToNextProject, id }) => {
                         {post.mainContactPage && renderDetails(post.mainContactPage, post.mainContactPageImg, post.mainContactPage)}
                         {post.mainWorkPage && renderDetails(post.mainWorkPage, post.mainWorkPageImg, post.mainWorkPage)}
                         {post.mainDarkMode && (
-                            <div className="project__details_details">
-                                <div className="project__details-text">
+                            <motion.div className="project__details_details"  ref={containerRef}>
+                                <motion.div className="project__details-text">
                                     <h2>{post.mainDarkMode}</h2>
-                                </div>
-                                <div className="project__details-img">
-                                    <img src={post.mainDarkModeImg} alt={post.mainContactPage} />
-                                    <img src={post.mainDarkModeImg2} alt={post.mainContactPage} />
-                                    <img src={post.mainDarkModeImg3} alt={post.mainContactPage} />
-                                    <img src={post.mainDarkModeImg4} alt={post.mainContactPage} />
-                                </div>
-                            </div>
+                                </motion.div>
+                                <motion.div className="project__details-img"  style={{ scale: scrollYProgress}}>
+                                    <motion.img  src={post.mainDarkModeImg} alt={post.mainContactPage}/>
+                                    <motion.img src={post.mainDarkModeImg2} alt={post.mainContactPage} />
+                                    <motion.img src={post.mainDarkModeImg3} alt={post.mainContactPage} />
+                                    <motion.img src={post.mainDarkModeImg4} alt={post.mainContactPage} />
+                                </motion.div>
+                            </motion.div>
                         )}
                         {post.lightMode && (
                             <div className="project__details_details">
@@ -108,7 +114,7 @@ const DesktopDetails = ({ post, renderDetails, goToNextProject, id }) => {
                                 </div>
                             </div>
                         )}
-                    </div>
+                    </motion.div>
                     <div className="project__next_project">
                         <div className="menu-item-wrapper">
                             <div className="menu-arrow">
