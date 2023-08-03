@@ -1,19 +1,13 @@
-import React, { useRef } from 'react'
-import { motion, useScroll } from 'framer-motion'
+import React from 'react'
+import { motion } from 'framer-motion'
 import ScrollAnimation from '../../../../../animation/ScrollAnimation/ScrollAnimation'
 import { Link } from 'react-router-dom'
 import { BiRightArrowAlt } from 'react-icons/bi'
 import { IoChevronBack } from 'react-icons/io5'
 
-const DesktopDetails = ({ post, renderDetails, goToNextProject, title, nextTitleName }) => {
-    const containerRef = useRef(null);
-
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start end", "start start"]
-    });
+const DesktopDetails = ({ post, renderDetails, goToNextProject, title, nextTitleName, scrollYProgress, containerRef }) => {
     return (
-        <motion.div initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
+        <motion.div ref={containerRef} initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
             <ScrollAnimation />
             <div className="project__details">
                 <div className="project__card_details container">
@@ -68,6 +62,13 @@ const DesktopDetails = ({ post, renderDetails, goToNextProject, title, nextTitle
                             </div>
                         </div>
                         {post.mainTitle && renderDetails(post.mainTitle, post.mainTitleImg, post.mainTitle)}
+                        {post.video && (
+                            <div className="project__details_details">
+                                <div className="project__details-text">
+                                    <video src={post.video} muted autoPlay loop poster={post.image}></video>
+                                </div>
+                            </div>
+                        )}
                         {post.mainPageOnHover && renderDetails(post.mainPageOnHover, post.mainPageOnHoverImg, post.mainPageOnHover)}
                         {post.mainTitle2 && renderDetails(post.mainTitle2, post.mainTitleImg2, post.mainTitle2)}
                         {post.articleDetails && renderDetails(post.articleDetails, post.articleDetailsImg, post.articleDetails)}
@@ -83,7 +84,7 @@ const DesktopDetails = ({ post, renderDetails, goToNextProject, title, nextTitle
                         {post.mainContactPage && renderDetails(post.mainContactPage, post.mainContactPageImg, post.mainContactPage)}
                         {post.mainWorkPage && renderDetails(post.mainWorkPage, post.mainWorkPageImg, post.mainWorkPage)}
                         {post.mainDarkMode && (
-                            <motion.div className="project__details_details" ref={containerRef}>
+                            <motion.div className="project__details_details" >
                                 <motion.div className="project__details-text">
                                     <h2>{post.mainDarkMode}</h2>
                                 </motion.div>
@@ -95,20 +96,23 @@ const DesktopDetails = ({ post, renderDetails, goToNextProject, title, nextTitle
                                 </motion.div>
                             </motion.div>
                         )}
+                        {post.collective && (
+                            <div className="project__details_details-light">
+                                <motion.div className="project__details-text">
+                                    <h2 style={{ width: window.innerWidth >= 860 ? "" : "100vw", }}>{post.overView}</h2>
+                                </motion.div>
+                                <div className="project__details-img-light">
+                                    <img src={post.collective} alt={post.mainContactPage} loading='lazy' />
+                                </div>
+                            </div>
+                        )}
                         {post.lightMode && (
-                            <div className="project__details_details">
+                            <div className="project__details_details-light">
                                 <div className="project__details-text">
                                     <h2>{post.lightMode}</h2>
                                 </div>
-                                <div className="project__details-img">
+                                <div className="project__details-img-light">
                                     <img src={post.lightModeImg1} alt={post.mainContactPage} />
-                                    <img src={post.lightModeImg2} alt={post.mainContactPage} />
-                                    <img src={post.lightModeImg3} alt={post.mainContactPage} />
-                                    <img src={post.lightModeImg4} alt={post.mainContactPage} />
-                                    <img src={post.lightModeImg5} alt={post.mainContactPage} />
-                                    <img src={post.lightModeImg6} alt={post.mainContactPage} />
-                                    <img src={post.lightModeImg7} alt={post.mainContactPage} />
-                                    <img src={post.lightModeImg8} alt={post.mainContactPage} />
                                 </div>
                             </div>
                         )}

@@ -53,9 +53,11 @@ $font-family_1: "Posterama", sans-serif;
 	position: relative;
 	top: 7rem;
 	z-index: 4;
+
 	.project__back {
 		display: flex;
 		gap: 0.7rem;
+
 		h2 {
 			font-size: 1rem;
 			font-weight: 600;
@@ -90,13 +92,50 @@ $font-family_1: "Posterama", sans-serif;
 			letter-spacing: 0.3rem;
 			font-family: $font-family_1;
 		}
+
 		img {
 			width: 100%;
 			height: 100%;
 			border: 0.2px solid var(--text-color);
 			border-radius: 2rem;
 			margin-bottom: 1rem;
+			pointer-events: none;
 		}
+
+	}
+
+	.project__details_details-light {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 4rem;
+		gap: 3rem;
+
+		h2 {
+			font-size: 2rem;
+			font-weight: 600;
+			color: $color_2;
+			margin-bottom: 1rem;
+			letter-spacing: 0.3rem;
+			font-family: $font-family_1;
+		}
+
+		.project__details-img-light {
+			width: 100%;
+			height: 100%;
+			border-radius: 2rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	video {
+		width: 100%;
+		height: 100%;
+		border: 0.2px solid var(--text-color);
+		border-radius: 2rem;
+		margin-bottom: 1rem;
+		pointer-events: none;
 	}
 }
 
@@ -218,66 +257,71 @@ $font-family_1: "Posterama", sans-serif;
 }
 
 .project__next_project {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: flex-start;
-		width: 97%;
-		padding: 1rem;
-		position: relative;
-		text-align: left;
-		top: 7rem;
-		left: 2%;
-		transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-		gap: 1rem;
-		border-top: 1px solid var(--text-color);
-		overflow: hidden;
-		h1 {
-			font-size: 2rem;
-			font-weight: 600;
-			color: $color_2;
-			margin-bottom: 1rem;
-			font-family: $font-family_1;
-			letter-spacing: 0.5rem;
-		}
-		&:hover {
-			.menu-item-wrapper {
-				left: 0%;
-			}
-		}
-	
-		.menu-item-wrapper {
-			display: flex;
-			position: relative;
-			transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-	
-			.menu-arrow {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 97%;
+	padding: 1rem;
+	position: relative;
+	text-align: left;
+	top: 7rem;
+	left: 2%;
+	transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+	gap: 1rem;
+	border-top: 1px solid var(--text-color);
+	overflow: hidden;
 
-					position: relative;
-					top: 0.5rem;
-					margin-right: 10px;
-					font-size: 2rem;
-					color: $color_1;
-					transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-			}
-			.menu-text {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				width: 24vw;
-				transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-				.next__project {
-					display: flex;
-					position: relative;
-					left: 5%;
-				}
-			}
+	h1 {
+		font-size: 2rem;
+		font-weight: 600;
+		color: $color_2;
+		margin-bottom: 1rem;
+		font-family: $font-family_1;
+		letter-spacing: 0.5rem;
+	}
+
+	&:hover {
+		.menu-item-wrapper {
+			left: 0%;
 		}
-		.project__next_project_name {
+	}
+
+	.menu-item-wrapper {
+		display: flex;
+		position: relative;
+		transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+
+		.menu-arrow {
+
+			position: relative;
+			top: 0.5rem;
+			margin-right: 10px;
+			font-size: 2rem;
+			color: $color_1;
+			transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+		}
+
+		.menu-text {
 			display: flex;
-			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			width: 24vw;
+			transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+
+			.next__project {
+				display: flex;
+				position: relative;
+				left: 5%;
+			}
 		}
-	
+	}
+
+	.project__next_project_name {
+		display: flex;
+		flex-direction: column;
+	}
+
 }
 
 
@@ -299,7 +343,7 @@ $font-family_1: "Posterama", sans-serif;
 		top: -11rem;
 		background-color: var(--body-color);
 		transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-	
+
 		.project__image_container img {
 			position: relative;
 			width: 83rem;
@@ -311,25 +355,29 @@ $font-family_1: "Posterama", sans-serif;
 			border: 0.2px solid var(--text-color);
 			border-top: 0px solid #000;
 		}
+
 		.project__back {
 			position: relative;
 			left: -10rem;
 		}
+
 		.project__title {
 			position: relative;
 			left: -10rem;
 		}
-		.project__details-brief{
+
+		.project__details-brief {
 			position: relative;
 			left: -10rem;
 		}
+
 		.background__img {
 			filter: blur(205px);
 		}
 	}
 }
 
-@media (max-width: 866px)  {
+@media (max-width: 866px) {
 	.project__card_details {
 		position: relative;
 		width: 100vw;
@@ -337,7 +385,7 @@ $font-family_1: "Posterama", sans-serif;
 		top: -11rem;
 		background-color: var(--body-color);
 		transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-	
+
 		.project__image_container img {
 			position: relative;
 			width: 80%;
@@ -353,10 +401,12 @@ $font-family_1: "Posterama", sans-serif;
 
 		.project__details_post-text {
 			padding: 0 3rem;
+
 			.category__list {
 				display: flex;
 				gap: 1rem;
 				margin-bottom: 1rem;
+
 				h2 {
 					text-align: left;
 					font-size: 1.2rem;
@@ -364,18 +414,22 @@ $font-family_1: "Posterama", sans-serif;
 					letter-spacing: 0.1rem;
 				}
 			}
+
 			.project__details-brief {
 				width: 90vw;
 			}
 		}
+
 		.project__details-text {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			text-align: center;
 		}
+
 		.project__next_project {
 			margin-top: 2rem;
+
 			h1 {
 				font-size: 2rem;
 				font-weight: 600;
@@ -384,30 +438,33 @@ $font-family_1: "Posterama", sans-serif;
 				font-family: $font-family_1;
 				letter-spacing: 0.2rem;
 			}
+
 			&:hover {
 				.menu-item-wrapper {
 					left: 0%;
 				}
 			}
-		
+
 			.menu-item-wrapper {
 				display: flex;
 				position: relative;
 				transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-		
+
 				.menu-arrow {
-						position: relative;
-						top: -0em;
-						margin-right: 10px;
-						font-size: 2rem;
-						color: $color_1;
+					position: relative;
+					top: -0em;
+					margin-right: 10px;
+					font-size: 2rem;
+					color: $color_1;
 				}
+
 				.menu-text {
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
 					width: 54vw;
 					transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+
 					.next__project {
 						display: flex;
 						position: relative;
@@ -416,13 +473,15 @@ $font-family_1: "Posterama", sans-serif;
 					}
 				}
 			}
+
 			.project__next_project_name {
 				display: flex;
 				flex-direction: column;
 			}
-		
+
 		}
 	}
+
 	.background__img {
 		position: fixed;
 		width: 80%;

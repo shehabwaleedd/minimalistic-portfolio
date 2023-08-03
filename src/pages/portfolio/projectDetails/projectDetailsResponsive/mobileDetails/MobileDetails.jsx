@@ -7,17 +7,11 @@ import { BiRightArrowAlt } from 'react-icons/bi';
 import { IoChevronBack } from 'react-icons/io5';
 
 
-const MobileDetails = ({ post, renderDetails, goToNextProject, nextTitleName }) => {
-    const containerRef = useRef(null);
-
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start end", "start start"]
-    });
+const MobileDetails = ({ post, renderDetails, goToNextProject, nextTitleName, scrollYProgress, containerRef }) => {
     return (
         <>
             <ScrollAnimation />
-            <motion.div className="project__details" style={{ width: "100vw", touchAction: "pan-y", }} initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
+            <motion.div  ref={containerRef} className="project__details" style={{ width: "100vw", touchAction: "pan-y", }} initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
                 <div className="project__card_details">
                     <motion.div
                         className="background__img"
@@ -99,7 +93,7 @@ const MobileDetails = ({ post, renderDetails, goToNextProject, nextTitleName }) 
                             {post.mainAboutPage && renderDetails(post.mainAboutPage, post.mainAboutPageImg, post.mainAboutPage)}
                             {post.mainContactPage && renderDetails(post.mainContactPage, post.mainContactPageImg, post.mainContactPage)}
                             {post.mainDarkMode && (
-                                <motion.div className="project__details_details" ref={containerRef}>
+                                <motion.div className="project__details_details">
                                     <div className="project__details-text">
                                         <h2>{post.mainDarkMode}</h2>
                                     </div>

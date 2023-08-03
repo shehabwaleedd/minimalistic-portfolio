@@ -6,6 +6,7 @@ import Work4 from "../../assets/Posters/cairo1.svg"
 import Work5 from "../../assets/Posters/blog7.png"
 import Work6 from "../../assets/Posters/Jin2.png"
 import LeluMainImg from "../../assets/ProjectDetails/Lelu/Lelu__MainPage2.png"
+import LeluVideo from "../../assets/ProjectDetails/Lelu/Lelu__video.mp4"
 import LeluMessageImg from "../../assets/ProjectDetails/Lelu/Lelu__BrandMessage.png"
 import LeluLoginsImg from "../../assets/ProjectDetails/Lelu/Lelu__logins.png"
 import LeluTestimonialsImg from "../../assets/ProjectDetails/Lelu/Lelu__testimonial.png"
@@ -18,6 +19,7 @@ import ShebooDarkModeImg2 from "../../assets/ProjectDetails/Sheboo/Shehab__mainP
 import ShebooDarkModeImg3 from "../../assets/ProjectDetails/Sheboo/Shehab__mainPageDarkMode3.png"
 import ShebooDarkModeImg4 from "../../assets/ProjectDetails/Sheboo/Shehab__mainPageDarkMode4.png"
 import BlogMainPage from "../../assets/ProjectDetails/Blog/blog_mainPage.png"
+import BlogVideo from "../../assets/ProjectDetails/Blog/Blog_video.mp4"
 import BlogSuBMenu from "../../assets/ProjectDetails/Blog/Blog__subMenu.png"
 import BlogPageOnHover from "../../assets/ProjectDetails/Blog/Blog__mainPageOnHover.png"
 import BlogArticleDetails from "../../assets/ProjectDetails/Blog/Blog__articleDetails.png"
@@ -27,14 +29,7 @@ import BlogAccount from "../../assets/ProjectDetails/Blog/Blog__AccountPage.png"
 import BlogAbout from "../../assets/ProjectDetails/Blog/Blog__aboutPage.png"
 import BlogLogin from "../../assets/ProjectDetails/Blog/Blog__logInPage.png"
 import BlogRegister from "../../assets/ProjectDetails/Blog/Blog__signUpPage.png"
-import BlogLightMode1 from "../../assets/ProjectDetails/Blog/Blog__lightMode.png"
-import BlogLightMode2 from "../../assets/ProjectDetails/Blog/Blog__lightMode2.png"
-import BlogLightMode3 from "../../assets/ProjectDetails/Blog/Blog__lightMode3.png"
-import BlogLightMode4 from "../../assets/ProjectDetails/Blog/Blog__lightMode4.png"
-import BlogLightMode5 from "../../assets/ProjectDetails/Blog/Blog__lightMode5.png"
-import BlogLightMode6 from "../../assets/ProjectDetails/Blog/Blog__lightMode6.png"
-import BlogLightMode7 from "../../assets/ProjectDetails/Blog/Blog__lightMode7.png"
-import BlogLightMode8 from "../../assets/ProjectDetails/Blog/Blog__lightMode8.png"
+import BlogLightMode1 from "../../assets/ProjectDetails/Blog/collective.png"
 import RollDiceMainPage from "../../assets/ProjectDetails/RollDice/RollDice__mainPage.png"
 import JingMainPage from "../../assets/ProjectDetails/Jing/Jin__mainPage.png"
 import JinGridView from "../../assets/ProjectDetails/Jing/Jin__gridView.png"
@@ -45,12 +40,12 @@ import JinDarkMode2 from "../../assets/ProjectDetails/Jing/Jing__darkMode2.png"
 import JinDarkMode3 from "../../assets/ProjectDetails/Jing/Jin__darkMode3.png"
 import JinDarkMode4 from "../../assets/ProjectDetails/Jing/Jin__darkMode4.png"
 import MoaazMainPage from "../../assets/ProjectDetails/Moaaz/Moaaz__mainPage.png"
+import MoaazVideo from "../../assets/ProjectDetails/Moaaz/Moaaz_video.mp4"
 import MoaazWorkPage from "../../assets/ProjectDetails/Moaaz/Moaaz__workPage.png"
 import MoaazOverlayNav from "../../assets/ProjectDetails/Moaaz/Moaaz__overlayNav.png"
 import MoaazAboutPage from "../../assets/ProjectDetails/Moaaz/Moaaz__aboutPage.png"
 import MoaazContactPage from "../../assets/ProjectDetails/Moaaz/Moaaz__contactPage.png"
-
-
+import MoaazColelctive from "../../assets/ProjectDetails/Moaaz/collective.png"
 
 
 
@@ -95,6 +90,7 @@ const projectsData = [
     comment: "Sheboo is the nickname I use on social medias. The goal of this project was to create my own identity, adaptable and modular to work with both my real name and my nickname. First, the identity needed to be defined in brand guidelines and then had to be adapted for digital medias (website, wallpapers, social medias) and physical formats (business cards/stickers, letter paper and resume).",
     mainTitle: "Main Page",
     mainTitleImg: LeluMainImg,
+    video: LeluVideo,
     mainTitle2: "Main Message",
     mainTitleImg2: LeluMessageImg,
     projectLogins: "Project Login/Sign Up Page",
@@ -138,13 +134,7 @@ const projectsData = [
     registerPageImg: BlogRegister,
     lightMode: "Light Mode",
     lightModeImg1: BlogLightMode1,
-    lightModeImg2: BlogLightMode2,
-    lightModeImg3: BlogLightMode3,
-    lightModeImg4: BlogLightMode4,
-    lightModeImg5: BlogLightMode5,
-    lightModeImg6: BlogLightMode6,
-    lightModeImg7: BlogLightMode7,
-    lightModeImg8: BlogLightMode8,
+    video: BlogVideo,
     class: "blog",
     workingOnIt: false,
     newProject: true,
@@ -196,14 +186,17 @@ const projectsData = [
     backgroundColor_mobile: "#006F469a",
     mainTitle: "Main Page",
     mainTitleImg: MoaazMainPage,
-    mainTitle2: "Overlayed Navbar",
-    mainTitleImg2: MoaazOverlayNav,
-    mainAboutPage: "About Page",
-    mainAboutPageImg: MoaazAboutPage,
-    mainContactPage: "Contact Page",
-    mainContactPageImg: MoaazContactPage,
-    mainWorkPage: "Work Page",
-    mainWorkPageImg: MoaazWorkPage,
+    video: MoaazVideo,
+    // mainTitle2: "Overlayed Navbar",
+    // mainTitleImg2: MoaazOverlayNav,
+    // mainAboutPage: "About Page",
+    // mainAboutPageImg: MoaazAboutPage,
+    // mainContactPage: "Contact Page",
+    // mainContactPageImg: MoaazContactPage,
+    // mainWorkPage: "Work Page",
+    // mainWorkPageImg: MoaazWorkPage,
+    overView: "Overview",
+    collective: MoaazColelctive,
 
   },
 

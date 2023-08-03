@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "../Data";
-import { motion} from 'framer-motion'
+import { motion, useScroll} from 'framer-motion'
 import "./ProjectDetails.scss";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useNavigate } from "react-router-dom";
@@ -25,7 +25,11 @@ function ProjectDetails({ isMobile, isTablet }) {
         return projectsData[nextIndex].title;
     };
     const ref = useRef(null);
-
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "start start"]
+    });
     const renderDetails = (title, img, alt) => {
         return (
             <motion.div className="project__details_details" ref={ref}>
@@ -50,11 +54,11 @@ function ProjectDetails({ isMobile, isTablet }) {
     return (
         <div >
             {isMobile ? (
-                <MobileDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName}/>
+                <MobileDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName}  containerRef={containerRef} scrollYProgress={scrollYProgress}/>
             ) : isTablet ? (
-                <TabletDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName}/>
+                <TabletDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} containerRef={containerRef} scrollYProgress={scrollYProgress}/>
             ) : (
-                <DesktopDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName}/>
+                <DesktopDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} containerRef={containerRef} scrollYProgress={scrollYProgress}/>
             )}
         </div>
     );
