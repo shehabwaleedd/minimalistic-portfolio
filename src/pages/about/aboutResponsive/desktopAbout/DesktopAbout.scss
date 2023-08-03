@@ -1,19 +1,23 @@
 @media (min-width: 1649px) {
     .about {
-        padding-bottom: 1rem;
+        .about_desktop {
+            padding-bottom: 1rem;
 
-        .about__pic {
-            img {
-                width: 150vw;
-                height: 55vh;
-                object-fit: cover;
-                border-radius: 0rem;
-                border: none;
+            .about__pic {
+                img {
+                    width: 150vw;
+                    height: 55vh;
+                    object-fit: cover;
+                    border-radius: 0rem;
+                    border: none;
+                }
             }
-        }
 
-        .about__bottom {
-            min-height: 190vh;
+            .about__bottom {
+                transform: translateY(-25rem);
+                min-height: 70vh;
+                padding: 0rem 2rem;
+            }
         }
     }
 }

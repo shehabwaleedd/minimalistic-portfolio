@@ -18,7 +18,7 @@ const DesktopAbout = ({ language }) => {
             <motion.div className='detailed__containerr' >
                 <motion.div className='detailed__row' >
                     <div className="aboutttt__container container">
-                        <div className="about__content" style={{ marginTop: language === "fr" ? "10rem" : language === "de" || language === "en" ? "30rem" : "20rem" }}>
+                        <div className="about__content">
                             <motion.h1 style={{ textAlign: language === "ar" ? "right" : "left", paddingRight: language === "ar" ? "3rem" : "0", fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.2rem", fontSize: language === "fr" ? "2rem" : "8.2rem" }} initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>{t("navbar__about")}</motion.h1>
                             <motion.h2 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>I'm Shehab. A web developer, desginer and problem solver.</motion.h2>
                             <div className="about__description">
@@ -70,8 +70,8 @@ const DesktopAbout = ({ language }) => {
                             Contact Me
                         </motion.button>
                     </Link>
+                <motion.img className='bottom_img' src={require("../../../../assets/profile2.JPG")} alt="profile" initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }} />
                 </div>
-                <motion.img src={require("../../../../assets/profile2.JPG")} alt="profile" initial={{ y: 50 }} whileInView={{ y: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }} />
             </div>
         </motion.div>
     )

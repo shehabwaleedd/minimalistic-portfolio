@@ -22,7 +22,7 @@ const Toggle = (props) => {
   const bgPosition = isOn ? '0 0' : '0 50%';
 
   return (
-    <div className='toggle__main '>
+    <div className='toggle__main'>
       <motion.div 
         className='switch' 
         onClick={toggleSwitch} 
@@ -53,7 +53,7 @@ const Toggle = (props) => {
             color: isOn ? 'var(--accent-color)' : 'var(--body-color)',
             position: 'absolute',
             top: isOn ? '1rem' : '1rem',
-            zIndex: 999,
+            zIndex: 9999999,
 
           }} 
         />
