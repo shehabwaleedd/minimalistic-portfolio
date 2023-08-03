@@ -11,13 +11,8 @@ import LeluMessageImg from "../../assets/ProjectDetails/Lelu/Lelu__BrandMessage.
 import LeluLoginsImg from "../../assets/ProjectDetails/Lelu/Lelu__logins.png"
 import LeluTestimonialsImg from "../../assets/ProjectDetails/Lelu/Lelu__testimonial.png"
 import ShebooMainImg from "../../assets/ProjectDetails/Sheboo/Shehab__mainPage.png"
-import ShebooMainProjectPageImg from "../../assets/ProjectDetails/Sheboo/Shehab__ProjectsPage.png"
-import ShebooMainContactPageImg from "../../assets/ProjectDetails/Sheboo/Shehab__ContactPage.png"
-import ShebooMainAboutPageImg from "../../assets/ProjectDetails/Sheboo/Shehab__AboutPage.png"
-import ShebooDarkModeImg from "../../assets/ProjectDetails/Sheboo/Shehab__mainPageDarkMode.png"
-import ShebooDarkModeImg2 from "../../assets/ProjectDetails/Sheboo/Shehab__mainPageDarkMode2.png"
-import ShebooDarkModeImg3 from "../../assets/ProjectDetails/Sheboo/Shehab__mainPageDarkMode3.png"
-import ShebooDarkModeImg4 from "../../assets/ProjectDetails/Sheboo/Shehab__mainPageDarkMode4.png"
+import ShebooVideo from "../../assets/ProjectDetails/Sheboo/Shehab__video.mp4"
+import ShebooCollective from "../../assets/ProjectDetails/Sheboo/Shehab__collective.png"
 import BlogMainPage from "../../assets/ProjectDetails/Blog/blog_mainPage.png"
 import BlogVideo from "../../assets/ProjectDetails/Blog/Blog_video.mp4"
 import BlogCollective from "../../assets/ProjectDetails/Blog/Blog__collective.png"
@@ -49,17 +44,9 @@ const projectsData = [
     comment: "I am commonly known as 'Sheboo' on various social media platforms, shaping my online identity. The primary aim of this project was to establish a versatile and adaptable identity that encompasses both my real name and nickname. As a frontend developer, it was essential to create a website that showcases my expertise, reflects my design principles, and establishes my unique identity. The goal was to develop a cohesive and recognizable personal brand that seamlessly translates between online and offline channels, ensuring a consistent representation across different mediums. This initiative aimed to optimize search engine visibility while presenting a professional and polished image.",
     mainTitle: "Main Page",
     mainTitleImg: ShebooMainImg,
-    mainProjectsPage: "Projects Page",
-    mainProjectsPageImg: ShebooMainProjectPageImg,
-    mainContactPage: "Contact Page",
-    mainContactPageImg: ShebooMainContactPageImg,
-    mainAboutPage: "About Page",
-    mainAboutPageImg: ShebooMainAboutPageImg,
-    mainDarkMode: "Dark Mode",
-    mainDarkModeImg: ShebooDarkModeImg,
-    mainDarkModeImg2: ShebooDarkModeImg2,
-    mainDarkModeImg3: ShebooDarkModeImg3,
-    mainDarkModeImg4: ShebooDarkModeImg4,
+    video: ShebooVideo,
+    overView: "Overview",
+    collective: ShebooCollective,
     workingOnIt: false,
     newProject: false,
     backgroundColor: "#63b7b777",
