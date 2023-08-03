@@ -107,16 +107,6 @@ const DesktopDetails = ({ post, renderDetails, goToNextProject, title, nextTitle
                                 </div>
                             </div>
                         )}
-                        {post.lightMode && (
-                            <div className="project__details_details-light">
-                                <div className="project__details-text">
-                                    <h2>{post.lightMode}</h2>
-                                </div>
-                                <div className="project__details-img-light">
-                                    <img src={post.lightModeImg1} alt={post.mainContactPage} />
-                                </div>
-                            </div>
-                        )}
                     </motion.div>
                     <div className="project__next_project">
                         <div className="menu-item-wrapper">

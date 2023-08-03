@@ -123,23 +123,6 @@ const MobileDetails = ({ post, renderDetails, goToNextProject, nextTitleName }) 
                                     </div>
                                 </div>
                             )}
-                            {post.lightMode && (
-                                <div className="project__details_details">
-                                    <div className="project__details-text">
-                                        <h2>{post.lightMode}</h2>
-                                    </div>
-                                    <div className="project__details-img">
-                                        <img src={post.lightModeImg1} alt={post.mainContactPage} />
-                                        <img src={post.lightModeImg2} alt={post.mainContactPage} />
-                                        <img src={post.lightModeImg3} alt={post.mainContactPage} />
-                                        <img src={post.lightModeImg4} alt={post.mainContactPage} />
-                                        <img src={post.lightModeImg5} alt={post.mainContactPage} />
-                                        <img src={post.lightModeImg6} alt={post.mainContactPage} />
-                                        <img src={post.lightModeImg7} alt={post.mainContactPage} />
-                                        <img src={post.lightModeImg8} alt={post.mainContactPage} />
-                                    </div>
-                                </div>
-                            )}
                         </div>
                     </div>
                     <div className="project__next_project" style={{ width: "100vw", left: "0", gap: "3rem", overflow: "visible" }}>
