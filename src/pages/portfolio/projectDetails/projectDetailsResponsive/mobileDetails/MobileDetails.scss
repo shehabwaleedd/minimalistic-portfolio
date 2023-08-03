@@ -1,3 +1,5 @@
+$font-family_1: "Posterama", sans-serif;
+$color_2: var(--accent-color);
 .project__image_container-mobile img {
     position: relative;
     width: 100%;
@@ -9,6 +11,55 @@
     border-bottom-right-radius: 2rem;
     border: 0.2px solid var(--text-color);
     border-top: 0px solid #000;
+}
+
+.project__img_container {
+    .project__details_details-mobile {
+        padding: 0;
+        .project__details-text-mobile {
+            video {
+                width: 100%;
+                height: 100%;
+                border-radius: 2rem;
+                margin-bottom: 1rem;
+                pointer-events: none;
+            }
+        }
+    }
+    .project__details_details-light-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 4rem;
+        gap: 3rem;
+        padding: 0rem;
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: $color_2;
+            margin-bottom: 1rem;
+            letter-spacing: 0.3rem;
+            font-family: $font-family_1;
+            text-align: center;
+        }
+
+        .project__details-img-light-mobile {
+            width: 90%;
+            height: 90%;
+            border-radius: 2rem;
+            margin-bottom: 1rem;
+            pointer-events: none;
+
+            img {
+                width: 95%;
+                height: 95%;
+                margin-bottom: 1rem;
+                pointer-events: none;
+            }
+        }
+    }
 }
 
 @media (max-width: 470px) {
