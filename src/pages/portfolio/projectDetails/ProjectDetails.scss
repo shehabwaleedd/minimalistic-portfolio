@@ -126,6 +126,13 @@ $font-family_1: "Posterama", sans-serif;
 			height: 100%;
 			border-radius: 2rem;
 			margin-bottom: 1rem;
+			pointer-events: none;
+			img {
+				width: 100%;
+				height: 100%;
+				margin-bottom: 1rem;
+				pointer-events: none;
+			}
 		}
 	}
 

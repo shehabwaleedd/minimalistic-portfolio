@@ -1,13 +1,19 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, useScroll } from 'framer-motion'
 import ScrollAnimation from '../../../../../animation/ScrollAnimation/ScrollAnimation'
 import { Link } from 'react-router-dom'
 import { BiRightArrowAlt } from 'react-icons/bi'
 import { IoChevronBack } from 'react-icons/io5'
+import { useRef } from 'react'
 
-const DesktopDetails = ({ post, renderDetails, goToNextProject, title, nextTitleName, scrollYProgress, containerRef }) => {
+const DesktopDetails = ({ post, renderDetails, goToNextProject, title, nextTitleName }) => {
+    const containerRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start end", "start start"]
+    });
     return (
-        <motion.div ref={containerRef} initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
+        <motion.div  ref={containerRef} initial={{ opacity: 0, y: -100, transition: { delay: 0.3, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.5, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: -500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }}>
             <ScrollAnimation />
             <div className="project__details">
                 <div className="project__card_details container">
@@ -71,12 +77,7 @@ const DesktopDetails = ({ post, renderDetails, goToNextProject, title, nextTitle
                         )}
                         {post.mainPageOnHover && renderDetails(post.mainPageOnHover, post.mainPageOnHoverImg, post.mainPageOnHover)}
                         {post.mainTitle2 && renderDetails(post.mainTitle2, post.mainTitleImg2, post.mainTitle2)}
-                        {post.articleDetails && renderDetails(post.articleDetails, post.articleDetailsImg, post.articleDetails)}
-                        {post.editPage && renderDetails(post.editPage, post.editPageImg, post.editPage)}
-                        {post.createPost && renderDetails(post.createPost, post.createPostImg, post.createPost)}
                         {post.mainTitleSubMenu && renderDetails(post.mainTitleSubMenu, post.mainTitleSubMenuImg, post.mainTitleSubMenu)}
-                        {post.projectLogins && renderDetails(post.projectLogins, post.projectLoginsImg, post.projectLogins)}
-                        {post.registerPage && renderDetails(post.registerPage, post.registerPageImg, post.registerPage)}
                         {post.projetTestimonials && renderDetails(post.projetTestimonials, post.projetTestimonialsImg, post.projetTestimonials)}
                         {post.mainProjectsPage && renderDetails(post.mainProjectsPage, post.mainProjectsPageImg, post.mainProjectsPage)}
                         {post.accountPage && renderDetails(post.accountPage, post.accountPageImg, post.accountPage)}
@@ -84,7 +85,7 @@ const DesktopDetails = ({ post, renderDetails, goToNextProject, title, nextTitle
                         {post.mainContactPage && renderDetails(post.mainContactPage, post.mainContactPageImg, post.mainContactPage)}
                         {post.mainWorkPage && renderDetails(post.mainWorkPage, post.mainWorkPageImg, post.mainWorkPage)}
                         {post.mainDarkMode && (
-                            <motion.div className="project__details_details" >
+                            <motion.div className="project__details_details"  >
                                 <motion.div className="project__details-text">
                                     <h2>{post.mainDarkMode}</h2>
                                 </motion.div>

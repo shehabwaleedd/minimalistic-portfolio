@@ -25,11 +25,8 @@ function ProjectDetails({ isMobile, isTablet }) {
         return projectsData[nextIndex].title;
     };
     const ref = useRef(null);
-    const containerRef = useRef(null);
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start end", "start start"]
-    });
+
+
     const renderDetails = (title, img, alt) => {
         return (
             <motion.div className="project__details_details" ref={ref}>
@@ -54,11 +51,11 @@ function ProjectDetails({ isMobile, isTablet }) {
     return (
         <div >
             {isMobile ? (
-                <MobileDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName}  containerRef={containerRef} scrollYProgress={scrollYProgress}/>
+                <MobileDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName}  />
             ) : isTablet ? (
-                <TabletDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} containerRef={containerRef} scrollYProgress={scrollYProgress}/>
+                <TabletDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} />
             ) : (
-                <DesktopDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} containerRef={containerRef} scrollYProgress={scrollYProgress}/>
+                <DesktopDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} />
             )}
         </div>
     );

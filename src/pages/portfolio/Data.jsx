@@ -20,16 +20,7 @@ import ShebooDarkModeImg3 from "../../assets/ProjectDetails/Sheboo/Shehab__mainP
 import ShebooDarkModeImg4 from "../../assets/ProjectDetails/Sheboo/Shehab__mainPageDarkMode4.png"
 import BlogMainPage from "../../assets/ProjectDetails/Blog/blog_mainPage.png"
 import BlogVideo from "../../assets/ProjectDetails/Blog/Blog_video.mp4"
-import BlogSuBMenu from "../../assets/ProjectDetails/Blog/Blog__subMenu.png"
-import BlogPageOnHover from "../../assets/ProjectDetails/Blog/Blog__mainPageOnHover.png"
-import BlogArticleDetails from "../../assets/ProjectDetails/Blog/Blog__articleDetails.png"
-import BlogEditPage from "../../assets/ProjectDetails/Blog/Blog__editPage.png"
-import BlogCreatePost from "../../assets/ProjectDetails/Blog/Blog__createPost.png"
-import BlogAccount from "../../assets/ProjectDetails/Blog/Blog__AccountPage.png"
-import BlogAbout from "../../assets/ProjectDetails/Blog/Blog__aboutPage.png"
-import BlogLogin from "../../assets/ProjectDetails/Blog/Blog__logInPage.png"
-import BlogRegister from "../../assets/ProjectDetails/Blog/Blog__signUpPage.png"
-import BlogLightMode1 from "../../assets/ProjectDetails/Blog/collective.png"
+import BlogCollective from "../../assets/ProjectDetails/Blog/Blog__collective.png"
 import RollDiceMainPage from "../../assets/ProjectDetails/RollDice/RollDice__mainPage.png"
 import JingMainPage from "../../assets/ProjectDetails/Jing/Jin__mainPage.png"
 import JinGridView from "../../assets/ProjectDetails/Jing/Jin__gridView.png"
@@ -110,26 +101,9 @@ const projectsData = [
     comment: "Lumos was conceived as an online digital blog platform, tailored for individuals with intellectual inclinations, to provide them with a space to freely express their thoughts. It served as my inaugural full-fledged web application, built entirely from scratch. The platform integrated Firebase for authentication and database functionalities, employed Framer Motion for animations, and utilized i18next for seamless translation into four languages. The design was characterized by sharp angles and squares, complemented by a simple color palette to enhance user experience.",
     mainTitle: "Main Page",
     mainTitleImg: BlogMainPage,
-    mainTitleSubMenu: "Sub Menu",
-    mainTitleSubMenuImg: BlogSuBMenu,
-    mainPageOnHover: "Main Page On Hover",
-    mainPageOnHoverImg: BlogPageOnHover,
-    articleDetails: "Article Details",
-    articleDetailsImg: BlogArticleDetails,
-    editPage: "Edit Page",
-    editPageImg: BlogEditPage,
-    createPost: "Create Post",
-    createPostImg: BlogCreatePost,
-    accountPage: "Account Page",
-    accountPageImg: BlogAccount,
-    mainAboutPage: "About Page",
-    mainAboutPageImg: BlogAbout,
-    projectLogins: "Login Page",
-    projectLoginsImg: BlogLogin,
-    registerPage: "Register Page",
-    registerPageImg: BlogRegister,
-    lightMode: "Light Mode",
-    lightModeImg1: BlogLightMode1,
+
+    overView: "Overview",
+    collective: BlogCollective,
     video: BlogVideo,
     class: "blog",
     workingOnIt: false,
