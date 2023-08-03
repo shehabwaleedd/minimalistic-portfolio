@@ -41,10 +41,6 @@ import JinDarkMode3 from "../../assets/ProjectDetails/Jing/Jin__darkMode3.png"
 import JinDarkMode4 from "../../assets/ProjectDetails/Jing/Jin__darkMode4.png"
 import MoaazMainPage from "../../assets/ProjectDetails/Moaaz/Moaaz__mainPage.png"
 import MoaazVideo from "../../assets/ProjectDetails/Moaaz/Moaaz_video.mp4"
-import MoaazWorkPage from "../../assets/ProjectDetails/Moaaz/Moaaz__workPage.png"
-import MoaazOverlayNav from "../../assets/ProjectDetails/Moaaz/Moaaz__overlayNav.png"
-import MoaazAboutPage from "../../assets/ProjectDetails/Moaaz/Moaaz__aboutPage.png"
-import MoaazContactPage from "../../assets/ProjectDetails/Moaaz/Moaaz__contactPage.png"
 import MoaazColelctive from "../../assets/ProjectDetails/Moaaz/collective.png"
 
 
@@ -187,14 +183,6 @@ const projectsData = [
     mainTitle: "Main Page",
     mainTitleImg: MoaazMainPage,
     video: MoaazVideo,
-    // mainTitle2: "Overlayed Navbar",
-    // mainTitleImg2: MoaazOverlayNav,
-    // mainAboutPage: "About Page",
-    // mainAboutPageImg: MoaazAboutPage,
-    // mainContactPage: "Contact Page",
-    // mainContactPageImg: MoaazContactPage,
-    // mainWorkPage: "Work Page",
-    // mainWorkPageImg: MoaazWorkPage,
     overView: "Overview",
     collective: MoaazColelctive,
 

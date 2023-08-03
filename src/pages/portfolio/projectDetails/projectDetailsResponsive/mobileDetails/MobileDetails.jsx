@@ -1,7 +1,7 @@
-import React, {useRef} from 'react'
+import React from 'react'
 import './MobileDetails.scss'
 import ScrollAnimation from '../../../../../animation/ScrollAnimation/ScrollAnimation';
-import { motion, useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { BiRightArrowAlt } from 'react-icons/bi';
 import { IoChevronBack } from 'react-icons/io5';
