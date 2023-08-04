@@ -3,25 +3,23 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import NavComponents from '../../navComponents/NavComponents';
 import DropDownMenu from "../../dropDownMenu/DropDownMenu";
-
+import "./MobileNavbar.scss"
 
 const MobileNavbar = ({ isMobile, setIsMobile, isAbout, setIsAbout, setOpen, navOpen, setNavOpen, language, isMenuVisible, setLanguage, languageExpanded, setLanguageExpanded, setMenuVisible, shouldReload, setShouldReload }) => {
     const { t } = useTranslation();
     return (
         <>
-            <div className="navbar__container" style={{ flexDirection: language === "ar" ? "row-reverse" : "row", direction: language === "ar" ? "rtl" : "ltr", padding: navOpen ? "3.2rem" : "3.2rem" }}>
-                <div style={{ transition: navOpen ? "1.5s" : "1.5s" }}>
-                    <Link to="/">
-                        <h1 className={navOpen ? "logo spin" : isAbout ? "logo" : "logo"} style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.3rem", fontSize: language === "ar" ? "2rem" : "1rem" }}>{t("my__name")}</h1>
-                    </Link>
-                </div>
-                <div className="side__navbar" style={{ flexDirection: language === "ar" ? "row-reverse" : "row", gap: language === "ar" ? "1.5rem" : "0.1rem" }}>
+            <div className="navbar__container_mobile" style={{ flexDirection: language === "ar" ? "row-reverse" : "row", direction: language === "ar" ? "rtl" : "ltr", padding: navOpen ? "3.2rem" : "3.2rem" }}>
+                <Link to="/">
+                    <h1 className={navOpen ? "logo_mobile spin" : "logo_mobile"} style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.3rem", fontSize: language === "ar" ? "2rem" : "1rem" }}>{t("my__name")}</h1>
+                </Link>
+                <div className="side__navbar_mobile" style={{ flexDirection: language === "ar" ? "row-reverse" : "row", gap: language === "ar" ? "1.5rem" : "0.1rem" }}>
                     <NavComponents isMobile={isMobile} navOpen={navOpen} language={language} />
-                    <DropDownMenu isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile}  setOpen={setOpen} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
+                    <DropDownMenu isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} setOpen={setOpen} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
                     <div className="menu-toggle" onClick={() => setNavOpen(!navOpen)}>
-                        <div className={navOpen ? "hamBox hamBoxOpen" : isAbout ? "hamBox" : "hamBox"}>
-                            <span className={navOpen ? "lineTop spin" : isAbout ? "lineTop" : "lineTop"}></span>
-                            <span className={navOpen ? "lineBottom spin" : isAbout ? "lineBottom" : "lineBottom"}></span>
+                        <div className={navOpen ? "hamBox_mobile hamBoxOpen" : "hamBox_mobile"}>
+                            <span className={navOpen ? "lineTop_mobile spin" : "lineTop_mobile"}></span>
+                            <span className={navOpen ? "lineBottom_mobile spin" : "lineBottom_mobile"}></span>
                         </div>
                     </div>
                 </div>

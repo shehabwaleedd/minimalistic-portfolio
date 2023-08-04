@@ -1,0 +1,95 @@
+$color_1: var(--logo-color);
+$color_2: var(--container-color);
+$color_3: var(--title-color);
+$font-family_1: "Posterama", sans-serif;
+$background-color_1: var(--nav-overlay-color);
+
+.navbar__container_mobile {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    transition: all 4s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 78vw;
+    height: 7vh;
+    padding: 3rem;
+    .logo_mobile {
+        text-decoration: none;
+        color: $color_1;
+        font-size: 1.5em;
+        font-family: $font-family_1;
+        letter-spacing: 0.3rem;
+        font-weight: bolder;
+        cursor: pointer;
+        transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .logo_mobile.spin {
+        color: $color_2;
+        transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        transition-delay: 1s;
+    }
+
+    .side__navbar_mobile {
+        .lineTop_mobile {
+            margin: 0 auto;
+            position: absolute;
+            display: block;
+            width: 1.5rem;
+            height: 0.125rem;
+            border-radius: 0.625rem;
+            background: var(--text-color);
+            right: 0rem;
+            transform: rotate(0deg);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            top: -1em;
+        }
+
+        .lineBottom_mobile {
+            margin: 0 auto;
+            position: absolute;
+            display: block;
+            width: 1.5rem;
+            height: 0.125rem;
+            border-radius: 0.625rem;
+            background: var(--text-color);
+            right: 0;
+            transform: rotate(0deg);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            color: $color_3;
+            top: -0.5em;
+        }
+
+        .lineTop_mobile.spin {
+            top: -0.85em;
+            transform: rotate(135deg);
+            background: var(--container-color);
+            right: 0;
+        }
+
+        .lineBottom_mobile.spin {
+            top: -0.85em;
+            transform: rotate(225deg);
+            background: var(--container-color);
+            right: 0;
+        }
+
+        .hamBox_mobile {
+            position: relative;
+            z-index: 99999999;
+            width: 1.75rem;
+            height: 1.75rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+            top: 0;
+        }
+        .hamBox_mobile.hamBoxOpen {
+            position: relative;
+            z-index: 99999999;
+            width: 2.75rem;
+            height: 3.75rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+            right: -8rem;
+        }
+    }
+}
