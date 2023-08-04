@@ -4,8 +4,6 @@ import { useTranslation } from "react-i18next";
 import NavComponents from '../../navComponents/NavComponents';
 import DropDownMenu from "../../dropDownMenu/DropDownMenu";
 import "./MobileNavbar.scss"
-import { AiOutlineClose } from "react-icons/ai"
-import { TbMenu } from "react-icons/tb"
 const MobileNavbar = ({ isMobile, setIsMobile, isAbout, setIsAbout, setOpen, navOpen, setNavOpen, language, isMenuVisible, setLanguage, languageExpanded, setLanguageExpanded, setMenuVisible, shouldReload, setShouldReload }) => {
     const { t } = useTranslation();
     return (

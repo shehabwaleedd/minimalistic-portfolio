@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import projectsData from "../Data";
-import { motion, useScroll} from 'framer-motion'
+import { motion } from 'framer-motion'
 import "./ProjectDetails.scss";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useNavigate } from "react-router-dom";
