@@ -1,10 +1,11 @@
 $font-family_1: "Posterama", sans-serif;
 $color_2: var(--accent-color);
+
 .project__image_container-mobile img {
     position: relative;
     width: 100%;
     height: 36rem;
-    left: 0%;
+    left: -0rem;
     top: 5rem;
     object-fit: cover;
     border-bottom-left-radius: 2rem;
@@ -14,18 +15,7 @@ $color_2: var(--accent-color);
 }
 
 .project__img_container {
-    .project__details_details-mobile {
-        padding: 0;
-        .project__details-text-mobile {
-            video {
-                width: 100%;
-                height: 100%;
-                border-radius: 2rem;
-                margin-bottom: 1rem;
-                pointer-events: none;
-            }
-        }
-    }
+
     .project__details_details-light-mobile {
         display: flex;
         flex-direction: column;
@@ -87,7 +77,7 @@ $color_2: var(--accent-color);
     }
 
     .project__img_container {
-        margin-right: 3.3rem;
+        margin-right: 4rem;
     }
 
     .menu-item-wrapper {
@@ -95,7 +85,7 @@ $color_2: var(--accent-color);
     }
 
     .project__details-img {
-        width: 90vw;
+        width: 98vw;
     }
 }
 

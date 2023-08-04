@@ -1,19 +1,18 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const MobileDetailsDetails = ({ post, renderDetails, scrollYProgress}) => {
+const MobileDetailsDetails = ({ post, renderDetails, scrollYProgress }) => {
     return (
         <div className="project__img_container" style={{ display: "flex", justifyContent: "center", alignContent: "center", alignItems: "center", flexDirection: "column", transform: "translateX(4rem)" }}>
             {post.mainTitle && renderDetails(post.mainTitle, post.mainTitleImg, post.mainTitle)}
             {post.video && (
-                <div className="project__details_details-mobile">
-                    <div className="project__details-text-mobile">
-                        <video src={post.video} muted autoPlay loop poster={post.image}></video>
-                    </div>
-                </div>
+                <motion.div className="project__details_details" >
+                    <motion.div className="project__details-img">
+                        <video src={post.video} loop="true" muted="true" playsInLine="playsinline" autoPlay="autoplay"></video>
+                    </motion.div>
+                </motion.div>
             )}
             {post.mainPageOnHover && renderDetails(post.mainPageOnHover, post.mainPageOnHoverImg, post.mainPageOnHover)}
-            {post.mainTitle2 && renderDetails(post.mainTitle2, post.mainTitleImg2, post.mainTitle2)}
             {post.mainTitleSubMenu && renderDetails(post.mainTitleSubMenu, post.mainTitleSubMenuImg, post.mainTitleSubMenu)}
             {post.projetTestimonials && renderDetails(post.projetTestimonials, post.projetTestimonialsImg, post.projetTestimonials)}
             {post.mainProjectsPage && renderDetails(post.mainProjectsPage, post.mainProjectsPageImg, post.mainProjectsPage)}
@@ -44,6 +43,7 @@ const MobileDetailsDetails = ({ post, renderDetails, scrollYProgress}) => {
                     </div>
                 </div>
             )}
+
         </div>
     )
 }
