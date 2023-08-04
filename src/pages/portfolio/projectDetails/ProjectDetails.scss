@@ -234,9 +234,9 @@ $font-family_1: "Posterama", sans-serif;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		color: $color_5;
+		color: $color_4;
 		position: relative;
-		font-size: 1.1rem;
+		font-size: 1.2rem;
 
 		&::after {
 			content: "";
@@ -260,6 +260,9 @@ $font-family_1: "Posterama", sans-serif;
 	.project__links {
 		display: flex;
 		justify-content: space-between;
+		a {
+			color: var(--title-color)
+		}
 	}
 }
 
