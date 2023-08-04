@@ -19,7 +19,7 @@ $background-color_1: var(--nav-overlay-color);
 	top: 0;
 	bottom: 0;
 	width: 100%;
-	height: 20vh;
+	height: 17vh;
 	transition: all 4s cubic-bezier(0.16, 1, 0.3, 1);
 	background-color: $background-color_1;
 }
@@ -29,7 +29,6 @@ $background-color_1: var(--nav-overlay-color);
 	position: relative;
 	justify-content: space-between;
 	transition: all 4s cubic-bezier(0.16, 1, 0.3, 1);
-
 	width: 100vw;
 	height: 7vh;
 	padding: 5rem 5rem 5rem 3rem;
@@ -43,6 +42,10 @@ $background-color_1: var(--nav-overlay-color);
 	z-index: 9;
 }
 
+.sheboo_logo {
+	margin-bottom: 10rem;
+}
+
 .logo {
 	text-decoration: none;
 	color: $color_1;
@@ -52,6 +55,7 @@ $background-color_1: var(--nav-overlay-color);
 	font-weight: bolder;
 	cursor: pointer;
 	transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+	transform: translateY(-2rem);
 }
 
 .logo.spin {
@@ -74,9 +78,8 @@ $background-color_1: var(--nav-overlay-color);
 	position: relative;
 	z-index: 99999999;
 	width: 2.75rem;
-	height: 2.75rem;
+	height: 3.75rem;
 	cursor: pointer;
-	border-radius: 50%;
 	transition: 0.3s ease;
 
 }
@@ -93,7 +96,7 @@ $background-color_1: var(--nav-overlay-color);
 	right: 0;
 	transform: rotate(0deg);
 	transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-	top: 1em;
+	top: -1em;
 }
 
 .lineBottom {
@@ -109,26 +112,9 @@ $background-color_1: var(--nav-overlay-color);
 	transform: rotate(0deg);
 	transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 	color: $color_3;
-	top: 0.35em;
+	top: -0.5em;
 }
-
-.lineTopAbout {
-	background: #fff;
-	margin: 0 auto;
-	position: absolute;
-	display: block;
-	width: 1.5rem;
-	height: 0.225rem;
-	border-radius: 0.625rem;
-	left: 0;
-	right: 0;
-	transform: rotate(0deg);
-	transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-	top: 1em;
-
-
-}
-.lineTopAboutAr {
+.lineTopAr {
 	background: var(--title-color);
 	margin: 0 auto;
 	position: absolute;
@@ -141,43 +127,10 @@ $background-color_1: var(--nav-overlay-color);
 	transform: rotate(0deg);
 	transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 	top: 1em;
-
-
-}
-
-.hamBoxAbout {
-	position: relative;
-	width: 2.75rem;
-	height: 2.75rem;
-	cursor: pointer;
-	border-radius: 50%;
-	transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-	background: rgba(158, 158, 158, 0.2);
-	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(1px);
-	border: 0.1px solid rgba(158, 158, 158, 0.3);
 }
 
 
-
-.lineBottomAbout {
-	background: #fff;
-	margin: 0 auto;
-	position: absolute;
-	display: block;
-	width: 1.5rem;
-	height: 0.225rem;
-	border-radius: 0.625rem;
-	left: 0;
-	right: 0;
-	transform: rotate(0deg);
-	transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-	color: $color_3;
-	top: 0.35em;
-}
-.lineBottomAboutAr {
+.lineBottomAr {
 	background: var(--title-color);
 	margin: 0 auto;
 	position: absolute;
@@ -192,34 +145,14 @@ $background-color_1: var(--nav-overlay-color);
 	color: $color_3;
 	top: 0.35em;
 }
-
-.logoAbout {
-	text-decoration: none;
-	color: #ffffeb;
-	font-family: $font-family_1;
-	letter-spacing: 0.3rem;
-	font-weight: bolder;
-	cursor: pointer;
-	transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-	background: rgba(158, 158, 158, 0.2);
-	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(1px);
-	-webkit-backdrop-filter: blur(1px);
-	border: 0.1px solid rgba(158, 158, 158, 0.3);
-	padding: 0.3rem;
-}
-
-
-
 .lineTop.spin {
-	top: 1.35em;
+	top: -0.85em;
 	transform: rotate(135deg);
 	background: var(--container-color);
 }
 
 .lineBottom.spin {
-	top: 1.35em;
+	top: -0.85em;
 	transform: rotate(225deg);
 	background: var(--container-color);
 }
@@ -233,7 +166,17 @@ $background-color_1: var(--nav-overlay-color);
 	grid-template-columns: repeat(2, 1fr);
 	color: $color_2;
 }
-
+.logoAr {
+	cursor: pointer;
+	transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);	
+	transform: translateY(-2rem);
+}
+.logoAr.spin {
+	cursor: pointer;
+	transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);	
+	transform: translateY(-3rem);
+	color: var(--container-color);
+}
 
 
 @media (max-width: 454px) {

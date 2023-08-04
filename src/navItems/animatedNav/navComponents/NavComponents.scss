@@ -53,6 +53,40 @@ $background-color_1: var(--container-color);
 	left: 0.5rem;
 	top: 1.35rem;
 }
+.nav__links_container-desktop {
+	display: flex;
+	gap: 0.3rem;
+	transition: all 3.5s cubic-bezier(0.16, 1, 0.3, 1);
+	display: none;
+}
+
+.nav__links_container-desktop.spin {
+	width: 27vw;
+	position: absolute;
+	transition: all 3.5s cubic-bezier(0.16, 1, 0.3, 1);
+	z-index: 999;
+	gap: 0rem;
+	left: -25.5rem;
+	top: -2.15rem;
+	display: flex;
+}
+.nav__links_containerAr-desktop {
+	display: flex;
+	gap: 0.3rem;
+	transition: all 3.5s cubic-bezier(0.16, 1, 0.3, 1);
+	display: none;
+}
+
+.nav__links_containerAr-desktop.spin {
+	width: 25vw;
+	position: absolute;
+	transition: all 3.5s cubic-bezier(0.16, 1, 0.3, 1);
+	z-index: 999;
+	gap: 0rem;
+	left: 15.5rem;
+	top: -2rem;
+	display: flex;
+}
 
 .navbar-social-media ul {
 	margin-top: 2rem;

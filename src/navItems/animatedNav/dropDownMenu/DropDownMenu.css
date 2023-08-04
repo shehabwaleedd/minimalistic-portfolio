@@ -31,7 +31,8 @@
     position:relative;
     color:var(--overlay-color);
     transition-delay:0.3s;
-    padding:0.5rem
+    margin-bottom: 0.3rem;
+    top: -1.7rem;
 }
 .dropdown__icon span {
     display:flex;

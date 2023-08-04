@@ -5,7 +5,7 @@
   flex-direction: column;
   .about_desktop {
     .about__pic {
-      position: absolute;
+      position: relative;
       top: 9rem;
       left: 0rem;
       z-index: 1;
@@ -25,7 +25,7 @@
       text-align: center;
       flex-direction: column;
       width: 100%;
-      height: 225vh;
+      height: 165vh;
       padding: 2rem 2rem;
 
       .detailed__row {
@@ -63,6 +63,8 @@
               letter-spacing: 0.3rem;
               text-transform: uppercase;
               font-family: "Posterama", sans-serif;
+              position: relative;
+              z-index: 99999999;
             }
 
             h2 {
@@ -136,7 +138,8 @@
       flex-direction: column;
       justify-content: flex-end;
       align-items: flex-end;
-      min-height: 250vh;
+      min-height: 170vh;
+      margin-top: 10rem;
 
       h1 {
         font-size: 3rem;

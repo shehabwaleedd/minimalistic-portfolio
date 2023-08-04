@@ -12,7 +12,7 @@ const DesktopDrop = ({ navOpen, language, handleLanguageExpanded, languageExpand
                         {languageExpanded && (
                             <motion.div initial={{ x: 15, opacity: 0 }} animate={{ x: 3, opacity: 1 }} exit={{ x: 15, opacity: 0 }}
                                 className="language__dropdown"
-                                style={{ top: navOpen ? "-4rem" : "", left: navOpen ? language === "ar" ? "-8rem" : "-10rem" : language === "ar" ? "4rem" : "-20rem", flexDirection: language === 'ar' ? 'row-reverse' : 'row' }}>
+                                style={{ top: navOpen ? "-2.7rem" : "", left: navOpen ? language === "ar" ? "-8rem" : "-10rem" : language === "ar" ? "4rem" : "-20rem", flexDirection: language === 'ar' ? 'row-reverse' : 'row' }}>
                                 <div className="language__dropdown-link" onClick={handleEnglishClick}>
                                     <span className="language__text" style={{ color: navOpen ? "var(--overlay-color)" : "var(--title-color)" }}>en</span>
                                 </div>
