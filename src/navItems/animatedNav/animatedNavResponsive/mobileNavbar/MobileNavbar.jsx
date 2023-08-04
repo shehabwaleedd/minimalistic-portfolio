@@ -4,7 +4,8 @@ import { useTranslation } from "react-i18next";
 import NavComponents from '../../navComponents/NavComponents';
 import DropDownMenu from "../../dropDownMenu/DropDownMenu";
 import "./MobileNavbar.scss"
-
+import { AiOutlineClose } from "react-icons/ai"
+import { TbMenu } from "react-icons/tb"
 const MobileNavbar = ({ isMobile, setIsMobile, isAbout, setIsAbout, setOpen, navOpen, setNavOpen, language, isMenuVisible, setLanguage, languageExpanded, setLanguageExpanded, setMenuVisible, shouldReload, setShouldReload }) => {
     const { t } = useTranslation();
     return (
@@ -15,7 +16,6 @@ const MobileNavbar = ({ isMobile, setIsMobile, isAbout, setIsAbout, setOpen, nav
                 </Link>
                 <div className="side__navbar_mobile" style={{ flexDirection: language === "ar" ? "row-reverse" : "row", gap: language === "ar" ? "1.5rem" : "0.1rem" }}>
                     <NavComponents isMobile={isMobile} navOpen={navOpen} language={language} />
-                    <DropDownMenu isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} setOpen={setOpen} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
                     <div className="menu-toggle" onClick={() => setNavOpen(!navOpen)}>
                         <div className={navOpen ? "hamBox_mobile hamBoxOpen" : "hamBox_mobile"}>
                             <span className={navOpen ? "lineTop_mobile spin" : "lineTop_mobile"}></span>
@@ -31,7 +31,7 @@ const MobileNavbar = ({ isMobile, setIsMobile, isAbout, setIsAbout, setOpen, nav
                 width: navOpen ? "100vw" : "100vw",
 
             }}>
-
+                <DropDownMenu isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} setOpen={setOpen} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
             </div>
         </>
     )

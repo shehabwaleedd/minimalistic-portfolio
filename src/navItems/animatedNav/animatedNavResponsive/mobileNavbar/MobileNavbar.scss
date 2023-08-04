@@ -38,10 +38,10 @@ $background-color_1: var(--nav-overlay-color);
             height: 0.125rem;
             border-radius: 0.625rem;
             background: var(--text-color);
-            right: 0rem;
+            right: 1rem;
             transform: rotate(0deg);
             transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-            top: -1em;
+            top: 1em;
         }
 
         .lineBottom_mobile {
@@ -52,22 +52,22 @@ $background-color_1: var(--nav-overlay-color);
             height: 0.125rem;
             border-radius: 0.625rem;
             background: var(--text-color);
-            right: 0;
+            right: 1rem;
             transform: rotate(0deg);
             transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
             color: $color_3;
-            top: -0.5em;
+            top: 0.5em;
         }
 
         .lineTop_mobile.spin {
-            top: -0.85em;
+            top: 0.85em;
             transform: rotate(135deg);
             background: var(--container-color);
             right: 0;
         }
 
         .lineBottom_mobile.spin {
-            top: -0.85em;
+            top: 0.85em;
             transform: rotate(225deg);
             background: var(--container-color);
             right: 0;
@@ -80,7 +80,8 @@ $background-color_1: var(--nav-overlay-color);
             height: 1.75rem;
             cursor: pointer;
             transition: 0.3s ease;
-            top: 0;
+            top: -0.15rem;
+            right: -7rem;
         }
         .hamBox_mobile.hamBoxOpen {
             position: relative;

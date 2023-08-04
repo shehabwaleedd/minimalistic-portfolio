@@ -17,7 +17,7 @@
     cursor:pointer;
     transition:.8s cubic-bezier(.19, 1, .22, 1);
     color:var(--text-color);
-    top:-.26rem
+    top:-1.26rem
 }
 
 .dropdown__icon.spin,.language__dropdown {
