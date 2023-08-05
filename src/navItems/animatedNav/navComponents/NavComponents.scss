@@ -7,12 +7,8 @@ $background-color_1: var(--container-color);
 	margin: 0 auto;
 	position: relative;
 	color: $color_1;
-	display: block;
-	left: 0rem;
-	right: 0px;
 	display: none;
 	font-family: $font-family_1;
-	width: 100%;
 	letter-spacing: 0.3rem;
 	transition: all 3.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -45,13 +41,9 @@ $background-color_1: var(--container-color);
 }
 
 .nav__links-links.spin {
-	width: 100%;
 	position: absolute;
 	transition: all 3.5s cubic-bezier(0.16, 1, 0.3, 1);
 	z-index: 999;
-	gap: 0rem;
-	left: 0.5rem;
-	top: 1.35rem;
 }
 .nav__links_container-desktop {
 	display: flex;
