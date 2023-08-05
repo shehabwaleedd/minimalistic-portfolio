@@ -5,6 +5,8 @@ import Work3 from "../../assets/Posters/moaz3.png"
 import Work4 from "../../assets/Posters/cairo1.svg"
 import Work5 from "../../assets/Posters/blog7.png"
 import Work6 from "../../assets/Posters/Jin2.png"
+import Work7 from "../../assets/Posters/qaa3a.png"
+import Work8 from "../../assets/Posters/eagle.png"
 import LeluMainImg from "../../assets/ProjectDetails/Lelu/Lelu__MainPage2.png"
 import LeluVideo from "../../assets/ProjectDetails/Lelu/Lelu__video.mp4"
 import LeluMessageImg from "../../assets/ProjectDetails/Lelu/Lelu__BrandMessage.png"
@@ -180,9 +182,36 @@ const projectsData = [
     backgroundColor: "#E19C007b",
     backgroundColor_mobile: "#E19C007b",
   },
-
-
-
+{
+    id: 8,
+    image: Work7,
+    title: "Qaa'a",
+    category: ["Web Application", "UI/UX Design"],
+    website: "https://qaa-a.vercel.app/",
+    link: "",
+    date: "June, 2023",
+    comment: "Qaa'a is a web application that allows users to create and share their own quizzes. It was created as a final project for the Coders Academy bootcamp. The application was built using React.js and Firebase. The design was inspired by the ancient Egyptian god of wisdom, Thoth, and the ancient Egyptian hieroglyphic alphabet. The application is currently in the development phase, with the aim of launching it in the near future.",
+    class: "qaa",
+    workingOnIt: true,
+    newProject: false,
+    backgroundColor: "#E19C007b",
+    backgroundColor_mobile: "#E19C007b",
+},
+{
+    id: 9,
+    image: Work8,
+    title: "Eagle Lake",
+    category: ["Web Application", "UI/UX Design"],
+    website: "https://eagle-lake.vercel.app/",
+    link: "",
+    date: "June, 2023",
+    comment: "Eagle Lake is a web application that allows users to create and share their own quizzes. It was created as a final project for the Coders Academy bootcamp. The application was built using React.js and Firebase. The design was inspired by the ancient Egyptian god of wisdom, Thoth, and the ancient Egyptian hieroglyphic alphabet. The application is currently in the development phase, with the aim of launching it in the near future.",
+    class: "eagle",
+    workingOnIt: true,
+    newProject: false,
+    backgroundColor: "#E19C007b",
+    backgroundColor_mobile: "#E19C007b",
+}
 ]
 
 export default projectsData;
