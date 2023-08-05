@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.723ead81.css",
-    "main.js": "/static/js/main.58b9dbdc.js",
+    "main.css": "/static/css/main.b568b01f.css",
+    "main.js": "/static/js/main.7cb3432a.js",
     "static/js/945.3c978414.chunk.js": "/static/js/945.3c978414.chunk.js",
     "static/media/Jin__darkMode1.png": "/static/media/Jin__darkMode1.00ddd0efe1e1d8002886.png",
     "static/media/Shehab__collective.png": "/static/media/Shehab__collective.f445851722f57c0a423c.png",
@@ -32,6 +32,8 @@
     "static/media/ArefRuqaa-Regular.ttf": "/static/media/ArefRuqaa-Regular.f1748641e2187e73c259.ttf",
     "static/media/Jin2.png": "/static/media/Jin2.b06e29672f1ae884221c.png",
     "static/media/moaz3.png": "/static/media/moaz3.eaa1e148d747e62a1744.png",
+    "static/media/eagle.png": "/static/media/eagle.fac70bca72f1a329a3f7.png",
+    "static/media/qaa3a.png": "/static/media/qaa3a.ba01f0a018c01eb46dfc.png",
     "static/media/Posterama.ttf": "/static/media/Posterama.6c5b7fa6f0088fdfcb7e.ttf",
     "static/media/Satoshi-MediumItalic.ttf": "/static/media/Satoshi-MediumItalic.5db9ec801a311bdf187b.ttf",
     "static/media/Satoshi-Medium.ttf": "/static/media/Satoshi-Medium.759562088ba19068aef8.ttf",
@@ -65,7 +67,7 @@
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
-    "static/css/main.723ead81.css",
-    "static/js/main.58b9dbdc.js"
+    "static/css/main.b568b01f.css",
+    "static/js/main.7cb3432a.js"
   ]
 }
