@@ -209,8 +209,8 @@ const projectsData = [
     class: "eagle",
     workingOnIt: true,
     newProject: false,
-    backgroundColor: "#E19C007b",
-    backgroundColor_mobile: "#E19C007b",
+    backgroundColor: "#9736367b",
+    backgroundColor_mobile: "#9736367b",
 }
 ]
 
