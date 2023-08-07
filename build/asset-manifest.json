@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b568b01f.css",
-    "main.js": "/static/js/main.7cb3432a.js",
+    "main.js": "/static/js/main.06700c1c.js",
     "static/js/945.3c978414.chunk.js": "/static/js/945.3c978414.chunk.js",
     "static/media/Jin__darkMode1.png": "/static/media/Jin__darkMode1.00ddd0efe1e1d8002886.png",
     "static/media/Shehab__collective.png": "/static/media/Shehab__collective.f445851722f57c0a423c.png",
@@ -68,6 +68,6 @@
   },
   "entrypoints": [
     "static/css/main.b568b01f.css",
-    "static/js/main.7cb3432a.js"
+    "static/js/main.06700c1c.js"
   ]
 }
