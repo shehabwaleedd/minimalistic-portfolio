@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.97e02caa.css",
-    "main.js": "/static/js/main.15eae4ad.js",
+    "main.js": "/static/js/main.675a5f7a.js",
     "static/js/945.3c978414.chunk.js": "/static/js/945.3c978414.chunk.js",
     "static/media/Jin__darkMode1.png": "/static/media/Jin__darkMode1.00ddd0efe1e1d8002886.png",
     "static/media/Shehab__collective.png": "/static/media/Shehab__collective.f445851722f57c0a423c.png",
-    "static/media/video.mov": "/static/media/video.92e5c0cac066a6d2463b.mov",
     "static/media/collective.png": "/static/media/collective.64d89fd5d6c0db94181f.png",
     "static/media/Shehab__video.mp4": "/static/media/Shehab__video.aa46930476a4dccc0c99.mp4",
+    "static/media/video.mov": "/static/media/video.276a438cc80419e1eb37.mov",
     "static/media/Lelu__video.mp4": "/static/media/Lelu__video.9bfda8cfafd391507756.mp4",
     "static/media/Eagle__collective.png": "/static/media/Eagle__collective.378e957be876adbda0c9.png",
     "static/media/Jin__gridView.png": "/static/media/Jin__gridView.073875bd42a42aaf339c.png",
@@ -71,6 +71,6 @@
   },
   "entrypoints": [
     "static/css/main.97e02caa.css",
-    "static/js/main.15eae4ad.js"
+    "static/js/main.675a5f7a.js"
   ]
 }
