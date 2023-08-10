@@ -30,7 +30,9 @@ import JinDarkMode4 from "../../assets/ProjectDetails/Jing/Jin__darkMode4.png"
 import MoaazMainPage from "../../assets/ProjectDetails/Moaaz/Moaaz__mainPage.png"
 import MoaazVideo from "../../assets/ProjectDetails/Moaaz/Moaaz_video.mp4"
 import MoaazColelctive from "../../assets/ProjectDetails/Moaaz/collective.png"
-
+import EagleMainImg from "../../assets/ProjectDetails/Eagle/Eagle__mainPage.png"
+import EagleCollective from "../../assets/ProjectDetails/Eagle/Eagle__collective.png"
+import EagleVideo from "../../assets/ProjectDetails/Eagle/video.mov"
 
 
 const projectsData = [
@@ -101,34 +103,25 @@ const projectsData = [
     backgroundColor_mobile: "#f9e5bf9a",
   },
   {
-    id: 7,
-    image: Work6,
-    title: "Jinghui Ma",
-    category: ["Branding", "Web Design", "UI/UX Design"],
-    website: "https://jinghui-mmaa.vercel.app/",
-    link: "https://github.com/shehabwaleedd/JINGHUI-MA",
-    date: "2023, July",
-    comment: "Jin, a friend of mine, approached me with a request to create a website that elegantly showcases her work and resume. She wanted a simple yet sophisticated design to highlight her talents and achievements, I used React.js to make it and I used Framer Motion to make the animations",
+    id: 9,
+    image: Work8,
+    title: "Eagle Lake",
+    category: ["UI/UX Design", "Web Design", "Branding"],
+    website: "https://eagle-lake.vercel.app/",
+    link: "",
+    date: "June, 2023",
+    comment: "Eagle Lake is a simple coffee shop in Sri Lanka. The website was built using React.js and Scss, and it is still under development.",
+    class: "eagle",
     mainTitle: "Main Page",
-    mainTitleImg: JingMainPage,
-    mainTitle2: "Grid View",
-    mainTitleImg2: JinGridView,
-    mainAboutPage: "About Page",
-    mainAboutPageImg: JinAboutPage,
-    mainContactPage: "Contact Page",
-    mainContactPageImg: JinContactPage,
-    mainDarkMode: "Dark Mode",
-    mainDarkModeImg: JinDarkMode,
-    mainDarkModeImg2: JinDarkMode2,
-    mainDarkModeImg3: JinDarkMode3,
-    mainDarkModeImg4: JinDarkMode4,
-    class: "jing",
+    mainTitleImg: EagleMainImg,
+    mockup: EagleVideo,
+    overView: "Overview",
+    collective: EagleCollective,
     workingOnIt: false,
-    newProject: false,
-    backgroundColor: "#ed293999",
-    backgroundColor_mobile: "#ed293969",
+    newProject: true ,
+    backgroundColor: "#9736367b",
+    backgroundColor_mobile: "#9736367b",
   },
-
   {
     id: 4,
     image: Work3,
@@ -168,6 +161,34 @@ const projectsData = [
     backgroundColor_mobile: "#4D2CF19a",
   },
   {
+    id: 7,
+    image: Work6,
+    title: "Jinghui Ma",
+    category: ["Branding", "Web Design", "UI/UX Design"],
+    website: "https://jinghui-mmaa.vercel.app/",
+    link: "https://github.com/shehabwaleedd/JINGHUI-MA",
+    date: "2023, July",
+    comment: "Jin, a friend of mine, approached me with a request to create a website that elegantly showcases her work and resume. She wanted a simple yet sophisticated design to highlight her talents and achievements, I used React.js to make it and I used Framer Motion to make the animations",
+    mainTitle: "Main Page",
+    mainTitleImg: JingMainPage,
+    mainTitle2: "Grid View",
+    mainTitleImg2: JinGridView,
+    mainAboutPage: "About Page",
+    mainAboutPageImg: JinAboutPage,
+    mainContactPage: "Contact Page",
+    mainContactPageImg: JinContactPage,
+    mainDarkMode: "Dark Mode",
+    mainDarkModeImg: JinDarkMode,
+    mainDarkModeImg2: JinDarkMode2,
+    mainDarkModeImg3: JinDarkMode3,
+    mainDarkModeImg4: JinDarkMode4,
+    class: "jing",
+    workingOnIt: false,
+    newProject: false,
+    backgroundColor: "#ed293999",
+    backgroundColor_mobile: "#ed293969",
+  },
+  {
     id: 5,
     image: Work4,
     title: "Cairo Brews",
@@ -182,7 +203,7 @@ const projectsData = [
     backgroundColor: "#E19C007b",
     backgroundColor_mobile: "#E19C007b",
   },
-{
+  {
     id: 8,
     image: Work7,
     title: "Qaa'a",
@@ -196,22 +217,8 @@ const projectsData = [
     newProject: false,
     backgroundColor: "#E19C007b",
     backgroundColor_mobile: "#E19C007b",
-},
-{
-    id: 9,
-    image: Work8,
-    title: "Eagle Lake",
-    category: ["Web Application", "UI/UX Design"],
-    website: "https://eagle-lake.vercel.app/",
-    link: "",
-    date: "June, 2023",
-    comment: "Eagle Lake is a simple coffee shop in Sri Lanka. The website was built using React.js and Scss, and it is still under development.",
-    class: "eagle",
-    workingOnIt: true,
-    newProject: false,
-    backgroundColor: "#9736367b",
-    backgroundColor_mobile: "#9736367b",
-}
+  },
+
 ]
 
 export default projectsData;
