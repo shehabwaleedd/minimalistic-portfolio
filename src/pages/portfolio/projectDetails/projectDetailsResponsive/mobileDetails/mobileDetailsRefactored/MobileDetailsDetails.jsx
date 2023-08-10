@@ -43,7 +43,11 @@ const MobileDetailsDetails = ({ post, renderDetails, scrollYProgress }) => {
                     </div>
                 </div>
             )}
-
+            {post.mockup && (
+                <div className="project__details-mockup">
+                    <video src={post.mockup} muted autoPlay loop poster={post.image}></video>
+                </div>
+            )}
         </div>
     )
 }

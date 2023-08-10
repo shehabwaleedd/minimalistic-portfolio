@@ -98,7 +98,7 @@ const projectsData = [
     video: BlogVideo,
     class: "blog",
     workingOnIt: false,
-    newProject: true,
+    newProject: false,
     backgroundColor: "#f9e5bf9a",
     backgroundColor_mobile: "#f9e5bf9a",
   },
