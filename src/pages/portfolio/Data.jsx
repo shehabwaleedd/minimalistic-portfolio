@@ -35,7 +35,7 @@ import MoaazColelctive from "../../assets/ProjectDetails/Moaaz/collective.png"
 import EagleMainImg from "../../assets/ProjectDetails/Eagle/Eagle__mainPage.png"
 import EagleCollective from "../../assets/ProjectDetails/Eagle/Eagle__collective.png"
 import EagleVideo from "../../assets/ProjectDetails/Eagle/video.mov"
-
+import ReveMainImg from "../../assets/ProjectDetails/Reve/Reve__mainPage.png"
 
 const projectsData = [
   {
@@ -63,11 +63,13 @@ const projectsData = [
     image: Work9,
     title: "Le Rêve",
     category: ["Web Application", "UI/UX Design"],
-    website: "https://le-reve.vercel.app/",
+    website: "https://le-revee.vercel.app/",
     link: "",
     date: "August, 2023",
     comment: "Le Rêve is hotel and restaurant reservation web application. It allows users to book a room or a table in a restaurant. The application was built using React.js and Firebase.",
     class: "le-reve",
+    mainTitle: "Main Page",
+    mainTitleImg: ReveMainImg,
     workingOnIt: true,
     newProject: false,
     backgroundColor: "#E9A7A1",
