@@ -14,12 +14,10 @@ export const HomeAnimations = () => {
   gsap.set(logo, {
     y: 0,
     opacity: 0,
-    display: "none",
   });
   gsap.set(darkModeToggle, {
     x: 0,
     opacity: 0,
-    display: "none",
   });
   gsap.set(dropDownMenu, {
     opacity: 0,
@@ -38,7 +36,7 @@ export const HomeAnimations = () => {
   const animateTitleElements = () => {
     return new Promise((resolve) => {
       titleElements.forEach((element, index) => {
-        const delay = index * 1.5; // Delay the start animation by 2 seconds
+        const delay = index * 1.5 + 1; // Delay the start animation by 2 seconds
         gsap.fromTo(
           element,
           {
@@ -60,7 +58,7 @@ export const HomeAnimations = () => {
                 ease: Power3.easeInOut,
                 opacity: "0",
                 duration: 0.8,
-                delay: 1.5,
+                delay: 2,
                 onComplete: index === titleElements.length - 1 ? resolve : null,
               });
             },
@@ -119,7 +117,6 @@ export const HomeAnimations = () => {
       y: 0,
       opacity: 1,
       ease: "expo.inOut",
-      display: "block",
       duration: 1,
       delay: 2.4,
       stagger: {
@@ -129,7 +126,6 @@ export const HomeAnimations = () => {
     gsap.to(darkModeToggle, {
       x: 10,
       opacity: 1,
-      display: "block",
       ease: "expo.inOut",
       duration: 1,
       delay: 4,

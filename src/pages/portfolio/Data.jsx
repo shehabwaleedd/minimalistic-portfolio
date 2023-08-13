@@ -59,7 +59,7 @@ const projectsData = [
     backgroundColor_mobile: "#63b7b777",
   },
   {
-    id: 9,
+    id: 2,
     image: Work9,
     title: "Le Rêve",
     category: ["Web Application", "UI/UX Design"],
@@ -98,7 +98,7 @@ const projectsData = [
     backgroundColor_mobile: "#f9e5bf9a",
   },
   {
-    id: 9,
+    id: 4,
     image: Work8,
     title: "Eagle Lake",
     category: ["UI/UX Design", "Web Design", "Branding"],
@@ -118,7 +118,7 @@ const projectsData = [
     backgroundColor_mobile: "#9736367b",
   },
   {
-    id: 4,
+    id: 5,
     image: Work3,
     title: "Moaaz Askaar",
     category: ["Branding", "Web Design", "UI/UX Design"],
@@ -138,7 +138,7 @@ const projectsData = [
     collective: MoaazColelctive,
   },
   {
-    id: 2,
+    id: 6,
     image: Work1,
     title: "LELU STORE",
     category: ["E-commerce", "Web Application", "UI/UX Design"],
@@ -162,7 +162,7 @@ const projectsData = [
     backgroundColor_mobile: "#ffdebeb4",
   },
   {
-    id: 6,
+    id: 7,
     image: Work5,
     title: "Roll The Dice",
     category: ["Game", "Web Application"],
@@ -178,7 +178,7 @@ const projectsData = [
     backgroundColor_mobile: "#4D2CF19a",
   },
   {
-    id: 7,
+    id: 8,
     image: Work6,
     title: "Jinghui Ma",
     category: ["Branding", "Web Design", "UI/UX Design"],
@@ -206,7 +206,7 @@ const projectsData = [
     backgroundColor_mobile: "#ed293969",
   },
   {
-    id: 5,
+    id: 9,
     image: Work4,
     title: "Cairo Brews",
     category: ["E-commerce", "Web Application", "UI/UX Design"],
@@ -221,7 +221,7 @@ const projectsData = [
     backgroundColor_mobile: "#E19C007b",
   },
   {
-    id: 8,
+    id: 10,
     image: Work7,
     title: "Qaa'a",
     category: ["Web Application", "UI/UX Design"],
@@ -236,7 +236,7 @@ const projectsData = [
     backgroundColor_mobile: "#DF8F9B99",
   },
   {
-    id: 10,
+    id: 11,
     image: Work10,
     title: "Kemet",
     category: ["Web Application", "UI/UX Design", "Web Design"],
