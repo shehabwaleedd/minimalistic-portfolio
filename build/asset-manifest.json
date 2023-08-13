@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3eb1b22a.css",
-    "main.js": "/static/js/main.c70b5eab.js",
+    "main.js": "/static/js/main.236a406a.js",
     "static/js/945.a2b930d1.chunk.js": "/static/js/945.a2b930d1.chunk.js",
     "static/media/Jin__darkMode1.png": "/static/media/Jin__darkMode1.00ddd0efe1e1d8002886.png",
     "static/media/Shehab__collective.png": "/static/media/Shehab__collective.f445851722f57c0a423c.png",
@@ -30,6 +30,7 @@
     "static/media/Jin__darkMode3.png": "/static/media/Jin__darkMode3.34621c6970b39b185ed7.png",
     "static/media/Jin__darkMode4.png": "/static/media/Jin__darkMode4.34621c6970b39b185ed7.png",
     "static/media/Jin__contactPage.png": "/static/media/Jin__contactPage.2fd091b633d4e2b32d76.png",
+    "static/media/reve.png": "/static/media/reve.a531551fbf2cb20cf640.png",
     "static/media/profile3.JPG": "/static/media/profile3.be9299372f00ee21c3cb.JPG",
     "static/media/RollDice__mainPage.png": "/static/media/RollDice__mainPage.a67c80bb49115f688f32.png",
     "static/media/blog7.png": "/static/media/blog7.17ec79cddb79d3fe1a98.png",
@@ -38,7 +39,6 @@
     "static/media/moaz3.png": "/static/media/moaz3.eaa1e148d747e62a1744.png",
     "static/media/eagle.png": "/static/media/eagle.fac70bca72f1a329a3f7.png",
     "static/media/qaa3a.png": "/static/media/qaa3a.ba01f0a018c01eb46dfc.png",
-    "static/media/reve.png": "/static/media/reve.eddb223a845dc74bec60.png",
     "static/media/Posterama.ttf": "/static/media/Posterama.6c5b7fa6f0088fdfcb7e.ttf",
     "static/media/Satoshi-MediumItalic.ttf": "/static/media/Satoshi-MediumItalic.5db9ec801a311bdf187b.ttf",
     "static/media/Satoshi-Medium.ttf": "/static/media/Satoshi-Medium.759562088ba19068aef8.ttf",
@@ -74,6 +74,6 @@
   },
   "entrypoints": [
     "static/css/main.3eb1b22a.css",
-    "static/js/main.c70b5eab.js"
+    "static/js/main.236a406a.js"
   ]
 }
