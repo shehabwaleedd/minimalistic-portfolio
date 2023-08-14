@@ -36,6 +36,7 @@ import EagleMainImg from "../../assets/ProjectDetails/Eagle/Eagle__mainPage.png"
 import EagleCollective from "../../assets/ProjectDetails/Eagle/Eagle__collective.png"
 import EagleVideo from "../../assets/ProjectDetails/Eagle/video.mov"
 import ReveMainImg from "../../assets/ProjectDetails/Reve/Reve__mainPage.png"
+import KemetMainImg from "../../assets/ProjectDetails/Kemet/Kemet__mainPage.png"
 
 const projectsData = [
   {
@@ -245,6 +246,8 @@ const projectsData = [
     date: "August, 2023",
     comment: "Kemet is a web application that educate users about the richness of the history of Egypt. The application was built using React.js and Firebase.  ",
     class: "kemet",
+    mainTitle: "Main Page",
+    mainTitleImg: KemetMainImg,
     workingOnIt: true,
     newProject: false,
     backgroundColor: "#E19C007b",
