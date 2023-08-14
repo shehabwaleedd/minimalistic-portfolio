@@ -241,7 +241,7 @@ const projectsData = [
     image: Work10,
     title: "Kemet",
     category: ["Web Application", "UI/UX Design", "Web Design"],
-    website: "https://kemet.vercel.app/",
+    website: "https://kemet-sigma.vercel.app/",
     link: "",
     date: "August, 2023",
     comment: "Kemet is a web application that educate users about the richness of the history of Egypt. The application was built using React.js and Firebase.  ",
