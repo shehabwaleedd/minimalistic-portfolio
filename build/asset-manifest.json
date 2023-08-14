@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3eb1b22a.css",
-    "main.js": "/static/js/main.236a406a.js",
+    "main.js": "/static/js/main.8e02c6f7.js",
     "static/js/945.a2b930d1.chunk.js": "/static/js/945.a2b930d1.chunk.js",
     "static/media/Jin__darkMode1.png": "/static/media/Jin__darkMode1.00ddd0efe1e1d8002886.png",
     "static/media/Shehab__collective.png": "/static/media/Shehab__collective.f445851722f57c0a423c.png",
@@ -15,6 +15,7 @@
     "static/media/Moaaz_video.mp4": "/static/media/Moaaz_video.00af97d76de33fc2be1b.mp4",
     "static/media/Jin__mainPage.png": "/static/media/Jin__mainPage.e913e5d335c1560bfae7.png",
     "static/media/Blog__collective.png": "/static/media/Blog__collective.683514aa92d6d88613d3.png",
+    "static/media/Kemet__mainPage.png": "/static/media/Kemet__mainPage.9dd12ec3055a906a9b85.png",
     "static/media/Jing__darkMode2.png": "/static/media/Jing__darkMode2.74238f64a6cd78bddae7.png",
     "static/media/Jin__aboutPage.png": "/static/media/Jin__aboutPage.3108ea7181332fe54171.png",
     "static/media/Eagle__mainPage.png": "/static/media/Eagle__mainPage.af4750c040c6981f62bc.png",
@@ -74,6 +75,6 @@
   },
   "entrypoints": [
     "static/css/main.3eb1b22a.css",
-    "static/js/main.236a406a.js"
+    "static/js/main.8e02c6f7.js"
   ]
 }
