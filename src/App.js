@@ -16,6 +16,7 @@ import Contact from './pages/contact/Contact';
 
 import { HomeAnimations } from './animation/HomeAnimations';
 import Home from './pages/home/Home';
+import Index from './animation/PreLoader';
 
 export const ThemeContext = createContext(null);
 
@@ -33,7 +34,22 @@ function App() {
   const [isMenuVisible, setMenuVisible] = useState(true);
   const location = useLocation();
 
+  const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    (
+      async () => {
+        const LocomotiveScroll = (await import('locomotive-scroll')).default
+        const locomotiveScroll = new LocomotiveScroll();
+
+        setTimeout(() => {
+          setIsLoading(false);
+          document.body.style.cursor = 'default'
+          window.scrollTo(0, 0);
+        }, 2000)
+      }
+    )()
+  }, [])
   // useEffect(() => {
   //   if (shouldReload) {
   //     window.location.reload();
@@ -108,28 +124,27 @@ function App() {
     <>
       <div className="noise"></div>
       <div className="App" id={theme}>
-        {/* {!isAnimationFinished && <OpeningAnimation />}
-        {isAnimationFinished && (
-          <> */}
-
-        <AnimatedNav setIsTablet={setIsTablet} isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
-        <Cursor />
-        <ThemeContext.Provider value={{ theme, toggleTheme }}>
-          <AnimatePresence mode='wait'>
-            <Routes location={location} key={location.pathname} >
-              <Route path='/about' key={location.pathname} element={<AboutPage isMobile={isMobile} language={language} isTablet={isTablet}/>} />
-              <Route path='/projects' key={location.pathname} element={<Portfolio isTablet={isTablet} isMobile={isMobile} language={language} l />} />
-              <Route path="/" element={<Home key={location.pathname} isTablet={isTablet} isMobile={isMobile} navOpen={navOpen} language={language} />} />
-              <Route path="/contact" element={<Contact key={location.pathname} isTablet={isTablet} isMobile={isMobile} language={language} />} />
-              <Route path="/project/:title" element={<ProjectDetails key={location.pathname} isTablet={isTablet} isMobile={isMobile} />} />
-            </Routes>
-          </AnimatePresence>
-          <ScrollUp />
-          <Toggle theme={theme} toggleTheme={toggleTheme} />
-        </ThemeContext.Provider>
-        {/* </>
+        {isLoading && <Index />}
+        {!isLoading && (
+          <>
+            <AnimatedNav setIsTablet={setIsTablet} isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
+            <Cursor />
+            <ThemeContext.Provider value={{ theme, toggleTheme }}>
+              <AnimatePresence mode='wait'>
+                <Routes location={location} key={location.pathname} >
+                  <Route path='/about' key={location.pathname} element={<AboutPage isMobile={isMobile} language={language} isTablet={isTablet} />} />
+                  <Route path='/projects' key={location.pathname} element={<Portfolio isTablet={isTablet} isMobile={isMobile} language={language} l />} />
+                  <Route path="/" element={<Home key={location.pathname} isTablet={isTablet} isMobile={isMobile} navOpen={navOpen} language={language} />} />
+                  <Route path="/contact" element={<Contact key={location.pathname} isTablet={isTablet} isMobile={isMobile} language={language} />} />
+                  <Route path="/project/:title" element={<ProjectDetails key={location.pathname} isTablet={isTablet} isMobile={isMobile} />} />
+                </Routes>
+              </AnimatePresence>
+              <ScrollUp />
+              <Toggle theme={theme} toggleTheme={toggleTheme} />
+            </ThemeContext.Provider>
+          </>
         )
-        } */}
+        }
       </div>
     </>
   );
