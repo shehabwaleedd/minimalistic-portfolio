@@ -13,7 +13,7 @@ import ProjectDetails from './pages/portfolio/projectDetails/ProjectDetails';
 import AboutPage from './pages/about/About';
 import Portfolio from './pages/portfolio/Portfolio';
 import Contact from './pages/contact/Contact';
-
+import LocomotiveScroll from 'locomotive-scroll';
 import { HomeAnimations } from './animation/HomeAnimations';
 import Home from './pages/home/Home';
 import Index from './animation/PreLoader';
@@ -39,44 +39,17 @@ function App() {
   useEffect(() => {
     (
       async () => {
-        const LocomotiveScroll = (await import('locomotive-scroll')).default
-        const locomotiveScroll = new LocomotiveScroll();
-
         setTimeout(() => {
           setIsLoading(false);
           document.body.style.cursor = 'default'
           window.scrollTo(0, 0);
         }, 2000)
       }
+
     )()
+
   }, [])
-  // useEffect(() => {
-  //   if (shouldReload) {
-  //     window.location.reload();
-  //   }
-  // }, [shouldReload]);
 
-  // useEffect(() => {
-
-  //   const timeout = setTimeout(() => {
-  //     setIsAnimationFinished(true);
-  //     HomeAnimations();
-
-  //   }, 8000); // 8000ms is the duration of the animation
-  //   return () => {
-  //     clearTimeout(timeout);
-  //   };
-  // }, []);
-
-
-
-  // useEffect(() => {
-  //   if (isAnimationFinished) {
-  //     document.body.classList.add('no-scroll');
-  //   } else {
-  //     document.body.classList.remove('no-scroll');
-  //   }
-  // }, []);
 
   useEffect(() => {
     const isHomePage = location.pathname === '/' || location.pathname === '/about';
@@ -123,7 +96,7 @@ function App() {
   return (
     <>
       <div className="noise"></div>
-      <div className="App" id={theme}>
+      <div className="App" id={theme} data-scroll-container>
         {isLoading && <Index />}
         {!isLoading && (
           <>
