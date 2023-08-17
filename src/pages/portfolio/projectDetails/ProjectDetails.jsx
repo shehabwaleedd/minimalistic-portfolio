@@ -49,15 +49,15 @@ function ProjectDetails({ isMobile, isTablet }) {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <div >
+        <section data-scroll-section>
             {isMobile ? (
                 <MobileDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName}  />
             ) : isTablet ? (
                 <TabletDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} />
             ) : (
-                <DesktopDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} />
+                <DesktopDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} data-scroll-container/>
             )}
-        </div>
+        </section>
     );
 }
 

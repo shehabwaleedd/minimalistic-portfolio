@@ -9,6 +9,8 @@ import DesktopDetailsBrief from './desktopDetailsRefactor/DesktopDetailsBrief'
 import DesktopDetailsNextProject from './desktopDetailsRefactor/DesktopDetailsNextProject'
 import DesktopDetailsBackground from './desktopDetailsRefactor/DesktopDetailsBackground'
 
+
+
 const DesktopDetails = ({ post, renderDetails, goToNextProject, nextTitleName }) => {
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
