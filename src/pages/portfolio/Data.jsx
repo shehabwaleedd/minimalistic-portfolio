@@ -147,7 +147,7 @@ const projectsData = [
     link: "https://github.com/shehabwaleedd/lelu-store",
     date: "March, 2023",
     class: "lelu",
-    comment: "Sheboo is the nickname I use on social medias. The goal of this project was to create my own identity, adaptable and modular to work with both my real name and my nickname. First, the identity needed to be defined in brand guidelines and then had to be adapted for digital medias (website, wallpapers, social medias) and physical formats (business cards/stickers, letter paper and resume).",
+    comment: "Lelu Store is a dynamic fashion hub designed exclusively for the modern and ambitious youth of Egypt. With a passion for vivid and distinctive colors, Lelu Store offers a curated collection that empowers young individuals to express their unique personality through fashion. Our store is a destination for those who embrace boldness and seek cutting-edge styles that resonate with their energetic spirit. Discover the perfect blend of contemporary designs and vibrant hues at Lelu Store, where every piece speaks volumes about your confident and daring fashion choices.",
     mainTitle: "Main Page",
     mainTitleImg: LeluMainImg,
     video: LeluVideo,
