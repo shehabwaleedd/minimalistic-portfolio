@@ -155,3 +155,17 @@ $background-color_1: var(--container-color);
 		display: flex;
 	}
 }
+
+@media (min-width: 1676px) {
+
+	.nav__links_container-desktop.spin {
+		width: 27vw;
+		position: absolute;
+		transition: all 3.5s cubic-bezier(0.16, 1, 0.3, 1);
+		z-index: 999;
+		gap: 0rem;
+		left: -35.5rem;
+		top: -2.15rem;
+		display: flex;
+	}
+}
