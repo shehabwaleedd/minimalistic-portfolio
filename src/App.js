@@ -42,7 +42,7 @@ function App() {
       async () => {
         setTimeout(() => {
           setIsLoading(false);
-        }, 2000)
+        }, 3000)
       }
 
     )()
@@ -101,11 +101,6 @@ function App() {
             {
               smooth: true,
             }
-          }
-          watch={
-            [
-
-            ]
           }
           containerRef={containerRef}
         >

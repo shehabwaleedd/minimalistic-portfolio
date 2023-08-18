@@ -43,6 +43,7 @@ const Toggle = (props) => {
           MozBoxShadow: 'var(--moz-box-shadow)',
           transition: "all 4s cubic-bezier(0.16, 1, 0.3, 1)",
           position: 'relative',
+          zIndex: 99999999999
         }}
       >
         <BiSun

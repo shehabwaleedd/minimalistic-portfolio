@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 const DesktopDetailsBackground = ({ post }) => {
     return (
-        <motion.div className="background__img" initial={{ opacity: 0, y: 100, transition: { delay: 0.1, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.1, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 500, transition: { delay: 1, velocity: 2, staggerChildren: 1.5, duration: 1, ease: [0.42, 0, 0.58, 1] } }} style={{ transform: "translateY(-40%)" }}>
+        <motion.div className="background__img" initial={{ opacity: 0, y: 100, transition: { delay: 0.1, staggerChildren: 3.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }} animate={{ opacity: 1, y: 0, transition: { delay: 0.1, staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 500, transition: { delay: 0.3, velocity: 2, staggerChildren: 1.5, duration: 0.75, ease: [0.42, 0, 0.58, 1] } }} style={{ transform: "translateY(-40%)" }}>
             <svg id="sw-js-blob-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" version="1.1" width="2200" height="1000">
                 <path
                     fill={post.backgroundColor}

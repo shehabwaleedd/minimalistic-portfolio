@@ -38,6 +38,15 @@ $font-family_1: "Posterama", sans-serif;
 		border: 0.2px solid var(--text-color);
 		border-top: 0px solid #000;
 	}
+
+	.background__img {
+		position: absolute;
+		width: 50%;
+		height: 50%;
+		object-fit: cover;
+		filter: blur(205px);
+	}
+
 }
 
 .project__details_post-text {
@@ -127,6 +136,7 @@ $font-family_1: "Posterama", sans-serif;
 			border-radius: 2rem;
 			margin-bottom: 1rem;
 			pointer-events: none;
+
 			img {
 				width: 100%;
 				height: 100%;
@@ -259,6 +269,7 @@ $font-family_1: "Posterama", sans-serif;
 	.project__links {
 		display: flex;
 		justify-content: space-between;
+
 		a {
 			color: var(--title-color)
 		}
@@ -334,14 +345,6 @@ $font-family_1: "Posterama", sans-serif;
 }
 
 
-.background__img {
-	position: fixed;
-	width: 50%;
-	height: 50%;
-	object-fit: cover;
-	filter: blur(205px);
-}
-
 
 
 @media (min-width: 1850px) {
@@ -378,10 +381,6 @@ $font-family_1: "Posterama", sans-serif;
 		.project__details-brief {
 			position: relative;
 			left: -10rem;
-		}
-
-		.background__img {
-			filter: blur(205px);
 		}
 	}
 }

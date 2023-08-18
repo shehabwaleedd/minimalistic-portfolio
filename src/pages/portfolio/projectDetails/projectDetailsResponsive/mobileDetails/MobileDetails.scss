@@ -52,6 +52,14 @@ $color_2: var(--accent-color);
     }
 }
 
+.background__img-mobile {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    filter: blur(205px);
+}
+
 @media (max-width: 470px) {
     project__details_details {
         padding: 0 1rem;
@@ -68,7 +76,7 @@ $color_2: var(--accent-color);
         text-align: center;
     }
 
-    .background__img {
+    .background__img-mobile {
         position: fixed;
         width: 80%;
         height: 80%;
