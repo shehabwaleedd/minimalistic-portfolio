@@ -22,13 +22,8 @@ import BlogVideo from "../../assets/ProjectDetails/Blog/Blog_video.mp4"
 import BlogCollective from "../../assets/ProjectDetails/Blog/Blog__collective.png"
 import RollDiceMainPage from "../../assets/ProjectDetails/RollDice/RollDice__mainPage.png"
 import JingMainPage from "../../assets/ProjectDetails/Jing/Jin__mainPage.png"
-import JinGridView from "../../assets/ProjectDetails/Jing/Jin__gridView.png"
-import JinAboutPage from "../../assets/ProjectDetails/Jing/Jin__aboutPage.png"
-import JinContactPage from "../../assets/ProjectDetails/Jing/Jin__contactPage.png"
-import JinDarkMode from "../../assets/ProjectDetails/Jing/Jin__darkMode1.png"
-import JinDarkMode2 from "../../assets/ProjectDetails/Jing/Jing__darkMode2.png"
-import JinDarkMode3 from "../../assets/ProjectDetails/Jing/Jin__darkMode3.png"
-import JinDarkMode4 from "../../assets/ProjectDetails/Jing/Jin__darkMode4.png"
+import JingVideo from "../../assets/ProjectDetails/Jing/Jinghui Ma.mp4"
+import JingCollective from "../../assets/ProjectDetails/Jing/collective.png"
 import MoaazMainPage from "../../assets/ProjectDetails/Moaaz/Moaaz__mainPage.png"
 import MoaazVideo from "../../assets/ProjectDetails/Moaaz/Moaaz_video.mp4"
 import MoaazColelctive from "../../assets/ProjectDetails/Moaaz/collective.png"
@@ -189,17 +184,9 @@ const projectsData = [
     comment: "Jin, a friend of mine, approached me with a request to create a website that elegantly showcases her work and resume. She wanted a simple yet sophisticated design to highlight her talents and achievements, I used React.js to make it and I used Framer Motion to make the animations",
     mainTitle: "Main Page",
     mainTitleImg: JingMainPage,
-    mainTitle2: "Grid View",
-    mainTitleImg2: JinGridView,
-    mainAboutPage: "About Page",
-    mainAboutPageImg: JinAboutPage,
-    mainContactPage: "Contact Page",
-    mainContactPageImg: JinContactPage,
-    mainDarkMode: "Dark Mode",
-    mainDarkModeImg: JinDarkMode,
-    mainDarkModeImg2: JinDarkMode2,
-    mainDarkModeImg3: JinDarkMode3,
-    mainDarkModeImg4: JinDarkMode4,
+    video: JingVideo,
+    overView: "Overview",
+    collective: JingCollective,
     class: "jing",
     workingOnIt: false,
     newProject: false,
