@@ -68,7 +68,7 @@ const Contact = ({ isMobile, language }) => {
     }
   }, []);
   return (
-    <>
+    <section data-scroll-section>
       <div className="contact__load-container">
         <div className="contact__load-screen" ref={(el) => (screen = el)}></div>
       </div>
@@ -78,7 +78,7 @@ const Contact = ({ isMobile, language }) => {
         <DesktopContact language={language} body={body} screen={screen} name={name} setName={setName} email={email} setEmail={setEmail} message={message} setMessage={setMessage} agreed={agreed} setAgreed={setAgreed} budget={budget} handleOptionChange={handleOptionChange} handleSubmit={handleSubmit} formErrors={formErrors} form={form} />
       )}
       <Footer isMobile={isMobile} language={language} />
-    </>
+    </section>
   )
 }
 

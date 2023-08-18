@@ -4,8 +4,8 @@ $color_2: var(--container-color);
 .toggle__main {
 	position: fixed;
 	left: 2rem;
-	bottom: 5rem;
-	z-index: 99;
+	bottom: 11rem;
+	z-index: 999999999999;
 	display: flex;
 	flex-direction: column;
 	cursor: pointer;
@@ -21,7 +21,7 @@ $color_2: var(--container-color);
 	display: flex;
 	box-shadow: var(--box-shadow);
 	cursor: pointer;
-	position: relative;
+	position: fixed;
 	z-index: 9999999999;
 	button {
 		padding: 0.5rem 0.8rem;
@@ -37,14 +37,8 @@ $color_2: var(--container-color);
 	cursor: pointer;
 }
 .switch {
-	position: relative;
-	z-index: 99999;
-	i {
-		font-size: 1.35rem;
-		color: $color_2;
-		transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-		cursor: pointer;
-	}
+	position: fixed;
+	z-index: 9999999;
 }
 .active {
 	cursor: pointer;
@@ -53,7 +47,7 @@ $color_2: var(--container-color);
 	z-index: -1;
 	cursor: pointer;
 }
-@media (max-width: 414px) {
+@media (max-width: 404px) {
 	.toggle__main {
 		display: none;
 	}
