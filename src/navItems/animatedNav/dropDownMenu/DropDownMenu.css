@@ -1,7 +1,8 @@
 .dropdown__icon,.dropdown__icon span{ 
     position:relative;
     align-items:center;
-    z-index:999999
+    z-index:999999;
+    user-select: none;
     
 }
 .dropdown-menu  {
@@ -13,12 +14,32 @@
 }
 .dropdown__icon {
     display:flex;
-    gap:1rem;
     cursor:pointer;
     transition:.8s cubic-bezier(.19, 1, .22, 1);
     color:var(--title-color);
-    top:-1.26rem
+    top:-1.26rem;
+    user-select: none;
 }
+
+.language__dropdown {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 5rem;
+    width: 18vw;
+    height: 4.4vh;
+    padding: 1rem;
+    gap: 2.5rem;
+    background: rgba(238, 231, 225, .66);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
+    backdrop-filter: blur(2.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(238, 231, 225, .3);
+    z-index: 99999999
+}
+
 
 .dropdown__icon.spin,.language__dropdown {
     transition:1s cubic-bezier(.16, 1, .3, 1)
@@ -32,7 +53,6 @@
     position:relative;
     color:var(--overlay-color);
     transition-delay:0.3s;
-    margin-bottom: 0.3rem;
     top: -1.7rem;
 }
 .dropdown__icon span {
@@ -43,40 +63,18 @@
     gap:0.6rem
 }
 
-.dropdown__icon span i {
-    font-size:1.3rem
-}
 
-.language__dropdown {
-    position:absolute;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    right:5rem;
-    width:20vw;
-    height:5.4vh;
-    padding:1rem;
-    gap:2.5rem;
-    background:rgba(238,231,225,.66);
-    border-radius:16px;
-    box-shadow:0 4px 30px rgba(0,0,0,.1);
-    backdrop-filter:blur(2.8px);
-    -webkit-backdrop-filter:blur(6.8px);
-    border:1px solid rgba(238,231,225,.3);
-    z-index:99999999
-
-}
 
 .language__dropdown-link {
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:2rem
+
 
 }
 
 .language__dropdown span {
-    font-size:1.1rem;
-    font-family:Posterama;
+    font-size:1rem;
+    font-family: "Posterama";
     color:var(--title-color)
 }

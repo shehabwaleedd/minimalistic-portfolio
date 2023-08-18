@@ -36,7 +36,7 @@
     font-family: Satoshi-Bold;
     gap: 0.6rem
 }
-.language__dropdown {
+.language__dropdown-mobile {
     position: absolute;
     display: flex;
     align-items: center;

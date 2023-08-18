@@ -14,8 +14,8 @@ const MobileDrop = ({ navOpen, language, handleLanguageExpanded, languageExpande
                     <FaAngleDown />
                     <AnimatePresence>
                         {languageExpanded && (
-                            <motion.div initial={{ x: 15, opacity: 0 }} animate={{ x: 3, opacity: 1 }} exit={{ x: 15, opacity: 0 }} className="language__dropdown"
-                                style={{ top: navOpen ? "-3rem" : "4rem", right: navOpen ? language === "ar" ? "-10rem" : "10rem" : language === "ar" ? "-6rem" : "-3rem", width: "16rem", zIndex: 999999999, }}>
+                            <motion.div initial={{ x: 15, opacity: 0 }} animate={{ x: 3, opacity: 1 }} exit={{ x: 15, opacity: 0 }} className="language__dropdown-mobile"
+                                style={{ top: navOpen ? "2rem" : "4rem", right: navOpen ? language === "ar" ? "-10rem" : "-1rem" : language === "ar" ? "-6rem" : "-3rem", width: "16rem", zIndex: 999999999, }}>
                                 <div className="language__dropdown-link" onClick={handleEnglishClick}>
                                     <span className="language__text">en</span>
                                 </div>

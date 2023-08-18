@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaAngleDown } from 'react-icons/fa'
 import { AnimatePresence, motion } from 'framer-motion'
+import "../../DropDownMenu.css"
 const DesktopDrop = ({ navOpen, language, handleLanguageExpanded, languageExpanded, handleEnglishClick, handleGermanClick, handleFrenchClick, handleArabicClick }) => {
     return (
         <div className="dropdown-menu">
@@ -8,11 +9,11 @@ const DesktopDrop = ({ navOpen, language, handleLanguageExpanded, languageExpand
                 <span onClick={handleLanguageExpanded}>
                     {language}
                     <FaAngleDown />
-                    <AnimatePresence>
+                    <AnimatePresence mode='wait'>
                         {languageExpanded && (
                             <motion.div initial={{ x: 15, opacity: 0 }} animate={{ x: 3, opacity: 1 }} exit={{ x: 15, opacity: 0 }}
                                 className="language__dropdown"
-                                style={{ top: navOpen ? "-2.7rem" : "", left: navOpen ? language === "ar" ? "-8rem" : "-10rem" : language === "ar" ? "4rem" : "-20rem", flexDirection: language === 'ar' ? 'row-reverse' : 'row' }}>
+                                style={{ top: navOpen ? "-2.7rem" : "", left: navOpen ? language === "ar" ? "-8rem" : "-14rem" : language === "ar" ? "4rem" : "-20rem", flexDirection: language === 'ar' ? 'row-reverse' : 'row' }}>
                                 <div className="language__dropdown-link" onClick={handleEnglishClick}>
                                     <span className="language__text" style={{ color: navOpen ? "var(--overlay-color)" : "var(--title-color)" }}>en</span>
                                 </div>
@@ -29,7 +30,6 @@ const DesktopDrop = ({ navOpen, language, handleLanguageExpanded, languageExpand
                         )}
                     </AnimatePresence>
                 </span>
-                <div className={navOpen ? 'language__dash spin' : 'language__dash'}></div>
             </div>
         </div>
     )
