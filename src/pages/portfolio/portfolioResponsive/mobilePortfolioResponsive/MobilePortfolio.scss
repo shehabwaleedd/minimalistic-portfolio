@@ -90,3 +90,10 @@ $background-color_5: #555;
         display: none;
     }
 }
+
+
+@media (max-width: 376px) {
+    .portfolio__container {
+        transform: translate(3.5rem, 10rem);
+    }
+}
