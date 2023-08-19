@@ -28,6 +28,7 @@ import JingCollective from "../../assets/ProjectDetails/Jing/collective.png"
 import MoaazMainPage from "../../assets/ProjectDetails/Moaaz/Moaaz__mainPage.png"
 import MoaazVideo from "../../assets/ProjectDetails/Moaaz/Moaaz_video.mp4"
 import MoaazColelctive from "../../assets/ProjectDetails/Moaaz/collective.png"
+import MoaazMockup from "../../assets/ProjectDetails/Moaaz/video.mov"
 import EagleMainImg from "../../assets/ProjectDetails/Eagle/Eagle__mainPage.png"
 import EagleCollective from "../../assets/ProjectDetails/Eagle/Eagle__collective.png"
 import EagleVideo from "../../assets/ProjectDetails/Eagle/video.mov"
@@ -153,6 +154,7 @@ const projectsData = [
     video: MoaazVideo,
     overView: "Overview",
     collective: MoaazColelctive,
+    mockup: MoaazMockup,
   },
   {
     id: 6,
