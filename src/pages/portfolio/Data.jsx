@@ -20,6 +20,7 @@ import ShebooCollective from "../../assets/ProjectDetails/Sheboo/Shehab__collect
 import BlogMainPage from "../../assets/ProjectDetails/Blog/blog_mainPage.png"
 import BlogVideo from "../../assets/ProjectDetails/Blog/Blog_video.mp4"
 import BlogCollective from "../../assets/ProjectDetails/Blog/Blog__collective.png"
+import BlogMockup from "../../assets/ProjectDetails/Blog/video.mov"
 import RollDiceMainPage from "../../assets/ProjectDetails/RollDice/RollDice__mainPage.png"
 import JingMainPage from "../../assets/ProjectDetails/Jing/Jin__mainPage.png"
 import JingVideo from "../../assets/ProjectDetails/Jing/Jinghui Ma.mp4"
@@ -123,10 +124,10 @@ const projectsData = [
     comment: "Lumos was conceived as an online digital blog platform, tailored for individuals with intellectual inclinations, to provide them with a space to freely express their thoughts. It served as my inaugural full-fledged web application, built entirely from scratch. The platform integrated Firebase for authentication and database functionalities, employed Framer Motion for animations, and utilized i18next for seamless translation into four languages. The design was characterized by sharp angles and squares, complemented by a simple color palette to enhance user experience.",
     mainTitle: "Main Page",
     mainTitleImg: BlogMainPage,
-
     overView: "Overview",
     collective: BlogCollective,
     video: BlogVideo,
+    mockup: BlogMockup,
     class: "blog",
     workingOnIt: false,
     newProject: false,
