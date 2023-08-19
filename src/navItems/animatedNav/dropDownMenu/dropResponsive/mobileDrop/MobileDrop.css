@@ -67,3 +67,9 @@
     font-family: Posterama;
     color: var(--title-color)
 }
+
+@media (max-width: 376px) {
+    .dropdown__icon_mobile {
+        right: -16.5rem;
+    }
+}
