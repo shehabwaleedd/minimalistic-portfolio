@@ -309,7 +309,26 @@
 @media (max-width: 376px) {
     .about_mobile {
         .detailed__containerr_mobile {
-            height: 238vh;
+            height: 260vh;
+        }
+        .about__bottom_mobile {
+            min-height: 300vh;
+            h1 {
+                font-size: 2.5rem;
+                text-align: left;
+            }
+            .exp_desc_mobile {
+                h2 {
+                    font-size: 0.9rem;
+                    line-height: normal;
+                }
+            }
+            .skills_desc_mobile {
+                h2 {
+                    font-size: 0.9rem;
+                    line-height: normal;
+                }
+            }
         }
     }
 }
