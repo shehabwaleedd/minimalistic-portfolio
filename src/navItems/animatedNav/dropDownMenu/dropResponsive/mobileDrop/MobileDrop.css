@@ -2,7 +2,7 @@
 .dropdown__icon_mobile span {
     position: relative;
     align-items: center;
-    z-index: 999999;
+    z-index: 99999999;
 }
 
 
@@ -34,6 +34,7 @@
     justify-content: center;
     font-size: 1.1rem;
     font-family: Satoshi-Bold;
+    cursor: pointer;
     gap: 0.6rem
 }
 .language__dropdown-mobile {
@@ -52,7 +53,8 @@
     backdrop-filter: blur(2.8px);
     -webkit-backdrop-filter: blur(6.8px);
     border: 1px solid rgba(238, 231, 225, .3);
-    z-index: 99999999
+    z-index: 99999999;
+    cursor: pointer;
 }
 
 .language__dropdown-link {
