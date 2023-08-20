@@ -76,5 +76,7 @@
 .language__dropdown span {
     font-size:1rem;
     font-family: "Posterama";
-    color:var(--title-color)
+    color:var(--title-color);
+    z-index: 9999999;
+    position: relative;
 }

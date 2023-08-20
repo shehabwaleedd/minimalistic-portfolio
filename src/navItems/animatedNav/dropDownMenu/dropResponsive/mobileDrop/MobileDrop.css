@@ -14,6 +14,8 @@
     color: var(--text-color);
     top: 3rem;
     right: -18.5rem;
+    position: relative;
+    z-index: 99999999;
 }
 
 
@@ -26,7 +28,8 @@
     color: var(--overlay-color);
     transition-delay: 0.3s;
     margin-bottom: 0.3rem;
-
+    position: relative;
+    z-index: 99999999;
 }
 
 .dropdown__icon_mobile span {
@@ -35,7 +38,9 @@
     font-size: 1.1rem;
     font-family: Satoshi-Bold;
     cursor: pointer;
-    gap: 0.6rem
+    gap: 0.6rem;
+    position: relative;
+    z-index: 99999999;
 }
 .language__dropdown-mobile {
     position: absolute;
@@ -64,14 +69,32 @@
     gap: 2rem
 }
 
+.language__dropdown-link span {
+    cursor: pointer;
+    position: relative;
+    z-index: 99999999;
+}
+
 .language__dropdown span {
     font-size: 1.1rem;
     font-family: Posterama;
     color: var(--title-color)
 }
 
+@media (max-width: 416px) {
+    .dropdown__icon_mobile {
+        right: -16.5rem;
+    }
+}
+
 @media (max-width: 376px) {
     .dropdown__icon_mobile {
         right: -16.5rem;
+    }
+}
+
+@media (max-width: 366px) {
+    .dropdown__icon_mobile {
+        right: -14.5rem;
     }
 }
