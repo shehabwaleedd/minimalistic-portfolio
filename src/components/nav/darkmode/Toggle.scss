@@ -47,8 +47,3 @@ $color_2: var(--container-color);
 	z-index: -1;
 	cursor: pointer;
 }
-@media (max-width: 404px) {
-	.toggle__main {
-		display: none;
-	}
-}
