@@ -8,7 +8,7 @@ import { BiRightArrowAlt } from 'react-icons/bi'
 const MobileMain = ({ navOpen, language }) => {
     const { t } = useTranslation()
     return (
-        <motion.div className="main__container container grid" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0, transition: { delay: 1.2, duration: 1, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, transition: { delay: 0.3, staggerChildren: 1.5, duration: 2, ease: [0.42, 0, 0.58, 1] } }}>
+        <motion.div className="main__container container grid" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.15, duration: 0.75, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, transition: { delay: 0.15, staggerChildren: 1.5, duration: 0.75, ease: [0.42, 0, 0.58, 1] } }}>
             <div className="main__content" style={{ marginTop: navOpen ? "0rem" : "0", }}>
                 <h1 style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.1rem", fontSize: language === "ar" ? "2.5rem" : "" }} className="main__titlee">{t("hey")}{t("my__name_im")}
                     <span style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.1rem", fontSize: language === "ar" ? "2.5rem" : "" }} className="main__title-color">
