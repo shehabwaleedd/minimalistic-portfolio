@@ -73,6 +73,7 @@
     cursor: pointer;
     position: relative;
     z-index: 99999999;
+    font-size: 1rem;
 }
 
 .language__dropdown span {
