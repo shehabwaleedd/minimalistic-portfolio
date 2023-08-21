@@ -18,7 +18,7 @@ const MobileAbout = ({ language, isMobile }) => {
                     <div className="aboutttt__container_mobile containered">
                         <div className="about__content_mobile" style={{ marginTop: language === "de" ? "7rem" : language === "fr" ? "0rem" : language === "ar" ? "-38rem" : "-8rem" }}>
                             <motion.h1 style={{ textAlign: language === "ar" ? "right" : "left", paddingRight: language === "ar" ? "3rem" : "0", fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.2rem", fontSize: language === "fr" ? "2rem" : "3.2rem" }} initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>{t("navbar__about")}</motion.h1>
-                            <motion.h2 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>I'm Shehab. A web developer, desginer and problem solver.</motion.h2>
+                            <motion.h2 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>{t("about__brief")}</motion.h2>
                             <motion.div className="about__description_mobile" initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>
                                 <motion.p style={{ fontSize: language === "fr" ? "1.1rem" : "1.1rem", fontFamily: language === "ar" ? "Almarai" : "", textAlignLast: language === "ar" ? "right" : "left" }} >
                                     {t("about__description")}
