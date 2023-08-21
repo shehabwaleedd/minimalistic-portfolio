@@ -13,7 +13,7 @@ const MobileNavComponents = ({ navOpen, language  }) => {
                 <Link className={navOpen ? "nav__link spin" : "nav__link"} to="/" style={{ opacity: navOpen ? "1" : "0", padding: navOpen ? "0.1rem" : "0", transitionDelay: navOpen ? "3s" : "3s", fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.2rem", fontSize: language === "ar" ? "2.5rem" : "2.5rem", textAlign: "left"}}>
                     {t("navbar__home")}
                 </Link>
-                <Link className={navOpen ? "nav__link spin" : "nav__link"} to="/about" style={{ opacity: navOpen ? "1" : "0", padding: navOpen ? "0.1rem" : "0", transitionDelay: navOpen ? "3s" : "0", fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.2rem", fontSize: language === "ar" ? "2.5rem" : "2.5rem" }}>
+                <Link className={navOpen ? "nav__link spin" : "nav__link"} to="/about" style={{ opacity: navOpen ? "1" : "0", padding: navOpen ? "0.1rem" : "0", transitionDelay: navOpen ? "3s" : "0", fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.2rem", fontSize: language === "ar" ? "2.5rem" : "2.5rem", width: language === "fr" ? "105vw" : "" }}>
                     {t("navbar__about")}
                 </Link>
                 <Link className={navOpen ? "nav__link spin" : "nav__link"} to="/projects"

@@ -16,7 +16,7 @@ const MobileAbout = ({ language, isMobile }) => {
             <div className='detailed__containerr_mobile'>
                 <div className='detailed__row_mobile'>
                     <div className="aboutttt__container_mobile containered">
-                        <div className="about__content_mobile">
+                        <div className="about__content_mobile" style={{ marginTop: language === "de" || language === "en" || language === "fr" ? window.innerWidth <= 416 ? "44rem" : "50rem" : "22rem" }}>
                             <motion.h1 style={{ textAlign: language === "ar" ? "right" : "left", paddingRight: language === "ar" ? "3rem" : "0", fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.2rem", fontSize: language === "fr" ? "2rem" : "3.2rem" }} initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>{t("navbar__about")}</motion.h1>
                             <motion.h2 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>I'm Shehab. A web developer, desginer and problem solver.</motion.h2>
                             <motion.div className="about__description_mobile" initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>

@@ -48,6 +48,7 @@
                     display: flex;
                     flex-direction: column;
                     width: 100%;
+                    transform: translateY(16rem);
                     h1 {
                         font-weight: var(--font-medium);
                         color: var(--container-color);
@@ -275,7 +276,6 @@
             height: 237vh;
 
         }
-
         .about__bottom_mobile {
             min-height: 266vh;
         }
@@ -285,11 +285,10 @@
 @media (max-width: 412.5px) {
     .about_mobile {
         .about__content_mobile {
-            margin-top: 50rem;
+        transform: translateX(10rem);
         }
         .detailed__containerr_mobile {
-            height: 205vh;
-            
+            height: 180vh;
         }
 
         .about__bottom_mobile {
