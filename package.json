@@ -1,6 +1,6 @@
 {
   "name": "minimalistic_personal_website",
-  "homepage": "https://www.shehabwaleed.com/",
+  "homepage": "https://www.shehabwaleed.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
