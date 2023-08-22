@@ -9,6 +9,7 @@ import Work7 from "../../assets/Posters/qaa3a.png"
 import Work8 from "../../assets/Posters/eagle.png"
 import Work9 from "../../assets/Posters/reve.png"
 import Work10 from "../../assets/Posters/kemet.png"
+import Work11 from "../../assets/Posters/cairostudio.png"
 import LeluMainImg from "../../assets/ProjectDetails/Lelu/Lelu__MainPage2.png"
 import LeluVideo from "../../assets/ProjectDetails/Lelu/Lelu__video.mp4"
 import LeluMessageImg from "../../assets/ProjectDetails/Lelu/Lelu__BrandMessage.png"
@@ -57,21 +58,20 @@ const projectsData = [
     backgroundColor_mobile: "#63b7b777",
   },
   {
-    id: 2,
-    image: Work9,
-    title: "Le Rêve",
-    category: ["Web Application", "UI/UX Design"],
-    website: "https://le-revee.vercel.app/",
+    id: 13,
+    image: Work11,
+    title: "Cairo Studio",
+    category: ["Web Application", "UI/UX Design", "Web Design"],
+    website: "https://cairostudio.vercel.app/",
     link: "",
     date: "August, 2023",
-    comment: "Le Rêve is hotel and restaurant reservation web application. It allows users to book a room or a table in a restaurant. The application was built using React.js and Firebase.",
-    class: "le-reve",
-    mainTitle: "Main Page",
-    mainTitleImg: ReveMainImg,
+    comment: "Cairo Studio stands as a dynamic powerhouse, where the fusion of innovation and artistry is the cornerstone of our mission. As a pioneering web and design agency, we don't just create web applications and designs; we sculpt digital experiences that resonate on a higher frequency. Our ambition lies in crafting exceptional, cutting-edge solutions that transcend the ordinary, elevating the standards of the local market. We are a team of passionate and creative individuals, driven by a shared vision to revolutionize the digital landscape in Egypt. Our team is committed to delivering excellence, with a focus on quality and attention to detail. We are Cairo Studio, and we are here to make a difference.",
+    class: "cairo-studio",
     workingOnIt: true,
     newProject: false,
-    backgroundColor: "#E9A7A1",
-    backgroundColor_mobile: "#E9A7A1",
+    backgroundColor: "#4D2CF19a",
+    backgroundColor_mobile: "#4D2CF19a",
+
   },
   {
     id: 8,
@@ -112,6 +112,23 @@ const projectsData = [
     newProject: true,
     backgroundColor: "#9736367b",
     backgroundColor_mobile: "#9736367b",
+  },
+  {
+    id: 2,
+    image: Work9,
+    title: "Le Rêve",
+    category: ["Web Application", "UI/UX Design"],
+    website: "https://le-revee.vercel.app/",
+    link: "",
+    date: "August, 2023",
+    comment: "Le Rêve is hotel and restaurant reservation web application. It allows users to book a room or a table in a restaurant. The application was built using React.js and Firebase.",
+    class: "le-reve",
+    mainTitle: "Main Page",
+    mainTitleImg: ReveMainImg,
+    workingOnIt: true,
+    newProject: false,
+    backgroundColor: "#E9A7A1",
+    backgroundColor_mobile: "#E9A7A1",
   },
   {
     id: 3,
