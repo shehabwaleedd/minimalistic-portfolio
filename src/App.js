@@ -18,6 +18,7 @@ import { HomeAnimations } from './animation/HomeAnimations';
 import Home from './pages/home/Home';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import Index from './animation/PreLoader';
+import Routers from './routes/Routers';
 
 export const ThemeContext = createContext(null);
 
@@ -113,11 +114,7 @@ function App() {
                 <ThemeContext.Provider value={{ theme, toggleTheme }}>
                   <AnimatePresence mode='wait'>
                     <Routes location={location} key={location.pathname} >
-                      <Route path='/about' key={location.pathname} element={<AboutPage isMobile={isMobile} language={language} isTablet={isTablet} />} />
-                      <Route path='/projects' key={location.pathname} element={<Portfolio isTablet={isTablet} isMobile={isMobile} language={language} l />} />
-                      <Route path="/" element={<Home key={location.pathname} isTablet={isTablet} isMobile={isMobile} navOpen={navOpen} language={language} />} />
-                      <Route path="/contact" element={<Contact key={location.pathname} isTablet={isTablet} isMobile={isMobile} language={language} />} />
-                      <Route path="/project/:title" element={<ProjectDetails key={location.pathname} isTablet={isTablet} isMobile={isMobile} />} />
+                      <Route path='/*' element={<Routers isTablet={isTablet} isMobile={isMobile} navOpen={navOpen} language={language}/>} />
                     </Routes>
                   </AnimatePresence>
                   <ScrollUp />
