@@ -6,6 +6,7 @@ import Contact from '../pages/contact/Contact';
 import ProjectDetails from '../pages/portfolio/projectDetails/ProjectDetails';
 import { useRoutes } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import NotFound from '../pages/notfound/NotFound';
 
 const Routers = ({ isMobile, isTablet, navOpen, language }) => {
     const location = useLocation();
@@ -18,6 +19,7 @@ const Routers = ({ isMobile, isTablet, navOpen, language }) => {
             path: '/',
             element: <Home key={location.pathname} isTablet={isTablet} isMobile={isMobile} navOpen={navOpen} language={language} />
         },
+        { path: '*', element: <NotFound /> },
     ];
 
     const renderedRoutes = useRoutes(routeConfig);
