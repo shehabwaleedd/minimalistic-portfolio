@@ -9,7 +9,6 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "boxicons": "^2.1.4",
     "formik": "^2.2.9",
     "framer-motion": "^10.10.0",
     "gsap": "^3.12.2",
@@ -29,7 +28,6 @@
     "react-router-dom": "^6.8.2",
     "react-scripts": "^5.0.1",
     "sass": "^1.62.1",
-    "splitting": "^1.0.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

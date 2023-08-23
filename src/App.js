@@ -96,36 +96,27 @@ function App() {
   return (
     <>
       <div className="noise"></div>
-      <div className="App" id={theme} data-scroll-container>
+      <div className="App" id={theme} data-scroll-container ref={containerRef}>
         <LocomotiveScrollProvider
-          options={
-            {
-              smooth: true,
-            }
-          }
-          containerRef={containerRef}
-        >
-          <main data-scroll-container ref={containerRef}>
-            {isLoading && <Index />}
-            {!isLoading && (
-              <>
-                <AnimatedNav setIsTablet={setIsTablet} isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
-                <Cursor />
-                <ThemeContext.Provider value={{ theme, toggleTheme }}>
-                  <AnimatePresence mode='wait'>
-                    <Routes location={location} key={location.pathname} >
-                      <Route path='/*' element={<Routers isTablet={isTablet} isMobile={isMobile} navOpen={navOpen} language={language}/>} />
-                    </Routes>
-                  </AnimatePresence>
-                  <ScrollUp />
-                  <Toggle theme={theme} toggleTheme={toggleTheme} />
-                </ThemeContext.Provider>
-              </>
-            )
-            }
-          </main>
+          options={{ smooth: true }}
+          containerRef={containerRef}>
+          {isLoading && <Index />}
+          {!isLoading && (
+            <>
+              <AnimatedNav setIsTablet={setIsTablet} isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
+              <Cursor />
+              <ThemeContext.Provider value={{ theme, toggleTheme }}>
+                <AnimatePresence mode='wait'>
+                  <Routes location={location} key={location.pathname} >
+                    <Route path='/*' element={<Routers isTablet={isTablet} isMobile={isMobile} navOpen={navOpen} language={language} />} />
+                  </Routes>
+                </AnimatePresence>
+                <ScrollUp />
+                <Toggle theme={theme} toggleTheme={toggleTheme} />
+              </ThemeContext.Provider>
+            </>
+          )}
         </LocomotiveScrollProvider>
-
       </div>
     </>
   );
