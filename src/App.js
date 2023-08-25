@@ -9,13 +9,8 @@ import Cursor from './components/cursor/Cursor';
 import i18next from 'i18next';
 import { useLocation } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
-import ProjectDetails from './pages/portfolio/projectDetails/ProjectDetails';
-import AboutPage from './pages/about/About';
-import Portfolio from './pages/portfolio/Portfolio';
-import Contact from './pages/contact/Contact';
 import "locomotive-scroll/dist/locomotive-scroll.css"
 import { HomeAnimations } from './animation/HomeAnimations';
-import Home from './pages/home/Home';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import Index from './animation/PreLoader';
 import Routers from './routes/Routers';
