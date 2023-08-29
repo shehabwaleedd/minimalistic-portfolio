@@ -95,7 +95,11 @@ function App() {
         <LocomotiveScrollProvider
           options={{ smooth: true }}
           containerRef={containerRef}>
-          {isLoading && <Index />}
+          {isLoading &&
+            <AnimatePresence mode='wait'>
+              <Index />
+            </AnimatePresence>
+          }
           {!isLoading && (
             <>
               <AnimatedNav setIsTablet={setIsTablet} isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
