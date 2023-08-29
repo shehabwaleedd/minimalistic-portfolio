@@ -38,10 +38,6 @@ export default function Index() {
             },
         });
     }, []);
-
-
-
-
     return (
         <div className={styles.introduction}>
             {dimension.width > 0 && (
