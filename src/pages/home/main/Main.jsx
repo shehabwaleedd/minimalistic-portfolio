@@ -5,12 +5,7 @@ import TabletMain from './mainResponsive/tabletMain/TabletMain';
 import DesktopMain from './mainResponsive/desktopMain/DesktopMain';
 
 const Main = ({ isMobile, navOpen, language, isTablet }) => {
-    useEffect(() => {
-        const helloWorld = document.querySelector('.main__content');
-        function handleDoubleClick() { helloWorld.classList.toggle('selected')}
-        helloWorld.addEventListener('dblclick', handleDoubleClick);
-        return () => { helloWorld.removeEventListener('dblclick', handleDoubleClick);};
-    }, []);
+
     return (
         <section className='main section'>
             {isMobile ? (

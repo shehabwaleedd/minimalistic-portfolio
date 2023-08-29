@@ -38,7 +38,7 @@ function App() {
       async () => {
         setTimeout(() => {
           setIsLoading(false);
-        }, 3000)
+        }, 3500)
       }
 
     )()
