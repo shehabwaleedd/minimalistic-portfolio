@@ -20,7 +20,6 @@ export const ThemeContext = createContext(null);
 function App() {
 
   const [theme, setTheme] = useState('dark');
-  // const [isAnimationFinished, setIsAnimationFinished] = useState(false);
   const [navOpen, setNavOpen] = useState(false)
   const [language, setLanguage] = useState(i18next.language);
   const [languageExpanded, setLanguageExpanded] = useState(false);
@@ -32,6 +31,15 @@ function App() {
   const location = useLocation();
   const containerRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [preLoaderAnimationShown, setPreLoaderAnimationShown] = useState(
+    sessionStorage.getItem('hasAnimationShown')
+  );
+  useEffect(() => {
+    if (shouldReload) {
+      window.location.reload();
+      setShouldReload(false);
+    }
+  }, [shouldReload]);
 
   useEffect(() => {
     (
@@ -95,12 +103,9 @@ function App() {
         <LocomotiveScrollProvider
           options={{ smooth: true }}
           containerRef={containerRef}>
-          {isLoading &&
-            <AnimatePresence mode='wait'>
-              <Index />
-            </AnimatePresence>
-          }
-          {!isLoading && (
+          {isLoading && !preLoaderAnimationShown ? (
+            <Index />
+          ) : (
             <>
               <AnimatedNav setIsTablet={setIsTablet} isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
               <Cursor />
@@ -116,7 +121,7 @@ function App() {
             </>
           )}
         </LocomotiveScrollProvider>
-      </div>
+      </div >
     </>
   );
 }
