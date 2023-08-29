@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import styles from './style.module.scss';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-
 const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Merhaba", "Guten tag", "Ahlan"]
 
 export default function Index() {
     const [index, setIndex] = useState(0);
     const [dimension, setDimension] = useState({ width: 0, height: 0 });
-    const navigate = useNavigate();
     useEffect(() => {
         setDimension({ width: window.innerWidth, height: window.innerHeight })
     }, []);
