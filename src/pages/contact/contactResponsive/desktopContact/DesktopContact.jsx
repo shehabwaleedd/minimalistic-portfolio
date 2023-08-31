@@ -14,16 +14,16 @@ const DesktopContact = ({ language, body, name, setName, email, setEmail, messag
                 <div className="contact__container " style={{ flexDirection: language === "ar" ? "row-reverse" : "column", display: language === "ar" ? "flex" : "" }}>
                     <div className="contact__content">
                         <div className="contact__details">
-                            <h1 style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", fontSize: language === "ar" ? "3rem" : "2rem", textAlign: language === "ar" ? "right" : "left" }}>{t("contact__title1")}<br />{t("contact__title2")}<br />{t("contact__title3")}</h1>
+                            <h2 style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", fontSize: language === "ar" ? "3rem" : "2rem", textAlign: language === "ar" ? "right" : "left" }}>{t("contact__title1")}<br />{t("contact__title2")}<br />{t("contact__title3")}</h2>
                         </div>
                         <Socials />
                         <div className="contact__info" style={{ justifyContent: language === "ar" ? "right" : "left", flexDirection: language === "ar" ? "row-reverse" : "row", gap: language === "ar" ? "6rem" : "10rem" }}>
                             <div className="contact__email" style={{ textAlign: language === "ar" ? "right" : "left", }}>
-                                <h3>{t("contact__getInTouch")}</h3>
+                                <h2>{t("contact__getInTouch")}</h2>
                                 <p><a href="mailto:shehabwaleedd@gmail.com">hello@shehabwaleed.com</a></p>
                             </div>
                             <div className="contact__location">
-                                <h3>{t("contact__location")}</h3>
+                                <h2>{t("contact__location")}</h2>
                                 <p>{t("contact__location-cairo")} {t("contact__location-egypt")}</p>
                             </div>
                         </div>

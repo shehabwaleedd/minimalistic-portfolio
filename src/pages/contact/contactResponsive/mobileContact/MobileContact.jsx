@@ -14,20 +14,20 @@ const MobileContact = ({language, body, name, setName, email, setEmail, message,
                 <div className="contact__container container grid" style={{ flexDirection: language === "ar" ? "column" : "column", display: language === "ar" ? "flex" : "flex",  }}>
                     <div className="contact__content">
                         <div className="contact__details">
-                            <h1 style={{ paddingLeft: "1rem", fontFamily: language === "ar" ? "Aref Ruqaa" : "", fontSize: language === "ar" ? "2.7rem" : "1.4rem", textAlign: language === "ar" ? "center" : "left" }}>
+                            <h2 style={{ paddingLeft: "1rem", fontFamily: language === "ar" ? "Aref Ruqaa" : "", fontSize: language === "ar" ? "2.7rem" : "1.4rem", textAlign: language === "ar" ? "center" : "left" }}>
                                 {t("contact__title1")}
                                 {t("contact__title2")}
                                 {t("contact__title3")}
-                            </h1>
+                            </h2>
                         </div>
                         <Socials />
                         <div className="contact__info" style={{ justifyContent: language === "ar" ? "center" : "center", flexDirection: language === "ar" ? "row-reverse" : "row", gap: language === "ar" ? "6rem" : "3rem" }}>
                             <div className="contact__email" style={{ textAlign: language === "ar" ? "center" : "center", }}>
-                                <h3>{t("contact__getInTouch")}</h3>
+                                <h2>{t("contact__getInTouch")}</h2>
                                 <p><a href="mailto:shehabwaleedd@gmail.com">hello@shehabwaleed.com</a></p>
                             </div>
                             <div className="contact__location">
-                                <h3>{t("contact__location")}</h3>
+                                <h2>{t("contact__location")}</h2>
                                 <p>{t("contact__location-cairo")} {t("contact__location-egypt")}</p>
                             </div>
                         </div>

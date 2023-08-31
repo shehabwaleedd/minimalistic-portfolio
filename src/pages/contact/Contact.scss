@@ -71,7 +71,7 @@ $border-color_1: var(--title-color);
 	font-family: $font-family_1;
 }
 .contact__details {
-	h1 {
+	h2 {
 		font-size: var(--h1-font-size);
 		font-weight: var(--font-medium);
 		margin-bottom: var(--mb-1-5);
@@ -209,7 +209,7 @@ $border-color_1: var(--title-color);
 	transition: 0.6s ease;
 }
 .contact__email {
-	h3 {
+	h2 {
 		font-size: var(--h3-font-size);
 		font-weight: var(--font-medium);
 		font-family: $font-family_1;
@@ -242,7 +242,7 @@ $border-color_1: var(--title-color);
 	}
 }
 .contact__location {
-	h3 {
+	h2 {
 		font-size: var(--h3-font-size);
 		font-weight: var(--font-medium);
 		font-family: $font-family_1;
