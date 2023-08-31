@@ -26,6 +26,7 @@ const MobileDetails = ({ post, renderDetails, goToNextProject, nextTitleName }) 
                         <img
                             src={post.image}
                             alt={post.title}
+                            width="100%" height="100%"
                         />
                     </div>
                     <div className="project__details_post-text" style={{ transform: "translateX(-2rem)", }}>

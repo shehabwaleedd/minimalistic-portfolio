@@ -20,32 +20,19 @@ const DesktopDetailsDetails = ({ post, renderDetails, scrollYProgress }) => {
             {post.mainAboutPage && renderDetails(post.mainAboutPage, post.mainAboutPageImg, post.mainAboutPage)}
             {post.mainContactPage && renderDetails(post.mainContactPage, post.mainContactPageImg, post.mainContactPage)}
             {post.mainWorkPage && renderDetails(post.mainWorkPage, post.mainWorkPageImg, post.mainWorkPage)}
-            {post.mainDarkMode && (
-                <motion.div className="project__details_details"  >
-                    <motion.div className="project__details-text">
-                        <h2>{post.mainDarkMode}</h2>
-                    </motion.div>
-                    <motion.div className="project__details-img" style={{ scale: scrollYProgress }}>
-                        <motion.img src={post.mainDarkModeImg} alt={post.mainContactPage} />
-                        <motion.img src={post.mainDarkModeImg2} alt={post.mainContactPage} />
-                        <motion.img src={post.mainDarkModeImg3} alt={post.mainContactPage} />
-                        <motion.img src={post.mainDarkModeImg4} alt={post.mainContactPage} />
-                    </motion.div>
-                </motion.div>
-            )}
             {post.collective && (
                 <div className="project__details_details-light">
                     <motion.div className="project__details-text">
                         <h2 style={{ width: window.innerWidth >= 860 ? "" : "100vw", }}>{post.overView}</h2>
                     </motion.div>
                     <div className="project__details-img-light">
-                        <img src={post.collective} alt={post.mainContactPage} loading='lazy' />
+                        <img src={post.collective} width="100%" height="100%" alt="Collective Images Of The Project" loading='lazy' />
                     </div>
                 </div>
             )}
             {post.mockup && (
                 <div className="project__details-mockup">
-                    <video src={post.mockup} muted autoPlay loop poster={post.image}></video>
+                    <video src={post.mockup} muted autoPlay loop poster={post.image} alt={post.mockup}></video>
                 </div>
             )}
         </>

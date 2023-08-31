@@ -9,12 +9,12 @@ const DesktopDetailsNextProject = ({ goToNextProject, nextTitleName}) => {
                 </div>
                 <div className="menu-text">
                     <div className="next__project">
-                        <h1 onClick={goToNextProject}>Next Project</h1>
+                        <h3 onClick={goToNextProject}>Next Project</h3>
                     </div>
                 </div>
             </div>
             <div className="project__next_project_name">
-                <h1>{nextTitleName()}</h1>
+                <h3>{nextTitleName()}</h3>
             </div>
         </div>
     )

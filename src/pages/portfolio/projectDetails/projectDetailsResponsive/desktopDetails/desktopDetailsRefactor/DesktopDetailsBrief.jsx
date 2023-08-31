@@ -25,9 +25,6 @@ const DesktopDetailsBrief = ({ post }) => {
                     <div className={`project__link ${post.class}`}>
                         <a href={`${post.website}`} target="__blank"><BiRightArrowAlt />View The Website</a>
                     </div>
-                    {/* <div className="project__link">
-                    <a href={`${post.link}`} target="__blank"><BiRightArrowAlt />View The Code</a>
-                </div> */}
                 </div>
             </div>
         </div>

@@ -39,7 +39,7 @@ function ProjectDetails({ isMobile, isTablet }) {
                     transition={{ duration: 0.5, delay: 0.15 }}
 
                 >
-                    <img src={img} alt={alt} />
+                    <img src={img} alt={alt} width="100%" height="100%"/>
                 </motion.div>
             </motion.div>
         );

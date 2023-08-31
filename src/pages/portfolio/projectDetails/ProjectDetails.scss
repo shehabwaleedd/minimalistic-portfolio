@@ -292,7 +292,7 @@ $font-family_1: "Posterama", sans-serif;
 	border-top: 1px solid var(--text-color);
 	overflow: hidden;
 
-	h1 {
+	h3 {
 		font-size: 2rem;
 		font-weight: 600;
 		color: $color_2;
@@ -311,9 +311,7 @@ $font-family_1: "Posterama", sans-serif;
 		display: flex;
 		position: relative;
 		transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-
 		.menu-arrow {
-
 			position: relative;
 			top: 0.5rem;
 			margin-right: 10px;
@@ -321,7 +319,6 @@ $font-family_1: "Posterama", sans-serif;
 			color: $color_1;
 			transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 		}
-
 		.menu-text {
 			display: flex;
 			justify-content: space-between;
@@ -336,10 +333,13 @@ $font-family_1: "Posterama", sans-serif;
 			}
 		}
 	}
-
 	.project__next_project_name {
 		display: flex;
 		flex-direction: column;
+		padding-top: 1rem;
+		@media (max-width: 456px) {
+			padding-top: 0;
+		}
 	}
 
 }
@@ -437,8 +437,7 @@ $font-family_1: "Posterama", sans-serif;
 
 		.project__next_project {
 			margin-top: 2rem;
-
-			h1 {
+			h3 {
 				font-size: 2rem;
 				font-weight: 600;
 				color: $color_2;

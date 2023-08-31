@@ -17,7 +17,7 @@ const TabletDetails = ({ post, renderDetails, goToNextProject, nextTitleName, sc
                 <div className="project__card_details">
                     <TabletDetailsBackground post={post} />
                     <div className="project__image_container">
-                        <img src={post.image} alt={post.title} loading='lazy'/>
+                        <img src={post.image} alt={post.title} width="100%" height="100%" loading='lazy'/>
                     </div>
                     <div className="project__details_post-text">
                         <Link to="/projects" className="project__back">

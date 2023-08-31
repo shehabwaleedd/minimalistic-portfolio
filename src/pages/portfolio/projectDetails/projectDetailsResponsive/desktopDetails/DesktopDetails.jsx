@@ -24,7 +24,7 @@ const DesktopDetails = ({ post, renderDetails, goToNextProject, nextTitleName })
                 <div className="project__card_details container">
                     <DesktopDetailsBackground post={post} />
                     <div className="project__image_container container">
-                        <img src={post.image} alt={post.title} />
+                        <img src={post.image} width="100%" height="100%" alt={post.title} />
                     </div>
                     <motion.div className="project__details_post-text">
                         <Link to="/projects" className="project__back">
