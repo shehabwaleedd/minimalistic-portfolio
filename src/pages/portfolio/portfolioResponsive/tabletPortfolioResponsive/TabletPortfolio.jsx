@@ -20,7 +20,7 @@ const TabletPortfolio = ({ language, body, screen }) => {
                             {projectsData.map((item, index) => (
                                 <div className="work__title" key={index} style={{ height: "5rem", gap: "2rem" }}>
                                     <div className="menu-text-tablet">
-                                        <Link to={`/project/${item.title}`}><h1 data-text={item.title}>{item.title}</h1></Link>
+                                        <Link to={`/projects/${item.title}`}><h1 data-text={item.title}>{item.title}</h1></Link>
                                         <div className="isNew-tablet" style={{ right: item.class === "shehab" ? "3rem" : item.class === "lelu" || item.class === "cairo" ? "0.5em" : "" }}>
                                             {item.workingOnIt && (
                                                 <h3 className='workingonit'>

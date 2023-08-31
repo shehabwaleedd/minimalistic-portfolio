@@ -14,7 +14,7 @@ const Routers = ({ isMobile, isTablet, navOpen, language }) => {
         { path: '/about', element: <AboutPage isMobile={isMobile} language={language} isTablet={isTablet} /> },
         { path: '/projects', element: <Portfolio isTablet={isTablet} isMobile={isMobile} language={language} /> },
         { path: '/contact', element: <Contact key={location.pathname} isTablet={isTablet} isMobile={isMobile} language={language} /> },
-        { path: '/project/:title', element: <ProjectDetails key={location.pathname} isTablet={isTablet} isMobile={isMobile} /> },
+        { path: '/projects/:title', element: <ProjectDetails key={location.pathname} isTablet={isTablet} isMobile={isMobile} /> },
         {
             path: '/',
             element: <Home key={location.pathname} isTablet={isTablet} isMobile={isMobile} navOpen={navOpen} language={language} />

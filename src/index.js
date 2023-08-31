@@ -8,7 +8,7 @@ import { initReactI18next } from 'react-i18next'
 import HttpApi from 'i18next-http-backend'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import { HelmetProvider } from 'react-helmet-async';
 
 
 i18next
@@ -34,13 +34,13 @@ i18next
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
+  <React.StrictMode>
+    <HelmetProvider>
       <Router>
-        <Routes>
-          <Route path="/*" element={<App />} />
-        </Routes>
+        <App />
       </Router>
-    </React.StrictMode>
+    </HelmetProvider>
+  </React.StrictMode >
 );
 
 
