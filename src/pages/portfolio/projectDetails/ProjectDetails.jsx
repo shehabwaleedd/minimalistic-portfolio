@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import projectsData from "../Data";
 import { motion } from 'framer-motion'
 import "./ProjectDetails.scss";
-
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import MobileDetails from "./projectDetailsResponsive/mobileDetails/MobileDetails";
 import TabletDetails from "./projectDetailsResponsive/tabletDetails/TabletDetails";
@@ -36,7 +36,7 @@ function ProjectDetails({ isMobile, isTablet }) {
                 <motion.div className="project__details-img"
                     initial={{ scale: 0.8 }}
                     whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.15}}  
+                    transition={{ duration: 0.5, delay: 0.15 }}
 
                 >
                     <img src={img} alt={alt} />
@@ -50,12 +50,20 @@ function ProjectDetails({ isMobile, isTablet }) {
     }, []);
     return (
         <section data-scroll-section>
+            <Helmet>
+                <title>{post.title} - Project Details</title>
+                <meta
+                    name="description"
+                    content={`Explore the details of ${post.title}, a creative project by our team. Discover how we brought this concept to life through design and development.`}
+                />
+                <link rel="canonical" href={`/projects/${post.title}`} />
+            </Helmet>
             {isMobile ? (
-                <MobileDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName}  />
+                <MobileDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} />
             ) : isTablet ? (
                 <TabletDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} />
             ) : (
-                <DesktopDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} data-scroll-container/>
+                <DesktopDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} data-scroll-container />
             )}
         </section>
     );

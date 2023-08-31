@@ -5,6 +5,7 @@ import MobilePortfolio from './portfolioResponsive/mobilePortfolioResponsive/Mob
 import TabletPortfolio from './portfolioResponsive/tabletPortfolioResponsive/TabletPortfolio';
 import DesktopPortfolio from './portfolioResponsive/desktopPortfolioResponsive/DesktopPortfolio';
 import RunAnimations from '../../animation/RunAnimations';
+import { Helmet } from 'react-helmet-async';
 const Portfolio = ({ language, isMobile, isTablet }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const handleTextHover = (imageId) => {
@@ -29,6 +30,14 @@ const Portfolio = ({ language, isMobile, isTablet }) => {
       <div className="projects__load-container">
         <div className="projects__load-screen" ref={(el) => (screen = el)}></div>
       </div>
+      <Helmet>
+        <title> Portfolio - Showcase of Our Creative Projects</title>
+        <meta
+          name="description"
+          content="Explore our portfolio showcasing a variety of creative projects. From web design to development, our work represents our passion and expertise."
+        />
+        <link rel="canonical" href="/projects" />
+      </Helmet>
       {isMobile ? (
         <MobilePortfolio language={language} body={body} screen={screen} />
       ) : isTablet ? (

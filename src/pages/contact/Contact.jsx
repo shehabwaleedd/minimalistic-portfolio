@@ -6,6 +6,7 @@ import Footer from '../footer/Footer';
 import MobileContact from './contactResponsive/mobileContact/MobileContact';
 import DesktopContact from './contactResponsive/desktopContact/DesktopContact';
 import RunAnimations from '../../animation/RunAnimations';
+import { Helmet } from 'react-helmet-async';
 const Contact = ({ isMobile, language }) => {
   const form = useRef();
   const sendEmail = (e) => {
@@ -69,6 +70,14 @@ const Contact = ({ isMobile, language }) => {
   }, []);
   return (
     <section data-scroll-section>
+      <Helmet>
+        <title>Contact Us - Get in Touch with Our Creative Team</title>
+        <meta
+          name="description"
+          content="Reach out to me and bring your ideas to life. Whether you need design, development, or consultation, i'm here to help. Contact us today to start your next project."
+        />
+        <link rel="canonical" href="/contact" />
+      </Helmet>
       <div className="contact__load-container">
         <div className="contact__load-screen" ref={(el) => (screen = el)}></div>
       </div>

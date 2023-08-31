@@ -5,6 +5,7 @@ import MobileAbout from './aboutResponsive/mobileAbout/MobileAbout';
 import DesktopAbout from './aboutResponsive/desktopAbout/DesktopAbout';
 import RunAnimations from '../../animation/RunAnimations';
 import TabletAbout from './aboutResponsive/tabletAbout/TabletAbout';
+import { Helmet } from 'react-helmet-async';
 
 const AboutPage = ({ isMobile, language, isTablet }) => {
   let screen = useRef(null);
@@ -18,6 +19,14 @@ const AboutPage = ({ isMobile, language, isTablet }) => {
   }, []);
   return (
     <motion.section data-scroll-section>
+      <Helmet>
+        <title>About Shehab - Crafting Extraordinary Web Experiences</title>
+        <meta
+          name="description"
+          content="Discover Shehab Waleed, a frontend freelancer dedicated to crafting unique web experiences. Stand out in the market with exceptional digital solutions."
+        />
+        <link rel="canonical" href="/about" />
+      </Helmet>
       <div className="load-container">
         <div className="load-screen" ref={(el) => (screen = el)}></div>
       </div>
@@ -25,7 +34,7 @@ const AboutPage = ({ isMobile, language, isTablet }) => {
         {isMobile ? (
           <MobileAbout language={language} isMobile={isMobile} />
         ) : isTablet ? (
-          <TabletAbout language={language}/>
+          <TabletAbout language={language} />
         ) : (
           <DesktopAbout language={language} />
         )}
