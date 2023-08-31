@@ -43,10 +43,10 @@ const MobileContact = ({language, body, name, setName, email, setEmail, message,
                                         <option value="budget" disabled>
                                             Budget
                                         </option>
-                                        <option value="$100">$100</option>
-                                        <option value="$100-$500">$100 - $500</option>
-                                        <option value="$500-$1000">$500 - $1000</option>
-                                        <option value="$1000+">$1000+</option>
+                                        <option value="$1000">$1000</option>
+                                        <option value="$1000-$5000">$1000 - $3000</option>
+                                        <option value="$3000-$5000">$3000 - $5000</option>
+                                        <option value="$5000+">$5000+</option>
                                     </select>
                                     {formErrors.budget && <p className="error-message">{formErrors.budget}</p>}
                                     <div className="dropdown-icon">▼</div>
