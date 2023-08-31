@@ -71,7 +71,7 @@ const Contact = ({ isMobile, language }) => {
   return (
     <section data-scroll-section>
       <Helmet>
-        <title>Contact Us - Get in Touch with Our Creative Team</title>
+        <title>Contact - Get in Touch And Let's Build Your Next Website</title>
         <meta
           name="description"
           content="Reach out to me and bring your ideas to life. Whether you need design, development, or consultation, i'm here to help. Contact us today to start your next project."
