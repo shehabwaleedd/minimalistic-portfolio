@@ -24,6 +24,34 @@
         padding: 2rem 2rem;
         margin-left: 1rem;
 
+        @media (max-width: 456px) {
+            height: 188vh;
+        }
+        @media (max-width: 416px) {
+            height: 238vh;
+        }
+
+        @media (max-width: 414.5px) and (max-height: 898px) {
+            height: 205vh;
+        }
+        @media (max-width: 414.5px) and (max-height: 737px) {
+            height: 237vh;
+
+        }
+        @media (max-width: 412.5px) {
+            height: 222vh;
+        }
+        @media (max-width: 395px) {
+            height: 255vh;
+        }
+        @media (max-width: 376px) {
+            height: 267vh;
+        }
+        @media (max-width: 362px) {
+            height: 295vh;
+        }
+
+
         .detailed__row_mobile {
             display: flex;
             align-items: center;
@@ -49,6 +77,7 @@
                     flex-direction: column;
                     width: 100%;
                     transform: translateY(16rem);
+
                     h1 {
                         font-weight: var(--font-medium);
                         color: var(--container-color);
@@ -134,6 +163,29 @@
         align-items: flex-start;
         min-height: 230vh;
 
+        @media (max-width: 416px) {
+            min-height: 220vh;
+        }
+        @media (max-width: 414.5px) and (max-height: 898px) {
+            min-height: 216vh;
+        }
+        @media (max-width: 414.5px) and (max-height: 737px) {
+            min-height: 266vh;
+        }
+        @media (max-width: 412.5px) {
+            min-height: 240vh;
+        }
+        @media (max-width: 395px) {
+            min-height: 250vh;
+        }
+        @media (max-width: 376px) {
+            min-height: 300vh;
+        }
+        @media (max-width: 362px) {
+            min-height: 280vh;
+        }
+
+
         h2 {
             font-size: 3rem;
             text-align: end;
@@ -145,6 +197,10 @@
             letter-spacing: 0.3rem;
             text-transform: uppercase;
             font-family: "Posterama", sans-serif;
+            @media (min-width: 376px) {
+                font-size: 2.5rem;
+                text-align: left;
+            }
         }
 
         .exp_desc_mobile {
@@ -167,6 +223,10 @@
                 white-space: pre-wrap;
                 text-align-last: left;
                 text-align: left;
+                @media (min-width: 376px) {
+                    font-size: 0.9rem;
+                    line-height: normal;
+                }
             }
         }
 
@@ -190,6 +250,10 @@
                 text-align-last: left;
                 text-align: justify;
                 margin-left: 1rem;
+                @media (min-width: 376px) {
+                    font-size: 0.9rem;
+                    line-height: normal;
+                }
             }
         }
 
@@ -230,6 +294,7 @@
                 text-transform: uppercase;
                 cursor: pointer;
                 transition: all 0.3s ease-in-out;
+
                 &:hover {
                     background-color: var(--container-color);
                     color: var(--title-color);
@@ -241,105 +306,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-    }
-}
-
-
-@media (max-width: 416px) {
-    .about_mobile {
-        .detailed__containerr_mobile {
-            height: 238vh;
-        }
-
-        .about__bottom_mobile {
-            min-height: 220vh;
-        }
-    }
-}
-
-@media (max-width: 414.5px) and (max-height: 898px) {
-    .about_mobile {
-        .detailed__containerr_mobile {
-            height: 205vh;
-        }
-
-        .about__bottom_mobile {
-            min-height: 216vh;
-        }
-    }
-}
-
-@media (max-width: 414.5px) and (max-height: 737px) {
-    .about_mobile {
-        .detailed__containerr_mobile {
-            height: 237vh;
-
-        }
-        .about__bottom_mobile {
-            min-height: 266vh;
-        }
-    }
-}
-
-@media (max-width: 412.5px) {
-    .about_mobile {
-        .detailed__containerr_mobile {
-            height: 222vh;
-        }
-
-        .about__bottom_mobile {
-            min-height: 240vh;
-        }
-    }
-}
-
-@media (max-width: 395px) {
-    .about_mobile {
-        .detailed__containerr_mobile {
-            height: 255vh;
-        }
-        .about__bottom_mobile {
-            min-height: 250vh;
-        }
-    }
-}
-
-@media (max-width: 376px) {
-    .about_mobile {
-        .detailed__containerr_mobile {
-            height: 270vh;
-        }
-        .about__bottom_mobile {
-            min-height: 300vh;
-            h2 {
-                font-size: 2.5rem;
-                text-align: left;
-            }
-            .exp_desc_mobile {
-                h3 {
-                    font-size: 0.9rem;
-                    line-height: normal;
-                }
-            }
-            .skills_desc_mobile {
-                h3 {
-                    font-size: 0.9rem;
-                    line-height: normal;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 361px) {
-    .about_mobile {
-        .detailed__containerr_mobile {
-            height: 295vh;
-        }
-
-        .about__bottom_mobile {
-            min-height: 280vh;
         }
     }
 }

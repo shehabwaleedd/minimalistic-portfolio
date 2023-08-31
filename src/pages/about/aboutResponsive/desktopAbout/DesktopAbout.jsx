@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import MyStack from '../../stack/MyStack'
 import cv from "../../../../assets/Shehab Waleed Resume.docx"
-import "./DesktopAbout.scss"
 import { Link } from 'react-router-dom'
 
 const DesktopAbout = ({ language }) => {
