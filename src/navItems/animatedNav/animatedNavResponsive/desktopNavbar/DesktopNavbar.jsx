@@ -10,7 +10,7 @@ const DesktopNavbar = ({ isAbout, isMobile, setIsMobile, setOpen, navOpen, setNa
         <>
             <div className="navbar__container" style={{ flexDirection: language === "ar" ? "row-reverse" : "row" }}>
                 <Link to="/" className='sheboo_logo'>
-                    <h1 className={navOpen ? language === "ar" ? "logoAr spin" : "logo spin" : language === "ar" ? "logoAr" : "logo"} style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.3rem", fontSize: language === "ar" ? "2.5rem" : "" }}>{t("my__name")}</h1>
+                    <h2 className={navOpen ? language === "ar" ? "logoAr spin" : "logo spin" : language === "ar" ? "logoAr" : "logo"} style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.3rem", fontSize: language === "ar" ? "2.5rem" : "" }}>{t("my__name")}</h2>
                 </Link>
                 <div className="side__navbar" style={{ flexDirection: language === "ar" ? "row-reverse" : "row", gap: language === "ar" ? "3rem" : "1rem" }}>
                     <NavComponents isMobile={isMobile} navOpen={navOpen} language={language} />

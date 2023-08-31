@@ -10,7 +10,7 @@ const MobileNavbar = ({ isMobile, setIsMobile, isAbout, setIsAbout, setOpen, nav
         <>
             <div className="navbar__container_mobile" style={{ flexDirection: language === "ar" ? "row-reverse" : "row", direction: language === "ar" ? "rtl" : "ltr", padding: navOpen ? "3.2rem" : "3.2rem" }}>
                 <Link to="/">
-                    <h1 className={navOpen ? "logo_mobile spin" : "logo_mobile"} style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.3rem", fontSize: language === "ar" ? "2rem" : "1rem" }}>{t("my__name")}</h1>
+                    <h2 className={navOpen ? "logo_mobile spin" : "logo_mobile"} style={{ fontFamily: language === "ar" ? "Aref Ruqaa" : "", letterSpacing: language === "ar" ? "0" : "0.3rem", fontSize: language === "ar" ? "2rem" : "1rem" }}>{t("my__name")}</h2>
                 </Link>
                 <div className="side__navbar_mobile" style={{ flexDirection: language === "ar" ? "row-reverse" : "row", gap: language === "ar" ? "1.5rem" : "0.1rem" }}>
                     <NavComponents isMobile={isMobile} navOpen={navOpen} language={language} />
