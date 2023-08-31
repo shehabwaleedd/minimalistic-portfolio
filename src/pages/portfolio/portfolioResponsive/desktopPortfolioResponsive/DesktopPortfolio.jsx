@@ -21,6 +21,10 @@ const DesktopPortfolio = ({ language, selectedImage, handleTextHover, handleText
                                             src={image.image}
                                             alt={image.title}
                                             className={selectedImage === image.image ? `menu__item-image.fade-in` : 'menu__item-image'}
+                                            title={image.title}
+                                            loading='eager'
+                                            width="100%"
+                                            height="100%"
                                         />
                                     </motion.div>
                                 ))}
@@ -40,7 +44,7 @@ const DesktopPortfolio = ({ language, selectedImage, handleTextHover, handleText
                                                 </motion.div>
                                                 <motion.div className="menu-text" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0, transition: { duration: 0.75, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 100, transition: { velocity: 2, staggerChildren: 1.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }}>
                                                     <Link to={`/projects/${item.title}`}>
-                                                        <motion.h1 data-text={item.title} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0, transition: { duration: 1, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 100, transition: { velocity: 2, staggerChildren: 1.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }}>{item.title}</motion.h1 >
+                                                        <motion.h2 data-text={item.title} initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0, transition: { duration: 1, ease: [0.42, 0, 0.58, 1] } }} exit={{ opacity: 0, y: 100, transition: { velocity: 2, staggerChildren: 1.5, duration: 0.5, ease: [0.42, 0, 0.58, 1] } }}>{item.title}</motion.h2 >
                                                     </Link>
                                                     <div className="isNew" style={{ right: item.class === "shehab" ? "5rem" : item.class === "lelu" || item.class === "cairo" ? "2rem" : "" }}>
                                                         {item.workingOnIt && (
