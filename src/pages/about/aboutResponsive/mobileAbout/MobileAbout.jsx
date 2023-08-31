@@ -39,7 +39,7 @@ const MobileAbout = ({ language, isMobile }) => {
                             </motion.div>
                             <motion.div className="about__quote_mobile" initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>
                                 <span>One of my favourite quotes (by Marcus Aurelius):</span>
-                                <h1>“Give yourself a gift, the present moment.”</h1>
+                                <h2>“Give yourself a gift, the present moment.”</h2>
                                 <div className="quote__explain">
                                     <span>{t("about__quote_exp")}</span>
                                 </div>
@@ -54,25 +54,25 @@ const MobileAbout = ({ language, isMobile }) => {
                 </div>
             </div>
             <div className="about__bottom_mobile container">
-                <motion.h1 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>{t("about__experience")}</motion.h1>
+                <motion.h2 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>{t("about__experience")}</motion.h2>
                 <div className="about__bottom_container_mobile">
                     <div className="exp_desc_mobile">
-                        <motion.h2 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>- Degree in Financial Accounting</motion.h2>
-                        <motion.h2 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>- a year and a half of experience in Frontend Development.</motion.h2>
+                        <motion.h3 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>- Degree in Financial Accounting</motion.h3>
+                        <motion.h3 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>- a year and a half of experience in Frontend Development.</motion.h3>
                     </div>
                 </div>
-                <motion.h1 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>{t("about__skills")}</motion.h1>
+                <motion.h2 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>{t("about__skills")}</motion.h2>
                 <motion.div className="skills_desc_mobile" initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>
-                    <h2>HTML5/CSS/JAVASCRIPT</h2>
-                    <h2>REACTJS/NEXTJS/TYPESCRIPT</h2>
-                    <h2>TAILWIND/BOOTSTRAP/SASS</h2>
-                    <h2>GSAP/FRAMER MOTION</h2>
-                    <h2>FIREBASE/GITHUB/GITLAB</h2>
+                    <h3>HTML5/CSS/JAVASCRIPT</h3>
+                    <h3>REACTJS/NEXTJS/TYPESCRIPT</h3>
+                    <h3>TAILWIND/BOOTSTRAP/SASS</h3>
+                    <h3>GSAP/FRAMER MOTION</h3>
+                    <h3>FIREBASE/GITHUB/GITLAB</h3>
                 </motion.div>
                 <MyStack isMobile={isMobile} />
                 <div className="kudos_desc_mobile">
-                    <motion.h1 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>KUDOS</motion.h1>
-                    <motion.h2 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>{t("about__kudos")}</motion.h2>
+                    <motion.h2 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>KUDOS</motion.h2>
+                    <motion.h3 initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>{t("about__kudos")}</motion.h3>
                     <Link to="/contact">
                         <motion.button initial={{ x: -50 }} whileInView={{ x: 0 }} transition={{ staggerChildren: 3.5, duration: 0.7, ease: [0.42, 0, 0.58, 1] }}>
                             Contact Me
