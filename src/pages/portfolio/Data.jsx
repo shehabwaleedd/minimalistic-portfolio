@@ -62,7 +62,7 @@ const projectsData = [
     image: Work11,
     title: "Cairo Studio",
     category: ["Web Application", "UI/UX Design", "Web Design"],
-    website: "https://cairostudio.vercel.app/",
+    website: "https://cairo-studio.com/",
     link: "",
     date: "August, 2023",
     comment: "Cairo Studio stands as a dynamic powerhouse, where the fusion of innovation and artistry is the cornerstone of our mission. As a pioneering web and design agency, we don't just create web applications and designs; we sculpt digital experiences that resonate on a higher frequency. Our ambition lies in crafting exceptional, cutting-edge solutions that transcend the ordinary, elevating the standards of the local market. We are a team of passionate and creative individuals, driven by a shared vision to revolutionize the digital landscape in Egypt. Our team is committed to delivering excellence, with a focus on quality and attention to detail. We are Cairo Studio, and we are here to make a difference.",
