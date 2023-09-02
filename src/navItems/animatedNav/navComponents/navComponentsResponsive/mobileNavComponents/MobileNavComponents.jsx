@@ -41,7 +41,7 @@ const MobileNavComponents = ({ navOpen, language  }) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="https://www.linkedin.com/in/shehabwaleedd/" target="__blank" rel="noreferrer">
+                                <Link to="https://twitter.com/waleedjr_" target="__blank" rel="noreferrer">
                                     <span>Twitter</span>
                                     <FiArrowUpRight />
                                 </Link>
