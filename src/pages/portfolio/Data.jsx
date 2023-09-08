@@ -1,5 +1,4 @@
 import Work0 from "../../assets/Posters/shebo2.png"
-import Work1 from "../../assets/Posters/lelu10.svg"
 import Work2 from "../../assets/Posters/blog4.webp"
 import Work3 from "../../assets/Posters/moaz3.png"
 import Work4 from "../../assets/Posters/cairo1.svg"
@@ -10,11 +9,6 @@ import Work8 from "../../assets/Posters/eagle.png"
 import Work9 from "../../assets/Posters/reve.png"
 import Work10 from "../../assets/Posters/kemet.png"
 import Work11 from "../../assets/Posters/cairostudio.png"
-import LeluMainImg from "../../assets/ProjectDetails/Lelu/Lelu__MainPage2.png"
-import LeluVideo from "../../assets/ProjectDetails/Lelu/Lelu__video.mp4"
-import LeluMessageImg from "../../assets/ProjectDetails/Lelu/Lelu__BrandMessage.png"
-import LeluLoginsImg from "../../assets/ProjectDetails/Lelu/Lelu__logins.png"
-import LeluTestimonialsImg from "../../assets/ProjectDetails/Lelu/Lelu__testimonial.png"
 import ShebooMainImg from "../../assets/ProjectDetails/Sheboo/Shehab__mainPage.png"
 import ShebooVideo from "../../assets/ProjectDetails/Sheboo/Shehab__video.mp4"
 import ShebooCollective from "../../assets/ProjectDetails/Sheboo/Shehab__collective.png"
@@ -172,30 +166,6 @@ const projectsData = [
     overView: "Overview",
     collective: MoaazColelctive,
     mockup: MoaazMockup,
-  },
-  {
-    id: 6,
-    image: Work1,
-    title: "LELU STORE",
-    category: ["E-commerce", "Web Application", "UI/UX Design"],
-    website: "https://lelu-store.vercel.app/",
-    link: "https://github.com/shehabwaleedd/lelu-store",
-    date: "March, 2023",
-    class: "lelu",
-    comment: "Lelu Store is a dynamic fashion hub designed exclusively for the modern and ambitious youth of Egypt. With a passion for vivid and distinctive colors, Lelu Store offers a curated collection that empowers young individuals to express their unique personality through fashion. Our store is a destination for those who embrace boldness and seek cutting-edge styles that resonate with their energetic spirit. Discover the perfect blend of contemporary designs and vibrant hues at Lelu Store, where every piece speaks volumes about your confident and daring fashion choices.",
-    mainTitle: "Main Page",
-    mainTitleImg: LeluMainImg,
-    video: LeluVideo,
-    mainTitle2: "Main Message",
-    mainTitleImg2: LeluMessageImg,
-    projectLogins: "Project Login/Sign Up Page",
-    projectLoginsImg: LeluLoginsImg,
-    projectTestimonials: "Project Testimonials Section",
-    projectTestimonialsImg: LeluTestimonialsImg,
-    workingOnIt: true,
-    newProject: false,
-    backgroundColor: "#ffdebeb4",
-    backgroundColor_mobile: "#ffdebeb4",
   },
   {
     id: 7,
