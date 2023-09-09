@@ -17,7 +17,7 @@ function ProjectDetails({ isMobile, isTablet }) {
         const currentIndex = projectsData.findIndex(project => project.title === title);
         const nextIndex = (currentIndex + 1) % projectsData.length;
 
-        navigate(`/project/${projectsData[nextIndex].title}`);
+        navigate(`/projects/${projectsData[nextIndex].title}`);
     };
     const nextTitleName = () => {
         const currentIndex = projectsData.findIndex(project => project.title === title);
@@ -39,11 +39,22 @@ function ProjectDetails({ isMobile, isTablet }) {
                     transition={{ duration: 0.5, delay: 0.15 }}
 
                 >
-                    <img src={img} alt={alt} width="100%" height="100%"/>
+                    <img src={img} alt={alt} width="100%" height="100%" />
                 </motion.div>
             </motion.div>
         );
     };
+
+    const renderMissions = (title) => {
+        return (
+            <motion.div className="project__details_missions" ref={ref}>
+                <motion.div className="project__details-text">
+                    <h2 style={{ width: window.innerWidth >= 860 ? "" : "100vw", }}>{title}</h2>
+                </motion.div>
+            </motion.div>
+        )
+    }
+
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -63,7 +74,7 @@ function ProjectDetails({ isMobile, isTablet }) {
             ) : isTablet ? (
                 <TabletDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} />
             ) : (
-                <DesktopDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} data-scroll-container />
+                <DesktopDetails post={post} renderDetails={renderDetails} renderMissions={renderMissions} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} data-scroll-container />
             )}
         </section>
     );

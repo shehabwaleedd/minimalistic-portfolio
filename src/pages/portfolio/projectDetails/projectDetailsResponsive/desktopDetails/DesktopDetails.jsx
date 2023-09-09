@@ -11,7 +11,7 @@ import DesktopDetailsBackground from './desktopDetailsRefactor/DesktopDetailsBac
 
 
 
-const DesktopDetails = ({ post, renderDetails, goToNextProject, nextTitleName }) => {
+const DesktopDetails = ({ post, renderDetails, goToNextProject, nextTitleName, renderMissions }) => {
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -33,7 +33,7 @@ const DesktopDetails = ({ post, renderDetails, goToNextProject, nextTitleName })
                         </Link>
                         <h1 className='project__title'>{post.title}</h1>
                         <DesktopDetailsBrief post={post} />
-                        <DesktopDetailsDetails post={post} renderDetails={renderDetails} scrollYProgress={scrollYProgress} />
+                        <DesktopDetailsDetails post={post} renderDetails={renderDetails} scrollYProgress={scrollYProgress} renderMissions={renderMissions}  />
                     </motion.div>
                     <DesktopDetailsNextProject goToNextProject={goToNextProject} nextTitleName={nextTitleName} />
                 </div>

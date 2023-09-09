@@ -1,9 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-const DesktopDetailsDetails = ({ post, renderDetails, scrollYProgress }) => {
+const DesktopDetailsDetails = ({ post, renderDetails, renderMissions, scrollYProgress }) => {
     return (
         <>
+            {post.mission && renderMissions(post.mission)}
             {post.mainTitle && renderDetails(post.mainTitle, post.mainTitleImg, post.mainTitle)}
+            {post.mission && renderMissions(post.challenge)}
             {post.video && (
                 <div className="project__details_details">
                     <div className="project__details-text">
@@ -11,15 +13,7 @@ const DesktopDetailsDetails = ({ post, renderDetails, scrollYProgress }) => {
                     </div>
                 </div>
             )}
-            {post.mainPageOnHover && renderDetails(post.mainPageOnHover, post.mainPageOnHoverImg, post.mainPageOnHover)}
-            {post.mainTitle2 && renderDetails(post.mainTitle2, post.mainTitleImg2, post.mainTitle2)}
-            {post.mainTitleSubMenu && renderDetails(post.mainTitleSubMenu, post.mainTitleSubMenuImg, post.mainTitleSubMenu)}
-            {post.projetTestimonials && renderDetails(post.projetTestimonials, post.projetTestimonialsImg, post.projetTestimonials)}
-            {post.mainProjectsPage && renderDetails(post.mainProjectsPage, post.mainProjectsPageImg, post.mainProjectsPage)}
-            {post.accountPage && renderDetails(post.accountPage, post.accountPageImg, post.accountPage)}
-            {post.mainAboutPage && renderDetails(post.mainAboutPage, post.mainAboutPageImg, post.mainAboutPage)}
-            {post.mainContactPage && renderDetails(post.mainContactPage, post.mainContactPageImg, post.mainContactPage)}
-            {post.mainWorkPage && renderDetails(post.mainWorkPage, post.mainWorkPageImg, post.mainWorkPage)}
+            {post.mission && renderMissions(post.solution)}
             {post.collective && (
                 <div className="project__details_details-light">
                     <motion.div className="project__details-text">

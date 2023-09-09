@@ -112,6 +112,23 @@ $font-family_1: "Posterama", sans-serif;
 		}
 
 	}
+	.project__details_missions {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 4rem;
+		gap: 3rem;
+
+		h2 {
+			font-size: 1vw;
+			font-weight: 600;
+			color: $color_2;
+			margin-bottom: 1rem;
+			letter-spacing: 0.1rem;
+			font-family: $font-family_1;
+		}
+	}
 
 	.project__details_details-light {
 		display: flex;
