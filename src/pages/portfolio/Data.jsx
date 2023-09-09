@@ -12,6 +12,9 @@ import Work11 from "../../assets/Posters/cairostudio.png"
 import ShebooMainImg from "../../assets/ProjectDetails/Sheboo/Shehab__mainPage.png"
 import ShebooVideo from "../../assets/ProjectDetails/Sheboo/Shehab__video.mp4"
 import ShebooCollective from "../../assets/ProjectDetails/Sheboo/Shehab__collective.png"
+import CairoCollective from "../../assets/ProjectDetails/Cairo/Cairo__collective.png"
+import CairoMainImg from "../../assets/ProjectDetails/Cairo/Cairo__mainPage.png"
+import CairoVideo from "../../assets/ProjectDetails/Cairo/Cairo__video.mp4"
 import BlogMainPage from "../../assets/ProjectDetails/Blog/blog_mainPage.png"
 import BlogVideo from "../../assets/ProjectDetails/Blog/Blog_video.mp4"
 import BlogCollective from "../../assets/ProjectDetails/Blog/Blog__collective.png"
@@ -60,13 +63,20 @@ const projectsData = [
     website: "https://cairo-studio.com/",
     link: "",
     date: "August, 2023",
-    comment: "Cairo Studio stands as a dynamic powerhouse, where the fusion of innovation and artistry is the cornerstone of our mission. As a pioneering web and design agency, we don't just create web applications and designs; we sculpt digital experiences that resonate on a higher frequency. Our ambition lies in crafting exceptional, cutting-edge solutions that transcend the ordinary, elevating the standards of the local market. We are a team of passionate and creative individuals, driven by a shared vision to revolutionize the digital landscape in Egypt. Our team is committed to delivering excellence, with a focus on quality and attention to detail. We are Cairo Studio, and we are here to make a difference.",
+    comment: "Cairo Studio is more than just a web and design agency; it's a dynamic powerhouse that thrives on the fusion of innovation and artistry. Our mission is to transcend the ordinary and sculpt digital experiences that resonate on a higher frequency. We're not content with following trends; we're here to set new ones. Our ambition is to elevate the standards of the local market, ushering in a new era of excellence in Egypt's digital landscape. At the heart of our success is our passionate and creative team, united by a shared vision to revolutionize the way digital projects are crafted and experienced. Quality and attention to detail are the cornerstones of our commitment to delivering excellence. Cairo Studio is not just a name; it's a promise to make a difference.",
+    mission: "Our mission at Cairo Studio is to break boundaries and redefine the possibilities of web and design. We aim to create digital experiences that leave a lasting impact, ones that resonate with users on a deep level. By merging innovation and artistry, we strive to set new standards and inspire change in the Egyptian digital landscape. We're not just building websites and designs; we're crafting a legacy of excellence.",
+    challenge: "In the dynamic world of web design and development, challenges become opportunities for innovation and growth. My mission was clear: create a website that not only meets but exceeds expectations, setting a new standard for excellence in the industry. The challenge? Crafting a unique, beautiful, and captivating website that stands out. I embarked on a journey of continuous learning and adaptation, pushing the boundaries of creativity and aesthetics. Every line of code, every design element was meticulously crafted to set this website apart. My goal is simple yet ambitious: to inspire other studios with a website that defines the criteria for extraordinary design and development. This website is a testament to my dedication to excellence",
+    solution: "To conquer challenges, I adopted a dynamic approach, merging fresh insights and expertise. Extensive research and dedication to staying current with industry trends and technology empowered me to deliver state-of-the-art solutions customized to each project's unique demands. Employing ReactJS for responsive interfaces, Three.js for immersive 3D animations, and integrating Locomotive Scroll and GSAP for fluidity and precision, I prioritized user engagement. My code was meticulously crafted for optimal performance, security, and future sustainability. My unwavering commitment to continuous learning fueled innovation, setting new industry benchmarks. This website is not just a digital destination; it represents an ongoing journey of innovation, dedicated to making a lasting impact in web design and development.",
     class: "cairo-studio",
+    mainTitle: "Main Page",
+    mainTitleImg: CairoMainImg,
+    video: CairoVideo,
+    overView: "Overview",
+    collective: CairoCollective,
     workingOnIt: false,
     newProject: true,
     backgroundColor: "#4D2CF19a",
     backgroundColor_mobile: "#4D2CF19a",
-
   },
   {
     id: 8,
