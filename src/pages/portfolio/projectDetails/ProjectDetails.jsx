@@ -67,7 +67,7 @@ function ProjectDetails({ isMobile, isTablet }) {
                     name="description"
                     content={`Explore the details of ${post.title}, a creative project by our team. Discover how we brought this concept to life through design and development.`}
                 />
-                <link rel="canonical" href={`/projects/${post.title}`} />
+                <link rel="canonical" href={`https://shehabwaleed.com/projects/${post.title}`} />
             </Helmet>
             {isMobile ? (
                 <MobileDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} />

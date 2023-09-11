@@ -76,7 +76,7 @@ const Contact = ({ isMobile, language }) => {
           name="description"
           content="Reach out to me and bring your ideas to life. Whether you need design, development, or consultation, i'm here to help. Contact us today to start your next project."
         />
-        <link rel="canonical" href="/contact" />
+        <link rel="canonical" href="https://shehabwaleed.com/contact" />
       </Helmet>
       <div className="contact__load-container">
         <div className="contact__load-screen" ref={(el) => (screen = el)}></div>

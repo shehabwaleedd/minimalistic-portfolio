@@ -20,12 +20,12 @@ const AboutPage = ({ isMobile, language, isTablet }) => {
   return (
     <motion.section data-scroll-section>
       <Helmet>
-        <title>About Shehab - Crafting Extraordinary Web Experiences</title>
+        <title>About Shehab - Crafting Exceptional Websites</title>
         <meta
           name="description"
           content="Discover Shehab Waleed, a frontend freelancer dedicated to crafting unique web experiences. Stand out in the market with exceptional digital solutions."
         />
-        <link rel="canonical" href="/about" />
+        <link rel="canonical" href="https://shehabwaleed.com/about" />
       </Helmet>
       <div className="load-container">
         <div className="load-screen" ref={(el) => (screen = el)}></div>

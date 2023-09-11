@@ -13,7 +13,7 @@ const Home = ({ isMobile, navOpen, language, isTablet }) => {
           name="description"
           content="Transform your vision into reality with Shehab Waleed, a passionate frontend developer and freelancer. From stunning designs to seamless development, I bring your ideas to life."
         />
-        <link rel="canonical" href="/" />
+        <link rel="canonical" href="https://shehabwaleed.com/" />
       </Helmet>
       <div className="main__containerr">
         <Main isMobile={isMobile} isTablet={isTablet} navOpen={navOpen} language={language} />

@@ -36,7 +36,7 @@ const Portfolio = ({ language, isMobile, isTablet }) => {
           name="description"
           content="Explore our portfolio showcasing a variety of creative projects. From web design to development, our work represents our passion and expertise."
         />
-        <link rel="canonical" href="/projects" />
+        <link rel="canonical" href="https://shehabwaleed.com/projects"/>
       </Helmet>
       {isMobile ? (
         <MobilePortfolio language={language} body={body} screen={screen} />
