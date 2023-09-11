@@ -60,7 +60,7 @@ function ProjectDetails({ isMobile, isTablet }) {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <section data-scroll-section>
+        <section>
             <Helmet>
                 <title>{post.title} - Project Details</title>
                 <meta
@@ -74,7 +74,7 @@ function ProjectDetails({ isMobile, isTablet }) {
             ) : isTablet ? (
                 <TabletDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} />
             ) : (
-                <DesktopDetails post={post} renderDetails={renderDetails} renderMissions={renderMissions} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} data-scroll-container />
+                <DesktopDetails post={post} renderDetails={renderDetails} renderMissions={renderMissions} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName}/>
             )}
         </section>
     );

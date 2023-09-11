@@ -69,7 +69,7 @@ const Contact = ({ isMobile, language }) => {
     }
   }, []);
   return (
-    <section data-scroll-section>
+    <section>
       <Helmet>
         <title>Contact - Get in Touch And Let's Build Your Next Website</title>
         <meta

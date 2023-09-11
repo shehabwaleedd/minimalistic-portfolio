@@ -9,9 +9,7 @@ import Cursor from './components/cursor/Cursor';
 import i18next from 'i18next';
 import { useLocation } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
-import "locomotive-scroll/dist/locomotive-scroll.css"
 import { HomeAnimations } from './animation/HomeAnimations';
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import Index from './animation/PreLoader';
 import Routers from './routes/Routers';
 
@@ -99,29 +97,25 @@ function App() {
   return (
     <>
       <div className="noise"></div>
-      <div className="App" id={theme} data-scroll-container ref={containerRef}>
-        <LocomotiveScrollProvider
-          options={{ smooth: true }}
-          containerRef={containerRef}>
-          {isLoading && !preLoaderAnimationShown ? (
-            <Index />
-          ) : (
-            <>
-              <AnimatedNav location={location} setIsTablet={setIsTablet} isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
-              <Cursor />
-              <ThemeContext.Provider value={{ theme, toggleTheme }}>
-                <AnimatePresence mode='wait'>
-                  <Routes location={location} key={location.pathname} >
-                    <Route path='/*' element={<Routers isTablet={isTablet} isMobile={isMobile} navOpen={navOpen} language={language} />} />
-                  </Routes>
-                </AnimatePresence>
-                <ScrollUp />
-                <Toggle theme={theme} toggleTheme={toggleTheme} />
-              </ThemeContext.Provider>
-            </>
-          )}
-        </LocomotiveScrollProvider>
-      </div >
+      <div className="App" id={theme} ref={containerRef}>
+        {isLoading && !preLoaderAnimationShown ? (
+          <Index />
+        ) : (
+          <>
+            <AnimatedNav location={location} setIsTablet={setIsTablet} isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} isMobile={isMobile} setIsMobile={setIsMobile} isAbout={isAbout} setIsAbout={setIsAbout} shouldReload={shouldReload} setShouldReload={setShouldReload} navOpen={navOpen} setNavOpen={setNavOpen} language={language} setLanguage={setLanguage} languageExpanded={languageExpanded} setLanguageExpanded={setLanguageExpanded} />
+            <Cursor />
+            <ThemeContext.Provider value={{ theme, toggleTheme }}>
+              <AnimatePresence mode='wait'>
+                <Routes location={location} key={location.pathname} >
+                  <Route path='/*' element={<Routers isTablet={isTablet} isMobile={isMobile} navOpen={navOpen} language={language} />} />
+                </Routes>
+              </AnimatePresence>
+              <ScrollUp />
+              <Toggle theme={theme} toggleTheme={toggleTheme} />
+            </ThemeContext.Provider>
+          </>
+        )}
+      </div>
     </>
   );
 }

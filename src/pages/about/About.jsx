@@ -18,7 +18,7 @@ const AboutPage = ({ isMobile, language, isTablet }) => {
     }
   }, []);
   return (
-    <motion.section data-scroll-section>
+    <motion.section>
       <Helmet>
         <title>About Shehab - Crafting Exceptional Websites</title>
         <meta
@@ -30,7 +30,7 @@ const AboutPage = ({ isMobile, language, isTablet }) => {
       <div className="load-container">
         <div className="load-screen" ref={(el) => (screen = el)}></div>
       </div>
-      <motion.div data-scroll-container ref={(el) => (body = el)} className="about section" id='about' initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" } }} exit={{ opacity: 0, y: -100, transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" } }}>
+      <motion.div  ref={(el) => (body = el)} className="about section" id='about' initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0, transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" } }} exit={{ opacity: 0, y: -100, transition: { delay: 0.2, duration: 0.5, ease: "easeInOut" } }}>
         {isMobile ? (
           <MobileAbout language={language} isMobile={isMobile} />
         ) : isTablet ? (
