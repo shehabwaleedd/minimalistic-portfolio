@@ -37,8 +37,7 @@ function ProjectDetails({ isMobile, isTablet }) {
                     initial={{ scale: 0.8 }}
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.15 }}
-
-                >
+                    viewport={{ once: true }}>
                     <img src={img} alt={alt} width="100%" height="100%" />
                 </motion.div>
             </motion.div>
@@ -63,11 +62,21 @@ function ProjectDetails({ isMobile, isTablet }) {
         <section>
             <Helmet>
                 <title>{post.title} - Project Details</title>
+                <meta name="title" content={`${post.title} - Project Details`} />
                 <meta
                     name="description"
-                    content={`Explore the details of ${post.title}, a creative project by our team. Discover how we brought this concept to life through design and development.`}
-                />
+                    content={`Explore the details of ${post.title}, a creative project by our team. Discover how we brought this concept to life through design and development.`}/>
+                <meta property="og:title" content={`${post.title} - Project Details`} />
+                <meta property="og:description" content={`Explore the details of ${post.title}, a creative project by our team. Discover how we brought this concept to life through design and development.`} />
+                <meta property="og:image" content={post.image} />
+                <meta property="og:url" content={`https://shehabwaleed.com/projects/${post.title}`} />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="Shehab Waleed | Portfolio" />
+                <meta property="og:locale" content="en_US" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="627" />
                 <link rel="canonical" href={`https://shehabwaleed.com/projects/${post.title}`} />
+
             </Helmet>
             {isMobile ? (
                 <MobileDetails post={post} renderDetails={renderDetails} goToNextProject={goToNextProject} title={title} nextTitleName={nextTitleName} />

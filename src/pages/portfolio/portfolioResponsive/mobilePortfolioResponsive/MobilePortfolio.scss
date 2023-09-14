@@ -26,6 +26,9 @@ $background-color_5: #555;
         background-color: $background-color_1;
         padding-bottom: 1em;
         border-top: 0px solid var(--text-color);
+        @media (max-width: 456px) {
+            padding-bottom: 0;
+        }
     }
 
     .portfolio__container {
@@ -59,15 +62,23 @@ $background-color_5: #555;
         .menu-text {
             width: 85vw;
             justify-content: space-between;
+            .isNew {
+                @media (max-width: 464px) and (min-width: 434px) {
+                    padding-top: 1.5rem;
+                }
+            }
         }
 
         p {
-            font-size: 0.6rem;
+            font-size: 0.8rem;
             font-weight: var(--font-medium);
             margin-bottom: var(--mb-0-5);
             font-family: $font-family_1;
             color: $color_1;
             text-align: right;
+            @media (max-width: 464px) and (min-width: 434px) {
+                padding-top: 2rem;
+            }
         }
 
         h1 {
@@ -83,6 +94,9 @@ $background-color_5: #555;
             cursor: pointer;
             padding-top: 0.5rem;
             letter-spacing: 0.1rem;
+            @media (max-width: 464px) and (min-width: 434px) {
+                padding-top: 2rem;
+            }
         }
     }
 
