@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e56320b4.css",
-    "main.js": "/static/js/main.a0c2be6d.js",
+    "main.css": "/static/css/main.89b8d5cb.css",
+    "main.js": "/static/js/main.d4c270f6.js",
     "static/js/945.a2b930d1.chunk.js": "/static/js/945.a2b930d1.chunk.js",
     "static/media/video.mov": "/static/media/video.330adf94a34aa681fb51.mov",
     "static/media/Cairo__collective.png": "/static/media/Cairo__collective.7722f1cd8d1925a50eb2.png",
@@ -67,7 +67,7 @@
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs"
   },
   "entrypoints": [
-    "static/css/main.e56320b4.css",
-    "static/js/main.a0c2be6d.js"
+    "static/css/main.89b8d5cb.css",
+    "static/js/main.d4c270f6.js"
   ]
 }
